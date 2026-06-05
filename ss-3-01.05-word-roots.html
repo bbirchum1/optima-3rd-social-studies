@@ -1,0 +1,1723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optima Academy Online — ✏️ Lesson Code: ✏️ Lesson Title (Grade 3 Museum)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', 'Century Gothic', 'Arial Rounded MT Bold', Verdana, sans-serif;
+  background: #F0F2F8;
+  color: #0E1C42;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(14, 28, 66, 0.08);
+}
+
+/* ═══════════ PROGRESS BAR ═══════════ */
+.progress-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #0E1C42;
+  padding: 8px 20px 10px;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.progress-label {
+  font-size: 12px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+.progress-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  /* ✏️ GRADE ACCENT: Update gradient per grade identity */
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #1A8A7D);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+.progress-pct {
+  font-size: 13px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ═══════════ HEADER ═══════════ */
+.header {
+  background: #0E1C42;
+  border-bottom: 6px solid #55C8E8;
+  padding: 20px 28px 18px;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #55C8E8);
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.header-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #55C8E8; letter-spacing: 0.5px; }
+.header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.header-title em {
+  /* ✏️ GRADE ACCENT: Tinted emphasis */
+  color: #A0E8DA;
+  font-style: italic;
+}
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(85, 200, 232, 0.15);
+  border: 1.5px solid rgba(85, 200, 232, 0.35);
+  border-radius: 28px;
+  padding: 6px 16px;
+}
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+
+/* ═══════════ INFO STRIP ═══════════ */
+.info-strip {
+  display: flex;
+  flex-wrap: wrap;
+  background: #FFFFFF;
+  border-bottom: 2px solid #E2E8F4;
+}
+.info-cell {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 16px;
+  border-right: 1px solid #E2E8F4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-cell:last-child { border-right: none; }
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.info-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.info-detail { font-size: 11px; color: #3A4A6B; line-height: 1.3; }
+
+/* ═══════════ QUOTE STRIP ═══════════ */
+.quote-strip {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border-bottom: 2px solid #F5E6C8;
+  padding: 14px 28px;
+  text-align: center;
+}
+.quote-strip-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #5A4A3A;
+  line-height: 1.6;
+}
+.quote-strip-attr {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  color: #7A88A8;
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO COLLAPSIBLE ═══════════ */
+.intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
+.intro-collapsed-bar {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 28px;
+  background: #FFF8F0;
+  border-bottom: 2px solid #F5E6C8;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.intro-collapsed-bar:hover { background: #FFF3DC; }
+.intro-section.collapsed .intro-collapsed-bar { display: flex; }
+.intro-collapsed-icon { font-size: 18px; }
+.intro-collapsed-text {
+  font-size: 14px;
+  color: #5A4A3A;
+  font-weight: 700;
+  flex: 1;
+}
+.intro-collapsed-toggle {
+  font-size: 12px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO 2-COL ═══════════ */
+.intro-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px 28px 4px;
+}
+.intro-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+.intro-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 2px solid;
+}
+.intro-card-head-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.intro-card-head-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.intro-card-head-title { font-size: 18px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.intro-card-body { padding: 14px 18px; }
+.intro-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.65; margin-bottom: 8px; }
+.intro-card-body p:last-child { margin-bottom: 0; }
+.intro-card-body .obj-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.intro-card-body .obj-line:last-child { margin-bottom: 0; }
+.intro-card-body .obj-icon { flex-shrink: 0; font-size: 17px; }
+.theme-question .intro-card-head { background: #FFF3DC; border-color: #F5E6C8; }
+.theme-question .intro-card-head-icon { background: #D4943A; }
+.theme-objectives .intro-card-head { background: #EAF8FD; border-color: #D6F2FB; }
+.theme-objectives .intro-card-head-icon { background: #55C8E8; }
+
+/* ═══════════ NEED STRIP ═══════════ */
+.need-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 28px 18px;
+}
+.need-strip-label {
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.need-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #E3F8ED;
+  border: 1.5px solid #B8E8CF;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+
+/* ═══════════ TODAY'S PATH ═══════════ */
+.todays-path {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-top: 14px;
+}
+.todays-path-title {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.todays-path-steps {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 600;
+}
+.todays-path-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.todays-path-arrow { color: #B0B8CC; font-size: 11px; }
+
+/* ═══════════ TAB BAR ═══════════ */
+.tab-bar {
+  position: sticky;
+  top: 38px;
+  z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 3px solid #E2E8F4;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  box-shadow: 0 -4px 0 0 #0E1C42;
+}
+.tab-bar::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 1;
+  min-width: 160px;
+  padding: 12px 8px 11px;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7A88A8;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  line-height: 1.3;
+  text-align: center;
+}
+.tab-btn:hover { color: #0E1C42; background: #EAF8FD; }
+.tab-btn.active {
+  color: #0E1C42;
+  border-bottom-color: #55C8E8;
+  background: #FFFFFF;
+}
+.tab-btn .tab-check {
+  display: none;
+  font-size: 12px;
+  color: #34B76F;
+  margin-left: 4px;
+  font-weight: 800;
+}
+.tab-btn.visited .tab-check { display: inline; }
+.tab-panel { display: none; padding: 24px 28px 36px; }
+.tab-panel.active { display: block; }
+
+/* ═══════════ VIDEO WRAP ═══════════ */
+.video-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.08);
+  background: #000;
+  margin: 0 0 22px;
+}
+.video-wrap-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.video-wrap-type {
+  font-size: 10px;
+  color: #55C8E8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+.video-wrap-title { font-size: 16px; color: #fff; font-weight: 800; line-height: 1.2; }
+.video-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-placeholder {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.video-placeholder-icon { font-size: 44px; margin-bottom: 10px; opacity: 0.55; }
+.video-placeholder-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.video-placeholder-id {
+  font-size: 11px;
+  color: rgba(85, 200, 232, 0.4);
+  font-family: monospace;
+  margin-top: 6px;
+}
+
+/* ═══════════ ACTIVITY CARDS ═══════════ */
+.activity {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+/* ✏️ GRADE ACCENT: Change left-border color per grade */
+.activity.bl-accent { border-left: 6px solid #1A8A7D; }
+.activity.bl-cyan { border-left: 6px solid #55C8E8; }
+.activity.bl-gold { border-left: 6px solid #D4943A; }
+.activity.bl-green { border-left: 6px solid #34B76F; }
+.activity.bl-purple { border-left: 6px solid #8B6FC0; }
+.activity.bl-navy { border-left: 6px solid #0E1C42; }
+.activity-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 14px 18px;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.activity-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.activity-title { font-size: 19px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.activity-sub { font-size: 12px; color: #7A88A8; }
+.activity-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.activity-body { padding: 18px 22px; }
+.activity-body p { font-size: 17px; color: #3A4A6B; line-height: 1.75; margin-bottom: 12px; }
+.activity-body p:last-child { margin-bottom: 0; }
+
+/* ═══════════ CALLOUTS ═══════════ */
+.callout {
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.callout:last-child { margin-bottom: 0; }
+.callout-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-info { background: #EAF8FD; border: 2px solid #D6F2FB; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-vocab { background: #F0E8FF; border: 2px solid #D8CCF0; }
+.callout-virtue { background: #FDE8F0; border: 2px solid #F0B8CA; }
+
+/* ═══════════ VIRTUE SPOTLIGHT ═══════════ */
+.virtue-card {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-left: 6px solid #D4943A;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.virtue-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.virtue-text { font-size: 15px; color: #0E1C42; line-height: 1.65; }
+
+/* ═══════════ KEY CONCEPT ═══════════ */
+.key-concept {
+  background: #FFF3DC;
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.key-concept-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.key-concept p { font-size: 15px; color: #0E1C42; line-height: 1.7; margin-bottom: 6px; }
+
+/* ═══════════ SOURCE STUDY CARD ═══════════ */
+.source-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.source-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.source-card-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.source-card-header-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.source-card-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.source-image-placeholder {
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(145deg, #E2E8F4, #D6E0F0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #E2E8F4;
+}
+.source-image-placeholder-text {
+  font-size: 14px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+}
+.source-card-body { padding: 18px 22px; }
+.source-label-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+}
+.source-label-bar .src-type {
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+/* ═══════════ COPYWORK ═══════════ */
+.copywork-box {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+.copywork-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.copywork-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.copywork-instruction { font-size: 14px; color: #3A4A6B; line-height: 1.5; }
+
+/* ═══════════ COUNCIL CHAMBER ═══════════ */
+.council-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.council-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.council-header-icon { font-size: 26px; }
+.council-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.council-question {
+  padding: 16px 22px;
+  background: #FFF3DC;
+  border-bottom: 2px solid #F5E6C8;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.6;
+  font-style: italic;
+}
+.council-perspectives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.council-perspective {
+  padding: 16px 18px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.council-perspective:first-child { border-right: 1px solid #E2E8F4; }
+.council-perspective-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.council-perspective-label.side-a { color: #2A7AB5; }
+.council-perspective-label.side-b { color: #D4663A; }
+.council-perspective p { font-size: 14px; color: #3A4A6B; line-height: 1.55; }
+.council-body { padding: 18px 22px; }
+
+/* ═══════════ TIMELINE CARD ═══════════ */
+.timeline-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.timeline-header-icon { font-size: 22px; color: #fff; }
+.timeline-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.timeline-events { padding: 18px 22px; }
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.timeline-event:last-child { border-bottom: none; }
+.timeline-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.timeline-event-content { flex: 1; }
+.timeline-event-date { font-size: 13px; color: #1A8A7D; font-weight: 800; margin-bottom: 2px; }
+.timeline-event-text { font-size: 15px; color: #0E1C42; line-height: 1.55; }
+
+/* ═══════════ JOURNAL TEXT BOXES ═══════════ */
+.journal-box {
+  width: 100%;
+  min-height: 70px;
+  padding: 12px 14px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.6;
+  resize: vertical;
+  background: #FAFBFF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+.journal-box:focus {
+  outline: none;
+  border-color: #55C8E8;
+  box-shadow: 0 0 0 3px rgba(85, 200, 232, 0.15);
+  background: #fff;
+}
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.journal-label {
+  font-size: 12px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.journal-label .saved-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #B0B8CC;
+  transition: background 0.3s;
+}
+.journal-label .saved-dot.saved { background: #34B76F; }
+
+/* ═══════════ PERSISTENT TEXTBOX PROMPT ═══════════ */
+.textbox-prompt {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 8px 12px;
+  background: #EAF8FD;
+  border: 1.5px solid #D6F2FB;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  margin-top: 10px;
+}
+.textbox-prompt + .journal-box {
+  border-radius: 0 0 12px 12px;
+  margin-top: 0;
+}
+
+/* ═══════════ ASSIGNMENT QUESTIONS ═══════════ */
+.q-block {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.q-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #55C8E8;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 4px; }
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+.turn-in-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 18px;
+}
+.turn-in-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #EAF8FD;
+  padding: 18px 22px;
+  border-bottom: 2px solid #D6F2FB;
+}
+.turn-in-header-icon { font-size: 36px; line-height: 1; flex-shrink: 0; }
+.turn-in-header-label {
+  font-size: 11px;
+  color: #1A6B8E;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.turn-in-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+.turn-in-body { padding: 18px 22px 20px; }
+.turn-in-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 16px; line-height: 1.55; }
+.turn-in-checklist { display: flex; flex-direction: column; gap: 10px; }
+.turn-in-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item:hover { background: #EAF8FD; border-color: #B8E0F0; }
+.turn-in-item.checked { background: #E3F8ED; border-color: #B8E8CF; }
+.turn-in-item .turn-in-check {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #B8E0F0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item.checked .turn-in-check { background: #34B76F; border-color: #34B76F; }
+.turn-in-item-text { font-size: 15px; color: #0E1C42; font-weight: 600; line-height: 1.55; flex: 1; }
+
+/* ═══════════ GATHERED ANSWERS ═══════════ */
+.gathered-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 22px;
+}
+.gathered-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  padding: 16px 22px;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.gathered-header-icon { font-size: 28px; }
+.gathered-header-label {
+  font-size: 11px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.gathered-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.gathered-body { padding: 18px 22px 20px; }
+.gathered-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 14px; line-height: 1.55; }
+.gathered-output {
+  width: 100%;
+  min-height: 250px;
+  padding: 16px 18px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #0E1C42;
+  line-height: 1.65;
+  background: #FAFBFF;
+  resize: vertical;
+  white-space: pre-wrap;
+}
+.gathered-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.gathered-btn {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gathered-btn:hover { transform: translateY(-2px); }
+.gathered-btn-copy {
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  box-shadow: 0 4px 14px rgba(85, 200, 232, 0.25);
+}
+.gathered-btn-pdf {
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  box-shadow: 0 4px 14px rgba(14, 28, 66, 0.25);
+}
+.gathered-copied {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34B76F;
+  margin-top: 8px;
+  display: none;
+}
+.gathered-copied.show { display: block; }
+
+/* ═══════════ NARRATIVE TRANSITION ═══════════ */
+.tab-next-wrap { text-align: center; padding: 24px 0 8px; }
+.tab-transition-voice {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #5A4A3A;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.tab-next-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  border: none;
+  border-radius: 28px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(85, 200, 232, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tab-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(85, 200, 232, 0.4);
+}
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+.root-match-game { margin: 14px 0; }
+.root-match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.root-match-item {
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.5;
+  transition: background 0.15s, border-color 0.2s, transform 0.15s;
+  user-select: none;
+}
+.root-match-item:hover { transform: translateY(-1px); border-color: #8B6FC0; }
+.root-match-item.selected { background: #F0E8FF; border-color: #8B6FC0; }
+.root-match-item.matched { background: #E3F8ED; border-color: #34B76F; pointer-events: none; opacity: 0.8; }
+.root-match-item.wrong-flash { background: #FFF0EC; border-color: #E8636B; animation: shake 0.4s ease; }
+.root-match-item.is-word { font-weight: 800; font-family: 'Lora', Georgia, serif; font-size: 16px; }
+.root-match-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.root-match-feedback.show { display: block; }
+
+/* ═══════════ FLIP CARDS ═══════════ */
+.vocab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0;
+}
+.flip-card { perspective: 800px; height: 160px; cursor: pointer; }
+.flip-card-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  text-align: center;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.06);
+}
+.flip-card-front { background: #FFFFFF; border-top: 5px solid #55C8E8; }
+.flip-card-front .fc-emoji { font-size: 24px; margin-bottom: 6px; }
+.flip-card-front .fc-word {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px; font-weight: 700; color: #0E1C42;
+}
+.flip-card-front .fc-tap { font-size: 11px; color: #7A88A8; font-weight: 600; margin-top: 4px; }
+.flip-card-back {
+  background: linear-gradient(145deg, #0E1C42, #1A2D5A);
+  border-color: #0E1C42;
+  transform: rotateY(180deg);
+}
+.flip-card-back .fc-def { font-size: 13px; color: #fff; line-height: 1.5; font-weight: 600; }
+.flip-card-back .fc-word-back {
+  font-size: 10px; color: #55C8E8; text-transform: uppercase;
+  letter-spacing: 1px; font-weight: 800; margin-bottom: 6px;
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  height: 44px;
+  padding: 0 18px 0 14px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  font-size: 14px; font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(14, 28, 66, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0; visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 500;
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { box-shadow: 0 6px 24px rgba(14, 28, 66, 0.5); transform: translateY(-3px); }
+
+/* ═══════════ CONFETTI ═══════════ */
+#confettiCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* ═══════════ SELF-CHECK QUIZ ═══════════ */
+.quiz-card {
+  background: #fff;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.quiz-q {
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.quiz-q-text { font-size: 17px; color: #0E1C42; font-weight: 700; margin-bottom: 12px; line-height: 1.55; }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-opt {
+  display: flex; align-items: center; gap: 12px;
+  background: #fff; border: 2px solid #E2E8F4; border-radius: 12px;
+  padding: 10px 14px; font-size: 15px; color: #0E1C42; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+}
+.quiz-opt:hover { border-color: #55C8E8; background: #EAF8FD; }
+.quiz-opt.correct { background: #E3F8ED; border-color: #34B76F; color: #1a5c2e; }
+.quiz-opt.wrong { background: #FFF0EC; border-color: #E8636B; color: #8a3030; }
+.quiz-opt.disabled { opacity: 0.5; cursor: default; pointer-events: none; }
+.opt-letter {
+  width: 28px; height: 28px; border-radius: 50%; background: #E2E8F4;
+  font-size: 13px; font-weight: 800; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; color: #3A4A6B;
+}
+.quiz-opt.correct .opt-letter { background: #34B76F; color: #fff; }
+.quiz-opt.wrong .opt-letter { background: #E8636B; color: #fff; }
+.quiz-feedback {
+  margin-top: 10px; padding: 10px 14px; border-radius: 10px;
+  font-size: 14px; font-weight: 600; line-height: 1.5; display: none;
+}
+.quiz-feedback.show { display: block; }
+.fb-correct { background: #E3F8ED; color: #1a5c2e; border: 1.5px solid #B8E8CF; }
+.fb-wrong { background: #FFF3DC; color: #5A4A3A; border: 1.5px solid #F5E6C8; }
+.quiz-score-box {
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff; border-radius: 16px; padding: 20px 22px;
+  margin-top: 16px; text-align: center; display: none;
+}
+.quiz-score-box.show { display: block; }
+.quiz-score-num { font-size: 52px; font-weight: 900; line-height: 1; }
+.quiz-score-label { font-size: 14px; color: #55C8E8; margin-bottom: 4px; }
+.quiz-score-msg { font-size: 18px; font-weight: 700; margin-top: 8px; }
+.quiz-video-wrap { margin-top: 16px; display: none; }
+.quiz-video-wrap.show { display: block; }
+
+/* ═══════════ DISCOVERY FACT (hidden reward on game completion) ═══════════ */
+.discovery-fact {
+  display: none;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2px solid #F5E6C8;
+  border-left: 5px solid #D4943A;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #5A4A3A;
+  line-height: 1.6;
+  animation: factReveal 0.5s ease;
+}
+.discovery-fact.show { display: block; }
+.discovery-fact-label {
+  font-size: 11px;
+  color: #D4943A;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+@keyframes factReveal {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════ HISTORIAN'S SEAL — certificate card with stamp ═══════════ */
+.historian-seal {
+  display: none;
+  margin-top: 20px;
+  animation: cardSlideUp 0.4s ease;
+}
+.historian-seal.show { display: block; }
+@keyframes cardSlideUp {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.seal-certificate {
+  position: relative;
+  background: linear-gradient(160deg, #FFFDF8, #FFF5E6, #FFFDF8);
+  border: 2px solid #E8D8C0;
+  border-radius: 14px;
+  padding: 22px 100px 22px 24px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(140, 120, 80, 0.1);
+}
+.seal-cert-message {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  color: #5A4A3A;
+  line-height: 1.55;
+  font-style: italic;
+}
+.seal-cert-message strong {
+  font-style: normal;
+  color: #3A2A1A;
+}
+.seal-stamp-wrap {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-8deg);
+  animation: stampBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+@keyframes stampBounce {
+  0% { opacity: 0; transform: translateY(-50%) rotate(-8deg) scale(0); }
+  60% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1.2); }
+  100% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1); }
+}
+
+/* ═══════════ OPTIMA OWL BUDDY ═══════════ */
+.owl-buddy {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin: 18px 0;
+  box-shadow: 0 2px 12px rgba(14, 28, 66, 0.06);
+  position: relative;
+}
+.owl-buddy-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2.5px solid #F5E6C8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+  animation: owlBob 3s ease-in-out infinite;
+}
+@keyframes owlBob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-3px) rotate(2deg); }
+}
+.owl-buddy-bubble {
+  flex: 1;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 12px 16px;
+  position: relative;
+  font-size: 15px;
+  color: #3A4A6B;
+  line-height: 1.6;
+}
+.owl-buddy-bubble::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  background: #FAFBFF;
+  border-left: 1.5px solid #E2E8F4;
+  border-bottom: 1.5px solid #E2E8F4;
+  transform: rotate(45deg);
+}
+.owl-buddy-name {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  margin-bottom: 4px;
+}
+
+/* ═══════════ TAB SECTION HEADERS ═══════════ */
+.tab-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0 18px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.tab-section-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  color: #fff;
+}
+.tab-section-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  color: #7A88A8;
+  margin-bottom: 1px;
+}
+.tab-section-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ═══════════ SECTION DIVIDERS ═══════════ */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+  margin: 8px 0;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E2E8F4, transparent);
+}
+.section-divider-dot {
+  font-size: 8px;
+  color: #D4D8E4;
+  letter-spacing: 6px;
+}
+
+/* ═══════════ STEP BADGES (for Explore tab progression) ═══════════ */
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+  /* ✏️ GRADE ACCENT */
+  background: rgba(26, 138, 125, 0.08);
+  color: #1A8A7D;
+}
+.step-badge-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #fff;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+}
+
+/* ═══════════ FOOTER ═══════════ */
+.footer {
+  background: #0E1C42;
+  border-top: 4px solid #55C8E8;
+  padding: 18px 28px;
+  text-align: center;
+}
+.footer-main { font-size: 14px; color: #fff; margin-bottom: 4px; }
+.footer-main span { color: #55C8E8; font-weight: 700; }
+.footer-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media (max-width: 620px) {
+  .intro-2col { grid-template-columns: 1fr; }
+  .council-perspectives { grid-template-columns: 1fr; }
+  .vocab-grid { grid-template-columns: 1fr; }
+  .root-match-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+</style>
+</head>
+<body>
+<div id="pageTop"></div>
+<div class="page-wrap">
+<div class="progress-wrap"><div class="progress-label">🏛️ Progress</div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-pct" id="progressPct">0%</div></div>
+
+<div class="header">
+  <div class="header-brand"><div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy"/></div><div><div class="header-org">Optima Academy Online</div><div class="header-sub">An Education Experience Company</div></div></div>
+  <div class="header-title">Social Studies <em>Word Roots</em></div>
+  <div class="header-badge"><span class="header-badge-icon">🌍</span><span class="header-badge-text">Lesson 3.01.05</span></div>
+</div>
+
+<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+  <defs><linearGradient id="sky5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#87CEEB"/><stop offset="55%" stop-color="#C8E6F7"/><stop offset="100%" stop-color="#E8DDD2"/></linearGradient></defs>
+  <rect width="920" height="260" fill="url(#sky5)"/>
+  <circle cx="780" cy="50" r="42" fill="#FDD835" opacity="0.3"/><circle cx="780" cy="50" r="26" fill="#FDD835" opacity="0.7"/>
+  <g style="animation:cloud-drift-1 9s ease-in-out infinite alternate;"><ellipse cx="300" cy="35" rx="50" ry="15" fill="#fff" opacity="0.75"/></g>
+  <!-- Museum wall -->
+  <rect x="0" y="60" width="920" height="200" fill="#FAF8F4"/><rect x="0" y="60" width="920" height="6" fill="#D4C4B0"/>
+  <!-- Word plaques on the wall -->
+  <g transform="translate(60,95)"><rect x="0" y="0" width="180" height="70" fill="#FFF8E1" rx="8" stroke="#D4943A" stroke-width="2.5"/><rect x="10" y="10" width="160" height="30" fill="rgba(212,148,58,0.1)" rx="4"/>
+    <text x="90" y="32" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="bold" fill="#D4943A" style="pointer-events:none;">histor</text>
+    <text x="90" y="55" text-anchor="middle" font-family="Nunito,sans-serif" font-size="11" fill="#8B7355" style="pointer-events:none;">Greek: one who knows</text>
+  </g>
+  <g transform="translate(270,90)" style="animation:hero-float 4s ease-in-out infinite 0.3s;"><rect x="0" y="0" width="180" height="70" fill="#E8FAF7" rx="8" stroke="#1A8A7D" stroke-width="2.5"/><rect x="10" y="10" width="160" height="30" fill="rgba(26,138,125,0.08)" rx="4"/>
+    <text x="90" y="32" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="bold" fill="#1A8A7D" style="pointer-events:none;">geo + graph</text>
+    <text x="90" y="55" text-anchor="middle" font-family="Nunito,sans-serif" font-size="11" fill="#5A8A7D" style="pointer-events:none;">Greek: earth + writing</text>
+  </g>
+  <g transform="translate(480,95)"><rect x="0" y="0" width="180" height="70" fill="#F0E8FF" rx="8" stroke="#8B6FC0" stroke-width="2.5"/><rect x="10" y="10" width="160" height="30" fill="rgba(139,111,192,0.08)" rx="4"/>
+    <text x="90" y="32" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="bold" fill="#8B6FC0" style="pointer-events:none;">econom</text>
+    <text x="90" y="55" text-anchor="middle" font-family="Nunito,sans-serif" font-size="11" fill="#6B5090" style="pointer-events:none;">Greek: household mgmt</text>
+  </g>
+  <g transform="translate(690,90)" style="animation:hero-float 3.5s ease-in-out infinite 0.6s;"><rect x="0" y="0" width="170" height="70" fill="#EAF8FD" rx="8" stroke="#0288D1" stroke-width="2.5"/><rect x="10" y="10" width="150" height="30" fill="rgba(2,136,209,0.08)" rx="4"/>
+    <text x="85" y="32" text-anchor="middle" font-family="Georgia,serif" font-size="20" font-weight="bold" fill="#0288D1" style="pointer-events:none;">civis</text>
+    <text x="85" y="55" text-anchor="middle" font-family="Nunito,sans-serif" font-size="11" fill="#02608E" style="pointer-events:none;">Latin: citizen</text>
+  </g>
+  <!-- Sparkles -->
+  <circle cx="250" cy="80" r="3" fill="#FDD835" style="animation:hero-twinkle 2.2s ease-in-out infinite;transform-origin:center;transform-box:fill-box;"/>
+  <circle cx="670" cy="78" r="2.5" fill="#FDD835" style="animation:hero-twinkle 3s ease-in-out infinite 0.5s;transform-origin:center;transform-box:fill-box;"/>
+  <!-- Museum floor -->
+  <rect x="0" y="220" width="920" height="40" fill="#E8DDD2"/><line x1="0" y1="220" x2="920" y2="220" stroke="#D4C4B0" stroke-width="2"/>
+</svg>
+
+<div class="info-strip">
+  <div class="info-cell"><div class="info-icon" style="background:#EAF8FD;">🏛️</div><div><div class="info-label">Unit</div><div class="info-value">Enter the World of Social Studies</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#FFF3DC;">📅</div><div><div class="info-label">Quarter · Week</div><div class="info-value">Q1 · Week 3</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📜</div><div><div class="info-label">Focus</div><div class="info-value">Historical Inquiry</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">📋</div><div><div class="info-label">Standards</div><div class="info-value" style="font-size:12px;">SS.3.A.1.1 · SS.3.A.1.2 · SS.3.A.1.3</div></div></div>
+</div>
+
+<div class="quote-strip"><div class="quote-strip-text" style="font-style:normal;text-align:left;font-size:15px;line-height:1.65;">🏛️ <strong>Museum Memo:</strong> A wall of museum words has appeared in the Curator Training Hall: <em>history, geography, economy,</em> and <em>civic.</em> These aren't just labels — they're the names of the four lenses curators use to understand the world. Today, you'll discover the roots hidden inside each word. Understanding these roots will help you read the museum map, understand the jobs you're learning, and think more clearly about every exhibit you build this year.</div></div>
+
+<div class="intro-section" id="introSection">
+  <div class="intro-collapsed-bar" onclick="toggleIntro()"><div class="intro-collapsed-icon">📍</div><div class="intro-collapsed-text">Curator's Question & Objectives</div><div class="intro-collapsed-toggle">▼ Expand</div></div>
+  <div class="intro-2col">
+    <div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">✨</div><div><div class="intro-card-head-label">Curator's Question</div><div class="intro-card-head-title">Today's Big Question</div></div></div><div class="intro-card-body"><p>What do the roots of <em>history, geography, economy,</em> and <em>civic</em> tell us about what each field really studies?</p></div></div>
+    <div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Objectives</div><div class="intro-card-head-title">What You'll Learn</div></div></div><div class="intro-card-body">
+      <div class="obj-line"><span class="obj-icon">🔤</span> I can name the root of each of the four social studies words.</div>
+      <div class="obj-line"><span class="obj-icon">🔍</span> I can explain how each root connects to what that field studies.</div>
+      <div class="obj-line"><span class="obj-icon">🏛️</span> I can use word roots to understand new social studies vocabulary.</div>
+    </div></div>
+  </div>
+  <div class="need-strip"><span class="need-strip-label">🎒 You'll need:</span><span class="need-chip"><span>📓</span>Curator's Notebook</span><span class="need-chip"><span>✏️</span>Pencil</span><span class="need-chip"><span>🗺️</span>Lesson Page</span></div>
+</div>
+
+<div class="tab-bar">
+  <button class="tab-btn active" id="btn-scene" onclick="switchTab('scene')">📍 Enter the Scene<span class="tab-check">✓</span></button>
+  <button class="tab-btn" id="btn-explore" onclick="switchTab('explore')">🔍 Explore<span class="tab-check">✓</span></button>
+  <button class="tab-btn" id="btn-check" onclick="switchTab('check')">🧠 Self-Check<span class="tab-check">✓</span></button>
+  <button class="tab-btn" id="btn-assignment" onclick="switchTab('assignment')">📝 Evidence &amp; Assignment<span class="tab-check">✓</span></button>
+</div>
+
+<!-- ═══ TAB 1 ═══ -->
+<div class="tab-panel active" id="panel-scene">
+  <div class="todays-path"><div class="todays-path-title">🗺️ Today's Path</div><div class="todays-path-steps">
+    <span class="todays-path-step">📍 Meet the museum word wall &amp; spotlight responsibility</span><span class="todays-path-arrow">→</span>
+    <span class="todays-path-step">🔍 Discover four word roots &amp; match them</span><span class="todays-path-arrow">→</span>
+    <span class="todays-path-step">🧠 Check your understanding</span><span class="todays-path-arrow">→</span>
+    <span class="todays-path-step">📝 Explain how word roots help curators</span>
+  </div></div>
+
+  <div class="video-wrap" style="margin-top:18px;"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">📍 WELCOME · ENTER THE SCENE</div><div class="video-wrap-title">The Museum Word Wall</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Point to the word wall. Read the Curator's Question. Say: "These four words are the lenses you'll use all year. Today we crack them open to find the roots inside." Mention the virtue of responsibility — responsible curators use precise language. Under 2 minutes.</div><div class="video-placeholder-id"><!-- slot: 3-01-05-welcome --></div></div></div></div>
+
+  <div class="virtue-card"><div class="virtue-label">🏛️ Virtue Spotlight — Responsibility</div><div class="virtue-text">Responsible curators use precise language. When you know the roots of social studies words, you can choose the right words for your labels and explain your thinking clearly. Sloppy language leads to confused visitors — precision is a form of responsibility.</div></div>
+
+  <div class="callout callout-info"><div class="callout-icon">🕯️</div><p><strong>Your Role Today:</strong> You are a <strong>Junior Curator</strong> learning the language of the museum. The four words on the wall — <em>history, geography, economy, civic</em> — are the keys to every exhibit room you'll enter this year.</p></div>
+
+  <div class="tab-next-wrap"><p class="tab-transition-voice">Let's crack open these four words and find the roots inside.</p><button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button></div>
+</div>
+
+<!-- ═══ TAB 2 ═══ -->
+<div class="tab-panel" id="panel-explore">
+  <div class="tab-section-header"><div class="tab-section-icon" style="background:linear-gradient(135deg,#1A8A7D,#34B0A0);">🔍</div><div><div class="tab-section-title">Explore</div></div></div>
+
+  <div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">🔍 TEACHING · EXPLORE</div><div class="video-wrap-title">Four Words, Four Roots</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through each root with enthusiasm. "Histor means 'one who knows' — so a historian is someone who knows the past. Geo means 'earth' and graph means 'writing' — geography literally means 'Earth writing'! Oikonomia means 'household management' — economics is about managing resources. Civis means 'citizen' — civics is the study of citizenship." Model the root match game. 3–5 minutes.</div><div class="video-placeholder-id"><!-- slot: 3-01-05-explore-explainer --></div></div></div></div>
+
+  <div class="step-badge"><div class="step-badge-num">1</div> Learn the Story</div>
+
+  <div class="activity bl-accent">
+    <div class="activity-head"><div class="activity-num" style="background:#1A8A7D;">📖</div><div><div class="activity-title">The Roots Inside the Words</div><div class="activity-sub">Every social studies word has a story hiding in its root.</div></div></div>
+    <div class="activity-body">
+      <p>The four words on the museum wall aren't random — each one has an ancient root that tells you exactly what that field is about.</p>
+      <p><strong>📜 HISTORY</strong> — from the Greek root <strong><em>histor</em></strong>, meaning <em>"one who knows."</em> A historian is a person who knows about the past. Related words: <em>historian, historical, prehistoric.</em></p>
+      <p><strong>🗺️ GEOGRAPHY</strong> — from the Greek roots <strong><em>geo</em></strong> ("earth") + <strong><em>graphein</em></strong> ("to write"). Geography literally means <em>"Earth writing."</em> Related words: <em>geographer, geology, geometry.</em></p>
+      <p><strong>💰 ECONOMY</strong> — from the Greek root <strong><em>oikonomia</em></strong>, meaning <em>"household management."</em> Economics is about how people manage resources — from a family budget to a whole country's trade. Related words: <em>economics, economist, economical.</em></p>
+      <p><strong>🏛️ CIVIC</strong> — from the Latin root <strong><em>civis</em></strong>, meaning <em>"citizen."</em> Civics is the study of what citizens do and how they govern themselves. Related words: <em>civil, civilian, civilization, civility.</em></p>
+    </div>
+  </div>
+
+  <div class="callout callout-think"><div class="callout-icon">🤔</div><p><strong>Pause &amp; Think:</strong> The root <em>geo</em> means "earth." Can you think of any other words that start with <em>geo-</em>? What do they have in common?</p></div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+  <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
+
+  <!-- Root Match Game: all four roots -->
+  <div class="activity bl-purple">
+    <div class="activity-head"><div class="activity-num" style="background:#8B6FC0;">🔤</div><div><div class="activity-title">Root Match — All Four Fields</div><div class="activity-sub">Tap a word, then tap its root meaning!</div></div></div>
+    <div class="activity-body">
+      <div class="root-match-game">
+        <div class="root-match-grid">
+          <div class="root-match-item is-word" data-match="a" onclick="rootMatchClick(this)">histor</div>
+          <div class="root-match-item" data-match="c" onclick="rootMatchClick(this)">household management</div>
+          <div class="root-match-item is-word" data-match="b" onclick="rootMatchClick(this)">geo + graph</div>
+          <div class="root-match-item" data-match="d" onclick="rootMatchClick(this)">citizen</div>
+          <div class="root-match-item is-word" data-match="c" onclick="rootMatchClick(this)">oikonomia</div>
+          <div class="root-match-item" data-match="a" onclick="rootMatchClick(this)">one who knows</div>
+          <div class="root-match-item is-word" data-match="d" onclick="rootMatchClick(this)">civis</div>
+          <div class="root-match-item" data-match="b" onclick="rootMatchClick(this)">earth + writing</div>
+        </div>
+        <div class="root-match-feedback" id="rootMatchFeedback">🎉 All matched! You've unlocked the museum's language.</div>
+        <div class="discovery-fact" id="rootDiscoveryFact"><div class="discovery-fact-label">🔎 Discovery Fact</div>The word "civilization" comes from the same root as "civic" — <em>civis</em>, meaning citizen. A civilization is literally a community of citizens working together. Every time you study civics, you're studying what makes civilizations work!</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flip Cards: Related Words -->
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">🎴</div><div><div class="activity-title">Flip to Explore — Related Words</div><div class="activity-sub">Each card shows a word. Flip to see its root connection.</div></div></div>
+    <div class="activity-body">
+      <div class="vocab-grid">
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🌋</div><div class="fc-word">geology</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">geo = earth</div><div class="fc-def">Geology is the study of Earth's rocks and landforms. Same root as geography — both start with geo (earth).</div></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🦕</div><div class="fc-word">prehistoric</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">pre + histor</div><div class="fc-def">"Pre" means before. "Histor" means one who knows. Prehistoric = before recorded history — before anyone wrote things down.</div></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🏙️</div><div class="fc-word">civilization</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">civis = citizen</div><div class="fc-def">A civilization is a community of citizens. Same root as civic — both come from civis (citizen).</div></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">💡</div><div class="fc-word">economical</div><div class="fc-tap">tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">oikonomia = manage</div><div class="fc-def">Economical means using resources wisely — not wasting. Same root as economy — it's all about careful management.</div></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+  <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
+
+  <div class="key-concept"><div class="key-concept-label">🏷️ Exhibit Label</div><p>The four social studies fields are named by their roots: <strong>histor</strong> (one who knows the past), <strong>geo + graph</strong> (Earth writing), <strong>oikonomia</strong> (household management), and <strong>civis</strong> (citizen). Knowing roots helps curators understand new words and use precise language in their exhibits.</p></div>
+
+  <div class="owl-buddy"><div class="owl-buddy-avatar">🦉</div><div class="owl-buddy-bubble"><div class="owl-buddy-name">🧭 Opti says…</div>Here's a curator trick: when you see a new word in the museum, look for a root you recognize. If it starts with <em>geo-</em>, it's about Earth. If it has <em>civ-</em>, it's about citizens. Roots are like secret codes that unlock meaning!</div></div>
+
+  <div class="tab-next-wrap"><p class="tab-transition-voice">You've cracked the code of all four roots. Let's check what you remember!</p><button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Self-Check →</button></div>
+</div>
+
+<!-- ═══ TAB 3 ═══ -->
+<div class="tab-panel" id="panel-check">
+  <div class="tab-section-header"><div class="tab-section-icon" style="background:linear-gradient(135deg,#8B6FC0,#A88AD4);">🧠</div><div><div class="tab-section-title">Quick Self-Check</div></div></div>
+  <div class="callout callout-info" style="margin-bottom:18px;"><div class="callout-icon">🧠</div><p>Not graded — just for you!</p></div>
+  <div class="quiz-card"><div style="padding:18px 22px;">
+    <div class="quiz-q" data-answer="b">
+      <div class="quiz-q-text">1. The word "geography" comes from Greek roots meaning:</div>
+      <div class="quiz-options">
+        <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>One who knows the past</div>
+        <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Earth writing</div>
+        <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Household management</div>
+      </div>
+      <div class="quiz-feedback fb-correct">✅ Geo means "earth" and graph means "writing." Geography = Earth writing!</div>
+      <div class="quiz-feedback fb-wrong">Think about the root geo- (earth). What does -graph mean?</div>
+    </div>
+    <div class="quiz-q" data-answer="c">
+      <div class="quiz-q-text">2. The Latin root <em>civis</em> means:</div>
+      <div class="quiz-options">
+        <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Earth</div>
+        <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>To manage</div>
+        <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Citizen</div>
+      </div>
+      <div class="quiz-feedback fb-correct">✅ Civis means citizen — that's why civics is the study of citizenship!</div>
+      <div class="quiz-feedback fb-wrong">This root gives us the words civic, civil, and civilization. What do they all have in common?</div>
+    </div>
+    <div class="quiz-q" data-answer="a">
+      <div class="quiz-q-text">3. Why does knowing word roots help curators?</div>
+      <div class="quiz-options">
+        <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>They can understand new words and use precise language</div>
+        <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>They can speak ancient Greek</div>
+        <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>They can read faster</div>
+      </div>
+      <div class="quiz-feedback fb-correct">✅ Word roots are like secret codes. When curators see a new word, they can figure out its meaning from the root — and choose the right words for their labels.</div>
+      <div class="quiz-feedback fb-wrong">Think about what Opti said: roots help you unlock the meaning of new words.</div>
+    </div>
+    <div class="quiz-score-box" id="quizScore"><div class="quiz-score-label">Your Score</div><div class="quiz-score-num" id="quizScoreNum">0</div><div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div><div class="quiz-score-msg" id="quizScoreMsg"></div></div>
+    <div class="quiz-video-wrap" id="quizVideoCorrect"><div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">✅</span><div><div class="video-wrap-type">FEEDBACK · PERFECT</div><div class="video-wrap-title">You know the museum's language!</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">⭐</div><div class="video-placeholder-text"><strong>Teacher:</strong> "You cracked all four roots! These are the lenses you'll use all year." Under 30 seconds.</div><div class="video-placeholder-id"><!-- slot: 3-01-05-quiz-perfect --></div></div></div></div></div>
+    <div class="quiz-video-wrap" id="quizVideoReview"><div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">📚</span><div><div class="video-wrap-type">FEEDBACK · REVIEW</div><div class="video-wrap-title">Let's review!</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">💪</div><div class="video-placeholder-text"><strong>Teacher:</strong> "Histor = one who knows. Geo+graph = earth writing. Oikonomia = household management. Civis = citizen." Under 1 minute.</div><div class="video-placeholder-id"><!-- slot: 3-01-05-quiz-review --></div></div></div></div></div>
+  </div></div>
+  <div class="tab-next-wrap"><p class="tab-transition-voice">Time to show what you know about word roots!</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Evidence &amp; Assignment →</button></div>
+</div>
+
+<!-- ═══ TAB 4 ═══ -->
+<div class="tab-panel" id="panel-assignment">
+  <div class="tab-section-header"><div class="tab-section-icon" style="background:linear-gradient(135deg,#D4943A,#E0A850);">📝</div><div><div class="tab-section-title">Evidence &amp; Assignment</div></div></div>
+  <div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div><div class="video-wrap-title">Time to Show What You Know</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Read each evidence question aloud. Model one: "Geography comes from geo (earth) and graph (writing) — so geography is literally about writing about the Earth. That helps me remember what geographers study." Explain the Curator Task. 2–3 minutes.</div><div class="video-placeholder-id"><!-- slot: 3-01-05-assignment-explainer --></div></div></div></div>
+
+  <div class="activity bl-cyan">
+    <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">A</div><div><div class="activity-title">Evidence Questions</div><div class="activity-sub">Answer using details from the lesson.</div></div></div>
+    <div class="activity-body">
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Pick two of the four word roots and explain what each one means. How does the root connect to what that field studies?</div></div>
+      <div class="textbox-prompt">Use details from the lesson.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Two word roots explained" placeholder="The root ___ means… This connects to the field because…" oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Why is it useful for curators to know word roots? Give an example.</div></div>
+      <div class="textbox-prompt">Explain your thinking with an example.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: Why roots help curators" placeholder="Knowing word roots helps curators because…" oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+  <div class="activity bl-gold">
+    <div class="activity-head"><div class="activity-num" style="background:#D4943A;">B</div><div><div class="activity-title">Curator Task: Word Root Notebook Entry</div><div class="activity-sub">Explain how the four roots connect to the museum's work.</div></div></div>
+    <div class="activity-body">
+      <p>The museum director asks: "If a visitor asked you what the four fields of social studies are and why their names matter, what would you say?" Write a Curator's Notebook entry in 3–4 sentences that explains the four roots and why they matter for the museum.</p>
+      <div class="textbox-prompt">Write your Curator's Notebook entry here.</div>
+      <textarea class="journal-box" id="journal-assign" data-label="Curator Task: Word Root Entry" placeholder="The four fields of social studies are named for their roots…" oninput="autoSave(this,'dot-assign');gatherAnswers();" style="min-height:100px;"></textarea>
+    </div>
+  </div>
+
+  <div class="activity bl-navy"><div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📜</div><div><div class="activity-title">Curator's Chronicle</div><div class="activity-sub">One sentence to capture today's exhibit work.</div></div></div><div class="activity-body"><p>Finish this sentence:</p><div class="textbox-prompt">In this exhibit, I learned that ______ because ______.</div><textarea class="journal-box" id="journal-chronicle" data-label="Curator's Chronicle" placeholder="In this exhibit, I learned that…" oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea></div></div>
+
+  <div class="gathered-card"><div class="gathered-header"><div class="gathered-header-icon">📋</div><div><div class="gathered-header-label">Review Your Work</div><div class="gathered-header-title">Gathered Answers</div></div></div><div class="gathered-body"><div class="gathered-intro">All your answers are gathered here.</div><textarea class="gathered-output" id="gatheredOutput" readonly></textarea><div class="gathered-actions"><button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button><button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button></div><div class="gathered-copied" id="gatheredCopied">✅ Copied!</div></div></div>
+
+  <div class="historian-seal" id="historianSeal"><div class="seal-certificate"><div class="seal-cert-message"><strong>Nice work, Junior Curator!</strong> You now know the roots behind all four social studies fields. These are the lenses you'll use for every exhibit this year.</div><div class="seal-stamp-wrap"><svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));"><defs><radialGradient id="stampGrad" cx="50%" cy="45%" r="50%"><stop offset="0%" stop-color="#D94040"/><stop offset="100%" stop-color="#A02020"/></radialGradient><clipPath id="owlStampClip"><circle cx="45" cy="38" r="16"/></clipPath></defs><circle cx="45" cy="45" r="42" fill="url(#stampGrad)" stroke="#7A1818" stroke-width="1.5"/><circle cx="45" cy="45" r="37" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/><image href="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" x="27" y="20" width="36" height="36" clip-path="url(#owlStampClip)" opacity="0.3" style="filter:brightness(3) grayscale(1);"/><text x="45" y="72" fill="rgba(255,255,255,0.85)" font-family="'Nunito',sans-serif" font-size="9" font-weight="800" letter-spacing="2" text-anchor="middle">CERTIFIED</text></svg></div></div></div>
+
+  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Submit Your Work</div><div class="turn-in-header-title">Turn-In Checklist</div></div></div><div class="turn-in-body"><div class="turn-in-intro">Check each item as you finish.</div><div class="turn-in-checklist">
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I answered the evidence questions.</div></div>
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I wrote my Word Root Notebook entry.</div></div>
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I wrote my Curator's Chronicle.</div></div>
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I copied or downloaded my work and submitted to Canvas.</div></div>
+  </div></div></div>
+
+  <div class="video-wrap" style="margin-top:18px;"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div><div class="video-wrap-title">The Museum's Language Is Yours!</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate: "You now know the four roots — histor, geo+graph, oikonomia, civis. These are the lenses you'll use all year." Tease: "Next time, you'll write your first official evidence entry. The museum director will decide if you're ready to earn the Evidence Keeper badge and move into the next wing of the museum." Under 1 minute.</div><div class="video-placeholder-id"><!-- slot: 3-01-05-closing --></div></div></div></div>
+</div>
+
+<div class="footer"><div class="footer-main">🏫 <span>Optima Academy Online</span></div><div class="footer-sub">Social Studies · Grade 3 · Lesson 3.01.05</div><div class="footer-copy">© 2025 Optima Academy Online</div></div>
+</div>
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()">⬆ Top</button>
+<canvas id="confettiCanvas"></canvas>
+<script>
+var visited={scene:true};function switchTab(tab){visited[tab]=true;document.querySelectorAll('.tab-panel').forEach(function(p){p.classList.remove('active')});document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});document.getElementById('panel-'+tab).classList.add('active');document.getElementById('btn-'+tab).classList.add('active');Object.keys(visited).forEach(function(v){document.getElementById('btn-'+v).classList.add('visited')});var intro=document.getElementById('introSection');if(tab!=='scene'){intro.classList.add('collapsed')}else{intro.classList.remove('collapsed')}updateProgress();scrollToTop();if(tab==='assignment')gatherAnswers()}
+function toggleIntro(){document.getElementById('introSection').classList.toggle('collapsed')}
+function updateProgress(){var total=4;var done=Object.keys(visited).length;var pct=Math.round((done/total)*100);document.getElementById('progressFill').style.width=pct+'%';document.getElementById('progressPct').textContent=pct+'%'}
+function autoSave(textarea,dotId){var dot=document.getElementById(dotId);if(dot){dot.classList.add('saved')}}
+function gatherAnswers(){var ids=['journal-q1','journal-q2','journal-assign','journal-chronicle'];var output='';ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var label=el.getAttribute('data-label')||id;var val=el.value.trim();output+=label.toUpperCase()+'\n';output+=(val||'(no answer)')+'\n\n'});output+='MINI-GAME RESULTS\n';output+=(window._rootMatchDone?'✅':'⬜')+' Word Roots Match\n';var gathered=document.getElementById('gatheredOutput');if(gathered)gathered.value=output.trim()}
+function copyGathered(){gatherAnswers();var output=document.getElementById('gatheredOutput');if(!output)return;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(output.value).then(function(){showCopied()})}else{output.select();document.execCommand('copy');showCopied()}}
+function showCopied(){var msg=document.getElementById('gatheredCopied');msg.classList.add('show');setTimeout(function(){msg.classList.remove('show')},2500)}
+function downloadJournal(){gatherAnswers();var ids=['journal-q1','journal-q2','journal-assign','journal-chronicle'];var html='<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Lesson 3.01.05 — My Work</title><style>body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;}.q-label{font-size:13px;font-weight:bold;color:#3A4A6B;margin:16px 0 2px;}.q-answer{font-size:14px;color:#0E1C42;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}.no-answer{color:#B0B8CC;font-style:italic;}</style></head><body><h1>📓 Lesson 3.01.05</h1>';ids.forEach(function(id){var el=document.getElementById(id);if(!el)return;var label=el.getAttribute('data-label')||id;var val=el.value.trim();html+='<div class="q-label">'+label+'</div>';html+=val?'<div class="q-answer">'+val.replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</div>':'<div class="q-answer no-answer">(no answer)</div>'});html+='</body></html>';var win=window.open('','_blank');win.document.write(html);win.document.close();setTimeout(function(){win.print()},400)}
+var quizAnswered=0,quizCorrect=0;function checkQuiz(optEl){var q=optEl.closest('.quiz-q');if(q.classList.contains('answered'))return;q.classList.add('answered');quizAnswered++;var correct=q.getAttribute('data-answer');var chosen=optEl.getAttribute('data-val');q.querySelectorAll('.quiz-opt').forEach(function(o){if(o.getAttribute('data-val')===correct){o.classList.add('correct')}else{o.classList.add('disabled')}});if(chosen===correct){quizCorrect++;optEl.classList.add('correct');var fb=q.querySelector('.fb-correct');if(fb)fb.classList.add('show')}else{optEl.classList.add('wrong');var fb=q.querySelector('.fb-wrong');if(fb)fb.classList.add('show')}if(quizAnswered===3){var scoreBox=document.getElementById('quizScore');document.getElementById('quizScoreNum').textContent=quizCorrect;if(quizCorrect===3){document.getElementById('quizScoreMsg').textContent='⭐ Perfect!';document.getElementById('quizVideoCorrect').classList.add('show');fireConfetti()}else if(quizCorrect===2){document.getElementById('quizScoreMsg').textContent='🏛️ Great job!';document.getElementById('quizVideoReview').classList.add('show')}else{document.getElementById('quizScoreMsg').textContent='📜 Good effort!';document.getElementById('quizVideoReview').classList.add('show')}scoreBox.classList.add('show')}}
+var rootFirst=null;var rootCount=0;window._rootMatchDone=false;function rootMatchClick(item){if(item.classList.contains('matched'))return;if(!rootFirst){rootFirst=item;item.classList.add('selected');return}if(rootFirst===item){rootFirst.classList.remove('selected');rootFirst=null;return}var key1=rootFirst.getAttribute('data-match');var key2=item.getAttribute('data-match');if(key1===key2&&rootFirst.classList.contains('is-word')!==item.classList.contains('is-word')){rootFirst.classList.remove('selected');rootFirst.classList.add('matched');item.classList.add('matched');rootCount++;rootFirst=null;if(rootCount>=4){document.getElementById('rootMatchFeedback').classList.add('show');var fact=document.getElementById('rootDiscoveryFact');if(fact)setTimeout(function(){fact.classList.add('show')},600);window._rootMatchDone=true}}else{item.classList.add('wrong-flash');rootFirst.classList.add('wrong-flash');var a=rootFirst;var b=item;setTimeout(function(){a.classList.remove('wrong-flash','selected');b.classList.remove('wrong-flash')},500);rootFirst=null}}
+document.querySelectorAll('.flip-card').forEach(function(card){card.addEventListener('click',function(){card.classList.toggle('flipped')})});
+function toggleCheck(item){item.classList.toggle('checked');var check=item.querySelector('.turn-in-check');check.textContent=item.classList.contains('checked')?'✓':'';var allChecked=document.querySelectorAll('.turn-in-item.checked').length===document.querySelectorAll('.turn-in-item').length;if(allChecked){fireConfetti();var seal=document.getElementById('historianSeal');if(seal)seal.classList.add('show')}}
+function fireConfetti(){var canvas=document.getElementById('confettiCanvas');var ctx=canvas.getContext('2d');canvas.width=window.innerWidth;canvas.height=window.innerHeight;var particles=[];var colors=['#55C8E8','#D4943A','#1A8A7D','#34B76F','#8B6FC0','#FFD700','#E8636B'];var emojis=['🏛️','📜','🗺️','🌍','🧭','🦉','🔔','⚖️','🏺','📋'];for(var i=0;i<120;i++){particles.push({type:'rect',x:Math.random()*canvas.width,y:Math.random()*canvas.height-canvas.height,r:Math.random()*6+3,c:colors[Math.floor(Math.random()*colors.length)],vx:(Math.random()-0.5)*4,vy:Math.random()*3+2,rot:Math.random()*360,rv:(Math.random()-0.5)*8})}for(var j=0;j<18;j++){particles.push({type:'emoji',x:Math.random()*canvas.width,y:Math.random()*canvas.height-canvas.height,emoji:emojis[Math.floor(Math.random()*emojis.length)],size:Math.random()*14+26,vx:(Math.random()-0.5)*3,vy:Math.random()*2.5+1.5,rot:Math.random()*360,rv:(Math.random()-0.5)*5})}var frames=0;function animate(){ctx.clearRect(0,0,canvas.width,canvas.height);particles.forEach(function(p){ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot*Math.PI/180);if(p.type==='emoji'){ctx.font=p.size+'px serif';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(p.emoji,0,0)}else{ctx.fillStyle=p.c;ctx.fillRect(-p.r,-p.r/2,p.r*2,p.r)}ctx.restore();p.x+=p.vx;p.y+=p.vy;p.rot+=p.rv;p.vy+=0.04});frames++;if(frames<300){if(frames>220){canvas.style.opacity=1-((frames-220)/80)}requestAnimationFrame(animate)}else{ctx.clearRect(0,0,canvas.width,canvas.height);canvas.style.opacity=1}}animate()}
+function scrollToTop(){var target=document.getElementById('pageTop');if(target){target.scrollIntoView({behavior:'smooth',block:'start'})}try{window.parent.postMessage({type:'scrollToTop'},'*')}catch(e){}window.scrollTo({top:0,behavior:'smooth'})}
+(function(){var btn=document.getElementById('backToTop');window.addEventListener('scroll',function(){btn.classList.toggle('show',(window.pageYOffset||document.documentElement.scrollTop)>400)});try{if(window.parent!==window)window.parent.addEventListener('scroll',function(){btn.classList.toggle('show',(window.pageYOffset||document.documentElement.scrollTop)>400)})}catch(e){}})();
+updateProgress();
+</script>
+</body>
+</html>
