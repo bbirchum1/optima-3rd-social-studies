@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Optima Academy Online — Lesson 3.02.02: Navigation Tools and Explorer Routes (Grade 3 Museum)</title>
+<title>Optima Academy Online — ✏️ Lesson Code: ✏️ Lesson Title (Grade 3 Museum)</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
 
@@ -1455,18 +1455,10 @@ body {
 
 @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
 </style>
-  html += '<style>';
-  html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
-  html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
-  html += 'h2{font-size:14px;color:#7A88A8;margin-bottom:24px;}';
-  html += '.section-title{font-size:16px;font-weight:bold;color:#0E1C42;margin:28px 0 4px;padding:8px 0 4px;border-bottom:2px solid #E2E8F4;}';
-  html += '.q-label{font-size:13px;font-weight:bold;color:#3A4A6B;margin:16px 0 2px;}';
-  html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
-  html += '.no-answer{color:#B0B8CC;font-style:italic;}';
-  html += '</style></head><body>';
 </head>
 <body>
 <div id="pageTop"></div>
+
 <div class="page-wrap">
 
 <!-- ═══ PROGRESS BAR ═══ -->
@@ -1485,91 +1477,76 @@ body {
       <div class="header-sub">An Education Experience Company</div>
     </div>
   </div>
-  <div class="header-title">Navigation Tools and <em>Explorer Routes</em></div>
+  <div class="header-title">Label the Continents and Oceans</div>
   <div class="header-badge">
     <span class="header-badge-icon">🌍</span>
-    <span class="header-badge-text">Lesson 3.02.02</span>
+    <span class="header-badge-text">Lesson 3.05.01</span>
   </div>
 </div>
 
 <!-- ═══ SVG HERO BANNER ═══ -->
 <svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
   <defs>
-    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#87CEEB"/>
-      <stop offset="100%" stop-color="#E0F4FF"/>
+    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#E8F0FE"/><stop offset="100%" stop-color="#D0E8FF"/>
     </linearGradient>
-    <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1A8A7D"/>
-      <stop offset="100%" stop-color="#0E6B62"/>
-    </linearGradient>
-    <linearGradient id="parchGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#F5E6C8"/>
-      <stop offset="100%" stop-color="#E8D5A8"/>
-    </linearGradient>
+    <radialGradient id="globeGrad" cx="42%" cy="38%" r="50%">
+      <stop offset="0%" stop-color="#5BB8E8"/><stop offset="100%" stop-color="#2171A5"/>
+    </radialGradient>
+    <clipPath id="globeClip"><circle cx="460" cy="125" r="95"/></clipPath>
   </defs>
-  <!-- Sky -->
   <rect width="920" height="260" fill="url(#skyGrad)"/>
-  <!-- Sea -->
-  <rect y="170" width="920" height="90" fill="url(#seaGrad)"/>
-  <!-- Waves -->
-  <path d="M0 185 Q50 172 100 185 Q150 198 200 185 Q250 172 300 185 Q350 198 400 185 Q450 172 500 185 Q550 198 600 185 Q650 172 700 185 Q750 198 800 185 Q850 172 920 185 V260 H0Z" fill="#0E6B62" opacity="0.4">
-    <animate attributeName="d" dur="5s" repeatCount="indefinite" values="M0 185 Q50 172 100 185 Q150 198 200 185 Q250 172 300 185 Q350 198 400 185 Q450 172 500 185 Q550 198 600 185 Q650 172 700 185 Q750 198 800 185 Q850 172 920 185 V260 H0Z;M0 190 Q50 198 100 190 Q150 178 200 190 Q250 198 300 190 Q350 178 400 190 Q450 198 500 190 Q550 178 600 190 Q650 198 700 190 Q750 178 800 190 Q850 198 920 190 V260 H0Z;M0 185 Q50 172 100 185 Q150 198 200 185 Q250 172 300 185 Q350 198 400 185 Q450 172 500 185 Q550 198 600 185 Q650 172 700 185 Q750 198 800 185 Q850 172 920 185 V260 H0Z"/>
-  </path>
-  <!-- Parchment Map (large, center-left) -->
-  <g transform="translate(100, 40)">
-    <rect x="0" y="0" width="200" height="140" rx="6" fill="url(#parchGrad)" stroke="#C4A060" stroke-width="1.5"/>
-    <!-- Map lines (route lines) -->
-    <path d="M30 70 Q60 40 100 55 Q140 70 170 45" fill="none" stroke="#B8432F" stroke-width="2" stroke-dasharray="6 3"/>
-    <path d="M40 100 Q80 80 120 95 Q150 105 180 85" fill="none" stroke="#1A8A7D" stroke-width="1.5" stroke-dasharray="4 3"/>
-    <!-- Land blobs on map -->
-    <ellipse cx="40" cy="60" rx="18" ry="12" fill="#8DB86B" opacity="0.6"/>
-    <ellipse cx="160" cy="50" rx="22" ry="15" fill="#8DB86B" opacity="0.6"/>
-    <ellipse cx="100" cy="110" rx="25" ry="10" fill="#8DB86B" opacity="0.5"/>
-    <!-- Compass rose on map -->
-    <circle cx="160" cy="120" r="12" fill="none" stroke="#8B5E20" stroke-width="0.8"/>
-    <polygon points="160,109 162,118 160,114 158,118" fill="#B8432F" opacity="0.7"/>
-    <polygon points="160,131 162,122 160,126 158,122" fill="#0E1C42" opacity="0.5"/>
+  <!-- Globe -->
+  <circle cx="460" cy="125" r="95" fill="url(#globeGrad)" stroke="#18506E" stroke-width="2.5"/>
+  <!-- Latitude/longitude lines -->
+  <g clip-path="url(#globeClip)" opacity="0.2" stroke="#FFF" fill="none" stroke-width="0.8">
+    <ellipse cx="460" cy="125" rx="95" ry="30"/>
+    <ellipse cx="460" cy="125" rx="95" ry="60"/>
+    <ellipse cx="460" cy="125" rx="60" ry="95"/>
+    <ellipse cx="460" cy="125" rx="25" ry="95"/>
+    <line x1="365" y1="125" x2="555" y2="125"/>
   </g>
-  <!-- Astrolabe -->
-  <g transform="translate(480, 70)">
-    <circle cx="0" cy="0" r="50" fill="#D4943A" stroke="#8B5E20" stroke-width="2.5"/>
-    <circle cx="0" cy="0" r="44" fill="none" stroke="#8B5E20" stroke-width="1"/>
-    <circle cx="0" cy="0" r="36" fill="none" stroke="#8B5E20" stroke-width="0.8"/>
-    <line x1="0" y1="-44" x2="0" y2="44" stroke="#8B5E20" stroke-width="1"/>
-    <line x1="-44" y1="0" x2="44" y2="0" stroke="#8B5E20" stroke-width="1"/>
-    <line x1="-31" y1="-31" x2="31" y2="31" stroke="#8B5E20" stroke-width="0.6"/>
-    <line x1="31" y1="-31" x2="-31" y2="31" stroke="#8B5E20" stroke-width="0.6"/>
-    <circle cx="0" cy="0" r="5" fill="#FFD700"/>
-    <!-- Pointer arm -->
-    <line x1="0" y1="0" x2="15" y2="-35" stroke="#5C3A1E" stroke-width="2.5" stroke-linecap="round">
-      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="30s" repeatCount="indefinite"/>
-    </line>
-    <!-- Ring at top -->
-    <circle cx="0" cy="-54" r="7" fill="none" stroke="#8B5E20" stroke-width="2"/>
+  <!-- Continents clipped to globe -->
+  <g clip-path="url(#globeClip)">
+    <!-- N. America -->
+    <path d="M395,65 Q385,75 388,90 Q392,100 398,105 L408,108 Q415,100 412,85 Q408,70 400,65Z" fill="#6BBF6B" opacity="0.85"/>
+    <!-- S. America -->
+    <path d="M415,118 Q410,130 412,148 Q415,162 420,168 L425,165 Q428,150 426,135 Q422,120 418,116Z" fill="#8BC88B" opacity="0.85"/>
+    <!-- Africa -->
+    <path d="M468,85 Q462,100 464,120 Q467,140 475,150 L482,145 Q485,125 483,105 Q480,90 474,83Z" fill="#A3D47A" opacity="0.85"/>
+    <!-- Europe -->
+    <path d="M460,65 Q455,72 458,82 L470,84 Q475,77 472,68Z" fill="#7EC87E" opacity="0.85"/>
+    <!-- Asia -->
+    <path d="M485,60 Q495,68 510,72 Q525,75 535,80 L532,95 Q520,100 505,95 Q490,88 483,78Z" fill="#6BBF6B" opacity="0.85"/>
+    <!-- Australia -->
+    <path d="M530,140 Q525,148 528,155 L540,158 Q545,150 542,142Z" fill="#8BC88B" opacity="0.8"/>
+    <!-- Antarctica hint -->
+    <path d="M410,195 Q440,200 480,198 Q510,195 520,192" fill="none" stroke="#FFF" stroke-width="3" opacity="0.4"/>
   </g>
-  <!-- Compass (bottom right) -->
-  <g transform="translate(720, 180)">
-    <circle cx="0" cy="0" r="32" fill="#FFF8E7" stroke="#D4943A" stroke-width="2.5"/>
-    <circle cx="0" cy="0" r="27" fill="none" stroke="#D4943A" stroke-width="0.6"/>
-    <polygon points="0,-22 5,0 0,-8 -5,0" fill="#E8636B"/>
-    <polygon points="0,22 5,0 0,8 -5,0" fill="#0E1C42"/>
-    <circle cx="0" cy="0" r="3.5" fill="#D4943A"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="4s" values="0 0 0;5 0 0;-3 0 0;0 0 0" repeatCount="indefinite"/>
+  <!-- Globe highlight/shine -->
+  <ellipse cx="430" cy="90" rx="35" ry="25" fill="#FFF" opacity="0.12"/>
+  <!-- Floating label cards -->
+  <g>
+    <rect x="120" y="55" width="100" height="34" rx="6" fill="#FFF" stroke="#D4943A" stroke-width="1.5"/>
+    <line x1="135" y1="68" x2="195" y2="68" stroke="#D4943A" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <line x1="135" y1="78" x2="180" y2="78" stroke="#ccc" stroke-width="1"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" dur="3s" repeatCount="indefinite"/>
   </g>
-  <!-- Stars for navigation -->
-  <circle cx="650" cy="30" r="3" fill="#FFD700" opacity="0.8">
-    <animate attributeName="opacity" dur="2s" values="0.8;0.3;0.8" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="700" cy="18" r="2" fill="#FFD700" opacity="0.6">
-    <animate attributeName="opacity" dur="3s" values="0.6;0.2;0.6" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="770" cy="40" r="2.5" fill="#FFD700" opacity="0.7">
-    <animate attributeName="opacity" dur="2.5s" values="0.7;0.3;0.7" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="830" cy="25" r="2" fill="#FFD700" opacity="0.5">
-    <animate attributeName="opacity" dur="3.5s" values="0.5;0.2;0.5" repeatCount="indefinite"/>
-  </circle>
+  <g>
+    <rect x="700" y="70" width="100" height="34" rx="6" fill="#FFF" stroke="#D4943A" stroke-width="1.5"/>
+    <line x1="715" y1="83" x2="775" y2="83" stroke="#D4943A" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <line x1="715" y1="93" x2="760" y2="93" stroke="#ccc" stroke-width="1"/>
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0" dur="3.5s" repeatCount="indefinite"/>
+  </g>
+  <!-- Compass -->
+  <circle cx="110" cy="200" r="28" fill="#FFF8E8" stroke="#D4943A" stroke-width="1.5"/>
+  <polygon points="110,177 114,200 110,196 106,200" fill="#D4943A"/>
+  <polygon points="110,223 114,200 110,204 106,200" fill="#1A8A7D"/>
+  <!-- Museum frame corners -->
+  <rect x="20" y="10" width="40" height="4" rx="2" fill="#D4943A" opacity="0.4"/>
+  <rect x="20" y="10" width="4" height="40" rx="2" fill="#D4943A" opacity="0.4"/>
+  <rect x="860" y="10" width="40" height="4" rx="2" fill="#D4943A" opacity="0.4"/>
+  <rect x="896" y="10" width="4" height="40" rx="2" fill="#D4943A" opacity="0.4"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
@@ -1578,28 +1555,28 @@ body {
     <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
     <div>
       <div class="info-label">Unit</div>
-      <div class="info-value">Age of Exploration</div>
+      <div class="info-value">Oceans, Continents, and Geographic Terms</div>
     </div>
   </div>
   <div class="info-cell">
     <div class="info-icon" style="background:#FFF3DC;">📅</div>
     <div>
       <div class="info-label">Week</div>
-      <div class="info-value">Week 4 · Q1</div>
+      <div class="info-value">Week 12 · Q2</div>
     </div>
   </div>
   <div class="info-cell">
     <div class="info-icon" style="background:#E3F8ED;">📜</div>
     <div>
       <div class="info-label">Focus</div>
-      <div class="info-value">American History & Geography</div>
+      <div class="info-value">World Geography</div>
     </div>
   </div>
   <div class="info-cell">
     <div class="info-icon" style="background:#F0E8FF;">📋</div>
     <div>
       <div class="info-label">Standards</div>
-      <div class="info-value" style="font-size:12px;">SS.3.A.1.1 · SS.3.A.1.2 · SS.3.A.1.3 · SS.3.G.1.1</div>
+      <div class="info-value" style="font-size:12px;">SS.3.G.1.3 · SS.3.G.1.4 · SS.3.G.2.1</div>
     </div>
   </div>
 </div>
@@ -1607,7 +1584,7 @@ body {
 <!-- ═══ MUSEUM MEMO ═══ -->
 <div class="quote-strip">
   <div class="quote-strip-text" style="font-style:normal;text-align:left;font-size:15px;line-height:1.65;">
-    Now that you know why people explored, it's time to look at <em>how</em> they did it. The Exploration Wing's tool display has navigation instruments and incomplete route lines waiting to be studied. Route Curators need to help visitors understand how tools like compasses and astrolabes helped explorers travel — and how maps recorded where they went. Today, you'll inspect a real navigation tool and explain what it tells us.
+    The head curator has been waiting for this moment all year. She walks you down a long hallway past the Great Map Room and stops in front of a tall curtain. "You proved in the Cartographer's Review that you can read maps, trace routes, and study evidence," she says. "That means you're ready for this." She pulls the curtain back — and behind it is the biggest map you've ever seen, stretching from floor to ceiling across an entire wall. But something is wrong. The continents and oceans are just shapes with no names. The head curator hands you a stack of blank label cards. "The World Map Hall opens soon. Let's start with the biggest pieces — the continents and oceans."
   </div>
 </div>
 
@@ -1615,7 +1592,7 @@ body {
 <div class="intro-section" id="introSection">
   <div class="intro-collapsed-bar" onclick="toggleIntro()">
     <div class="intro-collapsed-icon">📍</div>
-    <div class="intro-collapsed-text">Today's Curator's Question & Objectives</div>
+    <div class="intro-collapsed-text">Today's Curator's Question &amp; Objectives</div>
     <div class="intro-collapsed-toggle">▼ Expand</div>
   </div>
 
@@ -1629,7 +1606,7 @@ body {
         </div>
       </div>
       <div class="intro-card-body">
-        How did navigation tools help explorers travel, and how do maps record those routes?
+        <p>Why do museum visitors need labels for the continents and oceans on a world map?</p>
       </div>
     </div>
 
@@ -1642,9 +1619,9 @@ body {
         </div>
       </div>
       <div class="intro-card-body">
-        <div class="obj-line"><span class="obj-icon">🧭</span> Identify navigation tools explorers used on their voyages.</div>
-        <div class="obj-line"><span class="obj-icon">🗺️</span> Explain how tools helped explorers find their way across oceans.</div>
-        <div class="obj-line"><span class="obj-icon">📝</span> Describe how maps record explorer routes.</div>
+        <div class="obj-line"><span class="obj-icon">🌍</span> Name and locate all seven continents on a world map.</div>
+        <div class="obj-line"><span class="obj-icon">🌊</span> Name and locate the five major oceans.</div>
+        <div class="obj-line"><span class="obj-icon">📝</span> Explain why labeling helps visitors understand the world.</div>
       </div>
     </div>
   </div>
@@ -1665,28 +1642,23 @@ body {
   <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📝 Evidence &amp; Assignment <span class="tab-check">✓</span></button>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
 <!-- ═══ TAB 1: ENTER THE MUSEUM ═══ -->
-<!-- ═══════════════════════════════════════════════════════ -->
 <div class="tab-panel active" id="panel-scene">
-
   <div class="tab-section-header">
     <div class="tab-section-icon" style="background:linear-gradient(135deg, #D4943A, #E0A050);">📍</div>
-    <div>
-      <div class="tab-section-title">Enter the Museum</div>
-    </div>
+    <div><div class="tab-section-title">Enter the Museum</div></div>
   </div>
 
   <div class="todays-path">
     <div class="todays-path-title">🗺️ Today's Path</div>
     <div class="todays-path-steps">
-      <span class="todays-path-step">📍 Return to the Exploration Wing & spotlight courage</span>
+      <span class="todays-path-step">📍 Step into the World Map Hall &amp; spotlight service</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">🔍 Study a mariner's astrolabe and explorer route map</span>
+      <span class="todays-path-step">🔍 Label continents &amp; oceans on the giant map</span>
       <span class="todays-path-arrow">→</span>
       <span class="todays-path-step">🧠 Check your understanding</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">📝 Write a source study explanation for the tools display</span>
+      <span class="todays-path-step">📝 Explain why continent &amp; ocean labels matter</span>
     </div>
   </div>
 
@@ -1696,216 +1668,282 @@ body {
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">📍 WELCOME · ENTER THE MUSEUM</div>
-        <div class="video-wrap-title">Welcome Back to the Exploration Wing</div>
+        <div class="video-wrap-title">Welcome to the World Map Hall</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Welcome students back. Say: "Last time, you figured out why people explored. Today's question is: how did they actually do it?" Read the Curator's Question aloud: "How did navigation tools help explorers travel, and how do maps record those routes?" Tell them they'll study a real navigation tool — a mariner's astrolabe — and think like a Source Scholar. Mention courage again. Under 2 minutes.
+          <strong>Teacher recording notes:</strong> Read the Curator's Question aloud: "Why do museum visitors need labels for the continents and oceans on a world map?" Pause and let students think. Tell them: "Today you're a World Geography Curator. The head curator just unveiled a giant map — but it has no labels. Your first job is to name the biggest pieces: the seven continents and five oceans." Mention the virtue of service. Under 2 minutes.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 3-02-02-welcome --></div>
+        <div class="video-placeholder-id"><!-- slot: 3-05-01-welcome --></div>
       </div>
     </div>
   </div>
 
   <!-- Virtue Spotlight -->
   <div class="virtue-card">
-    <div class="virtue-label">🏛️ Virtue Spotlight — Courage</div>
-    <div class="virtue-text">Explorers sailed into open ocean with simple tools and hand-drawn maps. They couldn't call for help or check a phone for directions. Using those tools well took skill — and trusting them took courage.</div>
+    <div class="virtue-label">🏛️ Virtue Spotlight — Service</div>
+    <div class="virtue-text">Service means helping others and contributing to your community. Today, you are serving the museum and its future visitors by making the world map readable. When curators label exhibits clearly, they help everyone who walks through the door learn something new.</div>
   </div>
 
   <!-- Curator Role -->
   <div class="callout callout-info">
     <div class="callout-icon">🕯️</div>
-    <p><strong>Your Role Today:</strong> You are a <strong>Route Curator</strong> — your job is to investigate explorer tools and routes so museum visitors understand how exploration actually worked. Today, you'll study a navigation instrument and explain what it tells us.</p>
+    <p><strong>Your Role Today:</strong> You are a <strong>World Geography Curator</strong> — your job is to help visitors understand the world by labeling and explaining the giant map in the World Map Hall. Today, you'll place the most important labels first: the continents and oceans.</p>
   </div>
 
-  <div class="section-divider"><span class="section-divider-dot">···</span></div>
-
-  <!-- Tab Transition -->
   <div class="tab-next-wrap">
-    <p class="tab-transition-voice">You know why people explored. Now let's examine the tools that made those journeys possible.</p>
+    <p class="tab-transition-voice">Now that you've seen the World Map Hall, let's learn about the continents and oceans so you can label them.</p>
     <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
 <!-- ═══ TAB 2: EXPLORE ═══ -->
-<!-- ═══════════════════════════════════════════════════════ -->
 <div class="tab-panel" id="panel-explore">
-
   <div class="tab-section-header">
     <div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #34B0A0);">🔍</div>
-    <div>
-      <div class="tab-section-title">Explore</div>
-    </div>
+    <div><div class="tab-section-title">Explore</div></div>
   </div>
 
-  <!-- Explore Explainer Video -->
+  <!-- Explore Video -->
   <div class="video-wrap">
     <div class="video-wrap-header">
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">🔍 TEACHING · EXPLORE</div>
-        <div class="video-wrap-title">Navigation Tools and Route Maps</div>
+        <div class="video-wrap-title">The Continents and Oceans</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Explain the three main navigation tools: the compass (points north), the astrolabe (measures the angle of stars to find latitude), and maps/charts (record coastlines and routes). Show how each tool solved a specific problem. Then model the Artifact Table: "I'd write 'navigation tool' for the object type, and 'Age of Exploration' for the time period." Walk through the Source Study questions: "What do I see? What does it mean? Why does it matter?" 3–5 minutes.
+          <strong>Teacher recording notes:</strong> Walk through all seven continents and five oceans. Point to where each one sits on a world map. Share one memorable detail per continent (e.g., "Antarctica is the coldest place on Earth — no country owns it!"). Model how curators decide where labels go. 3–5 minutes.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 3-02-02-explore-explainer --></div>
+        <div class="video-placeholder-id"><!-- slot: 3-05-01-explore-explainer --></div>
       </div>
     </div>
   </div>
 
-  <!-- STEP 1: Learn -->
   <div class="step-badge"><div class="step-badge-num">1</div> Learn the Story</div>
 
-  <!-- Content Section -->
   <div class="activity bl-accent">
     <div class="activity-head">
       <div class="activity-num" style="background:#1A8A7D;">📖</div>
       <div>
-        <div class="activity-title">How Did Explorers Find Their Way?</div>
-        <div class="activity-sub">Navigation tools of the Age of Exploration</div>
+        <div class="activity-title">The World's Biggest Pieces</div>
+        <div class="activity-sub">Continents and oceans — the starting labels for any world map</div>
       </div>
     </div>
     <div class="activity-body">
-      <p>You already know why people explored. But imagine standing on the deck of a ship in the middle of the ocean. No landmarks. No roads. Just water in every direction. How would you know where to go?</p>
-      <p>Explorers used <strong>navigation tools</strong> to solve this problem. A <strong>compass</strong> uses a magnetized needle that always points north, helping sailors keep their direction. An <strong>astrolabe</strong> measures the angle of the sun or stars above the horizon, helping sailors figure out how far north or south they are.</p>
-      <p>Explorers also depended on <strong>maps and sea charts</strong>. Early maps were incomplete — some showed imaginary lands or missing coastlines. But every time an explorer returned from a voyage, mapmakers could add new details. Over time, the maps got better and better.</p>
-      <p>Together, these tools turned dangerous guessing into careful navigation. Without them, exploration would have been nearly impossible.</p>
+      <p>If you looked at Earth from space, you'd see two things right away: large areas of land and large areas of water. The big land areas are called <strong>continents</strong>, and the big water areas are called <strong>oceans</strong>.</p>
+      <p>There are <strong>seven continents</strong>: North America, South America, Europe, Asia, Africa, Australia, and Antarctica. Some are huge — Asia is the biggest. Some are much smaller — Australia is the smallest continent.</p>
+      <p>There are <strong>five oceans</strong>: the Pacific, the Atlantic, the Indian, the Arctic, and the Southern Ocean. The Pacific Ocean is so big that all seven continents could fit inside it!</p>
+      <p>A young museum volunteer tried to put the labels up last night but got confused about which ocean was which. He mixed up the Atlantic and the Pacific. That's exactly why labels need to go in the right places — visitors trust that the map is correct.</p>
     </div>
   </div>
 
-  <!-- Pause & Think -->
   <div class="callout callout-think">
     <div class="callout-icon">🤔</div>
-    <p><strong>Pause & Think:</strong> Why would an incomplete or incorrect map be dangerous for an explorer? What could go wrong?</p>
+    <p><strong>Pause &amp; Think:</strong> If a visitor looked at the giant map with no labels, could they tell the difference between Asia and Africa just by shape? What would help them know for sure?</p>
   </div>
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
 
-  <!-- STEP 2: Investigate -->
   <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
 
-  <!-- Artifact Table (Grade 3 Source Study scaffold) -->
-  <div class="activity bl-purple">
-    <div class="activity-head">
-      <div class="activity-num" style="background:#8B6FC0;">🏺</div>
-      <div>
-        <div class="activity-title">Artifact Table</div>
-        <div class="activity-sub">Study this object as if it were placed before you in a museum.</div>
-      </div>
-    </div>
-    <div class="activity-body">
-      <table style="width:100%;border-collapse:collapse;font-size:14px;">
-        <tr style="border-bottom:1px solid #E2E8F4;">
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;width:35%;vertical-align:top;">Object / Source</td>
-          <td style="padding:10px 12px;color:#0E1C42;">A mariner's astrolabe — a circular metal tool used for navigation at sea</td>
-        </tr>
-        <tr style="border-bottom:1px solid #E2E8F4;">
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">Time Period</td>
-          <td style="padding:10px 12px;color:#0E1C42;">Age of Exploration (around the 1400s–1600s)</td>
-        </tr>
-        <tr style="border-bottom:1px solid #E2E8F4;">
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">Place</td>
-          <td style="padding:10px 12px;color:#0E1C42;">Used by European sailors on ocean voyages</td>
-        </tr>
-        <tr style="border-bottom:1px solid #E2E8F4;">
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">What I Notice First</td>
-          <td style="padding:10px 12px;color:#7A88A8;font-style:italic;">Look at the source image below and note one thing that catches your eye.</td>
-        </tr>
-        <tr>
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">What I Wonder</td>
-          <td style="padding:10px 12px;color:#7A88A8;font-style:italic;">What question do you have about this tool?</td>
-        </tr>
-      </table>
+  <!-- SOURCE STUDY (Category 3 — Real image) -->
+  <div class="source-card">
+    <div class="source-card-header"><div class="source-card-header-icon">📜</div><div><div class="source-card-header-label">Source Study · Guided Practice</div><div class="source-card-header-title">Question Like a Geographer</div></div></div>
+    <div class="source-image-placeholder"><div class="source-image-placeholder-text">🖼️ A real photograph of Earth from space, ideally NASA's "Blue Marble" image or a similar full-disk view. Continents and oceans should be clearly visible. Suggested source: NASA image library (public domain).<br><br><strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-05-01-earth-from-space.jpg</code></div></div>
+    <div class="source-card-body">
+      <div class="source-label-bar"><span class="src-type">Primary Source</span> · Satellite photograph of Earth</div>
+      <div class="callout callout-info"><div class="callout-icon">👁️</div><p><strong>What do I see?</strong> Look at the photo. Where is land? Where is water? What colors stand out?</p></div>
+      <div class="callout callout-think"><div class="callout-icon">💭</div><p><strong>What does it mean?</strong> Can you spot any continents you recognize? About how much of Earth looks like water?</p></div>
+      <div class="callout callout-tip"><div class="callout-icon">⚖️</div><p><strong>Why does it matter?</strong> Why is it useful to see Earth from space? What can you learn here that a flat map can't show you?</p></div>
     </div>
   </div>
 
-  <!-- Source Study Card -->
-  <div class="source-card">
-    <div class="source-card-header">
-      <div class="source-card-header-icon">📜</div>
+  <!-- Map Quest: Interactive continent/ocean matching -->
+  <div class="activity bl-accent">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#1A8A7D;">🗺️</div>
       <div>
-        <div class="source-card-header-label">Source Study</div>
-        <div class="source-card-header-title">A Mariner's Astrolabe</div>
+        <div class="activity-title">Map Quest: Label the World</div>
+        <div class="activity-sub">Match each continent and ocean to its description</div>
       </div>
     </div>
-    <div class="source-image-placeholder">
-      <div class="source-image-placeholder-text">
-        🖼️ A photograph of a mariner's astrolabe — a heavy, circular brass instrument with degree markings around the rim and a rotating pointer (alidade) in the center. Used by sailors to measure the angle of the sun or stars above the horizon to determine latitude. Look for examples at the Smithsonian Open Access (si.edu/openaccess), the Metropolitan Museum of Art (metmuseum.org), or Wikimedia Commons (commons.wikimedia.org).<br><br>
-        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-02-02-mariners-astrolabe.jpg</code>
+    <div class="activity-body">
+      <p>The head curator laid out cards with descriptions on one side and names on the other. Match each name to the right description to prove you can label the map correctly.</p>
+
+      <div class="flip-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:12px;">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">🌎</div>
+              <div class="fc-word">North America</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">North America</div>
+              <div class="fc-def">The continent where the United States, Canada, and Mexico are located. Bordered by the Atlantic and Pacific Oceans.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">🌎</div>
+              <div class="fc-word">South America</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">South America</div>
+              <div class="fc-def">Home to the Amazon rainforest and the Andes Mountains. Connected to North America by Central America.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">🌍</div>
+              <div class="fc-word">Africa</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">Africa</div>
+              <div class="fc-def">The second-largest continent. It has the Sahara Desert in the north and grasslands called savannas in the middle.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">🌏</div>
+              <div class="fc-word">Asia</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">Asia</div>
+              <div class="fc-def">The biggest continent. Home to the Himalaya Mountains, the tallest on Earth. More people live here than anywhere else.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">🌍</div>
+              <div class="fc-word">Europe</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">Europe</div>
+              <div class="fc-def">A smaller continent connected to Asia. Many explorers from the Age of Exploration sailed from here.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">🌏</div>
+              <div class="fc-word">Australia</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">Australia</div>
+              <div class="fc-def">The smallest continent. It is also a country! Surrounded by the Indian and Pacific Oceans.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">🧊</div>
+              <div class="fc-word">Antarctica</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">Antarctica</div>
+              <div class="fc-def">The coldest, driest continent. Covered in ice. No country owns it — scientists from many nations study it together.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">🌊</div>
+              <div class="fc-word">Pacific Ocean</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">Pacific Ocean</div>
+              <div class="fc-def">The largest and deepest ocean. It stretches between Asia and the Americas. All seven continents could fit inside it!</div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">🌊</div>
+              <div class="fc-word">Atlantic Ocean</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">Atlantic Ocean</div>
+              <div class="fc-def">The second-largest ocean. It separates the Americas from Europe and Africa. Explorers crossed it to reach the New World.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="source-card-body">
-      <div class="source-label-bar">
-        <span class="src-type">Historical Artifact</span> · Mariner's astrolabe, circa 1400s–1600s, used by European navigators
-      </div>
-      <div class="callout callout-info">
-        <div class="callout-icon">👁️</div>
-        <p><strong>What do I see?</strong> Look carefully at this tool. What shape is it? What markings or parts do you notice? What material does it look like it's made from?</p>
-      </div>
-      <div class="callout callout-think">
-        <div class="callout-icon">💭</div>
-        <p><strong>What does it mean?</strong> How would a sailor use this tool on a ship? What problem did it help solve?</p>
-      </div>
-      <div class="callout callout-tip">
-        <div class="callout-icon">⚖️</div>
-        <p><strong>Why does it matter?</strong> Why is this tool important for understanding how exploration worked? What would happen without it?</p>
-      </div>
-    </div>
+  </div>
+
+  <!-- Labeled Reference Map (Category 3 — Real image) -->
+  <div class="callout callout-info">
+    <div class="callout-icon">📐</div>
+    <p><strong>Labeled Reference Map:</strong> Study the world map below carefully. Find each continent and ocean by name. You'll use this when you answer your evidence questions.</p>
+  </div>
+  <div class="source-image-placeholder" style="height:auto;min-height:300px;margin:0 0 14px;">
+    <div class="source-image-placeholder-text">🗺️ A real labeled political world map showing all 7 continents and 5 oceans with clear text labels. Should be student-friendly and easy to read. Suggested sources: CIA World Factbook public-domain maps, Wikimedia Commons "Blank world map" (labeled version), or a National Geographic Education map.<br><br><strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">reference-3-05-01-labeled-world-map.jpg</code></div>
   </div>
 
   <!-- Then & Now -->
   <div class="callout callout-tip">
     <div class="callout-icon">⏳</div>
-    <p><strong>Then & Now:</strong> In the past, sailors used compasses, astrolabes, and star charts to navigate the open ocean. Today, we use GPS satellites and digital maps on our phones. What stayed the same about the human need to know where we are and where we're going?</p>
+    <p><strong>Then &amp; Now:</strong> Long ago, many people didn't know all seven continents existed. Mapmakers drew only the parts of the world they had visited. Today, satellites show us the whole Earth at once. What stayed the same about the human need to name and label places?</p>
   </div>
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
 
-  <!-- STEP 3: Connect -->
   <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
 
-  <!-- Exhibit Label -->
   <div class="key-concept">
     <div class="key-concept-label">🏷️ Exhibit Label</div>
-    <p>Explorers used navigation tools — compasses, astrolabes, and maps — to find their way across oceans. Each voyage added new knowledge to the maps that came after.</p>
+    <p>Earth has seven continents and five oceans. Labeling them on a map helps people understand where places are and how the world is organized.</p>
   </div>
 
-  <!-- Opti the Owl -->
+  <!-- Opti -->
   <div class="owl-buddy">
     <div class="owl-buddy-avatar">🦉</div>
     <div class="owl-buddy-bubble">
       <div class="owl-buddy-name">🧭 Opti says…</div>
-      Here's something neat — early astrolabes were so heavy they had to be held by a ring at the top while the ship rocked beneath you. Imagine trying to measure a star's angle while standing on a rolling deck. That's skill <em>and</em> courage.
+      Here's something cool — the Pacific Ocean is so wide that if you flew across it in an airplane, the trip would take longer than flying from New York to London and back!
     </div>
   </div>
 
-  <!-- Tab Transition -->
   <div class="tab-next-wrap">
-    <p class="tab-transition-voice">You've studied the tools and routes. Let's see how much you remember.</p>
+    <p class="tab-transition-voice">You've explored the continents and oceans. Let's see how much you remember.</p>
     <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Self-Check →</button>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
 <!-- ═══ TAB 3: SELF-CHECK ═══ -->
-<!-- ═══════════════════════════════════════════════════════ -->
 <div class="tab-panel" id="panel-check">
-
   <div class="tab-section-header">
     <div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div>
-    <div>
-      <div class="tab-section-title">Quick Self-Check</div>
-    </div>
+    <div><div class="tab-section-title">Quick Self-Check</div></div>
   </div>
 
   <div class="callout callout-info" style="margin-bottom:18px;">
@@ -1916,43 +1954,39 @@ body {
   <div class="quiz-card">
     <div style="padding:18px 22px;">
 
-      <!-- QUESTION 1 -->
-      <div class="quiz-q" data-answer="a">
-        <div class="quiz-q-text">1. What does a compass help a sailor do?</div>
-        <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Find which direction is north so they can stay on course.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Measure how deep the ocean is below the ship.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Count how many days the voyage has lasted.</div>
-        </div>
-        <div class="quiz-feedback fb-correct">Right! A compass uses a magnetized needle that always points north, helping sailors keep their direction.</div>
-        <div class="quiz-feedback fb-wrong">Think about what problem sailors face in the open ocean. Which direction are they heading? That's what a compass answers.</div>
-      </div>
-
-      <!-- QUESTION 2 -->
       <div class="quiz-q" data-answer="b">
-        <div class="quiz-q-text">2. What did an astrolabe help sailors figure out?</div>
+        <div class="quiz-q-text">1. How many continents are there on Earth?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>How fast the wind was blowing.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>How far north or south they were by measuring the sun or stars.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>How many sailors were needed on the ship.</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Five</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Seven</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Ten</div>
         </div>
-        <div class="quiz-feedback fb-correct">Exactly! An astrolabe measures the angle of the sun or stars above the horizon. This tells sailors their latitude — how far north or south they are.</div>
-        <div class="quiz-feedback fb-wrong">Remember, an astrolabe is pointed at the sky. What in the sky could help a sailor figure out their position?</div>
+        <div class="quiz-feedback fb-correct">That's right! Earth has seven continents: North America, South America, Europe, Asia, Africa, Australia, and Antarctica.</div>
+        <div class="quiz-feedback fb-wrong">Not quite. Think about the large land areas we just learned about — count them carefully in your head.</div>
       </div>
 
-      <!-- QUESTION 3 -->
+      <div class="quiz-q" data-answer="a">
+        <div class="quiz-q-text">2. Which is the largest ocean on Earth?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Pacific Ocean</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Atlantic Ocean</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Indian Ocean</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Yes! The Pacific Ocean is the largest — so big that all seven continents could fit inside it.</div>
+        <div class="quiz-feedback fb-wrong">Think about which ocean we said was big enough to hold all the continents inside it.</div>
+      </div>
+
       <div class="quiz-q" data-answer="c">
-        <div class="quiz-q-text">3. Why did maps get better over time during the Age of Exploration?</div>
+        <div class="quiz-q-text">3. Why do museum visitors need labels on a world map?</div>
         <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Because mapmakers used bigger paper.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because kings ordered the maps to be more colorful.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because every returning explorer brought back new information about coastlines and routes.</div>
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Labels make the map look prettier</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Labels tell visitors who made the map</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Labels help visitors find and understand places</div>
         </div>
-        <div class="quiz-feedback fb-correct">Yes! Each voyage added new details. Over time, mapmakers filled in coastlines, routes, and landmarks that earlier maps had missed.</div>
-        <div class="quiz-feedback fb-wrong">Think about what happens after an explorer returns from a voyage. What new information could they share with mapmakers?</div>
+        <div class="quiz-feedback fb-correct">Exactly! Labels help visitors know which continent or ocean they're looking at, so they can understand how the world is organized.</div>
+        <div class="quiz-feedback fb-wrong">Think about what would happen if a visitor tried to find Africa on a map with no labels. What would they need?</div>
       </div>
 
-      <!-- Score Box -->
       <div class="quiz-score-box" id="quizScore">
         <div class="quiz-score-label">Your Score</div>
         <div class="quiz-score-num" id="quizScoreNum">0</div>
@@ -1960,7 +1994,6 @@ body {
         <div class="quiz-score-msg" id="quizScoreMsg"></div>
       </div>
 
-      <!-- Conditional video: perfect -->
       <div class="quiz-video-wrap" id="quizVideoCorrect">
         <div class="video-wrap">
           <div class="video-wrap-header">
@@ -1973,14 +2006,13 @@ body {
           <div class="video-ratio">
             <div class="video-placeholder">
               <div class="video-placeholder-icon">⭐</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate! Say: "You clearly understand how navigation tools worked — the compass for direction, the astrolabe for position, and maps that got better over time. You're ready to write your source study explanation." Under 30 seconds.</div>
-              <div class="video-placeholder-id"><!-- slot: 3-02-02-quiz-perfect --></div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate the perfect score. "You know your continents and oceans — you're ready to be a World Geography Curator!" Under 30 seconds.</div>
+              <div class="video-placeholder-id"><!-- slot: 3-05-01-quiz-perfect --></div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Conditional video: review -->
       <div class="quiz-video-wrap" id="quizVideoReview">
         <div class="video-wrap">
           <div class="video-wrap-header">
@@ -1993,8 +2025,8 @@ body {
           <div class="video-ratio">
             <div class="video-placeholder">
               <div class="video-placeholder-icon">🔄</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through each answer. Key idea: compass = direction, astrolabe = position using stars, maps = improved with each voyage. Under 1 minute. Encouraging.</div>
-              <div class="video-placeholder-id"><!-- slot: 3-02-02-quiz-review --></div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the correct answers. Remind them there are 7 continents and 5 oceans. The Pacific is the largest ocean. Labels help visitors understand. Under 1 minute.</div>
+              <div class="video-placeholder-id"><!-- slot: 3-05-01-quiz-review --></div>
             </div>
           </div>
         </div>
@@ -2003,23 +2035,17 @@ body {
     </div>
   </div>
 
-  <!-- Tab Transition -->
   <div class="tab-next-wrap">
     <p class="tab-transition-voice">Now that you've checked your understanding, time to put your thinking into words.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Evidence &amp; Assignment →</button>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
 <!-- ═══ TAB 4: EVIDENCE & ASSIGNMENT ═══ -->
-<!-- ═══════════════════════════════════════════════════════ -->
 <div class="tab-panel" id="panel-assignment">
-
   <div class="tab-section-header">
     <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div>
-    <div>
-      <div class="tab-section-title">Evidence &amp; Assignment</div>
-    </div>
+    <div><div class="tab-section-title">Evidence &amp; Assignment</div></div>
   </div>
 
   <div class="callout callout-info" style="margin-bottom:18px;">
@@ -2027,7 +2053,6 @@ body {
     <p>Time to show what you know. Answer the evidence questions and complete your Curator Task. Your answers will be gathered at the bottom so you can copy or download them for Canvas.</p>
   </div>
 
-  <!-- Assignment Explainer Video -->
   <div class="video-wrap">
     <div class="video-wrap-header">
       <span style="font-size:20px;">🎬</span>
@@ -2040,14 +2065,13 @@ body {
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Read each evidence question aloud. Think aloud through Q1: "I'd say the compass helped explorers because the lesson told us it uses a magnetized needle to point north — that's how they stayed on course." Then explain the Curator Task: "You're writing the explanation label for the navigation tools display. Tell visitors what the astrolabe is, how it works, and why it mattered." 2–3 minutes.
+          <strong>Teacher recording notes:</strong> Read each evidence question aloud. Think aloud through Q1: "I know there are 7 continents. Let me name them all — North America, South America..." Show how to write a complete sentence. Clarify the Curator Task: they're writing a label card that explains why the world map needs continent and ocean labels. Walk through the turn-in process. 2–3 minutes.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 3-02-02-assignment-explainer --></div>
+        <div class="video-placeholder-id"><!-- slot: 3-05-01-assignment-explainer --></div>
       </div>
     </div>
   </div>
 
-  <!-- Part A: Evidence Questions -->
   <div class="activity bl-cyan">
     <div class="activity-head">
       <div class="activity-num" style="background:#55C8E8;">A</div>
@@ -2058,50 +2082,38 @@ body {
     </div>
     <div class="activity-body">
 
-      <!-- Q1 -->
-      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Choose one navigation tool (compass, astrolabe, or maps). Explain what problem it solved for explorers.</div></div>
-      <div class="textbox-prompt">Use at least one detail from the lesson to support your answer.</div>
-      <textarea class="journal-box" id="journal-q1" data-label="Q1: Navigation tool and its purpose"
-        placeholder="The [tool] helped explorers because..."
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Name all seven continents. Which one is the largest?</div></div>
+      <div class="textbox-prompt">List all seven continents, then tell which one is the biggest.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Seven Continents"
+        placeholder="The seven continents are..."
         oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
 
-      <!-- Q2 -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Why did maps improve over time during the Age of Exploration? Use evidence from the lesson.</div></div>
-      <div class="textbox-prompt">Explain your thinking using evidence from what you read.</div>
-      <textarea class="journal-box" id="journal-q2" data-label="Q2: Why maps improved"
-        placeholder="Maps improved over time because..."
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Why did the young museum volunteer's mistake with the Atlantic and Pacific labels matter? What could go wrong if ocean labels are in the wrong places?</div></div>
+      <div class="textbox-prompt">Think about what happens when a visitor trusts a label that is wrong.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: Why Labels Matter"
+        placeholder="If ocean labels are in the wrong places, visitors might..."
         oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
-
-      <!-- Q3 -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>How does studying navigation tools help us understand why exploration took courage? Connect the tools to the risks explorers faced.</div></div>
-      <div class="textbox-prompt">Connect what you learned about tools to what you know about the dangers of exploration.</div>
-      <textarea class="journal-box" id="journal-q3" data-label="Q3: Tools and courage"
-        placeholder="Studying navigation tools helps us understand courage because..."
-        oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
 
     </div>
   </div>
 
-  <!-- Part B: Curator Task -->
   <div class="activity bl-gold">
     <div class="activity-head">
       <div class="activity-num" style="background:#D4943A;">B</div>
       <div>
-        <div class="activity-title">Curator Task: Navigation Tools Display Label</div>
-        <div class="activity-sub">Write the explanation label for the navigation tools display in the Exploration Wing.</div>
+        <div class="activity-title">Curator Task: World Map Label Card</div>
+        <div class="activity-sub">Write a label card for the World Map Hall entrance explaining why continent and ocean labels matter.</div>
       </div>
     </div>
     <div class="activity-body">
-      <p>The navigation tools display needs a label so museum visitors understand what they're looking at. Write a short explanation (3–4 sentences) about the mariner's astrolabe: what it is, how explorers used it, and why it was important for navigation. Use details from today's lesson and your source study.</p>
-
-      <div class="textbox-prompt">Your label should tell visitors: What is this tool? How was it used? Why did it matter?</div>
-      <textarea class="journal-box" id="journal-assign" data-label="Curator Task: Navigation Tools Display Label"
-        placeholder="This mariner's astrolabe is a..."
+      <p>The head curator wants to place a small card near the entrance of the World Map Hall. It should explain to visitors why the map has labels for each continent and ocean. Write 2–3 sentences for this card.</p>
+      <div class="textbox-prompt">Explain what continents and oceans are and why labeling them helps visitors.</div>
+      <textarea class="journal-box" id="journal-assign" data-label="Curator Task: World Map Label Card"
+        placeholder="This world map shows..."
         oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- Curator's Chronicle -->
   <div class="activity bl-navy">
     <div class="activity-head">
       <div class="activity-num" style="background:#0E1C42;">📜</div>
@@ -2139,26 +2151,21 @@ body {
     </div>
   </div>
 
-  <!-- Historian's Certificate -->
+  <!-- Certificate -->
   <div class="historian-seal" id="historianSeal">
     <div class="seal-certificate">
       <div class="seal-cert-message">
-        <strong>Nice work, Route Curator!</strong> You studied a real navigation tool, traced explorer routes, and explained how tools made ocean voyages possible.
+        <strong>Nice work, World Geography Curator!</strong> You labeled the continents and oceans and explained why those labels help museum visitors understand the world.
       </div>
       <div class="seal-stamp-wrap">
         <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
           <defs>
-            <radialGradient id="stampGrad" cx="50%" cy="45%" r="50%">
-              <stop offset="0%" stop-color="#D94040"/>
-              <stop offset="100%" stop-color="#A02020"/>
-            </radialGradient>
+            <radialGradient id="stampGrad" cx="50%" cy="45%" r="50%"><stop offset="0%" stop-color="#D94040"/><stop offset="100%" stop-color="#A02020"/></radialGradient>
             <clipPath id="owlStampClip"><circle cx="45" cy="38" r="16"/></clipPath>
           </defs>
           <circle cx="45" cy="45" r="42" fill="url(#stampGrad)" stroke="#7A1818" stroke-width="1.5"/>
           <circle cx="45" cy="45" r="37" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-          <image href="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"
-                 x="27" y="20" width="36" height="36"
-                 clip-path="url(#owlStampClip)" opacity="0.3" style="filter:brightness(3) grayscale(1);"/>
+          <image href="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" x="27" y="20" width="36" height="36" clip-path="url(#owlStampClip)" opacity="0.3" style="filter:brightness(3) grayscale(1);"/>
           <text x="45" y="72" fill="rgba(255,255,255,0.85)" font-family="'Nunito', sans-serif" font-size="9" font-weight="800" letter-spacing="2" text-anchor="middle">CERTIFIED</text>
         </svg>
       </div>
@@ -2183,7 +2190,7 @@ body {
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I completed the Curator Task: Navigation Tools Display Label.</div>
+          <div class="turn-in-item-text">✅ I completed the Curator Task: World Map Label Card.</div>
         </div>
         <div class="turn-in-item" onclick="toggleCheck(this)">
           <div class="turn-in-check"></div>
@@ -2197,22 +2204,28 @@ body {
     </div>
   </div>
 
+    <!-- Coming Up Next (REQUIRED on every lesson) -->
+  <div class="callout callout-tip" style="margin-top:18px;border-left:4px solid #D4943A;background:#FFF8EE;">
+    <div class="callout-icon">🔮</div>
+    <p><strong>Coming Up Next…</strong> The seven continents and five oceans are labeled — the giant map finally tells visitors what they're looking at. But when the head curator steps back to admire it, the young volunteer is on his hands and knees picking something up. A whole stack of feature cards — mountains, rivers, plains, lakes — slid off the map overnight. "We have to put them all back," he says. Tomorrow you'll help him figure out where each one belongs.</p>
+  </div>
+
   <!-- Closing Video -->
   <div class="video-wrap" style="margin-top:18px;">
     <div class="video-wrap-header">
       <span style="font-size:20px;">🎬</span>
       <div>
         <div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div>
-        <div class="video-wrap-title">Great Work, Route Curator!</div>
+        <div class="video-wrap-title">Great Work Today, World Geography Curator!</div>
       </div>
     </div>
     <div class="video-ratio">
       <div class="video-placeholder">
         <div class="video-placeholder-icon">🎬</div>
         <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Celebrate: "You studied a mariner's astrolabe, traced how navigation tools worked, and wrote a display label for the Exploration Wing. You're building this exhibit one piece at a time." Tease next lesson: "Next time, we'll meet some of the famous explorers themselves — and match their portraits with the routes they actually sailed." Under 1 minute.
+          <strong>Teacher recording notes:</strong> Celebrate: "You just placed the biggest labels on the World Map Hall — the seven continents and five oceans!" Restate the key idea: labels help visitors understand places. Tease next lesson: "But wait — the head curator just noticed that the map still has no mountains, rivers, or valleys marked. There are landform and water cards that need to go up next. See you in Lesson 3.05.02!" Under 1 minute.
         </div>
-        <div class="video-placeholder-id"><!-- slot: 3-02-02-closing --></div>
+        <div class="video-placeholder-id"><!-- slot: 3-05-01-closing --></div>
       </div>
     </div>
   </div>
@@ -2222,18 +2235,14 @@ body {
 <!-- ═══ FOOTER ═══ -->
 <div class="footer">
   <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Social Studies · Grade 3 · Lesson 3.02.02</div>
+  <div class="footer-sub">Social Studies · Grade 3 · Lesson 3.05.01</div>
   <div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 
 </div><!-- end page-wrap -->
 
-<!-- ═══ BACK TO TOP ═══ -->
 <button class="back-to-top" id="backToTop" onclick="scrollToTop()">⬆ Top</button>
-
-<!-- ═══ CONFETTI CANVAS ═══ -->
 <canvas id="confettiCanvas"></canvas>
-
 <script>
 /* ═══════════ TAB SWITCHING ═══════════ */
 var visited = { scene: true };
@@ -2300,7 +2309,7 @@ function gatherAnswers() {
 
   // Mini-game status
   output += 'MINI-GAME RESULTS\n';
-  output += '(no mini-game this lesson)\n';
+  output += (window._rootMatchDone ? '✅' : '⬜') + ' Word Roots Match\n';
 
   var gathered = document.getElementById('gatheredOutput');
   if (gathered) gathered.value = output.trim();
@@ -2332,7 +2341,7 @@ function downloadJournal() {
   gatherAnswers();
   var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
   var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
-  html += '<title>Lesson 3.02.02 — My Work</title>';
+  html += '<title>3.05.01 — My Work</title>';
   html += '<style>';
   html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
   html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
@@ -2342,8 +2351,8 @@ function downloadJournal() {
   html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
   html += '.no-answer{color:#B0B8CC;font-style:italic;}';
   html += '</style></head><body>';
-  html += '<h1>📓 My Work — Lesson 3.02.02</h1>';
-  html += '<h2>Navigation Tools and Explorer Routes</h2>';
+  html += '<h1>📓 My Work — 3.05.01</h1>';
+  html += '<h2>Label the Continents and Oceans</h2>';
 
   html += '<div class="section-title">📝 EVIDENCE QUESTIONS</div>';
   ids.forEach(function(id) {

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Optima Academy Online — Lesson 3.02.02: Navigation Tools and Explorer Routes (Grade 3 Museum)</title>
+<title>Optima Academy Online — ✏️ Lesson Code: ✏️ Lesson Title (Grade 3 Museum)</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
 
@@ -1455,206 +1455,61 @@ body {
 
 @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
 </style>
-  html += '<style>';
-  html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
-  html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
-  html += 'h2{font-size:14px;color:#7A88A8;margin-bottom:24px;}';
-  html += '.section-title{font-size:16px;font-weight:bold;color:#0E1C42;margin:28px 0 4px;padding:8px 0 4px;border-bottom:2px solid #E2E8F4;}';
-  html += '.q-label{font-size:13px;font-weight:bold;color:#3A4A6B;margin:16px 0 2px;}';
-  html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
-  html += '.no-answer{color:#B0B8CC;font-style:italic;}';
-  html += '</style></head><body>';
 </head>
 <body>
 <div id="pageTop"></div>
 <div class="page-wrap">
-
-<!-- ═══ PROGRESS BAR ═══ -->
-<div class="progress-wrap">
-  <div class="progress-label">🏛️ Progress</div>
-  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-  <div class="progress-pct" id="progressPct">0%</div>
+<div class="progress-wrap"><div class="progress-label">🏛️ Progress</div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-pct" id="progressPct">0%</div></div>
+<div class="header"><div class="header-brand"><div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div><div><div class="header-org">Optima Academy Online</div><div class="header-sub">An Education Experience Company</div></div></div>
+  <div class="header-title">Geographic Terms Word Roots</div>
+  <div class="header-badge"><span class="header-badge-icon">🌍</span><span class="header-badge-text">Lesson 3.05.05</span></div>
 </div>
 
-<!-- ═══ HEADER ═══ -->
-<div class="header">
-  <div class="header-brand">
-    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title">Navigation Tools and <em>Explorer Routes</em></div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🌍</span>
-    <span class="header-badge-text">Lesson 3.02.02</span>
-  </div>
-</div>
-
-<!-- ═══ SVG HERO BANNER ═══ -->
+<!-- SVG HERO -->
 <svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-  <defs>
-    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#87CEEB"/>
-      <stop offset="100%" stop-color="#E0F4FF"/>
-    </linearGradient>
-    <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1A8A7D"/>
-      <stop offset="100%" stop-color="#0E6B62"/>
-    </linearGradient>
-    <linearGradient id="parchGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#F5E6C8"/>
-      <stop offset="100%" stop-color="#E8D5A8"/>
-    </linearGradient>
-  </defs>
-  <!-- Sky -->
+  <defs><linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#FFF8EE"/><stop offset="100%" stop-color="#F0E6D0"/></linearGradient></defs>
   <rect width="920" height="260" fill="url(#skyGrad)"/>
-  <!-- Sea -->
-  <rect y="170" width="920" height="90" fill="url(#seaGrad)"/>
-  <!-- Waves -->
-  <path d="M0 185 Q50 172 100 185 Q150 198 200 185 Q250 172 300 185 Q350 198 400 185 Q450 172 500 185 Q550 198 600 185 Q650 172 700 185 Q750 198 800 185 Q850 172 920 185 V260 H0Z" fill="#0E6B62" opacity="0.4">
-    <animate attributeName="d" dur="5s" repeatCount="indefinite" values="M0 185 Q50 172 100 185 Q150 198 200 185 Q250 172 300 185 Q350 198 400 185 Q450 172 500 185 Q550 198 600 185 Q650 172 700 185 Q750 198 800 185 Q850 172 920 185 V260 H0Z;M0 190 Q50 198 100 190 Q150 178 200 190 Q250 198 300 190 Q350 178 400 190 Q450 198 500 190 Q550 178 600 190 Q650 198 700 190 Q750 178 800 190 Q850 198 920 190 V260 H0Z;M0 185 Q50 172 100 185 Q150 198 200 185 Q250 172 300 185 Q350 198 400 185 Q450 172 500 185 Q550 198 600 185 Q650 172 700 185 Q750 198 800 185 Q850 172 920 185 V260 H0Z"/>
-  </path>
-  <!-- Parchment Map (large, center-left) -->
-  <g transform="translate(100, 40)">
-    <rect x="0" y="0" width="200" height="140" rx="6" fill="url(#parchGrad)" stroke="#C4A060" stroke-width="1.5"/>
-    <!-- Map lines (route lines) -->
-    <path d="M30 70 Q60 40 100 55 Q140 70 170 45" fill="none" stroke="#B8432F" stroke-width="2" stroke-dasharray="6 3"/>
-    <path d="M40 100 Q80 80 120 95 Q150 105 180 85" fill="none" stroke="#1A8A7D" stroke-width="1.5" stroke-dasharray="4 3"/>
-    <!-- Land blobs on map -->
-    <ellipse cx="40" cy="60" rx="18" ry="12" fill="#8DB86B" opacity="0.6"/>
-    <ellipse cx="160" cy="50" rx="22" ry="15" fill="#8DB86B" opacity="0.6"/>
-    <ellipse cx="100" cy="110" rx="25" ry="10" fill="#8DB86B" opacity="0.5"/>
-    <!-- Compass rose on map -->
-    <circle cx="160" cy="120" r="12" fill="none" stroke="#8B5E20" stroke-width="0.8"/>
-    <polygon points="160,109 162,118 160,114 158,118" fill="#B8432F" opacity="0.7"/>
-    <polygon points="160,131 162,122 160,126 158,122" fill="#0E1C42" opacity="0.5"/>
-  </g>
-  <!-- Astrolabe -->
-  <g transform="translate(480, 70)">
-    <circle cx="0" cy="0" r="50" fill="#D4943A" stroke="#8B5E20" stroke-width="2.5"/>
-    <circle cx="0" cy="0" r="44" fill="none" stroke="#8B5E20" stroke-width="1"/>
-    <circle cx="0" cy="0" r="36" fill="none" stroke="#8B5E20" stroke-width="0.8"/>
-    <line x1="0" y1="-44" x2="0" y2="44" stroke="#8B5E20" stroke-width="1"/>
-    <line x1="-44" y1="0" x2="44" y2="0" stroke="#8B5E20" stroke-width="1"/>
-    <line x1="-31" y1="-31" x2="31" y2="31" stroke="#8B5E20" stroke-width="0.6"/>
-    <line x1="31" y1="-31" x2="-31" y2="31" stroke="#8B5E20" stroke-width="0.6"/>
-    <circle cx="0" cy="0" r="5" fill="#FFD700"/>
-    <!-- Pointer arm -->
-    <line x1="0" y1="0" x2="15" y2="-35" stroke="#5C3A1E" stroke-width="2.5" stroke-linecap="round">
-      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="30s" repeatCount="indefinite"/>
-    </line>
-    <!-- Ring at top -->
-    <circle cx="0" cy="-54" r="7" fill="none" stroke="#8B5E20" stroke-width="2"/>
-  </g>
-  <!-- Compass (bottom right) -->
-  <g transform="translate(720, 180)">
-    <circle cx="0" cy="0" r="32" fill="#FFF8E7" stroke="#D4943A" stroke-width="2.5"/>
-    <circle cx="0" cy="0" r="27" fill="none" stroke="#D4943A" stroke-width="0.6"/>
-    <polygon points="0,-22 5,0 0,-8 -5,0" fill="#E8636B"/>
-    <polygon points="0,22 5,0 0,8 -5,0" fill="#0E1C42"/>
-    <circle cx="0" cy="0" r="3.5" fill="#D4943A"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="4s" values="0 0 0;5 0 0;-3 0 0;0 0 0" repeatCount="indefinite"/>
-  </g>
-  <!-- Stars for navigation -->
-  <circle cx="650" cy="30" r="3" fill="#FFD700" opacity="0.8">
-    <animate attributeName="opacity" dur="2s" values="0.8;0.3;0.8" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="700" cy="18" r="2" fill="#FFD700" opacity="0.6">
-    <animate attributeName="opacity" dur="3s" values="0.6;0.2;0.6" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="770" cy="40" r="2.5" fill="#FFD700" opacity="0.7">
-    <animate attributeName="opacity" dur="2.5s" values="0.7;0.3;0.7" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="830" cy="25" r="2" fill="#FFD700" opacity="0.5">
-    <animate attributeName="opacity" dur="3.5s" values="0.5;0.2;0.5" repeatCount="indefinite"/>
-  </circle>
+  <!-- Wooden cabinet -->
+  <rect x="330" y="50" width="260" height="180" rx="8" fill="#8B6914" opacity="0.85"/>
+  <rect x="340" y="60" width="115" height="75" rx="4" fill="#FFF8EE" stroke="#6B4E0A" stroke-width="1"/>
+  <rect x="465" y="60" width="115" height="75" rx="4" fill="#FFF8EE" stroke="#6B4E0A" stroke-width="1"/>
+  <rect x="340" y="145" width="115" height="75" rx="4" fill="#FFF8EE" stroke="#6B4E0A" stroke-width="1"/>
+  <rect x="465" y="145" width="115" height="75" rx="4" fill="#FFF8EE" stroke="#6B4E0A" stroke-width="1"/>
+  <!-- Floating word cards -->
+  <g><rect x="100" y="80" width="100" height="36" rx="5" fill="#FFF" stroke="#1A8A7D" stroke-width="1.5" opacity="0.9"/><animateTransform attributeName="transform" type="translate" values="0,0;0,-6;0,0" dur="3s" repeatCount="indefinite"/></g>
+  <g><rect x="720" y="70" width="100" height="36" rx="5" fill="#FFF" stroke="#D4943A" stroke-width="1.5" opacity="0.9"/><animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" dur="2.5s" repeatCount="indefinite"/></g>
+  <!-- Museum frame corners -->
+  <rect x="20" y="10" width="40" height="4" rx="2" fill="#D4943A" opacity="0.4"/>
+  <rect x="20" y="10" width="4" height="40" rx="2" fill="#D4943A" opacity="0.4"/>
+  <rect x="860" y="10" width="40" height="4" rx="2" fill="#D4943A" opacity="0.4"/>
+  <rect x="896" y="10" width="4" height="40" rx="2" fill="#D4943A" opacity="0.4"/>
 </svg>
 
 <!-- ═══ INFO STRIP ═══ -->
 <div class="info-strip">
-  <div class="info-cell">
-    <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
-    <div>
-      <div class="info-label">Unit</div>
-      <div class="info-value">Age of Exploration</div>
-    </div>
-  </div>
-  <div class="info-cell">
-    <div class="info-icon" style="background:#FFF3DC;">📅</div>
-    <div>
-      <div class="info-label">Week</div>
-      <div class="info-value">Week 4 · Q1</div>
-    </div>
-  </div>
-  <div class="info-cell">
-    <div class="info-icon" style="background:#E3F8ED;">📜</div>
-    <div>
-      <div class="info-label">Focus</div>
-      <div class="info-value">American History & Geography</div>
-    </div>
-  </div>
-  <div class="info-cell">
-    <div class="info-icon" style="background:#F0E8FF;">📋</div>
-    <div>
-      <div class="info-label">Standards</div>
-      <div class="info-value" style="font-size:12px;">SS.3.A.1.1 · SS.3.A.1.2 · SS.3.A.1.3 · SS.3.G.1.1</div>
-    </div>
-  </div>
+  <div class="info-cell"><div class="info-icon" style="background:#EAF8FD;">🏛️</div><div><div class="info-label">Unit</div><div class="info-value">Oceans, Continents, and Geographic Terms</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#FFF3DC;">📅</div><div><div class="info-label">Week</div><div class="info-value">Week 14 · Q2</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📜</div><div><div class="info-label">Focus</div><div class="info-value">World Geography</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">📋</div><div><div class="info-label">Standards</div><div class="info-value" style="font-size:12px;">SS.3.G.1.3 · SS.3.G.1.4 · SS.3.G.2.1</div></div></div>
 </div>
 
 <!-- ═══ MUSEUM MEMO ═══ -->
-<div class="quote-strip">
-  <div class="quote-strip-text" style="font-style:normal;text-align:left;font-size:15px;line-height:1.65;">
-    Now that you know why people explored, it's time to look at <em>how</em> they did it. The Exploration Wing's tool display has navigation instruments and incomplete route lines waiting to be studied. Route Curators need to help visitors understand how tools like compasses and astrolabes helped explorers travel — and how maps recorded where they went. Today, you'll inspect a real navigation tool and explain what it tells us.
-  </div>
-</div>
+<div class="quote-strip"><div class="quote-strip-text" style="font-style:normal;text-align:left;font-size:15px;line-height:1.65;">
+A rolling cabinet appears outside the World Map Hall with a note taped to it: <em>"For the Word Roots Collection — please deliver to the World Geography Curators."</em> The head curator wheels it inside and opens the drawers. Each one is full of cards with Latin and Greek roots — <em>geo-</em>, <em>terra-</em>, <em>aqua-</em>, and more. "These roots are the building blocks of every geographic term on our map," she says. The young volunteer picks up a card that says <em>peninsula</em> and squints. "Pen-in-su-la. Is that even English?" The head curator smiles. "It's Latin. <em>Pen</em> means 'almost' and <em>insula</em> means 'island.' A peninsula is <em>almost</em> an island — land surrounded by water on three sides." The volunteer's eyes go wide. "So the word actually tells you what it looks like?"
+</div></div>
 
-<!-- ═══ INTRO SECTION ═══ -->
+<!-- ═══ INTRO ═══ -->
 <div class="intro-section" id="introSection">
-  <div class="intro-collapsed-bar" onclick="toggleIntro()">
-    <div class="intro-collapsed-icon">📍</div>
-    <div class="intro-collapsed-text">Today's Curator's Question & Objectives</div>
-    <div class="intro-collapsed-toggle">▼ Expand</div>
-  </div>
-
+  <div class="intro-collapsed-bar" onclick="toggleIntro()"><div class="intro-collapsed-icon">📍</div><div class="intro-collapsed-text">Today's Curator's Question &amp; Objectives</div><div class="intro-collapsed-toggle">▼ Expand</div></div>
   <div class="intro-2col">
-    <div class="intro-card theme-question">
-      <div class="intro-card-head">
-        <div class="intro-card-head-icon">✨</div>
-        <div>
-          <div class="intro-card-head-label">Curator's Question</div>
-          <div class="intro-card-head-title">Today's Big Question</div>
-        </div>
-      </div>
-      <div class="intro-card-body">
-        How did navigation tools help explorers travel, and how do maps record those routes?
-      </div>
-    </div>
-
-    <div class="intro-card theme-objectives">
-      <div class="intro-card-head">
-        <div class="intro-card-head-icon">🎯</div>
-        <div>
-          <div class="intro-card-head-label">Objectives</div>
-          <div class="intro-card-head-title">What You'll Learn</div>
-        </div>
-      </div>
-      <div class="intro-card-body">
-        <div class="obj-line"><span class="obj-icon">🧭</span> Identify navigation tools explorers used on their voyages.</div>
-        <div class="obj-line"><span class="obj-icon">🗺️</span> Explain how tools helped explorers find their way across oceans.</div>
-        <div class="obj-line"><span class="obj-icon">📝</span> Describe how maps record explorer routes.</div>
-      </div>
-    </div>
+    <div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">✨</div><div><div class="intro-card-head-label">Curator's Question</div><div class="intro-card-head-title">Today's Big Question</div></div></div><div class="intro-card-body"><p>How do Latin and Greek word roots help us understand what geographic terms really mean?</p></div></div>
+    <div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Objectives</div><div class="intro-card-head-title">What You'll Learn</div></div></div><div class="intro-card-body">
+      <div class="obj-line"><span class="obj-icon">🔤</span> Break apart geographic terms to find their Latin and Greek roots.</div>
+      <div class="obj-line"><span class="obj-icon">🗺️</span> Use word roots to figure out what a geographic term describes.</div>
+      <div class="obj-line"><span class="obj-icon">📝</span> Write a root-based explanation for a geographic term.</div>
+    </div></div>
   </div>
-
-  <div class="need-strip">
-    <span class="need-strip-label">You'll need:</span>
-    <span class="need-chip">📓 Curator's Notebook</span>
-    <span class="need-chip">✏️ Pencil</span>
-    <span class="need-chip">🗺️ Lesson Page</span>
-  </div>
+  <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Curator's Notebook</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">🗺️ Lesson Page</span></div>
 </div>
 
 <!-- ═══ TAB BAR ═══ -->
@@ -1665,575 +1520,300 @@ body {
   <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📝 Evidence &amp; Assignment <span class="tab-check">✓</span></button>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
 <!-- ═══ TAB 1: ENTER THE MUSEUM ═══ -->
-<!-- ═══════════════════════════════════════════════════════ -->
 <div class="tab-panel active" id="panel-scene">
-
-  <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #D4943A, #E0A050);">📍</div>
-    <div>
-      <div class="tab-section-title">Enter the Museum</div>
-    </div>
-  </div>
+  <div class="tab-section-header"><div class="tab-section-icon" style="background:linear-gradient(135deg, #D4943A, #E0A050);">📍</div><div><div class="tab-section-title">Enter the Museum</div></div></div>
 
   <div class="todays-path">
     <div class="todays-path-title">🗺️ Today's Path</div>
     <div class="todays-path-steps">
-      <span class="todays-path-step">📍 Return to the Exploration Wing & spotlight courage</span>
+      <span class="todays-path-step">📍 Open the Word Roots cabinet &amp; spotlight honesty</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">🔍 Study a mariner's astrolabe and explorer route map</span>
+      <span class="todays-path-step">🔍 Match roots to geographic terms</span>
       <span class="todays-path-arrow">→</span>
       <span class="todays-path-step">🧠 Check your understanding</span>
       <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">📝 Write a source study explanation for the tools display</span>
+      <span class="todays-path-step">📝 Write a "Did You Know?" card</span>
     </div>
   </div>
 
-  <!-- Welcome Video -->
-  <div class="video-wrap" style="margin-top:18px;">
-    <div class="video-wrap-header">
-      <span style="font-size:20px;">🎬</span>
-      <div>
-        <div class="video-wrap-type">📍 WELCOME · ENTER THE MUSEUM</div>
-        <div class="video-wrap-title">Welcome Back to the Exploration Wing</div>
-      </div>
-    </div>
-    <div class="video-ratio">
-      <div class="video-placeholder">
-        <div class="video-placeholder-icon">🎬</div>
-        <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Welcome students back. Say: "Last time, you figured out why people explored. Today's question is: how did they actually do it?" Read the Curator's Question aloud: "How did navigation tools help explorers travel, and how do maps record those routes?" Tell them they'll study a real navigation tool — a mariner's astrolabe — and think like a Source Scholar. Mention courage again. Under 2 minutes.
-        </div>
-        <div class="video-placeholder-id"><!-- slot: 3-02-02-welcome --></div>
-      </div>
-    </div>
-  </div>
+  <div class="video-wrap" style="margin-top:18px;"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">📍 WELCOME · ENTER THE MUSEUM</div><div class="video-wrap-title">Welcome to the Word Roots Cabinet</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Read the Curator's Question aloud. Tell students: "A new cabinet rolled into the World Map Hall — it's full of word root cards. Today we're opening the drawers and discovering what geographic terms actually mean from the inside out." Mention the virtue of honesty. Under 2 minutes.</div><div class="video-placeholder-id"><!-- slot: 3-05-05-welcome --></div></div></div></div>
 
-  <!-- Virtue Spotlight -->
   <div class="virtue-card">
-    <div class="virtue-label">🏛️ Virtue Spotlight — Courage</div>
-    <div class="virtue-text">Explorers sailed into open ocean with simple tools and hand-drawn maps. They couldn't call for help or check a phone for directions. Using those tools well took skill — and trusting them took courage.</div>
+    <div class="virtue-label">🏛️ Virtue Spotlight — Honesty</div>
+    <div class="virtue-text">Honest thinkers don't just guess — they look carefully and tell the truth about what they find. Today, you'll be honest about what word roots actually tell us. Some roots might surprise you, and that's a good thing. The best curators share what's real, not what's easy.</div>
   </div>
 
-  <!-- Curator Role -->
-  <div class="callout callout-info">
-    <div class="callout-icon">🕯️</div>
-    <p><strong>Your Role Today:</strong> You are a <strong>Route Curator</strong> — your job is to investigate explorer tools and routes so museum visitors understand how exploration actually worked. Today, you'll study a navigation instrument and explain what it tells us.</p>
+  <div class="callout callout-info"><div class="callout-icon">🕯️</div>
+    <p><strong>Your Role Today:</strong> You are a <strong>World Geography Curator</strong> helping build the Word Roots Collection for the World Map Hall. The cabinet just arrived and it's your job to match roots to the right geographic terms — and explain what those roots really mean.</p>
   </div>
 
-  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+  <!-- WORD ROOTS CARDS -->
+  <div class="activity bl-accent">
+    <div class="activity-head"><div class="activity-num" style="background:#6B4E0A;">🔤</div><div><div class="activity-title">Word Roots</div><div class="activity-sub">Latin &amp; Greek roots in geography</div></div></div>
+    <div class="activity-body">
+      <p>Many geographic terms come from Latin and Greek. If you know the root, you can figure out what a word means — even if you've never seen it before.</p>
+      <div class="flip-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:12px;">
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🌍</div><div class="fc-word">geo-</div><div class="fc-tap">Tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">geo-</div><div class="fc-def">Greek · means "earth" — geography, geology, geographer</div></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🏔️</div><div class="fc-word">terra-</div><div class="fc-tap">Tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">terra-</div><div class="fc-def">Latin · means "land" — terrain, territory, terrace</div></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">💧</div><div class="fc-word">aqua-</div><div class="fc-tap">Tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">aqua-</div><div class="fc-def">Latin · means "water" — aquatic, aqueduct, aquarium</div></div></div></div>
+        <div class="flip-card"><div class="flip-card-inner"><div class="flip-card-front"><div class="fc-emoji">🏝️</div><div class="fc-word">pen- / paene-</div><div class="fc-tap">Tap to flip</div></div><div class="flip-card-back"><div class="fc-word-back">pen-</div><div class="fc-def">Latin · means "almost" — peninsula (almost an island), penultimate</div></div></div></div>
+      </div>
+      <div class="callout callout-think" style="margin-top:14px;"><div class="callout-icon">🤔</div><p>If <em>geo-</em> means "earth" and <em>-graphy</em> means "writing," what does "geography" really mean?</p></div>
+    </div>
+  </div>
 
-  <!-- Tab Transition -->
   <div class="tab-next-wrap">
-    <p class="tab-transition-voice">You know why people explored. Now let's examine the tools that made those journeys possible.</p>
+    <p class="tab-transition-voice">Now that you've seen the roots, let's put them to work.</p>
     <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
 <!-- ═══ TAB 2: EXPLORE ═══ -->
-<!-- ═══════════════════════════════════════════════════════ -->
 <div class="tab-panel" id="panel-explore">
+  <div class="tab-section-header"><div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #23A094);">🔍</div><div><div class="tab-section-title">Explore</div></div></div>
 
-  <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #34B0A0);">🔍</div>
-    <div>
-      <div class="tab-section-title">Explore</div>
-    </div>
-  </div>
+  <div class="video-wrap" style="margin-top:18px;"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">🔍 EXPLORE · WORD ROOTS IN ACTION</div><div class="video-wrap-title">Cracking Open the Roots</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through one example root in depth (e.g., peninsula = pen + insula). Show how breaking a word apart reveals its picture. Encourage students to try the Root Match game. Under 3 minutes.</div><div class="video-placeholder-id"><!-- slot: 3-05-05-explore-explainer --></div></div></div></div>
 
-  <!-- Explore Explainer Video -->
-  <div class="video-wrap">
-    <div class="video-wrap-header">
-      <span style="font-size:20px;">🎬</span>
-      <div>
-        <div class="video-wrap-type">🔍 TEACHING · EXPLORE</div>
-        <div class="video-wrap-title">Navigation Tools and Route Maps</div>
-      </div>
-    </div>
-    <div class="video-ratio">
-      <div class="video-placeholder">
-        <div class="video-placeholder-icon">🎬</div>
-        <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Explain the three main navigation tools: the compass (points north), the astrolabe (measures the angle of stars to find latitude), and maps/charts (record coastlines and routes). Show how each tool solved a specific problem. Then model the Artifact Table: "I'd write 'navigation tool' for the object type, and 'Age of Exploration' for the time period." Walk through the Source Study questions: "What do I see? What does it mean? Why does it matter?" 3–5 minutes.
-        </div>
-        <div class="video-placeholder-id"><!-- slot: 3-02-02-explore-explainer --></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- STEP 1: Learn -->
   <div class="step-badge"><div class="step-badge-num">1</div> Learn the Story</div>
 
-  <!-- Content Section -->
   <div class="activity bl-accent">
-    <div class="activity-head">
-      <div class="activity-num" style="background:#1A8A7D;">📖</div>
-      <div>
-        <div class="activity-title">How Did Explorers Find Their Way?</div>
-        <div class="activity-sub">Navigation tools of the Age of Exploration</div>
-      </div>
-    </div>
+    <div class="activity-head"><div class="activity-num" style="background:#1A8A7D;">📖</div><div><div class="activity-title">What Word Roots Tell Us</div><div class="activity-sub">How roots unlock meaning</div></div></div>
     <div class="activity-body">
-      <p>You already know why people explored. But imagine standing on the deck of a ship in the middle of the ocean. No landmarks. No roads. Just water in every direction. How would you know where to go?</p>
-      <p>Explorers used <strong>navigation tools</strong> to solve this problem. A <strong>compass</strong> uses a magnetized needle that always points north, helping sailors keep their direction. An <strong>astrolabe</strong> measures the angle of the sun or stars above the horizon, helping sailors figure out how far north or south they are.</p>
-      <p>Explorers also depended on <strong>maps and sea charts</strong>. Early maps were incomplete — some showed imaginary lands or missing coastlines. But every time an explorer returned from a voyage, mapmakers could add new details. Over time, the maps got better and better.</p>
-      <p>Together, these tools turned dangerous guessing into careful navigation. Without them, exploration would have been nearly impossible.</p>
+      <p>Here's the thing about geographic terms — they aren't random. People didn't just make up the word "peninsula" because it sounded nice. They put two Latin pieces together: <em>paene</em> (almost) + <em>insula</em> (island). The word itself is a description.</p>
+      <p>The same is true for many terms on our World Map. When you see <em>terrain</em>, the root <em>terra</em> (land) is right there. When you hear <em>aquatic</em>, you can hear <em>aqua</em> (water). The roots are clues hiding inside the words.</p>
+      <p>This matters for curators because when you write a label for the map, you can use roots to explain terms clearly. The volunteer in the World Map Hall was stuck on the word <em>archipelago</em>. He couldn't remember what it meant. But when the head curator told him the Greek root means "chief sea," it clicked — an archipelago is a chain of islands in a sea. The root told the story.</p>
     </div>
   </div>
 
-  <!-- Pause & Think -->
-  <div class="callout callout-think">
-    <div class="callout-icon">🤔</div>
-    <p><strong>Pause & Think:</strong> Why would an incomplete or incorrect map be dangerous for an explorer? What could go wrong?</p>
-  </div>
+  <div class="callout callout-think"><div class="callout-icon">🤔</div><p><strong>Pause &amp; Think:</strong> Can you think of any English words that have <em>aqua</em> in them? What do they all have in common?</p></div>
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
-
-  <!-- STEP 2: Investigate -->
   <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
 
-  <!-- Artifact Table (Grade 3 Source Study scaffold) -->
-  <div class="activity bl-purple">
-    <div class="activity-head">
-      <div class="activity-num" style="background:#8B6FC0;">🏺</div>
-      <div>
-        <div class="activity-title">Artifact Table</div>
-        <div class="activity-sub">Study this object as if it were placed before you in a museum.</div>
-      </div>
-    </div>
-    <div class="activity-body">
-      <table style="width:100%;border-collapse:collapse;font-size:14px;">
-        <tr style="border-bottom:1px solid #E2E8F4;">
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;width:35%;vertical-align:top;">Object / Source</td>
-          <td style="padding:10px 12px;color:#0E1C42;">A mariner's astrolabe — a circular metal tool used for navigation at sea</td>
-        </tr>
-        <tr style="border-bottom:1px solid #E2E8F4;">
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">Time Period</td>
-          <td style="padding:10px 12px;color:#0E1C42;">Age of Exploration (around the 1400s–1600s)</td>
-        </tr>
-        <tr style="border-bottom:1px solid #E2E8F4;">
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">Place</td>
-          <td style="padding:10px 12px;color:#0E1C42;">Used by European sailors on ocean voyages</td>
-        </tr>
-        <tr style="border-bottom:1px solid #E2E8F4;">
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">What I Notice First</td>
-          <td style="padding:10px 12px;color:#7A88A8;font-style:italic;">Look at the source image below and note one thing that catches your eye.</td>
-        </tr>
-        <tr>
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">What I Wonder</td>
-          <td style="padding:10px 12px;color:#7A88A8;font-style:italic;">What question do you have about this tool?</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- Source Study Card -->
+  <!-- SOURCE STUDY (Category 3 — Real image) -->
   <div class="source-card">
-    <div class="source-card-header">
-      <div class="source-card-header-icon">📜</div>
-      <div>
-        <div class="source-card-header-label">Source Study</div>
-        <div class="source-card-header-title">A Mariner's Astrolabe</div>
-      </div>
-    </div>
-    <div class="source-image-placeholder">
-      <div class="source-image-placeholder-text">
-        🖼️ A photograph of a mariner's astrolabe — a heavy, circular brass instrument with degree markings around the rim and a rotating pointer (alidade) in the center. Used by sailors to measure the angle of the sun or stars above the horizon to determine latitude. Look for examples at the Smithsonian Open Access (si.edu/openaccess), the Metropolitan Museum of Art (metmuseum.org), or Wikimedia Commons (commons.wikimedia.org).<br><br>
-        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-02-02-mariners-astrolabe.jpg</code>
-      </div>
-    </div>
+    <div class="source-card-header"><div class="source-card-header-icon">📜</div><div><div class="source-card-header-label">Source Study · Guided Practice</div><div class="source-card-header-title">Question Like a Geographer</div></div></div>
+    <div class="source-image-placeholder"><div class="source-image-placeholder-text">🖼️ A real photograph of a place whose name comes from a Latin or Greek root — for example, an aerial photo of a peninsula (almost-an-island), a Roman aqueduct (water-carrier), or terraced farmland (terra = land). Should clearly show the feature the root names. Suggested source: Library of Congress, Wikimedia Commons public-domain photos, NASA Earth Observatory.<br><br><strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-05-05-root-feature.jpg</code></div></div>
     <div class="source-card-body">
-      <div class="source-label-bar">
-        <span class="src-type">Historical Artifact</span> · Mariner's astrolabe, circa 1400s–1600s, used by European navigators
-      </div>
-      <div class="callout callout-info">
-        <div class="callout-icon">👁️</div>
-        <p><strong>What do I see?</strong> Look carefully at this tool. What shape is it? What markings or parts do you notice? What material does it look like it's made from?</p>
-      </div>
-      <div class="callout callout-think">
-        <div class="callout-icon">💭</div>
-        <p><strong>What does it mean?</strong> How would a sailor use this tool on a ship? What problem did it help solve?</p>
-      </div>
-      <div class="callout callout-tip">
-        <div class="callout-icon">⚖️</div>
-        <p><strong>Why does it matter?</strong> Why is this tool important for understanding how exploration worked? What would happen without it?</p>
+      <div class="source-label-bar"><span class="src-type">Secondary Source</span> · Photograph of a feature named from its root</div>
+      <div class="callout callout-info"><div class="callout-icon">👁️</div><p><strong>What do I see?</strong> Look at the photo. What kind of place is it? What does the name of the feature tell you to expect?</p></div>
+      <div class="callout callout-think"><div class="callout-icon">💭</div><p><strong>What does it mean?</strong> Break the name apart. What root is hiding inside it? How does the root match what you see?</p></div>
+      <div class="callout callout-tip"><div class="callout-icon">⚖️</div><p><strong>Why does it matter?</strong> Why do you think the people who first named this place chose a word with that root?</p></div>
+    </div>
+  </div>
+
+  <!-- Category 2 — Supplemental SVG reference -->
+  <div class="callout callout-info" style="margin-top:14px;">
+    <div class="callout-icon">📐</div>
+    <p><strong>Root Reference:</strong> Four geographic roots and the terms built from them.</p>
+  </div>
+  <svg viewBox="0 0 740 180" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#FAFBFE;border:1px solid #E2E8F4;border-radius:10px;margin-bottom:14px;">
+    <defs><style>.rt{font-family:'Lora',Georgia,serif;font-size:16px;fill:#6B4E0A;font-weight:700;font-style:italic;} .ro{font-family:sans-serif;font-size:10px;fill:#666;} .rw{font-family:sans-serif;font-size:11px;fill:#333;font-weight:600;} .ra{stroke:#D4943A;stroke-width:1;fill:none;stroke-dasharray:3,2;}</style></defs>
+    <rect x="20" y="20" width="160" height="140" rx="8" fill="#FFF8EE" stroke="#D4943A" stroke-width="1.5"/>
+    <text x="100" y="50" class="rt" text-anchor="middle">geo-</text>
+    <text x="100" y="68" class="ro" text-anchor="middle">Greek · "earth"</text>
+    <line x1="40" y1="78" x2="160" y2="78" class="ra"/>
+    <text x="100" y="98" class="rw" text-anchor="middle">geography</text>
+    <text x="100" y="116" class="rw" text-anchor="middle">geology</text>
+    <text x="100" y="134" class="rw" text-anchor="middle">geographer</text>
+    <rect x="200" y="20" width="160" height="140" rx="8" fill="#FFF8EE" stroke="#D4943A" stroke-width="1.5"/>
+    <text x="280" y="50" class="rt" text-anchor="middle">terra-</text>
+    <text x="280" y="68" class="ro" text-anchor="middle">Latin · "land"</text>
+    <line x1="220" y1="78" x2="340" y2="78" class="ra"/>
+    <text x="280" y="98" class="rw" text-anchor="middle">terrain</text>
+    <text x="280" y="116" class="rw" text-anchor="middle">territory</text>
+    <text x="280" y="134" class="rw" text-anchor="middle">terrace</text>
+    <rect x="380" y="20" width="160" height="140" rx="8" fill="#FFF8EE" stroke="#D4943A" stroke-width="1.5"/>
+    <text x="460" y="50" class="rt" text-anchor="middle">aqua-</text>
+    <text x="460" y="68" class="ro" text-anchor="middle">Latin · "water"</text>
+    <line x1="400" y1="78" x2="520" y2="78" class="ra"/>
+    <text x="460" y="98" class="rw" text-anchor="middle">aquatic</text>
+    <text x="460" y="116" class="rw" text-anchor="middle">aqueduct</text>
+    <text x="460" y="134" class="rw" text-anchor="middle">aquarium</text>
+    <rect x="560" y="20" width="160" height="140" rx="8" fill="#FFF8EE" stroke="#D4943A" stroke-width="1.5"/>
+    <text x="640" y="50" class="rt" text-anchor="middle">pen-</text>
+    <text x="640" y="68" class="ro" text-anchor="middle">Latin · "almost"</text>
+    <line x1="580" y1="78" x2="700" y2="78" class="ra"/>
+    <text x="640" y="98" class="rw" text-anchor="middle">peninsula</text>
+    <text x="640" y="116" class="rw" text-anchor="middle">penultimate</text>
+  </svg>
+
+  <!-- Root Match Game -->
+  <div class="activity bl-accent">
+    <div class="activity-head"><div class="activity-num" style="background:#1A8A7D;">🎮</div><div><div class="activity-title">Root Match</div><div class="activity-sub">Tap a word, then tap its meaning</div></div></div>
+    <div class="activity-body">
+      <div class="root-match-game">
+        <div class="root-match-grid">
+          <div class="root-match-item is-word" data-match="a" onclick="rootMatchClick(this)">geography</div>
+          <div class="root-match-item" data-match="b" onclick="rootMatchClick(this)">land or ground surface</div>
+          <div class="root-match-item is-word" data-match="b" onclick="rootMatchClick(this)">terrain</div>
+          <div class="root-match-item" data-match="c" onclick="rootMatchClick(this)">almost an island</div>
+          <div class="root-match-item is-word" data-match="c" onclick="rootMatchClick(this)">peninsula</div>
+          <div class="root-match-item" data-match="d" onclick="rootMatchClick(this)">related to water</div>
+          <div class="root-match-item is-word" data-match="d" onclick="rootMatchClick(this)">aquatic</div>
+          <div class="root-match-item" data-match="a" onclick="rootMatchClick(this)">writing about the earth</div>
+        </div>
+        <div class="root-match-feedback" id="rootMatchFeedback">🎉 All matched! The Word Roots cabinet is organized.</div>
+        <div class="discovery-fact" id="rootDiscoveryFact">
+          <div class="discovery-fact-label">🔎 Discovery Fact</div>
+          The word "Arctic" comes from the Greek word <em>arktos</em>, meaning "bear" — because the northern sky has the constellation Ursa Major, the Great Bear!
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Then & Now -->
-  <div class="callout callout-tip">
-    <div class="callout-icon">⏳</div>
-    <p><strong>Then & Now:</strong> In the past, sailors used compasses, astrolabes, and star charts to navigate the open ocean. Today, we use GPS satellites and digital maps on our phones. What stayed the same about the human need to know where we are and where we're going?</p>
-  </div>
+  <div class="callout callout-tip"><div class="callout-icon">⏳</div><p><strong>Then &amp; Now:</strong> Ancient Romans and Greeks named the places they discovered using their own languages. Thousands of years later, we still use those roots. The word <em>Mediterranean</em> literally means "middle of the land." Some names never change.</p></div>
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
-
-  <!-- STEP 3: Connect -->
   <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
 
-  <!-- Exhibit Label -->
-  <div class="key-concept">
-    <div class="key-concept-label">🏷️ Exhibit Label</div>
-    <p>Explorers used navigation tools — compasses, astrolabes, and maps — to find their way across oceans. Each voyage added new knowledge to the maps that came after.</p>
-  </div>
+  <div class="key-concept"><div class="key-concept-label">🏷️ Exhibit Label</div><p>Latin and Greek word roots are hidden inside geographic terms. Knowing the root helps you understand — and explain — what a term really describes.</p></div>
 
-  <!-- Opti the Owl -->
-  <div class="owl-buddy">
-    <div class="owl-buddy-avatar">🦉</div>
-    <div class="owl-buddy-bubble">
-      <div class="owl-buddy-name">🧭 Opti says…</div>
-      Here's something neat — early astrolabes were so heavy they had to be held by a ring at the top while the ship rocked beneath you. Imagine trying to measure a star's angle while standing on a rolling deck. That's skill <em>and</em> courage.
-    </div>
-  </div>
+  <div class="owl-buddy"><div class="owl-buddy-avatar">🦉</div><div class="owl-buddy-bubble"><div class="owl-buddy-name">🧭 Opti says…</div>Here's something cool — the word "volcano" comes from Vulcan, the Roman god of fire. Even the name tells you what happens there!</div></div>
 
-  <!-- Tab Transition -->
   <div class="tab-next-wrap">
-    <p class="tab-transition-voice">You've studied the tools and routes. Let's see how much you remember.</p>
+    <p class="tab-transition-voice">You've cracked open the roots. Let's see how much you remember.</p>
     <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Self-Check →</button>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
 <!-- ═══ TAB 3: SELF-CHECK ═══ -->
-<!-- ═══════════════════════════════════════════════════════ -->
 <div class="tab-panel" id="panel-check">
+  <div class="tab-section-header"><div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div><div><div class="tab-section-title">Quick Self-Check</div></div></div>
 
-  <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div>
-    <div>
-      <div class="tab-section-title">Quick Self-Check</div>
+  <div class="callout callout-info" style="margin-bottom:18px;"><div class="callout-icon">🧠</div><p>Not graded — just for you! Answer these questions to see how much you remember about word roots.</p></div>
+
+  <div class="quiz-card"><div style="padding:18px 22px;">
+    <div class="quiz-q" data-answer="b">
+      <div class="quiz-q-text">1. The root <em>geo-</em> means "earth." What does a <em>geographer</em> study?</div>
+      <div class="quiz-options">
+        <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>The ocean floor</div>
+        <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>The earth and its features</div>
+        <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Outer space</div>
+      </div>
+      <div class="quiz-feedback fb-correct">That's right! <em>Geo-</em> means earth, so a geographer studies the earth and its features.</div>
+      <div class="quiz-feedback fb-wrong">Think about the root — <em>geo-</em> means "earth." What would studying the earth include?</div>
     </div>
-  </div>
-
-  <div class="callout callout-info" style="margin-bottom:18px;">
-    <div class="callout-icon">🧠</div>
-    <p>Not graded — just for you! Answer these three questions to see how much you remember before writing your evidence responses.</p>
-  </div>
-
-  <div class="quiz-card">
-    <div style="padding:18px 22px;">
-
-      <!-- QUESTION 1 -->
-      <div class="quiz-q" data-answer="a">
-        <div class="quiz-q-text">1. What does a compass help a sailor do?</div>
-        <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Find which direction is north so they can stay on course.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Measure how deep the ocean is below the ship.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Count how many days the voyage has lasted.</div>
-        </div>
-        <div class="quiz-feedback fb-correct">Right! A compass uses a magnetized needle that always points north, helping sailors keep their direction.</div>
-        <div class="quiz-feedback fb-wrong">Think about what problem sailors face in the open ocean. Which direction are they heading? That's what a compass answers.</div>
+    <div class="quiz-q" data-answer="a">
+      <div class="quiz-q-text">2. The root <em>terra-</em> means "land." Which word most likely describes the surface of the land?</div>
+      <div class="quiz-options">
+        <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Terrain</div>
+        <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Aquarium</div>
+        <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Compass</div>
       </div>
-
-      <!-- QUESTION 2 -->
-      <div class="quiz-q" data-answer="b">
-        <div class="quiz-q-text">2. What did an astrolabe help sailors figure out?</div>
-        <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>How fast the wind was blowing.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>How far north or south they were by measuring the sun or stars.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>How many sailors were needed on the ship.</div>
-        </div>
-        <div class="quiz-feedback fb-correct">Exactly! An astrolabe measures the angle of the sun or stars above the horizon. This tells sailors their latitude — how far north or south they are.</div>
-        <div class="quiz-feedback fb-wrong">Remember, an astrolabe is pointed at the sky. What in the sky could help a sailor figure out their position?</div>
-      </div>
-
-      <!-- QUESTION 3 -->
-      <div class="quiz-q" data-answer="c">
-        <div class="quiz-q-text">3. Why did maps get better over time during the Age of Exploration?</div>
-        <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Because mapmakers used bigger paper.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because kings ordered the maps to be more colorful.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because every returning explorer brought back new information about coastlines and routes.</div>
-        </div>
-        <div class="quiz-feedback fb-correct">Yes! Each voyage added new details. Over time, mapmakers filled in coastlines, routes, and landmarks that earlier maps had missed.</div>
-        <div class="quiz-feedback fb-wrong">Think about what happens after an explorer returns from a voyage. What new information could they share with mapmakers?</div>
-      </div>
-
-      <!-- Score Box -->
-      <div class="quiz-score-box" id="quizScore">
-        <div class="quiz-score-label">Your Score</div>
-        <div class="quiz-score-num" id="quizScoreNum">0</div>
-        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
-        <div class="quiz-score-msg" id="quizScoreMsg"></div>
-      </div>
-
-      <!-- Conditional video: perfect -->
-      <div class="quiz-video-wrap" id="quizVideoCorrect">
-        <div class="video-wrap">
-          <div class="video-wrap-header">
-            <span style="font-size:20px;">⭐</span>
-            <div>
-              <div class="video-wrap-type">Perfect Score · Great Work!</div>
-              <div class="video-wrap-title">You nailed it!</div>
-            </div>
-          </div>
-          <div class="video-ratio">
-            <div class="video-placeholder">
-              <div class="video-placeholder-icon">⭐</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate! Say: "You clearly understand how navigation tools worked — the compass for direction, the astrolabe for position, and maps that got better over time. You're ready to write your source study explanation." Under 30 seconds.</div>
-              <div class="video-placeholder-id"><!-- slot: 3-02-02-quiz-perfect --></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Conditional video: review -->
-      <div class="quiz-video-wrap" id="quizVideoReview">
-        <div class="video-wrap">
-          <div class="video-wrap-header">
-            <span style="font-size:20px;">🔄</span>
-            <div>
-              <div class="video-wrap-type">Review · Keep Going!</div>
-              <div class="video-wrap-title">Let's look at those tricky questions.</div>
-            </div>
-          </div>
-          <div class="video-ratio">
-            <div class="video-placeholder">
-              <div class="video-placeholder-icon">🔄</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through each answer. Key idea: compass = direction, astrolabe = position using stars, maps = improved with each voyage. Under 1 minute. Encouraging.</div>
-              <div class="video-placeholder-id"><!-- slot: 3-02-02-quiz-review --></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <div class="quiz-feedback fb-correct">Yes! Terrain contains the root <em>terra-</em> (land) — it describes what the surface of the land looks like.</div>
+      <div class="quiz-feedback fb-wrong">Look for the word that has <em>terra-</em> hiding inside it.</div>
     </div>
-  </div>
+    <div class="quiz-q" data-answer="b">
+      <div class="quiz-q-text">3. If <em>pen-</em> means "almost" and <em>insula</em> means "island," what is a peninsula?</div>
+      <div class="quiz-options">
+        <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>A small island far from shore</div>
+        <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Land surrounded by water on three sides</div>
+        <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>A deep ocean trench</div>
+      </div>
+      <div class="quiz-feedback fb-correct">Exactly! A peninsula is "almost" an island — land with water on three sides, but still connected to the mainland.</div>
+      <div class="quiz-feedback fb-wrong">"Almost an island" means the land is surrounded by water on most sides but still connected somewhere.</div>
+    </div>
+    <div class="quiz-q" data-answer="b">
+      <div class="quiz-q-text">4. The root <em>aqua-</em> means "water." An aqueduct is a structure that ___.</div>
+      <div class="quiz-options">
+        <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Grows crops on dry land</div>
+        <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Carries water from one place to another</div>
+        <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Measures temperature</div>
+      </div>
+      <div class="quiz-feedback fb-correct">Right! An aqueduct carries water — the <em>aqua-</em> root is your clue.</div>
+      <div class="quiz-feedback fb-wrong">The root <em>aqua-</em> means water. What would a structure with "water" in its name do?</div>
+    </div>
+    <div class="quiz-score-box" id="quizScore"><div class="quiz-score-label">Your Score</div><div class="quiz-score-num" id="quizScoreNum">0</div><div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 4</div><div class="quiz-score-msg" id="quizScoreMsg"></div></div>
 
-  <!-- Tab Transition -->
+    <div class="quiz-video-wrap" id="quizVideoCorrect"><div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">⭐</span><div><div class="video-wrap-type">Perfect Score · Great Work!</div><div class="video-wrap-title">You Know Your Roots!</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate the perfect score. "You cracked open every root!" Under 30 seconds.</div><div class="video-placeholder-id"><!-- slot: 3-05-05-quiz-perfect --></div></div></div></div></div>
+    <div class="quiz-video-wrap" id="quizVideoReview"><div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">📖</span><div><div class="video-wrap-type">Let's Review Together</div><div class="video-wrap-title">Root Review</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the trickiest question. Remind students what each root means. Under 1 minute.</div><div class="video-placeholder-id"><!-- slot: 3-05-05-quiz-review --></div></div></div></div></div>
+  </div></div>
+
   <div class="tab-next-wrap">
-    <p class="tab-transition-voice">Now that you've checked your understanding, time to put your thinking into words.</p>
+    <p class="tab-transition-voice">Great work! Now let's write your evidence and your "Did You Know?" card.</p>
     <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Evidence &amp; Assignment →</button>
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
 <!-- ═══ TAB 4: EVIDENCE & ASSIGNMENT ═══ -->
-<!-- ═══════════════════════════════════════════════════════ -->
 <div class="tab-panel" id="panel-assignment">
+  <div class="tab-section-header"><div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div><div><div class="tab-section-title">Evidence &amp; Assignment</div></div></div>
 
-  <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div>
-    <div>
-      <div class="tab-section-title">Evidence &amp; Assignment</div>
-    </div>
-  </div>
+  <div class="callout callout-info" style="margin-bottom:18px;"><div class="callout-icon">📝</div><p>Time to show what you know. Answer the evidence questions and complete your Curator Task. Your answers will be gathered at the bottom so you can copy or download them for Canvas.</p></div>
 
-  <div class="callout callout-info" style="margin-bottom:18px;">
-    <div class="callout-icon">📝</div>
-    <p>Time to show what you know. Answer the evidence questions and complete your Curator Task. Your answers will be gathered at the bottom so you can copy or download them for Canvas.</p>
-  </div>
+  <div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div><div class="video-wrap-title">What You'll Turn In</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Read each evidence question aloud. Model answering Q1 by picking a word and naming its root. Clarify the Curator Task: they're writing a "Did You Know?" card for the museum. Walk through the turn-in process. 2–3 minutes.</div><div class="video-placeholder-id"><!-- slot: 3-05-05-assignment-explainer --></div></div></div></div>
 
-  <!-- Assignment Explainer Video -->
-  <div class="video-wrap">
-    <div class="video-wrap-header">
-      <span style="font-size:20px;">🎬</span>
-      <div>
-        <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
-        <div class="video-wrap-title">What You'll Turn In</div>
-      </div>
-    </div>
-    <div class="video-ratio">
-      <div class="video-placeholder">
-        <div class="video-placeholder-icon">🎬</div>
-        <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Read each evidence question aloud. Think aloud through Q1: "I'd say the compass helped explorers because the lesson told us it uses a magnetized needle to point north — that's how they stayed on course." Then explain the Curator Task: "You're writing the explanation label for the navigation tools display. Tell visitors what the astrolabe is, how it works, and why it mattered." 2–3 minutes.
-        </div>
-        <div class="video-placeholder-id"><!-- slot: 3-02-02-assignment-explainer --></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Part A: Evidence Questions -->
   <div class="activity bl-cyan">
-    <div class="activity-head">
-      <div class="activity-num" style="background:#55C8E8;">A</div>
-      <div>
-        <div class="activity-title">Evidence Questions</div>
-        <div class="activity-sub">Answer using details from the lesson.</div>
-      </div>
-    </div>
+    <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">A</div><div><div class="activity-title">Evidence Questions</div><div class="activity-sub">Answer using details from the lesson.</div></div></div>
     <div class="activity-body">
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Pick one geographic term from this lesson (<em>geography</em>, <em>terrain</em>, <em>peninsula</em>, or <em>aquatic</em>). What root does it come from, and what does that root mean?</div></div>
+      <div class="textbox-prompt">Name the word, its root, and the root's meaning.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Word Root Identification" placeholder="The word I picked is... Its root is... That root means..." oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
 
-      <!-- Q1 -->
-      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Choose one navigation tool (compass, astrolabe, or maps). Explain what problem it solved for explorers.</div></div>
-      <div class="textbox-prompt">Use at least one detail from the lesson to support your answer.</div>
-      <textarea class="journal-box" id="journal-q1" data-label="Q1: Navigation tool and its purpose"
-        placeholder="The [tool] helped explorers because..."
-        oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
-
-      <!-- Q2 -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Why did maps improve over time during the Age of Exploration? Use evidence from the lesson.</div></div>
-      <div class="textbox-prompt">Explain your thinking using evidence from what you read.</div>
-      <textarea class="journal-box" id="journal-q2" data-label="Q2: Why maps improved"
-        placeholder="Maps improved over time because..."
-        oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
-
-      <!-- Q3 -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>How does studying navigation tools help us understand why exploration took courage? Connect the tools to the risks explorers faced.</div></div>
-      <div class="textbox-prompt">Connect what you learned about tools to what you know about the dangers of exploration.</div>
-      <textarea class="journal-box" id="journal-q3" data-label="Q3: Tools and courage"
-        placeholder="Studying navigation tools helps us understand courage because..."
-        oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
-
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Why would it help museum visitors to know the word roots of geographic terms? Give a reason.</div></div>
+      <div class="textbox-prompt">Think about what visitors see when they read a label with a tricky word.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: Why Roots Help Visitors" placeholder="It would help because..." oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- Part B: Curator Task -->
   <div class="activity bl-gold">
-    <div class="activity-head">
-      <div class="activity-num" style="background:#D4943A;">B</div>
-      <div>
-        <div class="activity-title">Curator Task: Navigation Tools Display Label</div>
-        <div class="activity-sub">Write the explanation label for the navigation tools display in the Exploration Wing.</div>
-      </div>
-    </div>
+    <div class="activity-head"><div class="activity-num" style="background:#D4943A;">B</div><div><div class="activity-title">Curator Task: "Did You Know?" Card</div><div class="activity-sub">Write a word root label for the World Map</div></div></div>
     <div class="activity-body">
-      <p>The navigation tools display needs a label so museum visitors understand what they're looking at. Write a short explanation (3–4 sentences) about the mariner's astrolabe: what it is, how explorers used it, and why it was important for navigation. Use details from today's lesson and your source study.</p>
-
-      <div class="textbox-prompt">Your label should tell visitors: What is this tool? How was it used? Why did it matter?</div>
-      <textarea class="journal-box" id="journal-assign" data-label="Curator Task: Navigation Tools Display Label"
-        placeholder="This mariner's astrolabe is a..."
-        oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
+      <p>The head curator wants to add "Did You Know?" cards next to tricky terms on the World Map. These cards explain the word root so visitors can see what the term really means.</p>
+      <p><strong>Pick one geographic term from the Word Roots cabinet.</strong> Write a short "Did You Know?" card (3–5 sentences) that explains the term, what root it comes from, what that root means, and how knowing the root helps someone picture what the term describes.</p>
+      <div class="textbox-prompt">Write your card here. Start with "Did You Know?"</div>
+      <textarea class="journal-box" id="journal-assign" data-label="Curator Task: Did You Know Card" placeholder="Did You Know? The word _____ comes from the root..." oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- Curator's Chronicle -->
   <div class="activity bl-navy">
-    <div class="activity-head">
-      <div class="activity-num" style="background:#0E1C42;">📜</div>
-      <div>
-        <div class="activity-title">Curator's Chronicle</div>
-        <div class="activity-sub">One sentence to capture today's exhibit work.</div>
-      </div>
-    </div>
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📜</div><div><div class="activity-title">Curator's Chronicle</div><div class="activity-sub">One sentence to capture today's exhibit work.</div></div></div>
     <div class="activity-body">
       <p>Finish this sentence in your own words:</p>
       <div class="textbox-prompt">In this exhibit, I learned that ______ because ______.</div>
-      <textarea class="journal-box" id="journal-chronicle" data-label="Curator's Chronicle"
-        placeholder="In this exhibit, I learned that..."
-        oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
+      <textarea class="journal-box" id="journal-chronicle" data-label="Curator's Chronicle" placeholder="In this exhibit, I learned that..." oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
     </div>
   </div>
 
   <!-- Gathered Answers -->
-  <div class="gathered-card">
-    <div class="gathered-header">
-      <div class="gathered-header-icon">📋</div>
-      <div>
-        <div class="gathered-header-label">Review Your Work</div>
-        <div class="gathered-header-title">Gathered Answers</div>
-      </div>
-    </div>
-    <div class="gathered-body">
-      <div class="gathered-intro">All your answers are gathered here. Review them, then copy or download to submit.</div>
-      <textarea class="gathered-output" id="gatheredOutput" readonly></textarea>
-      <div class="gathered-actions">
-        <button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button>
-        <button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button>
-      </div>
-      <div class="gathered-copied" id="gatheredCopied">✅ Copied!</div>
-    </div>
-  </div>
+  <div class="gathered-card"><div class="gathered-header"><div class="gathered-header-icon">📋</div><div><div class="gathered-header-label">Review Your Work</div><div class="gathered-header-title">Gathered Answers</div></div></div><div class="gathered-body"><div class="gathered-intro">All your answers are gathered here. Review them, then copy or download to submit.</div><textarea class="gathered-output" id="gatheredOutput" readonly></textarea><div class="gathered-actions"><button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button><button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button></div><div class="gathered-copied" id="gatheredCopied">✅ Copied!</div></div></div>
 
-  <!-- Historian's Certificate -->
-  <div class="historian-seal" id="historianSeal">
-    <div class="seal-certificate">
-      <div class="seal-cert-message">
-        <strong>Nice work, Route Curator!</strong> You studied a real navigation tool, traced explorer routes, and explained how tools made ocean voyages possible.
-      </div>
-      <div class="seal-stamp-wrap">
-        <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
-          <defs>
-            <radialGradient id="stampGrad" cx="50%" cy="45%" r="50%">
-              <stop offset="0%" stop-color="#D94040"/>
-              <stop offset="100%" stop-color="#A02020"/>
-            </radialGradient>
-            <clipPath id="owlStampClip"><circle cx="45" cy="38" r="16"/></clipPath>
-          </defs>
-          <circle cx="45" cy="45" r="42" fill="url(#stampGrad)" stroke="#7A1818" stroke-width="1.5"/>
-          <circle cx="45" cy="45" r="37" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-          <image href="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"
-                 x="27" y="20" width="36" height="36"
-                 clip-path="url(#owlStampClip)" opacity="0.3" style="filter:brightness(3) grayscale(1);"/>
-          <text x="45" y="72" fill="rgba(255,255,255,0.85)" font-family="'Nunito', sans-serif" font-size="9" font-weight="800" letter-spacing="2" text-anchor="middle">CERTIFIED</text>
-        </svg>
-      </div>
-    </div>
-  </div>
+  <!-- Certificate -->
+  <div class="historian-seal" id="historianSeal"><div class="seal-certificate"><div class="seal-cert-message"><strong>Nice work, World Geography Curator!</strong> You've cracked open the Word Roots cabinet and can now decode geographic terms like a pro.</div><div class="seal-stamp-wrap"><svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));"><defs><radialGradient id="stampGrad" cx="50%" cy="45%" r="50%"><stop offset="0%" stop-color="#D94040"/><stop offset="100%" stop-color="#A02020"/></radialGradient><clipPath id="owlStampClip"><circle cx="45" cy="38" r="16"/></clipPath></defs><circle cx="45" cy="45" r="42" fill="url(#stampGrad)" stroke="#7A1818" stroke-width="1.5"/><circle cx="45" cy="45" r="37" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/><image href="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" x="27" y="20" width="36" height="36" clip-path="url(#owlStampClip)" opacity="0.3" style="filter:brightness(3) grayscale(1);"/><text x="45" y="72" fill="rgba(255,255,255,0.85)" font-family="'Nunito', sans-serif" font-size="9" font-weight="800" letter-spacing="2" text-anchor="middle">CERTIFIED</text></svg></div></div></div>
 
   <!-- Turn-In Checklist -->
-  <div class="turn-in-card">
-    <div class="turn-in-header">
-      <div class="turn-in-header-icon">✅</div>
-      <div>
-        <div class="turn-in-header-label">Submit Your Work</div>
-        <div class="turn-in-header-title">Turn-In Checklist</div>
-      </div>
-    </div>
-    <div class="turn-in-body">
-      <div class="turn-in-intro">Check each item as you finish. When all are checked, you're done!</div>
-      <div class="turn-in-checklist">
-        <div class="turn-in-item" onclick="toggleCheck(this)">
-          <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I answered the evidence questions.</div>
-        </div>
-        <div class="turn-in-item" onclick="toggleCheck(this)">
-          <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I completed the Curator Task: Navigation Tools Display Label.</div>
-        </div>
-        <div class="turn-in-item" onclick="toggleCheck(this)">
-          <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I wrote my Curator's Chronicle.</div>
-        </div>
-        <div class="turn-in-item" onclick="toggleCheck(this)">
-          <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I copied or downloaded my work and submitted to Canvas.</div>
-        </div>
-      </div>
-    </div>
+  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Submit Your Work</div><div class="turn-in-header-title">Turn-In Checklist</div></div></div><div class="turn-in-body"><div class="turn-in-intro">Check each item as you finish. When all are checked, you're done!</div><div class="turn-in-checklist">
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I completed the Root Match game.</div></div>
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I answered both evidence questions.</div></div>
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I wrote my "Did You Know?" card.</div></div>
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I finished the self-check quiz.</div></div>
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I copied or downloaded my work and submitted to Canvas.</div></div>
+  </div></div></div>
+
+    <!-- Coming Up Next (REQUIRED on every lesson) -->
+  <div class="callout callout-tip" style="margin-top:18px;border-left:4px solid #D4943A;background:#FFF8EE;">
+    <div class="callout-icon">🔮</div>
+    <p><strong>Coming Up Next…</strong> The Word Roots cabinet is organized, and "Did You Know?" cards stand by every tricky term on the World Map. The volunteer can finally pronounce <em>archipelago</em>. But Opening Night is tomorrow — and one frame by the entrance is still blank. The head curator walks over and turns to you. "Every exhibit in this museum starts with an explanation," she says. "Visitors need a label right here that tells them what this whole room is about. That's why I'm asking our best curator to write it." Tomorrow you'll write the most important label in the World Map Hall.</p>
   </div>
 
   <!-- Closing Video -->
-  <div class="video-wrap" style="margin-top:18px;">
-    <div class="video-wrap-header">
-      <span style="font-size:20px;">🎬</span>
-      <div>
-        <div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div>
-        <div class="video-wrap-title">Great Work, Route Curator!</div>
-      </div>
-    </div>
-    <div class="video-ratio">
-      <div class="video-placeholder">
-        <div class="video-placeholder-icon">🎬</div>
-        <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Celebrate: "You studied a mariner's astrolabe, traced how navigation tools worked, and wrote a display label for the Exploration Wing. You're building this exhibit one piece at a time." Tease next lesson: "Next time, we'll meet some of the famous explorers themselves — and match their portraits with the routes they actually sailed." Under 1 minute.
-        </div>
-        <div class="video-placeholder-id"><!-- slot: 3-02-02-closing --></div>
-      </div>
-    </div>
-  </div>
+  <div class="video-wrap" style="margin-top:18px;"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div><div class="video-wrap-title">Great Work, World Geography Curator!</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate: "You cracked open word roots and now you know what geographic terms actually mean!" Tease next: "Tomorrow is Opening Night — the head curator needs one final label for the World Map Hall entrance. You'll write the most important explanation in the whole exhibit. See you in Lesson 3.05.06!" Under 1 minute.</div><div class="video-placeholder-id"><!-- slot: 3-05-05-closing --></div></div></div></div>
 
 </div><!-- end panel-assignment -->
 
 <!-- ═══ FOOTER ═══ -->
 <div class="footer">
   <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Social Studies · Grade 3 · Lesson 3.02.02</div>
+  <div class="footer-sub">Social Studies · Grade 3 · Lesson 3.05.05</div>
   <div class="footer-copy">© 2025 Optima Academy Online</div>
 </div>
 
 </div><!-- end page-wrap -->
 
-<!-- ═══ BACK TO TOP ═══ -->
 <button class="back-to-top" id="backToTop" onclick="scrollToTop()">⬆ Top</button>
-
-<!-- ═══ CONFETTI CANVAS ═══ -->
 <canvas id="confettiCanvas"></canvas>
-
 <script>
 /* ═══════════ TAB SWITCHING ═══════════ */
 var visited = { scene: true };
@@ -2300,7 +1880,7 @@ function gatherAnswers() {
 
   // Mini-game status
   output += 'MINI-GAME RESULTS\n';
-  output += '(no mini-game this lesson)\n';
+  output += (window._rootMatchDone ? '✅' : '⬜') + ' Word Roots Match\n';
 
   var gathered = document.getElementById('gatheredOutput');
   if (gathered) gathered.value = output.trim();
@@ -2332,7 +1912,7 @@ function downloadJournal() {
   gatherAnswers();
   var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
   var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
-  html += '<title>Lesson 3.02.02 — My Work</title>';
+  html += '<title>3.05.05 — My Work</title>';
   html += '<style>';
   html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
   html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
@@ -2342,8 +1922,8 @@ function downloadJournal() {
   html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
   html += '.no-answer{color:#B0B8CC;font-style:italic;}';
   html += '</style></head><body>';
-  html += '<h1>📓 My Work — Lesson 3.02.02</h1>';
-  html += '<h2>Navigation Tools and Explorer Routes</h2>';
+  html += '<h1>📓 My Work — 3.05.05</h1>';
+  html += '<h2>Geographic Terms Word Roots</h2>';
 
   html += '<div class="section-title">📝 EVIDENCE QUESTIONS</div>';
   ids.forEach(function(id) {

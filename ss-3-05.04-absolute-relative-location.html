@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Optima Academy Online — Lesson 3.02.02: Navigation Tools and Explorer Routes (Grade 3 Museum)</title>
+<title>Optima Academy Online — ✏️ Lesson Code: ✏️ Lesson Title (Grade 3 Museum)</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
 
@@ -1455,209 +1455,78 @@ body {
 
 @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
 </style>
-  html += '<style>';
-  html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
-  html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
-  html += 'h2{font-size:14px;color:#7A88A8;margin-bottom:24px;}';
-  html += '.section-title{font-size:16px;font-weight:bold;color:#0E1C42;margin:28px 0 4px;padding:8px 0 4px;border-bottom:2px solid #E2E8F4;}';
-  html += '.q-label{font-size:13px;font-weight:bold;color:#3A4A6B;margin:16px 0 2px;}';
-  html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
-  html += '.no-answer{color:#B0B8CC;font-style:italic;}';
-  html += '</style></head><body>';
 </head>
 <body>
 <div id="pageTop"></div>
 <div class="page-wrap">
-
-<!-- ═══ PROGRESS BAR ═══ -->
-<div class="progress-wrap">
-  <div class="progress-label">🏛️ Progress</div>
-  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
-  <div class="progress-pct" id="progressPct">0%</div>
+<div class="progress-wrap"><div class="progress-label">🏛️ Progress</div><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-pct" id="progressPct">0%</div></div>
+<div class="header"><div class="header-brand"><div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div><div><div class="header-org">Optima Academy Online</div><div class="header-sub">An Education Experience Company</div></div></div>
+  <div class="header-title">Absolute and Relative Location</div>
+  <div class="header-badge"><span class="header-badge-icon">🌍</span><span class="header-badge-text">Lesson 3.05.04</span></div>
 </div>
 
-<!-- ═══ HEADER ═══ -->
-<div class="header">
-  <div class="header-brand">
-    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
-    <div>
-      <div class="header-org">Optima Academy Online</div>
-      <div class="header-sub">An Education Experience Company</div>
-    </div>
-  </div>
-  <div class="header-title">Navigation Tools and <em>Explorer Routes</em></div>
-  <div class="header-badge">
-    <span class="header-badge-icon">🌍</span>
-    <span class="header-badge-text">Lesson 3.02.02</span>
-  </div>
-</div>
-
-<!-- ═══ SVG HERO BANNER ═══ -->
+<!-- SVG HERO -->
 <svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
-  <defs>
-    <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#87CEEB"/>
-      <stop offset="100%" stop-color="#E0F4FF"/>
-    </linearGradient>
-    <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1A8A7D"/>
-      <stop offset="100%" stop-color="#0E6B62"/>
-    </linearGradient>
-    <linearGradient id="parchGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#F5E6C8"/>
-      <stop offset="100%" stop-color="#E8D5A8"/>
-    </linearGradient>
-  </defs>
-  <!-- Sky -->
+  <defs><linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#E8F0FE"/><stop offset="100%" stop-color="#D0E8FF"/></linearGradient></defs>
   <rect width="920" height="260" fill="url(#skyGrad)"/>
-  <!-- Sea -->
-  <rect y="170" width="920" height="90" fill="url(#seaGrad)"/>
-  <!-- Waves -->
-  <path d="M0 185 Q50 172 100 185 Q150 198 200 185 Q250 172 300 185 Q350 198 400 185 Q450 172 500 185 Q550 198 600 185 Q650 172 700 185 Q750 198 800 185 Q850 172 920 185 V260 H0Z" fill="#0E6B62" opacity="0.4">
-    <animate attributeName="d" dur="5s" repeatCount="indefinite" values="M0 185 Q50 172 100 185 Q150 198 200 185 Q250 172 300 185 Q350 198 400 185 Q450 172 500 185 Q550 198 600 185 Q650 172 700 185 Q750 198 800 185 Q850 172 920 185 V260 H0Z;M0 190 Q50 198 100 190 Q150 178 200 190 Q250 198 300 190 Q350 178 400 190 Q450 198 500 190 Q550 178 600 190 Q650 198 700 190 Q750 178 800 190 Q850 198 920 190 V260 H0Z;M0 185 Q50 172 100 185 Q150 198 200 185 Q250 172 300 185 Q350 198 400 185 Q450 172 500 185 Q550 198 600 185 Q650 172 700 185 Q750 198 800 185 Q850 172 920 185 V260 H0Z"/>
-  </path>
-  <!-- Parchment Map (large, center-left) -->
-  <g transform="translate(100, 40)">
-    <rect x="0" y="0" width="200" height="140" rx="6" fill="url(#parchGrad)" stroke="#C4A060" stroke-width="1.5"/>
-    <!-- Map lines (route lines) -->
-    <path d="M30 70 Q60 40 100 55 Q140 70 170 45" fill="none" stroke="#B8432F" stroke-width="2" stroke-dasharray="6 3"/>
-    <path d="M40 100 Q80 80 120 95 Q150 105 180 85" fill="none" stroke="#1A8A7D" stroke-width="1.5" stroke-dasharray="4 3"/>
-    <!-- Land blobs on map -->
-    <ellipse cx="40" cy="60" rx="18" ry="12" fill="#8DB86B" opacity="0.6"/>
-    <ellipse cx="160" cy="50" rx="22" ry="15" fill="#8DB86B" opacity="0.6"/>
-    <ellipse cx="100" cy="110" rx="25" ry="10" fill="#8DB86B" opacity="0.5"/>
-    <!-- Compass rose on map -->
-    <circle cx="160" cy="120" r="12" fill="none" stroke="#8B5E20" stroke-width="0.8"/>
-    <polygon points="160,109 162,118 160,114 158,118" fill="#B8432F" opacity="0.7"/>
-    <polygon points="160,131 162,122 160,126 158,122" fill="#0E1C42" opacity="0.5"/>
+  <!-- Grid lines suggesting coordinates -->
+  <line x1="0" y1="130" x2="920" y2="130" stroke="#1A8A7D" stroke-width="1" opacity="0.2"/>
+  <line x1="460" y1="0" x2="460" y2="260" stroke="#1A8A7D" stroke-width="1" opacity="0.2"/>
+  <line x1="0" y1="65" x2="920" y2="65" stroke="#1A8A7D" stroke-width="0.5" opacity="0.1" stroke-dasharray="8,4"/>
+  <line x1="0" y1="195" x2="920" y2="195" stroke="#1A8A7D" stroke-width="0.5" opacity="0.1" stroke-dasharray="8,4"/>
+  <line x1="230" y1="0" x2="230" y2="260" stroke="#1A8A7D" stroke-width="0.5" opacity="0.1" stroke-dasharray="8,4"/>
+  <line x1="690" y1="0" x2="690" y2="260" stroke="#1A8A7D" stroke-width="0.5" opacity="0.1" stroke-dasharray="8,4"/>
+  <!-- Location pin -->
+  <g transform="translate(300,80)">
+    <path d="M0,0 C-15,-25 -25,-40 0,-55 C25,-40 15,-25 0,0Z" fill="#E8636B" opacity="0.8">
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,-5;0,0" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="0" cy="-38" r="8" fill="#FFF" opacity="0.6"/>
   </g>
-  <!-- Astrolabe -->
-  <g transform="translate(480, 70)">
-    <circle cx="0" cy="0" r="50" fill="#D4943A" stroke="#8B5E20" stroke-width="2.5"/>
-    <circle cx="0" cy="0" r="44" fill="none" stroke="#8B5E20" stroke-width="1"/>
-    <circle cx="0" cy="0" r="36" fill="none" stroke="#8B5E20" stroke-width="0.8"/>
-    <line x1="0" y1="-44" x2="0" y2="44" stroke="#8B5E20" stroke-width="1"/>
-    <line x1="-44" y1="0" x2="44" y2="0" stroke="#8B5E20" stroke-width="1"/>
-    <line x1="-31" y1="-31" x2="31" y2="31" stroke="#8B5E20" stroke-width="0.6"/>
-    <line x1="31" y1="-31" x2="-31" y2="31" stroke="#8B5E20" stroke-width="0.6"/>
-    <circle cx="0" cy="0" r="5" fill="#FFD700"/>
-    <!-- Pointer arm -->
-    <line x1="0" y1="0" x2="15" y2="-35" stroke="#5C3A1E" stroke-width="2.5" stroke-linecap="round">
-      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="30s" repeatCount="indefinite"/>
-    </line>
-    <!-- Ring at top -->
-    <circle cx="0" cy="-54" r="7" fill="none" stroke="#8B5E20" stroke-width="2"/>
+  <!-- Location pin 2 -->
+  <g transform="translate(620,150)">
+    <path d="M0,0 C-15,-25 -25,-40 0,-55 C25,-40 15,-25 0,0Z" fill="#D4943A" opacity="0.8">
+      <animateTransform attributeName="transform" type="translate" values="0,0;0,-4;0,0" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="0" cy="-38" r="8" fill="#FFF" opacity="0.6"/>
   </g>
-  <!-- Compass (bottom right) -->
-  <g transform="translate(720, 180)">
-    <circle cx="0" cy="0" r="32" fill="#FFF8E7" stroke="#D4943A" stroke-width="2.5"/>
-    <circle cx="0" cy="0" r="27" fill="none" stroke="#D4943A" stroke-width="0.6"/>
-    <polygon points="0,-22 5,0 0,-8 -5,0" fill="#E8636B"/>
-    <polygon points="0,22 5,0 0,8 -5,0" fill="#0E1C42"/>
-    <circle cx="0" cy="0" r="3.5" fill="#D4943A"/>
-    <animateTransform attributeName="transform" type="rotate" additive="sum" dur="4s" values="0 0 0;5 0 0;-3 0 0;0 0 0" repeatCount="indefinite"/>
-  </g>
-  <!-- Stars for navigation -->
-  <circle cx="650" cy="30" r="3" fill="#FFD700" opacity="0.8">
-    <animate attributeName="opacity" dur="2s" values="0.8;0.3;0.8" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="700" cy="18" r="2" fill="#FFD700" opacity="0.6">
-    <animate attributeName="opacity" dur="3s" values="0.6;0.2;0.6" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="770" cy="40" r="2.5" fill="#FFD700" opacity="0.7">
-    <animate attributeName="opacity" dur="2.5s" values="0.7;0.3;0.7" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="830" cy="25" r="2" fill="#FFD700" opacity="0.5">
-    <animate attributeName="opacity" dur="3.5s" values="0.5;0.2;0.5" repeatCount="indefinite"/>
-  </circle>
+  <!-- Clue cards -->
+  <rect x="100" y="180" width="90" height="50" rx="6" fill="#FFF" stroke="#1A8A7D" stroke-width="1.5" opacity="0.8"/>
+  <line x1="115" y1="195" x2="175" y2="195" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="115" y1="210" x2="160" y2="210" stroke="#ccc" stroke-width="1.5"/>
+  <rect x="730" y="170" width="90" height="50" rx="6" fill="#FFF" stroke="#D4943A" stroke-width="1.5" opacity="0.8"/>
+  <line x1="745" y1="185" x2="805" y2="185" stroke="#ccc" stroke-width="1.5"/>
+  <line x1="745" y1="200" x2="790" y2="200" stroke="#ccc" stroke-width="1.5"/>
+  <!-- Compass -->
+  <circle cx="460" cy="130" r="25" fill="rgba(255,255,255,0.5)" stroke="#D4943A" stroke-width="1"/>
+  <polygon points="460,108 464,130 460,126 456,130" fill="#D4943A"/>
+  <polygon points="460,152 464,130 460,134 456,130" fill="#1A8A7D"/>
 </svg>
 
-<!-- ═══ INFO STRIP ═══ -->
 <div class="info-strip">
-  <div class="info-cell">
-    <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
-    <div>
-      <div class="info-label">Unit</div>
-      <div class="info-value">Age of Exploration</div>
-    </div>
-  </div>
-  <div class="info-cell">
-    <div class="info-icon" style="background:#FFF3DC;">📅</div>
-    <div>
-      <div class="info-label">Week</div>
-      <div class="info-value">Week 4 · Q1</div>
-    </div>
-  </div>
-  <div class="info-cell">
-    <div class="info-icon" style="background:#E3F8ED;">📜</div>
-    <div>
-      <div class="info-label">Focus</div>
-      <div class="info-value">American History & Geography</div>
-    </div>
-  </div>
-  <div class="info-cell">
-    <div class="info-icon" style="background:#F0E8FF;">📋</div>
-    <div>
-      <div class="info-label">Standards</div>
-      <div class="info-value" style="font-size:12px;">SS.3.A.1.1 · SS.3.A.1.2 · SS.3.A.1.3 · SS.3.G.1.1</div>
-    </div>
-  </div>
+  <div class="info-cell"><div class="info-icon" style="background:#EAF8FD;">🏛️</div><div><div class="info-label">Unit</div><div class="info-value">Oceans, Continents, and Geographic Terms</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#FFF3DC;">📅</div><div><div class="info-label">Week</div><div class="info-value">Week 13 · Q2</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#E3F8ED;">📜</div><div><div class="info-label">Focus</div><div class="info-value">World Geography</div></div></div>
+  <div class="info-cell"><div class="info-icon" style="background:#F0E8FF;">📋</div><div><div class="info-label">Standards</div><div class="info-value" style="font-size:12px;">SS.3.G.1.3 · SS.3.G.1.4 · SS.3.G.2.1</div></div></div>
 </div>
 
-<!-- ═══ MUSEUM MEMO ═══ -->
-<div class="quote-strip">
-  <div class="quote-strip-text" style="font-style:normal;text-align:left;font-size:15px;line-height:1.65;">
-    Now that you know why people explored, it's time to look at <em>how</em> they did it. The Exploration Wing's tool display has navigation instruments and incomplete route lines waiting to be studied. Route Curators need to help visitors understand how tools like compasses and astrolabes helped explorers travel — and how maps recorded where they went. Today, you'll inspect a real navigation tool and explain what it tells us.
-  </div>
-</div>
+<div class="quote-strip"><div class="quote-strip-text" style="font-style:normal;text-align:left;font-size:15px;line-height:1.65;">
+A package arrives at the World Map Hall addressed to "The Scavenger Hunt Committee." Inside is a stack of location clue cards — the museum is planning a game where visitors find places on the world map using clues. But the young volunteer looks confused. Some cards say things like "29°N, 81°W" and others say "south of the Great Lakes, near the Mississippi River." "These don't even look like the same kind of directions!" he says. The head curator picks up one card from each pile. "They're both ways of describing where a place is," she explains. "One is exact. The other is relational. Today we'll learn why the museum needs both."
+</div></div>
 
-<!-- ═══ INTRO SECTION ═══ -->
 <div class="intro-section" id="introSection">
-  <div class="intro-collapsed-bar" onclick="toggleIntro()">
-    <div class="intro-collapsed-icon">📍</div>
-    <div class="intro-collapsed-text">Today's Curator's Question & Objectives</div>
-    <div class="intro-collapsed-toggle">▼ Expand</div>
-  </div>
-
+  <div class="intro-collapsed-bar" onclick="toggleIntro()"><div class="intro-collapsed-icon">📍</div><div class="intro-collapsed-text">Today's Curator's Question &amp; Objectives</div><div class="intro-collapsed-toggle">▼ Expand</div></div>
   <div class="intro-2col">
-    <div class="intro-card theme-question">
-      <div class="intro-card-head">
-        <div class="intro-card-head-icon">✨</div>
-        <div>
-          <div class="intro-card-head-label">Curator's Question</div>
-          <div class="intro-card-head-title">Today's Big Question</div>
-        </div>
-      </div>
-      <div class="intro-card-body">
-        How did navigation tools help explorers travel, and how do maps record those routes?
-      </div>
-    </div>
-
-    <div class="intro-card theme-objectives">
-      <div class="intro-card-head">
-        <div class="intro-card-head-icon">🎯</div>
-        <div>
-          <div class="intro-card-head-label">Objectives</div>
-          <div class="intro-card-head-title">What You'll Learn</div>
-        </div>
-      </div>
-      <div class="intro-card-body">
-        <div class="obj-line"><span class="obj-icon">🧭</span> Identify navigation tools explorers used on their voyages.</div>
-        <div class="obj-line"><span class="obj-icon">🗺️</span> Explain how tools helped explorers find their way across oceans.</div>
-        <div class="obj-line"><span class="obj-icon">📝</span> Describe how maps record explorer routes.</div>
-      </div>
-    </div>
+    <div class="intro-card theme-question"><div class="intro-card-head"><div class="intro-card-head-icon">✨</div><div><div class="intro-card-head-label">Curator's Question</div><div class="intro-card-head-title">Today's Big Question</div></div></div><div class="intro-card-body"><p>What is the difference between absolute and relative location, and when do we need each one?</p></div></div>
+    <div class="intro-card theme-objectives"><div class="intro-card-head"><div class="intro-card-head-icon">🎯</div><div><div class="intro-card-head-label">Objectives</div><div class="intro-card-head-title">What You'll Learn</div></div></div><div class="intro-card-body">
+      <div class="obj-line"><span class="obj-icon">📍</span> Explain what absolute location means and give an example.</div>
+      <div class="obj-line"><span class="obj-icon">🧭</span> Explain what relative location means and give an example.</div>
+      <div class="obj-line"><span class="obj-icon">📝</span> Write location clues using both types of description.</div>
+    </div></div>
   </div>
-
-  <div class="need-strip">
-    <span class="need-strip-label">You'll need:</span>
-    <span class="need-chip">📓 Curator's Notebook</span>
-    <span class="need-chip">✏️ Pencil</span>
-    <span class="need-chip">🗺️ Lesson Page</span>
-  </div>
+  <div class="need-strip"><span class="need-strip-label">You'll need:</span><span class="need-chip">📓 Curator's Notebook</span><span class="need-chip">✏️ Pencil</span><span class="need-chip">🗺️ Lesson Page</span></div>
 </div>
 
-<!-- ═══ TAB BAR ═══ -->
 <div class="tab-bar" id="tabBar">
   <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">📍 Enter the Museum <span class="tab-check">✓</span></button>
   <button class="tab-btn" onclick="switchTab('explore')" id="btn-explore">🔍 Explore <span class="tab-check">✓</span></button>
@@ -1665,575 +1534,266 @@ body {
   <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📝 Evidence &amp; Assignment <span class="tab-check">✓</span></button>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- ═══ TAB 1: ENTER THE MUSEUM ═══ -->
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- TAB 1 -->
 <div class="tab-panel active" id="panel-scene">
+  <div class="tab-section-header"><div class="tab-section-icon" style="background:linear-gradient(135deg, #D4943A, #E0A050);">📍</div><div><div class="tab-section-title">Enter the Museum</div></div></div>
+  <div class="todays-path"><div class="todays-path-title">🗺️ Today's Path</div><div class="todays-path-steps">
+    <span class="todays-path-step">📍 Open the scavenger hunt clue cards</span><span class="todays-path-arrow">→</span>
+    <span class="todays-path-step">🔍 Sort clues by absolute &amp; relative location</span><span class="todays-path-arrow">→</span>
+    <span class="todays-path-step">🧠 Check your understanding</span><span class="todays-path-arrow">→</span>
+    <span class="todays-path-step">📝 Write your own location clue card</span>
+  </div></div>
 
-  <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #D4943A, #E0A050);">📍</div>
-    <div>
-      <div class="tab-section-title">Enter the Museum</div>
-    </div>
-  </div>
+  <div class="video-wrap" style="margin-top:18px;"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">📍 WELCOME · ENTER THE MUSEUM</div><div class="video-wrap-title">Two Ways to Describe Where</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> "The scavenger hunt cards have two kinds of clues. Today you'll learn the difference between absolute location — an exact address on the map — and relative location — describing where something is compared to other places." Read the Curator's Question. Mention responsibility. Under 2 minutes.</div><div class="video-placeholder-id"><!-- slot: 3-05-04-welcome --></div></div></div></div>
 
-  <div class="todays-path">
-    <div class="todays-path-title">🗺️ Today's Path</div>
-    <div class="todays-path-steps">
-      <span class="todays-path-step">📍 Return to the Exploration Wing & spotlight courage</span>
-      <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">🔍 Study a mariner's astrolabe and explorer route map</span>
-      <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">🧠 Check your understanding</span>
-      <span class="todays-path-arrow">→</span>
-      <span class="todays-path-step">📝 Write a source study explanation for the tools display</span>
-    </div>
-  </div>
+  <div class="virtue-card"><div class="virtue-label">🏛️ Virtue Spotlight — Responsibility</div><div class="virtue-text">Responsibility means doing what you're supposed to do. When curators describe a location, they take responsibility for being clear and accurate. A visitor who follows a wrong location clue ends up in the wrong place. Responsible curators give directions people can trust.</div></div>
 
-  <!-- Welcome Video -->
-  <div class="video-wrap" style="margin-top:18px;">
-    <div class="video-wrap-header">
-      <span style="font-size:20px;">🎬</span>
-      <div>
-        <div class="video-wrap-type">📍 WELCOME · ENTER THE MUSEUM</div>
-        <div class="video-wrap-title">Welcome Back to the Exploration Wing</div>
-      </div>
-    </div>
-    <div class="video-ratio">
-      <div class="video-placeholder">
-        <div class="video-placeholder-icon">🎬</div>
-        <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Welcome students back. Say: "Last time, you figured out why people explored. Today's question is: how did they actually do it?" Read the Curator's Question aloud: "How did navigation tools help explorers travel, and how do maps record those routes?" Tell them they'll study a real navigation tool — a mariner's astrolabe — and think like a Source Scholar. Mention courage again. Under 2 minutes.
-        </div>
-        <div class="video-placeholder-id"><!-- slot: 3-02-02-welcome --></div>
-      </div>
-    </div>
-  </div>
+  <div class="callout callout-info"><div class="callout-icon">🕯️</div><p><strong>Your Role Today:</strong> You are a <strong>World Geography Curator</strong> — today you'll learn two ways to describe where places are and write scavenger hunt clues that help visitors find locations on the world map.</p></div>
 
-  <!-- Virtue Spotlight -->
-  <div class="virtue-card">
-    <div class="virtue-label">🏛️ Virtue Spotlight — Courage</div>
-    <div class="virtue-text">Explorers sailed into open ocean with simple tools and hand-drawn maps. They couldn't call for help or check a phone for directions. Using those tools well took skill — and trusting them took courage.</div>
-  </div>
-
-  <!-- Curator Role -->
-  <div class="callout callout-info">
-    <div class="callout-icon">🕯️</div>
-    <p><strong>Your Role Today:</strong> You are a <strong>Route Curator</strong> — your job is to investigate explorer tools and routes so museum visitors understand how exploration actually worked. Today, you'll study a navigation instrument and explain what it tells us.</p>
-  </div>
-
-  <div class="section-divider"><span class="section-divider-dot">···</span></div>
-
-  <!-- Tab Transition -->
-  <div class="tab-next-wrap">
-    <p class="tab-transition-voice">You know why people explored. Now let's examine the tools that made those journeys possible.</p>
-    <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button>
-  </div>
+  <div class="tab-next-wrap"><p class="tab-transition-voice">Let's explore the two types of location.</p><button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button></div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- ═══ TAB 2: EXPLORE ═══ -->
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- TAB 2 -->
 <div class="tab-panel" id="panel-explore">
+  <div class="tab-section-header"><div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #34B0A0);">🔍</div><div><div class="tab-section-title">Explore</div></div></div>
 
-  <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #34B0A0);">🔍</div>
-    <div>
-      <div class="tab-section-title">Explore</div>
-    </div>
-  </div>
+  <div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">🔍 TEACHING · EXPLORE</div><div class="video-wrap-title">Absolute vs. Relative Location</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Explain absolute location as an exact spot using coordinates or an address. Then explain relative location as describing where something is compared to something else. Use the school as an example: "Our school's absolute location is its street address. Its relative location might be 'two blocks north of the park.'" 3–5 minutes.</div><div class="video-placeholder-id"><!-- slot: 3-05-04-explore-explainer --></div></div></div></div>
 
-  <!-- Explore Explainer Video -->
-  <div class="video-wrap">
-    <div class="video-wrap-header">
-      <span style="font-size:20px;">🎬</span>
-      <div>
-        <div class="video-wrap-type">🔍 TEACHING · EXPLORE</div>
-        <div class="video-wrap-title">Navigation Tools and Route Maps</div>
-      </div>
-    </div>
-    <div class="video-ratio">
-      <div class="video-placeholder">
-        <div class="video-placeholder-icon">🎬</div>
-        <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Explain the three main navigation tools: the compass (points north), the astrolabe (measures the angle of stars to find latitude), and maps/charts (record coastlines and routes). Show how each tool solved a specific problem. Then model the Artifact Table: "I'd write 'navigation tool' for the object type, and 'Age of Exploration' for the time period." Walk through the Source Study questions: "What do I see? What does it mean? Why does it matter?" 3–5 minutes.
-        </div>
-        <div class="video-placeholder-id"><!-- slot: 3-02-02-explore-explainer --></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- STEP 1: Learn -->
   <div class="step-badge"><div class="step-badge-num">1</div> Learn the Story</div>
 
-  <!-- Content Section -->
   <div class="activity bl-accent">
-    <div class="activity-head">
-      <div class="activity-num" style="background:#1A8A7D;">📖</div>
-      <div>
-        <div class="activity-title">How Did Explorers Find Their Way?</div>
-        <div class="activity-sub">Navigation tools of the Age of Exploration</div>
-      </div>
-    </div>
+    <div class="activity-head"><div class="activity-num" style="background:#1A8A7D;">📖</div><div><div class="activity-title">Two Ways to Say "Where"</div><div class="activity-sub">Absolute and relative location</div></div></div>
     <div class="activity-body">
-      <p>You already know why people explored. But imagine standing on the deck of a ship in the middle of the ocean. No landmarks. No roads. Just water in every direction. How would you know where to go?</p>
-      <p>Explorers used <strong>navigation tools</strong> to solve this problem. A <strong>compass</strong> uses a magnetized needle that always points north, helping sailors keep their direction. An <strong>astrolabe</strong> measures the angle of the sun or stars above the horizon, helping sailors figure out how far north or south they are.</p>
-      <p>Explorers also depended on <strong>maps and sea charts</strong>. Early maps were incomplete — some showed imaginary lands or missing coastlines. But every time an explorer returned from a voyage, mapmakers could add new details. Over time, the maps got better and better.</p>
-      <p>Together, these tools turned dangerous guessing into careful navigation. Without them, exploration would have been nearly impossible.</p>
+      <p>Every place on Earth has a location. But there are two different ways to describe it.</p>
+      <p><strong>Absolute location</strong> is the exact spot where something is. On a map, this might be a set of coordinates — numbers that pinpoint exactly where a place sits on Earth. Think of it like a street address. If someone gives you "123 Oak Street," you know exactly where to go.</p>
+      <p><strong>Relative location</strong> describes where something is by comparing it to other places. Instead of exact numbers, you'd say things like "east of the mountains" or "between the river and the coast." It's like giving directions to a friend: "It's near the park, across from the library."</p>
+      <p>The museum needs both kinds. Absolute location helps visitors find exact points on the world map. Relative location helps them understand how places connect to each other. The young volunteer picks up a clue card that says "north of the equator, between the Atlantic and Pacific." He grins. "That's North America! I didn't need coordinates to figure that out."</p>
     </div>
   </div>
 
-  <!-- Pause & Think -->
-  <div class="callout callout-think">
-    <div class="callout-icon">🤔</div>
-    <p><strong>Pause & Think:</strong> Why would an incomplete or incorrect map be dangerous for an explorer? What could go wrong?</p>
-  </div>
+  <div class="callout callout-think"><div class="callout-icon">🤔</div><p><strong>Pause &amp; Think:</strong> If someone asked you where your school is, would you give them an absolute location (the address) or a relative location (near the park)? When would each one be more helpful?</p></div>
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
-
-  <!-- STEP 2: Investigate -->
   <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
 
-  <!-- Artifact Table (Grade 3 Source Study scaffold) -->
-  <div class="activity bl-purple">
-    <div class="activity-head">
-      <div class="activity-num" style="background:#8B6FC0;">🏺</div>
-      <div>
-        <div class="activity-title">Artifact Table</div>
-        <div class="activity-sub">Study this object as if it were placed before you in a museum.</div>
-      </div>
-    </div>
-    <div class="activity-body">
-      <table style="width:100%;border-collapse:collapse;font-size:14px;">
-        <tr style="border-bottom:1px solid #E2E8F4;">
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;width:35%;vertical-align:top;">Object / Source</td>
-          <td style="padding:10px 12px;color:#0E1C42;">A mariner's astrolabe — a circular metal tool used for navigation at sea</td>
-        </tr>
-        <tr style="border-bottom:1px solid #E2E8F4;">
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">Time Period</td>
-          <td style="padding:10px 12px;color:#0E1C42;">Age of Exploration (around the 1400s–1600s)</td>
-        </tr>
-        <tr style="border-bottom:1px solid #E2E8F4;">
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">Place</td>
-          <td style="padding:10px 12px;color:#0E1C42;">Used by European sailors on ocean voyages</td>
-        </tr>
-        <tr style="border-bottom:1px solid #E2E8F4;">
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">What I Notice First</td>
-          <td style="padding:10px 12px;color:#7A88A8;font-style:italic;">Look at the source image below and note one thing that catches your eye.</td>
-        </tr>
-        <tr>
-          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">What I Wonder</td>
-          <td style="padding:10px 12px;color:#7A88A8;font-style:italic;">What question do you have about this tool?</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- Source Study Card -->
+  <!-- SOURCE STUDY (Category 3 — Real image) -->
   <div class="source-card">
-    <div class="source-card-header">
-      <div class="source-card-header-icon">📜</div>
-      <div>
-        <div class="source-card-header-label">Source Study</div>
-        <div class="source-card-header-title">A Mariner's Astrolabe</div>
-      </div>
-    </div>
-    <div class="source-image-placeholder">
-      <div class="source-image-placeholder-text">
-        🖼️ A photograph of a mariner's astrolabe — a heavy, circular brass instrument with degree markings around the rim and a rotating pointer (alidade) in the center. Used by sailors to measure the angle of the sun or stars above the horizon to determine latitude. Look for examples at the Smithsonian Open Access (si.edu/openaccess), the Metropolitan Museum of Art (metmuseum.org), or Wikimedia Commons (commons.wikimedia.org).<br><br>
-        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-02-02-mariners-astrolabe.jpg</code>
-      </div>
-    </div>
+    <div class="source-card-header"><div class="source-card-header-icon">📜</div><div><div class="source-card-header-label">Source Study · Guided Practice</div><div class="source-card-header-title">Question Like a Geographer</div></div></div>
+    <div class="source-image-placeholder"><div class="source-image-placeholder-text">🖼️ A real historical or modern map showing latitude and longitude lines — ideally one where the grid is clearly visible. Examples: a 19th-century globe, a navigation chart, or a modern world map with degree markings. Suggested source: Library of Congress Geography &amp; Map Division, David Rumsey Map Collection.<br><br><strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-05-04-coordinate-map.jpg</code></div></div>
     <div class="source-card-body">
-      <div class="source-label-bar">
-        <span class="src-type">Historical Artifact</span> · Mariner's astrolabe, circa 1400s–1600s, used by European navigators
-      </div>
-      <div class="callout callout-info">
-        <div class="callout-icon">👁️</div>
-        <p><strong>What do I see?</strong> Look carefully at this tool. What shape is it? What markings or parts do you notice? What material does it look like it's made from?</p>
-      </div>
-      <div class="callout callout-think">
-        <div class="callout-icon">💭</div>
-        <p><strong>What does it mean?</strong> How would a sailor use this tool on a ship? What problem did it help solve?</p>
-      </div>
-      <div class="callout callout-tip">
-        <div class="callout-icon">⚖️</div>
-        <p><strong>Why does it matter?</strong> Why is this tool important for understanding how exploration worked? What would happen without it?</p>
+      <div class="source-label-bar"><span class="src-type">Primary Source</span> · Map with latitude and longitude grid</div>
+      <div class="callout callout-info"><div class="callout-icon">👁️</div><p><strong>What do I see?</strong> Look at the lines crossing the map. What numbers appear along the edges? What might those numbers mean?</p></div>
+      <div class="callout callout-think"><div class="callout-icon">💭</div><p><strong>What does it mean?</strong> How would a navigator use these grid lines to find an exact spot? What's different from saying "near the big river"?</p></div>
+      <div class="callout callout-tip"><div class="callout-icon">⚖️</div><p><strong>Why does it matter?</strong> Why might explorers, pilots, or ship captains need exact coordinates instead of just descriptions?</p></div>
+    </div>
+  </div>
+
+  <!-- Category 2 — Supplemental side-by-side comparison -->
+  <div class="callout callout-info" style="margin-top:14px;">
+    <div class="callout-icon">📐</div>
+    <p><strong>Reference Comparison:</strong> Two ways to describe where a place is — exact coordinates vs. relational landmarks.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 0 14px;">
+    <div style="background:#EAF8FD;border:2px solid #5B8FDB;border-radius:12px;padding:16px;">
+      <div style="font-weight:700;color:#0E1C42;font-size:15px;margin-bottom:6px;">📍 Absolute Location</div>
+      <div style="font-size:13px;color:#333;line-height:1.6;">Uses <strong>exact coordinates</strong> on a grid.<br/>Example: <em>29°N, 81°W</em><br/>This pinpoints one specific spot. Anyone with the same map can find it.</div>
+    </div>
+    <div style="background:#FFF8EE;border:2px solid #D4943A;border-radius:12px;padding:16px;">
+      <div style="font-weight:700;color:#0E1C42;font-size:15px;margin-bottom:6px;">🧭 Relative Location</div>
+      <div style="font-size:13px;color:#333;line-height:1.6;">Describes where something is <strong>compared to other places</strong>.<br/>Example: <em>"South of the Great Lakes, near the Mississippi"</em><br/>No numbers needed — just landmarks.</div>
+    </div>
+  </div>
+
+  <div class="activity bl-accent">
+    <div class="activity-head"><div class="activity-num" style="background:#1A8A7D;">🗺️</div><div><div class="activity-title">Map Quest: Sort the Clue Cards</div><div class="activity-sub">Decide whether each clue uses absolute or relative location</div></div></div>
+    <div class="activity-body">
+      <p>Read each clue card. Decide if it describes an absolute location (exact) or a relative location (compared to other places). Tap each card to check.</p>
+      <div class="flip-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:12px;">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">📍</div>
+              <div class="fc-word" style="font-size:14px;">"29°N, 81°W"</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">Clue Card</div>
+              <div class="fc-def"><strong>Absolute location!</strong> These are exact coordinates — a specific point on Earth's grid.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">🧭</div>
+              <div class="fc-word" style="font-size:14px;">"South of Europe, across the Mediterranean Sea"</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">Clue Card</div>
+              <div class="fc-def"><strong>Relative location!</strong> This describes Africa by comparing it to Europe and a body of water.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">📍</div>
+              <div class="fc-word" style="font-size:14px;">"40°N, 74°W"</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">Clue Card</div>
+              <div class="fc-def"><strong>Absolute location!</strong> Those are the coordinates for New York City.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">🧭</div>
+              <div class="fc-word" style="font-size:14px;">"The coldest continent at the bottom of the world"</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">Clue Card</div>
+              <div class="fc-def"><strong>Relative location!</strong> This describes Antarctica using position and description — no exact numbers.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="fc-emoji">🧭</div>
+              <div class="fc-word" style="font-size:14px;">"Between the Atlantic and Indian Oceans, south of Europe"</div>
+              <div class="fc-tap">Tap to flip</div>
+            </div>
+            <div class="flip-card-back">
+              <div class="fc-word-back">Clue Card</div>
+              <div class="fc-def"><strong>Relative location!</strong> This is Africa again, described by what's near it.</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Then & Now -->
-  <div class="callout callout-tip">
-    <div class="callout-icon">⏳</div>
-    <p><strong>Then & Now:</strong> In the past, sailors used compasses, astrolabes, and star charts to navigate the open ocean. Today, we use GPS satellites and digital maps on our phones. What stayed the same about the human need to know where we are and where we're going?</p>
-  </div>
+  <div class="callout callout-tip"><div class="callout-icon">⏳</div><p><strong>Then &amp; Now:</strong> Long ago, sailors described location by what they could see — "three days east of the last island." Today, GPS gives us exact coordinates in seconds. What stayed the same about the human need to describe where places are?</p></div>
 
   <div class="section-divider"><span class="section-divider-dot">···</span></div>
-
-  <!-- STEP 3: Connect -->
   <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
 
-  <!-- Exhibit Label -->
-  <div class="key-concept">
-    <div class="key-concept-label">🏷️ Exhibit Label</div>
-    <p>Explorers used navigation tools — compasses, astrolabes, and maps — to find their way across oceans. Each voyage added new knowledge to the maps that came after.</p>
-  </div>
+  <div class="key-concept"><div class="key-concept-label">🏷️ Exhibit Label</div><p>Absolute location gives the exact spot using coordinates or an address. Relative location describes where something is compared to other places. Both help visitors find and understand locations on a map.</p></div>
 
-  <!-- Opti the Owl -->
-  <div class="owl-buddy">
-    <div class="owl-buddy-avatar">🦉</div>
-    <div class="owl-buddy-bubble">
-      <div class="owl-buddy-name">🧭 Opti says…</div>
-      Here's something neat — early astrolabes were so heavy they had to be held by a ring at the top while the ship rocked beneath you. Imagine trying to measure a star's angle while standing on a rolling deck. That's skill <em>and</em> courage.
-    </div>
-  </div>
+  <div class="owl-buddy"><div class="owl-buddy-avatar">🦉</div><div class="owl-buddy-bubble"><div class="owl-buddy-name">🧭 Opti says…</div>Fun fact — the equator is the line at 0° latitude that splits Earth into the Northern and Southern Hemispheres. If you stood right on it, you'd have one foot in each half of the world!</div></div>
 
-  <!-- Tab Transition -->
-  <div class="tab-next-wrap">
-    <p class="tab-transition-voice">You've studied the tools and routes. Let's see how much you remember.</p>
-    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Self-Check →</button>
-  </div>
+  <div class="tab-next-wrap"><p class="tab-transition-voice">You've explored absolute and relative location. Let's check what you've learned.</p><button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Self-Check →</button></div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- ═══ TAB 3: SELF-CHECK ═══ -->
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- TAB 3 -->
 <div class="tab-panel" id="panel-check">
-
-  <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div>
-    <div>
-      <div class="tab-section-title">Quick Self-Check</div>
+  <div class="tab-section-header"><div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div><div><div class="tab-section-title">Quick Self-Check</div></div></div>
+  <div class="callout callout-info" style="margin-bottom:18px;"><div class="callout-icon">🧠</div><p>Not graded — just for you!</p></div>
+  <div class="quiz-card"><div style="padding:18px 22px;">
+    <div class="quiz-q" data-answer="a">
+      <div class="quiz-q-text">1. What is absolute location?</div>
+      <div class="quiz-options">
+        <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>The exact spot where something is, using coordinates or an address</div>
+        <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>A description of what a place looks like</div>
+        <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>The distance between two cities</div>
+      </div>
+      <div class="quiz-feedback fb-correct">Right! Absolute location pinpoints exactly where something is.</div>
+      <div class="quiz-feedback fb-wrong">Think about the word "absolute" — it means exact. Which answer gives an exact spot?</div>
     </div>
-  </div>
-
-  <div class="callout callout-info" style="margin-bottom:18px;">
-    <div class="callout-icon">🧠</div>
-    <p>Not graded — just for you! Answer these three questions to see how much you remember before writing your evidence responses.</p>
-  </div>
-
-  <div class="quiz-card">
-    <div style="padding:18px 22px;">
-
-      <!-- QUESTION 1 -->
-      <div class="quiz-q" data-answer="a">
-        <div class="quiz-q-text">1. What does a compass help a sailor do?</div>
-        <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Find which direction is north so they can stay on course.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Measure how deep the ocean is below the ship.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Count how many days the voyage has lasted.</div>
-        </div>
-        <div class="quiz-feedback fb-correct">Right! A compass uses a magnetized needle that always points north, helping sailors keep their direction.</div>
-        <div class="quiz-feedback fb-wrong">Think about what problem sailors face in the open ocean. Which direction are they heading? That's what a compass answers.</div>
+    <div class="quiz-q" data-answer="b">
+      <div class="quiz-q-text">2. Which of these is a relative location?</div>
+      <div class="quiz-options">
+        <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>40°N, 74°W</div>
+        <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>North of the equator, between two oceans</div>
+        <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>123 Main Street, Orlando, FL</div>
       </div>
-
-      <!-- QUESTION 2 -->
-      <div class="quiz-q" data-answer="b">
-        <div class="quiz-q-text">2. What did an astrolabe help sailors figure out?</div>
-        <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>How fast the wind was blowing.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>How far north or south they were by measuring the sun or stars.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>How many sailors were needed on the ship.</div>
-        </div>
-        <div class="quiz-feedback fb-correct">Exactly! An astrolabe measures the angle of the sun or stars above the horizon. This tells sailors their latitude — how far north or south they are.</div>
-        <div class="quiz-feedback fb-wrong">Remember, an astrolabe is pointed at the sky. What in the sky could help a sailor figure out their position?</div>
-      </div>
-
-      <!-- QUESTION 3 -->
-      <div class="quiz-q" data-answer="c">
-        <div class="quiz-q-text">3. Why did maps get better over time during the Age of Exploration?</div>
-        <div class="quiz-options">
-          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Because mapmakers used bigger paper.</div>
-          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because kings ordered the maps to be more colorful.</div>
-          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because every returning explorer brought back new information about coastlines and routes.</div>
-        </div>
-        <div class="quiz-feedback fb-correct">Yes! Each voyage added new details. Over time, mapmakers filled in coastlines, routes, and landmarks that earlier maps had missed.</div>
-        <div class="quiz-feedback fb-wrong">Think about what happens after an explorer returns from a voyage. What new information could they share with mapmakers?</div>
-      </div>
-
-      <!-- Score Box -->
-      <div class="quiz-score-box" id="quizScore">
-        <div class="quiz-score-label">Your Score</div>
-        <div class="quiz-score-num" id="quizScoreNum">0</div>
-        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
-        <div class="quiz-score-msg" id="quizScoreMsg"></div>
-      </div>
-
-      <!-- Conditional video: perfect -->
-      <div class="quiz-video-wrap" id="quizVideoCorrect">
-        <div class="video-wrap">
-          <div class="video-wrap-header">
-            <span style="font-size:20px;">⭐</span>
-            <div>
-              <div class="video-wrap-type">Perfect Score · Great Work!</div>
-              <div class="video-wrap-title">You nailed it!</div>
-            </div>
-          </div>
-          <div class="video-ratio">
-            <div class="video-placeholder">
-              <div class="video-placeholder-icon">⭐</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate! Say: "You clearly understand how navigation tools worked — the compass for direction, the astrolabe for position, and maps that got better over time. You're ready to write your source study explanation." Under 30 seconds.</div>
-              <div class="video-placeholder-id"><!-- slot: 3-02-02-quiz-perfect --></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Conditional video: review -->
-      <div class="quiz-video-wrap" id="quizVideoReview">
-        <div class="video-wrap">
-          <div class="video-wrap-header">
-            <span style="font-size:20px;">🔄</span>
-            <div>
-              <div class="video-wrap-type">Review · Keep Going!</div>
-              <div class="video-wrap-title">Let's look at those tricky questions.</div>
-            </div>
-          </div>
-          <div class="video-ratio">
-            <div class="video-placeholder">
-              <div class="video-placeholder-icon">🔄</div>
-              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through each answer. Key idea: compass = direction, astrolabe = position using stars, maps = improved with each voyage. Under 1 minute. Encouraging.</div>
-              <div class="video-placeholder-id"><!-- slot: 3-02-02-quiz-review --></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <div class="quiz-feedback fb-correct">Yes! Relative location compares a place to other places — no exact numbers needed.</div>
+      <div class="quiz-feedback fb-wrong">Remember, relative location describes where something is *compared to* other things. Which uses comparison words?</div>
     </div>
-  </div>
-
-  <!-- Tab Transition -->
-  <div class="tab-next-wrap">
-    <p class="tab-transition-voice">Now that you've checked your understanding, time to put your thinking into words.</p>
-    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Evidence &amp; Assignment →</button>
-  </div>
+    <div class="quiz-q" data-answer="c">
+      <div class="quiz-q-text">3. Why does the museum need both kinds of location on the world map?</div>
+      <div class="quiz-options">
+        <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Because absolute location is always better</div>
+        <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because relative location is easier to read</div>
+        <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because one gives exact spots and the other shows how places connect</div>
+      </div>
+      <div class="quiz-feedback fb-correct">Exactly! Each kind helps visitors in a different way.</div>
+      <div class="quiz-feedback fb-wrong">Think about what each type does best. One is exact; the other shows connections.</div>
+    </div>
+    <div class="quiz-score-box" id="quizScore"><div class="quiz-score-label">Your Score</div><div class="quiz-score-num" id="quizScoreNum">0</div><div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div><div class="quiz-score-msg" id="quizScoreMsg"></div></div>
+    <div class="quiz-video-wrap" id="quizVideoCorrect"><div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">⭐</span><div><div class="video-wrap-type">Perfect Score · Great Work!</div><div class="video-wrap-title">You nailed it!</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">⭐</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate. Under 30 seconds.</div><div class="video-placeholder-id"><!-- slot: 3-05-04-quiz-perfect --></div></div></div></div></div>
+    <div class="quiz-video-wrap" id="quizVideoReview"><div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">🔄</span><div><div class="video-wrap-type">Review · Keep Going!</div><div class="video-wrap-title">Let's review.</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🔄</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Absolute = exact coordinates or address. Relative = compared to nearby places. Both help visitors. Under 1 minute.</div><div class="video-placeholder-id"><!-- slot: 3-05-04-quiz-review --></div></div></div></div></div>
+  </div></div>
+  <div class="tab-next-wrap"><p class="tab-transition-voice">Time to show what you know.</p><button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Evidence &amp; Assignment →</button></div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════ -->
-<!-- ═══ TAB 4: EVIDENCE & ASSIGNMENT ═══ -->
-<!-- ═══════════════════════════════════════════════════════ -->
+<!-- TAB 4 -->
 <div class="tab-panel" id="panel-assignment">
+  <div class="tab-section-header"><div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div><div><div class="tab-section-title">Evidence &amp; Assignment</div></div></div>
+  <div class="callout callout-info" style="margin-bottom:18px;"><div class="callout-icon">📝</div><p>Time to show what you know.</p></div>
 
-  <div class="tab-section-header">
-    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div>
-    <div>
-      <div class="tab-section-title">Evidence &amp; Assignment</div>
-    </div>
-  </div>
+  <div class="video-wrap"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div><div class="video-wrap-title">What You'll Turn In</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Read each question. Model Q1: "Absolute location is like a GPS coordinate — it tells you exactly where. Relative location is like saying 'near the coast, south of Canada.'" For the Curator Task, explain they're writing a scavenger hunt card. 2–3 minutes.</div><div class="video-placeholder-id"><!-- slot: 3-05-04-assignment-explainer --></div></div></div></div>
 
-  <div class="callout callout-info" style="margin-bottom:18px;">
-    <div class="callout-icon">📝</div>
-    <p>Time to show what you know. Answer the evidence questions and complete your Curator Task. Your answers will be gathered at the bottom so you can copy or download them for Canvas.</p>
-  </div>
-
-  <!-- Assignment Explainer Video -->
-  <div class="video-wrap">
-    <div class="video-wrap-header">
-      <span style="font-size:20px;">🎬</span>
-      <div>
-        <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
-        <div class="video-wrap-title">What You'll Turn In</div>
-      </div>
-    </div>
-    <div class="video-ratio">
-      <div class="video-placeholder">
-        <div class="video-placeholder-icon">🎬</div>
-        <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Read each evidence question aloud. Think aloud through Q1: "I'd say the compass helped explorers because the lesson told us it uses a magnetized needle to point north — that's how they stayed on course." Then explain the Curator Task: "You're writing the explanation label for the navigation tools display. Tell visitors what the astrolabe is, how it works, and why it mattered." 2–3 minutes.
-        </div>
-        <div class="video-placeholder-id"><!-- slot: 3-02-02-assignment-explainer --></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Part A: Evidence Questions -->
   <div class="activity bl-cyan">
-    <div class="activity-head">
-      <div class="activity-num" style="background:#55C8E8;">A</div>
-      <div>
-        <div class="activity-title">Evidence Questions</div>
-        <div class="activity-sub">Answer using details from the lesson.</div>
-      </div>
-    </div>
+    <div class="activity-head"><div class="activity-num" style="background:#55C8E8;">A</div><div><div class="activity-title">Evidence Questions</div><div class="activity-sub">Answer using details from the lesson.</div></div></div>
     <div class="activity-body">
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Explain the difference between absolute location and relative location in your own words. Give one example of each.</div></div>
+      <div class="textbox-prompt">Describe each type and give an example.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Absolute vs. Relative" placeholder="Absolute location is... For example..." oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
 
-      <!-- Q1 -->
-      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Choose one navigation tool (compass, astrolabe, or maps). Explain what problem it solved for explorers.</div></div>
-      <div class="textbox-prompt">Use at least one detail from the lesson to support your answer.</div>
-      <textarea class="journal-box" id="journal-q1" data-label="Q1: Navigation tool and its purpose"
-        placeholder="The [tool] helped explorers because..."
-        oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Why did the young volunteer not need coordinates to figure out that "north of the equator, between the Atlantic and Pacific" was North America?</div></div>
+      <div class="textbox-prompt">Think about what the relative location clue told him.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: Relative Location Clue" placeholder="The volunteer could figure it out because..." oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
 
-      <!-- Q2 -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Why did maps improve over time during the Age of Exploration? Use evidence from the lesson.</div></div>
-      <div class="textbox-prompt">Explain your thinking using evidence from what you read.</div>
-      <textarea class="journal-box" id="journal-q2" data-label="Q2: Why maps improved"
-        placeholder="Maps improved over time because..."
-        oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
-
-      <!-- Q3 -->
-      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>How does studying navigation tools help us understand why exploration took courage? Connect the tools to the risks explorers faced.</div></div>
-      <div class="textbox-prompt">Connect what you learned about tools to what you know about the dangers of exploration.</div>
-      <textarea class="journal-box" id="journal-q3" data-label="Q3: Tools and courage"
-        placeholder="Studying navigation tools helps us understand courage because..."
-        oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
-
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>When would a museum visitor need absolute location instead of relative location? Give a reason.</div></div>
+      <div class="textbox-prompt">Think about a situation where comparing to nearby places isn't enough.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: When to Use Absolute" placeholder="A visitor would need absolute location when..." oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- Part B: Curator Task -->
   <div class="activity bl-gold">
-    <div class="activity-head">
-      <div class="activity-num" style="background:#D4943A;">B</div>
-      <div>
-        <div class="activity-title">Curator Task: Navigation Tools Display Label</div>
-        <div class="activity-sub">Write the explanation label for the navigation tools display in the Exploration Wing.</div>
-      </div>
-    </div>
+    <div class="activity-head"><div class="activity-num" style="background:#D4943A;">B</div><div><div class="activity-title">Curator Task: Scavenger Hunt Clue Card</div><div class="activity-sub">Write one clue card using relative location for a place on the world map.</div></div></div>
     <div class="activity-body">
-      <p>The navigation tools display needs a label so museum visitors understand what they're looking at. Write a short explanation (3–4 sentences) about the mariner's astrolabe: what it is, how explorers used it, and why it was important for navigation. Use details from today's lesson and your source study.</p>
-
-      <div class="textbox-prompt">Your label should tell visitors: What is this tool? How was it used? Why did it matter?</div>
-      <textarea class="journal-box" id="journal-assign" data-label="Curator Task: Navigation Tools Display Label"
-        placeholder="This mariner's astrolabe is a..."
-        oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
+      <p>Pick any continent, ocean, or feature you've learned about so far. Write a scavenger hunt clue that describes its location using relative location — no coordinates allowed! Make it clear enough that a museum visitor could find it.</p>
+      <div class="textbox-prompt">Write a clue that describes where your place is compared to other places.</div>
+      <textarea class="journal-box" id="journal-assign" data-label="Curator Task: Scavenger Hunt Clue" placeholder="Find the place that is..." oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
     </div>
   </div>
 
-  <!-- Curator's Chronicle -->
   <div class="activity bl-navy">
-    <div class="activity-head">
-      <div class="activity-num" style="background:#0E1C42;">📜</div>
-      <div>
-        <div class="activity-title">Curator's Chronicle</div>
-        <div class="activity-sub">One sentence to capture today's exhibit work.</div>
-      </div>
-    </div>
-    <div class="activity-body">
-      <p>Finish this sentence in your own words:</p>
-      <div class="textbox-prompt">In this exhibit, I learned that ______ because ______.</div>
-      <textarea class="journal-box" id="journal-chronicle" data-label="Curator's Chronicle"
-        placeholder="In this exhibit, I learned that..."
-        oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
-    </div>
+    <div class="activity-head"><div class="activity-num" style="background:#0E1C42;">📜</div><div><div class="activity-title">Curator's Chronicle</div><div class="activity-sub">One sentence to capture today's exhibit work.</div></div></div>
+    <div class="activity-body"><p>Finish this sentence in your own words:</p><div class="textbox-prompt">In this exhibit, I learned that ______ because ______.</div><textarea class="journal-box" id="journal-chronicle" data-label="Curator's Chronicle" placeholder="In this exhibit, I learned that..." oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea></div>
   </div>
 
-  <!-- Gathered Answers -->
-  <div class="gathered-card">
-    <div class="gathered-header">
-      <div class="gathered-header-icon">📋</div>
-      <div>
-        <div class="gathered-header-label">Review Your Work</div>
-        <div class="gathered-header-title">Gathered Answers</div>
-      </div>
-    </div>
-    <div class="gathered-body">
-      <div class="gathered-intro">All your answers are gathered here. Review them, then copy or download to submit.</div>
-      <textarea class="gathered-output" id="gatheredOutput" readonly></textarea>
-      <div class="gathered-actions">
-        <button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button>
-        <button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button>
-      </div>
-      <div class="gathered-copied" id="gatheredCopied">✅ Copied!</div>
-    </div>
+  <div class="gathered-card"><div class="gathered-header"><div class="gathered-header-icon">📋</div><div><div class="gathered-header-label">Review Your Work</div><div class="gathered-header-title">Gathered Answers</div></div></div><div class="gathered-body"><div class="gathered-intro">All your answers are gathered here.</div><textarea class="gathered-output" id="gatheredOutput" readonly></textarea><div class="gathered-actions"><button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button><button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button></div><div class="gathered-copied" id="gatheredCopied">✅ Copied!</div></div></div>
+
+  <div class="historian-seal" id="historianSeal"><div class="seal-certificate"><div class="seal-cert-message"><strong>Nice work, World Geography Curator!</strong> You learned two ways to describe location and wrote a scavenger hunt clue card for museum visitors.</div><div class="seal-stamp-wrap"><svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));"><defs><radialGradient id="stampGrad" cx="50%" cy="45%" r="50%"><stop offset="0%" stop-color="#D94040"/><stop offset="100%" stop-color="#A02020"/></radialGradient><clipPath id="owlStampClip"><circle cx="45" cy="38" r="16"/></clipPath></defs><circle cx="45" cy="45" r="42" fill="url(#stampGrad)" stroke="#7A1818" stroke-width="1.5"/><circle cx="45" cy="45" r="37" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/><image href="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" x="27" y="20" width="36" height="36" clip-path="url(#owlStampClip)" opacity="0.3" style="filter:brightness(3) grayscale(1);"/><text x="45" y="72" fill="rgba(255,255,255,0.85)" font-family="'Nunito', sans-serif" font-size="9" font-weight="800" letter-spacing="2" text-anchor="middle">CERTIFIED</text></svg></div></div></div>
+
+  <div class="turn-in-card"><div class="turn-in-header"><div class="turn-in-header-icon">✅</div><div><div class="turn-in-header-label">Submit Your Work</div><div class="turn-in-header-title">Turn-In Checklist</div></div></div><div class="turn-in-body"><div class="turn-in-intro">Check each item as you finish.</div><div class="turn-in-checklist">
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I answered the evidence questions.</div></div>
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I completed the Curator Task: Scavenger Hunt Clue Card.</div></div>
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I wrote my Curator's Chronicle.</div></div>
+    <div class="turn-in-item" onclick="toggleCheck(this)"><div class="turn-in-check"></div><div class="turn-in-item-text">✅ I copied or downloaded my work and submitted to Canvas.</div></div>
+  </div></div></div>
+
+  <!-- Coming Up Next (REQUIRED on every lesson) -->
+  <div class="callout callout-tip" style="margin-top:18px;border-left:4px solid #D4943A;background:#FFF8EE;">
+    <div class="callout-icon">🔮</div>
+    <p><strong>Coming Up Next…</strong> The scavenger hunt clue cards are sorted — absolute clues in one pile, relative clues in the other. The volunteer is finally untangled. But just as you finish, a rolling cabinet appears outside the World Map Hall. A note taped to it reads: <em>"For the Word Roots Collection — please deliver to the World Geography Curators."</em> The volunteer picks up a card that says <em>peninsula</em> and squints. "Pen-in-su-la. Is that even English?" Tomorrow you'll crack open the cabinet.</p>
   </div>
 
-  <!-- Historian's Certificate -->
-  <div class="historian-seal" id="historianSeal">
-    <div class="seal-certificate">
-      <div class="seal-cert-message">
-        <strong>Nice work, Route Curator!</strong> You studied a real navigation tool, traced explorer routes, and explained how tools made ocean voyages possible.
-      </div>
-      <div class="seal-stamp-wrap">
-        <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
-          <defs>
-            <radialGradient id="stampGrad" cx="50%" cy="45%" r="50%">
-              <stop offset="0%" stop-color="#D94040"/>
-              <stop offset="100%" stop-color="#A02020"/>
-            </radialGradient>
-            <clipPath id="owlStampClip"><circle cx="45" cy="38" r="16"/></clipPath>
-          </defs>
-          <circle cx="45" cy="45" r="42" fill="url(#stampGrad)" stroke="#7A1818" stroke-width="1.5"/>
-          <circle cx="45" cy="45" r="37" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
-          <image href="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"
-                 x="27" y="20" width="36" height="36"
-                 clip-path="url(#owlStampClip)" opacity="0.3" style="filter:brightness(3) grayscale(1);"/>
-          <text x="45" y="72" fill="rgba(255,255,255,0.85)" font-family="'Nunito', sans-serif" font-size="9" font-weight="800" letter-spacing="2" text-anchor="middle">CERTIFIED</text>
-        </svg>
-      </div>
-    </div>
-  </div>
-
-  <!-- Turn-In Checklist -->
-  <div class="turn-in-card">
-    <div class="turn-in-header">
-      <div class="turn-in-header-icon">✅</div>
-      <div>
-        <div class="turn-in-header-label">Submit Your Work</div>
-        <div class="turn-in-header-title">Turn-In Checklist</div>
-      </div>
-    </div>
-    <div class="turn-in-body">
-      <div class="turn-in-intro">Check each item as you finish. When all are checked, you're done!</div>
-      <div class="turn-in-checklist">
-        <div class="turn-in-item" onclick="toggleCheck(this)">
-          <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I answered the evidence questions.</div>
-        </div>
-        <div class="turn-in-item" onclick="toggleCheck(this)">
-          <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I completed the Curator Task: Navigation Tools Display Label.</div>
-        </div>
-        <div class="turn-in-item" onclick="toggleCheck(this)">
-          <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I wrote my Curator's Chronicle.</div>
-        </div>
-        <div class="turn-in-item" onclick="toggleCheck(this)">
-          <div class="turn-in-check"></div>
-          <div class="turn-in-item-text">✅ I copied or downloaded my work and submitted to Canvas.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Closing Video -->
-  <div class="video-wrap" style="margin-top:18px;">
-    <div class="video-wrap-header">
-      <span style="font-size:20px;">🎬</span>
-      <div>
-        <div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div>
-        <div class="video-wrap-title">Great Work, Route Curator!</div>
-      </div>
-    </div>
-    <div class="video-ratio">
-      <div class="video-placeholder">
-        <div class="video-placeholder-icon">🎬</div>
-        <div class="video-placeholder-text">
-          <strong>Teacher recording notes:</strong> Celebrate: "You studied a mariner's astrolabe, traced how navigation tools worked, and wrote a display label for the Exploration Wing. You're building this exhibit one piece at a time." Tease next lesson: "Next time, we'll meet some of the famous explorers themselves — and match their portraits with the routes they actually sailed." Under 1 minute.
-        </div>
-        <div class="video-placeholder-id"><!-- slot: 3-02-02-closing --></div>
-      </div>
-    </div>
-  </div>
-
-</div><!-- end panel-assignment -->
-
-<!-- ═══ FOOTER ═══ -->
-<div class="footer">
-  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
-  <div class="footer-sub">Social Studies · Grade 3 · Lesson 3.02.02</div>
-  <div class="footer-copy">© 2025 Optima Academy Online</div>
+  <div class="video-wrap" style="margin-top:18px;"><div class="video-wrap-header"><span style="font-size:20px;">🎬</span><div><div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div><div class="video-wrap-title">Great Work, World Geography Curator!</div></div></div><div class="video-ratio"><div class="video-placeholder"><div class="video-placeholder-icon">🎬</div><div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate: "You can describe locations two different ways now — and you wrote your own scavenger hunt clue!" Tease next: "The volunteer just found some words on the map that visitors keep stumbling over — 'peninsula,' 'plateau,' 'archipelago.' The Word Roots cabinet is being rolled in to help. See you next time!" Under 1 minute.</div><div class="video-placeholder-id"><!-- slot: 3-05-04-closing --></div></div></div></div>
 </div>
 
-</div><!-- end page-wrap -->
-
-<!-- ═══ BACK TO TOP ═══ -->
+<div class="footer"><div class="footer-main">🏫 <span>Optima Academy Online</span></div><div class="footer-sub">Social Studies · Grade 3 · Lesson 3.05.04</div><div class="footer-copy">© 2025 Optima Academy Online</div></div>
+</div>
 <button class="back-to-top" id="backToTop" onclick="scrollToTop()">⬆ Top</button>
-
-<!-- ═══ CONFETTI CANVAS ═══ -->
 <canvas id="confettiCanvas"></canvas>
-
 <script>
 /* ═══════════ TAB SWITCHING ═══════════ */
 var visited = { scene: true };
@@ -2300,7 +1860,7 @@ function gatherAnswers() {
 
   // Mini-game status
   output += 'MINI-GAME RESULTS\n';
-  output += '(no mini-game this lesson)\n';
+  output += (window._rootMatchDone ? '✅' : '⬜') + ' Word Roots Match\n';
 
   var gathered = document.getElementById('gatheredOutput');
   if (gathered) gathered.value = output.trim();
@@ -2332,7 +1892,7 @@ function downloadJournal() {
   gatherAnswers();
   var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
   var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
-  html += '<title>Lesson 3.02.02 — My Work</title>';
+  html += '<title>3.05.04 — My Work</title>';
   html += '<style>';
   html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
   html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
@@ -2342,8 +1902,8 @@ function downloadJournal() {
   html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
   html += '.no-answer{color:#B0B8CC;font-style:italic;}';
   html += '</style></head><body>';
-  html += '<h1>📓 My Work — Lesson 3.02.02</h1>';
-  html += '<h2>Navigation Tools and Explorer Routes</h2>';
+  html += '<h1>📓 My Work — 3.05.04</h1>';
+  html += '<h2>Absolute and Relative Location</h2>';
 
   html += '<div class="section-title">📝 EVIDENCE QUESTIONS</div>';
   ids.forEach(function(id) {
