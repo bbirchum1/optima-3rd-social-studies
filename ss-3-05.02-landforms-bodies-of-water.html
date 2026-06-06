@@ -1702,7 +1702,7 @@ body {
   <!-- SOURCE STUDY (Category 3 — Real image) -->
   <div class="source-card">
     <div class="source-card-header"><div class="source-card-header-icon">📜</div><div><div class="source-card-header-label">Source Study · Guided Practice</div><div class="source-card-header-title">Question Like a Geographer</div></div></div>
-    <div class="source-image-placeholder"><div class="source-image-placeholder-text">🖼️ A real photograph of a dramatic landform — a mountain range, a river cutting through a valley, a wide plain, or a plateau. Should clearly show the shape of the land. Suggested source: National Park Service photo library, USGS, or Library of Congress.<br><br><strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-05-02-landform-photo.jpg</code></div></div>
+    <div class="source-image-placeholder" data-image="source-3-05-02-landform-photo"><div class="source-image-placeholder-text">🖼️ A real photograph of a dramatic landform — a mountain range, a river cutting through a valley, a wide plain, or a plateau. Should clearly show the shape of the land. Suggested source: National Park Service photo library, USGS, or Library of Congress.<br><br><strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-05-02-landform-photo.jpg</code></div></div>
     <div class="source-card-body">
       <div class="source-label-bar"><span class="src-type">Secondary Source</span> · Landscape photograph</div>
       <div class="callout callout-info"><div class="callout-icon">👁️</div><p><strong>What do I see?</strong> Look carefully. What kind of landform is in this photo? What features stand out — height, shape, water?</p></div>
@@ -2328,6 +2328,7 @@ function scrollToTop() {
 
 /* ═══════════ INIT ═══════════ */
 updateProgress();
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-3rd-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];document.querySelectorAll('.source-image-placeholder[data-image]').forEach(function(el){tryImg(el,el.getAttribute('data-image'),0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
 </script>
 </body>
 </html>

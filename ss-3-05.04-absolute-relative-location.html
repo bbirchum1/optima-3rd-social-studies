@@ -1579,7 +1579,7 @@ A package arrives at the World Map Hall addressed to "The Scavenger Hunt Committ
   <!-- SOURCE STUDY (Category 3 — Real image) -->
   <div class="source-card">
     <div class="source-card-header"><div class="source-card-header-icon">📜</div><div><div class="source-card-header-label">Source Study · Guided Practice</div><div class="source-card-header-title">Question Like a Geographer</div></div></div>
-    <div class="source-image-placeholder"><div class="source-image-placeholder-text">🖼️ A real historical or modern map showing latitude and longitude lines — ideally one where the grid is clearly visible. Examples: a 19th-century globe, a navigation chart, or a modern world map with degree markings. Suggested source: Library of Congress Geography &amp; Map Division, David Rumsey Map Collection.<br><br><strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-05-04-coordinate-map.jpg</code></div></div>
+    <div class="source-image-placeholder" data-image="source-3-05-04-coordinate-map"><div class="source-image-placeholder-text">🖼️ A real historical or modern map showing latitude and longitude lines — ideally one where the grid is clearly visible. Examples: a 19th-century globe, a navigation chart, or a modern world map with degree markings. Suggested source: Library of Congress Geography &amp; Map Division, David Rumsey Map Collection.<br><br><strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-05-04-coordinate-map.jpg</code></div></div>
     <div class="source-card-body">
       <div class="source-label-bar"><span class="src-type">Primary Source</span> · Map with latitude and longitude grid</div>
       <div class="callout callout-info"><div class="callout-icon">👁️</div><p><strong>What do I see?</strong> Look at the lines crossing the map. What numbers appear along the edges? What might those numbers mean?</p></div>
@@ -2141,6 +2141,7 @@ function scrollToTop() {
 
 /* ═══════════ INIT ═══════════ */
 updateProgress();
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-3rd-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];document.querySelectorAll('.source-image-placeholder[data-image]').forEach(function(el){tryImg(el,el.getAttribute('data-image'),0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
 </script>
 </body>
 </html>

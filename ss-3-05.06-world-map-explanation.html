@@ -1567,7 +1567,7 @@ It's the last day before Opening Night. The World Map Hall is almost ready. The 
   <!-- SOURCE STUDY (Category 3 — Real image) -->
   <div class="source-card">
     <div class="source-card-header"><div class="source-card-header-icon">📜</div><div><div class="source-card-header-label">Source Study · Mentor Text</div><div class="source-card-header-title">Question Like a Curator</div></div></div>
-    <div class="source-image-placeholder"><div class="source-image-placeholder-text">🖼️ A real photograph of a museum world map exhibit OR a famous historical world map. Should show a labeled map being used to teach visitors about the world. Examples: National Geographic Museum's giant floor map, the Mappa Mundi at Hereford Cathedral, or a Smithsonian Hall of Geography display. Suggested source: museum public-domain photo galleries, Wikimedia Commons, Library of Congress.<br><br><strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-05-06-world-map-exhibit.jpg</code></div></div>
+    <div class="source-image-placeholder" data-image="source-3-05-06-world-map-exhibit"><div class="source-image-placeholder-text">🖼️ A real photograph of a museum world map exhibit OR a famous historical world map. Should show a labeled map being used to teach visitors about the world. Examples: National Geographic Museum's giant floor map, the Mappa Mundi at Hereford Cathedral, or a Smithsonian Hall of Geography display. Suggested source: museum public-domain photo galleries, Wikimedia Commons, Library of Congress.<br><br><strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-05-06-world-map-exhibit.jpg</code></div></div>
     <div class="source-card-body">
       <div class="source-label-bar"><span class="src-type">Secondary Source</span> · Museum world map display</div>
       <div class="callout callout-info"><div class="callout-icon">👁️</div><p><strong>What do I see?</strong> What does this exhibit show? What labels, features, or details stand out?</p></div>
@@ -2096,6 +2096,7 @@ function scrollToTop() {
 
 /* ═══════════ INIT ═══════════ */
 updateProgress();
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-3rd-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];document.querySelectorAll('.source-image-placeholder[data-image]').forEach(function(el){tryImg(el,el.getAttribute('data-image'),0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
 </script>
 </body>
 </html>

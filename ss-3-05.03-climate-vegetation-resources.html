@@ -1599,7 +1599,7 @@ body {
   <!-- SOURCE STUDY (Category 3 — Real image) -->
   <div class="source-card">
     <div class="source-card-header"><div class="source-card-header-icon">📜</div><div><div class="source-card-header-label">Source Study · Guided Practice</div><div class="source-card-header-title">Question Like a Geographer</div></div></div>
-    <div class="source-image-placeholder"><div class="source-image-placeholder-text">🖼️ A real photograph that shows a distinct climate clearly — Sahara sand dunes, dense Amazon rainforest canopy, or Arctic tundra with snow and ice. The vegetation should be obvious. Suggested source: NASA Earth Observatory, USGS, or National Geographic public-domain archive.<br><br><strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-05-03-climate-zone.jpg</code></div></div>
+    <div class="source-image-placeholder" data-image="source-3-05-03-climate-zone"><div class="source-image-placeholder-text">🖼️ A real photograph that shows a distinct climate clearly — Sahara sand dunes, dense Amazon rainforest canopy, or Arctic tundra with snow and ice. The vegetation should be obvious. Suggested source: NASA Earth Observatory, USGS, or National Geographic public-domain archive.<br><br><strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-05-03-climate-zone.jpg</code></div></div>
     <div class="source-card-body">
       <div class="source-label-bar"><span class="src-type">Secondary Source</span> · Climate zone photograph</div>
       <div class="callout callout-info"><div class="callout-icon">👁️</div><p><strong>What do I see?</strong> What's the weather like here — hot, cold, wet, dry? What plants are growing (or not growing)?</p></div>
@@ -2145,6 +2145,7 @@ function scrollToTop() {
 
 /* ═══════════ INIT ═══════════ */
 updateProgress();
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-3rd-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];document.querySelectorAll('.source-image-placeholder[data-image]').forEach(function(el){tryImg(el,el.getAttribute('data-image'),0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
 </script>
 </body>
 </html>
