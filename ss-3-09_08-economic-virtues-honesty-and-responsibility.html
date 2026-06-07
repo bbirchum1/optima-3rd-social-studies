@@ -1,0 +1,2883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optima Academy Online — Lesson 3.09.08: Economic Virtues — Honesty and Responsibility (Grade 3 Museum · Unit Closer)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', 'Century Gothic', 'Arial Rounded MT Bold', Verdana, sans-serif;
+  background: #F0F2F8;
+  color: #0E1C42;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(14, 28, 66, 0.08);
+}
+
+/* ═══════════ PROGRESS BAR ═══════════ */
+.progress-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #0E1C42;
+  padding: 8px 20px 10px;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.progress-label {
+  font-size: 12px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+.progress-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  /* ✏️ GRADE ACCENT: Update gradient per grade identity */
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #1A8A7D);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+.progress-pct {
+  font-size: 13px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ═══════════ HEADER ═══════════ */
+.header {
+  background: #0E1C42;
+  border-bottom: 6px solid #55C8E8;
+  padding: 20px 28px 18px;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #55C8E8);
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.header-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #55C8E8; letter-spacing: 0.5px; }
+.header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.header-title em {
+  /* ✏️ GRADE ACCENT: Tinted emphasis */
+  color: #A0E8DA;
+  font-style: italic;
+}
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(85, 200, 232, 0.15);
+  border: 1.5px solid rgba(85, 200, 232, 0.35);
+  border-radius: 28px;
+  padding: 6px 16px;
+}
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+
+/* ═══════════ INFO STRIP ═══════════ */
+.info-strip {
+  display: flex;
+  flex-wrap: wrap;
+  background: #FFFFFF;
+  border-bottom: 2px solid #E2E8F4;
+}
+.info-cell {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 16px;
+  border-right: 1px solid #E2E8F4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-cell:last-child { border-right: none; }
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.info-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.info-detail { font-size: 11px; color: #3A4A6B; line-height: 1.3; }
+
+/* ═══════════ QUOTE STRIP ═══════════ */
+.quote-strip {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border-bottom: 2px solid #F5E6C8;
+  padding: 14px 28px;
+  text-align: center;
+}
+.quote-strip-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #5A4A3A;
+  line-height: 1.6;
+}
+.quote-strip-attr {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  color: #7A88A8;
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO COLLAPSIBLE ═══════════ */
+.intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
+.intro-collapsed-bar {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 28px;
+  background: #FFF8F0;
+  border-bottom: 2px solid #F5E6C8;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.intro-collapsed-bar:hover { background: #FFF3DC; }
+.intro-section.collapsed .intro-collapsed-bar { display: flex; }
+.intro-collapsed-icon { font-size: 18px; }
+.intro-collapsed-text {
+  font-size: 14px;
+  color: #5A4A3A;
+  font-weight: 700;
+  flex: 1;
+}
+.intro-collapsed-toggle {
+  font-size: 12px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO 2-COL ═══════════ */
+.intro-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px 28px 4px;
+}
+.intro-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+.intro-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 2px solid;
+}
+.intro-card-head-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.intro-card-head-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.intro-card-head-title { font-size: 18px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.intro-card-body { padding: 14px 18px; }
+.intro-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.65; margin-bottom: 8px; }
+.intro-card-body p:last-child { margin-bottom: 0; }
+.intro-card-body .obj-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.intro-card-body .obj-line:last-child { margin-bottom: 0; }
+.intro-card-body .obj-icon { flex-shrink: 0; font-size: 17px; }
+.theme-question .intro-card-head { background: #FFF3DC; border-color: #F5E6C8; }
+.theme-question .intro-card-head-icon { background: #D4943A; }
+.theme-objectives .intro-card-head { background: #EAF8FD; border-color: #D6F2FB; }
+.theme-objectives .intro-card-head-icon { background: #55C8E8; }
+
+/* ═══════════ NEED STRIP ═══════════ */
+.need-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 28px 18px;
+}
+.need-strip-label {
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.need-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #E3F8ED;
+  border: 1.5px solid #B8E8CF;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+
+/* ═══════════ TODAY'S PATH ═══════════ */
+.todays-path {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-top: 14px;
+}
+.todays-path-title {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.todays-path-steps {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 600;
+}
+.todays-path-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.todays-path-arrow { color: #B0B8CC; font-size: 11px; }
+
+/* ═══════════ TAB BAR ═══════════ */
+.tab-bar {
+  position: sticky;
+  top: 38px;
+  z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 3px solid #E2E8F4;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  box-shadow: 0 -4px 0 0 #0E1C42;
+}
+.tab-bar::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 1;
+  min-width: 160px;
+  padding: 12px 8px 11px;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7A88A8;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  line-height: 1.3;
+  text-align: center;
+}
+.tab-btn:hover { color: #0E1C42; background: #EAF8FD; }
+.tab-btn.active {
+  color: #0E1C42;
+  border-bottom-color: #55C8E8;
+  background: #FFFFFF;
+}
+.tab-btn .tab-check {
+  display: none;
+  font-size: 12px;
+  color: #34B76F;
+  margin-left: 4px;
+  font-weight: 800;
+}
+.tab-btn.visited .tab-check { display: inline; }
+.tab-panel { display: none; padding: 24px 28px 36px; }
+.tab-panel.active { display: block; }
+
+/* ═══════════ VIDEO WRAP ═══════════ */
+.video-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.08);
+  background: #000;
+  margin: 0 0 22px;
+}
+.video-wrap-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.video-wrap-type {
+  font-size: 10px;
+  color: #55C8E8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+.video-wrap-title { font-size: 16px; color: #fff; font-weight: 800; line-height: 1.2; }
+.video-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-placeholder {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.video-placeholder-icon { font-size: 44px; margin-bottom: 10px; opacity: 0.55; }
+.video-placeholder-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.video-placeholder-id {
+  font-size: 11px;
+  color: rgba(85, 200, 232, 0.4);
+  font-family: monospace;
+  margin-top: 6px;
+}
+
+/* ═══════════ ACTIVITY CARDS ═══════════ */
+.activity {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+/* ✏️ GRADE ACCENT: Change left-border color per grade */
+.activity.bl-accent { border-left: 6px solid #1A8A7D; }
+.activity.bl-cyan { border-left: 6px solid #55C8E8; }
+.activity.bl-gold { border-left: 6px solid #D4943A; }
+.activity.bl-green { border-left: 6px solid #34B76F; }
+.activity.bl-purple { border-left: 6px solid #8B6FC0; }
+.activity.bl-navy { border-left: 6px solid #0E1C42; }
+.activity-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 14px 18px;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.activity-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.activity-title { font-size: 19px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.activity-sub { font-size: 12px; color: #7A88A8; }
+.activity-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.activity-body { padding: 18px 22px; }
+.activity-body p { font-size: 17px; color: #3A4A6B; line-height: 1.75; margin-bottom: 12px; }
+.activity-body p:last-child { margin-bottom: 0; }
+
+/* ═══════════ CALLOUTS ═══════════ */
+.callout {
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.callout:last-child { margin-bottom: 0; }
+.callout-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-info { background: #EAF8FD; border: 2px solid #D6F2FB; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-vocab { background: #F0E8FF; border: 2px solid #D8CCF0; }
+.callout-virtue { background: #FDE8F0; border: 2px solid #F0B8CA; }
+
+/* ═══════════ VIRTUE SPOTLIGHT ═══════════ */
+.virtue-card {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-left: 6px solid #D4943A;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.virtue-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.virtue-text { font-size: 15px; color: #0E1C42; line-height: 1.65; }
+
+/* ═══════════ KEY CONCEPT ═══════════ */
+.key-concept {
+  background: #FFF3DC;
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.key-concept-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.key-concept p { font-size: 15px; color: #0E1C42; line-height: 1.7; margin-bottom: 6px; }
+
+/* ═══════════ SOURCE STUDY CARD ═══════════ */
+.source-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.source-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.source-card-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.source-card-header-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.source-card-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.source-image-placeholder {
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(145deg, #E2E8F4, #D6E0F0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #E2E8F4;
+}
+.source-image-placeholder-text {
+  font-size: 14px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+}
+.source-card-body { padding: 18px 22px; }
+.source-label-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+}
+.source-label-bar .src-type {
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+/* ═══════════ COPYWORK ═══════════ */
+.copywork-box {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+.copywork-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.copywork-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.copywork-instruction { font-size: 14px; color: #3A4A6B; line-height: 1.5; }
+
+/* ═══════════ COUNCIL CHAMBER ═══════════ */
+.council-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.council-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.council-header-icon { font-size: 26px; }
+.council-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.council-question {
+  padding: 16px 22px;
+  background: #FFF3DC;
+  border-bottom: 2px solid #F5E6C8;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.6;
+  font-style: italic;
+}
+.council-perspectives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.council-perspective {
+  padding: 16px 18px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.council-perspective:first-child { border-right: 1px solid #E2E8F4; }
+.council-perspective-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.council-perspective-label.side-a { color: #2A7AB5; }
+.council-perspective-label.side-b { color: #D4663A; }
+.council-perspective p { font-size: 14px; color: #3A4A6B; line-height: 1.55; }
+.council-body { padding: 18px 22px; }
+
+/* ═══════════ TIMELINE CARD ═══════════ */
+.timeline-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.timeline-header-icon { font-size: 22px; color: #fff; }
+.timeline-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.timeline-events { padding: 18px 22px; }
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.timeline-event:last-child { border-bottom: none; }
+.timeline-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.timeline-event-content { flex: 1; }
+.timeline-event-date { font-size: 13px; color: #1A8A7D; font-weight: 800; margin-bottom: 2px; }
+.timeline-event-text { font-size: 15px; color: #0E1C42; line-height: 1.55; }
+
+/* ═══════════ JOURNAL TEXT BOXES ═══════════ */
+.journal-box {
+  width: 100%;
+  min-height: 70px;
+  padding: 12px 14px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.6;
+  resize: vertical;
+  background: #FAFBFF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+.journal-box:focus {
+  outline: none;
+  border-color: #55C8E8;
+  box-shadow: 0 0 0 3px rgba(85, 200, 232, 0.15);
+  background: #fff;
+}
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.journal-label {
+  font-size: 12px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.journal-label .saved-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #B0B8CC;
+  transition: background 0.3s;
+}
+.journal-label .saved-dot.saved { background: #34B76F; }
+
+/* ═══════════ PERSISTENT TEXTBOX PROMPT ═══════════ */
+.textbox-prompt {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 8px 12px;
+  background: #EAF8FD;
+  border: 1.5px solid #D6F2FB;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  margin-top: 10px;
+}
+.textbox-prompt + .journal-box {
+  border-radius: 0 0 12px 12px;
+  margin-top: 0;
+}
+
+/* ═══════════ ASSIGNMENT QUESTIONS ═══════════ */
+.q-block {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.q-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #55C8E8;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 4px; }
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+.turn-in-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 18px;
+}
+.turn-in-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #EAF8FD;
+  padding: 18px 22px;
+  border-bottom: 2px solid #D6F2FB;
+}
+.turn-in-header-icon { font-size: 36px; line-height: 1; flex-shrink: 0; }
+.turn-in-header-label {
+  font-size: 11px;
+  color: #1A6B8E;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.turn-in-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+.turn-in-body { padding: 18px 22px 20px; }
+.turn-in-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 16px; line-height: 1.55; }
+.turn-in-checklist { display: flex; flex-direction: column; gap: 10px; }
+.turn-in-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item:hover { background: #EAF8FD; border-color: #B8E0F0; }
+.turn-in-item.checked { background: #E3F8ED; border-color: #B8E8CF; }
+.turn-in-item .turn-in-check {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #B8E0F0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item.checked .turn-in-check { background: #34B76F; border-color: #34B76F; }
+.turn-in-item-text { font-size: 15px; color: #0E1C42; font-weight: 600; line-height: 1.55; flex: 1; }
+
+/* ═══════════ GATHERED ANSWERS ═══════════ */
+.gathered-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 22px;
+}
+.gathered-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  padding: 16px 22px;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.gathered-header-icon { font-size: 28px; }
+.gathered-header-label {
+  font-size: 11px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.gathered-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.gathered-body { padding: 18px 22px 20px; }
+.gathered-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 14px; line-height: 1.55; }
+.gathered-output {
+  width: 100%;
+  min-height: 250px;
+  padding: 16px 18px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #0E1C42;
+  line-height: 1.65;
+  background: #FAFBFF;
+  resize: vertical;
+  white-space: pre-wrap;
+}
+.gathered-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.gathered-btn {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gathered-btn:hover { transform: translateY(-2px); }
+.gathered-btn-copy {
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  box-shadow: 0 4px 14px rgba(85, 200, 232, 0.25);
+}
+.gathered-btn-pdf {
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  box-shadow: 0 4px 14px rgba(14, 28, 66, 0.25);
+}
+.gathered-copied {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34B76F;
+  margin-top: 8px;
+  display: none;
+}
+.gathered-copied.show { display: block; }
+
+/* ═══════════ NARRATIVE TRANSITION ═══════════ */
+.tab-next-wrap { text-align: center; padding: 24px 0 8px; }
+.tab-transition-voice {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #5A4A3A;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.tab-next-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  border: none;
+  border-radius: 28px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(85, 200, 232, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tab-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(85, 200, 232, 0.4);
+}
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+.root-match-game { margin: 14px 0; }
+.root-match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.root-match-item {
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.5;
+  transition: background 0.15s, border-color 0.2s, transform 0.15s;
+  user-select: none;
+}
+.root-match-item:hover { transform: translateY(-1px); border-color: #8B6FC0; }
+.root-match-item.selected { background: #F0E8FF; border-color: #8B6FC0; }
+.root-match-item.matched { background: #E3F8ED; border-color: #34B76F; pointer-events: none; opacity: 0.8; }
+.root-match-item.wrong-flash { background: #FFF0EC; border-color: #E8636B; animation: shake 0.4s ease; }
+.root-match-item.is-word { font-weight: 800; font-family: 'Lora', Georgia, serif; font-size: 16px; }
+.root-match-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.root-match-feedback.show { display: block; }
+
+/* ═══════════ FLIP CARDS ═══════════ */
+.vocab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0;
+}
+.flip-card { perspective: 800px; height: 160px; cursor: pointer; }
+.flip-card-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  text-align: center;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.06);
+}
+.flip-card-front { background: #FFFFFF; border-top: 5px solid #55C8E8; }
+.flip-card-front .fc-emoji { font-size: 24px; margin-bottom: 6px; }
+.flip-card-front .fc-word {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px; font-weight: 700; color: #0E1C42;
+}
+.flip-card-front .fc-tap { font-size: 11px; color: #7A88A8; font-weight: 600; margin-top: 4px; }
+.flip-card-back {
+  background: linear-gradient(145deg, #0E1C42, #1A2D5A);
+  border-color: #0E1C42;
+  transform: rotateY(180deg);
+}
+.flip-card-back .fc-def { font-size: 13px; color: #fff; line-height: 1.5; font-weight: 600; }
+.flip-card-back .fc-word-back {
+  font-size: 10px; color: #55C8E8; text-transform: uppercase;
+  letter-spacing: 1px; font-weight: 800; margin-bottom: 6px;
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  height: 44px;
+  padding: 0 18px 0 14px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  font-size: 14px; font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(14, 28, 66, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0; visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 500;
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { box-shadow: 0 6px 24px rgba(14, 28, 66, 0.5); transform: translateY(-3px); }
+
+/* ═══════════ CONFETTI ═══════════ */
+#confettiCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* ═══════════ SELF-CHECK QUIZ ═══════════ */
+.quiz-card {
+  background: #fff;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.quiz-q {
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.quiz-q-text { font-size: 17px; color: #0E1C42; font-weight: 700; margin-bottom: 12px; line-height: 1.55; }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-opt {
+  display: flex; align-items: center; gap: 12px;
+  background: #fff; border: 2px solid #E2E8F4; border-radius: 12px;
+  padding: 10px 14px; font-size: 15px; color: #0E1C42; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+}
+.quiz-opt:hover { border-color: #55C8E8; background: #EAF8FD; }
+.quiz-opt.correct { background: #E3F8ED; border-color: #34B76F; color: #1a5c2e; }
+.quiz-opt.wrong { background: #FFF0EC; border-color: #E8636B; color: #8a3030; }
+.quiz-opt.disabled { opacity: 0.5; cursor: default; pointer-events: none; }
+.opt-letter {
+  width: 28px; height: 28px; border-radius: 50%; background: #E2E8F4;
+  font-size: 13px; font-weight: 800; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; color: #3A4A6B;
+}
+.quiz-opt.correct .opt-letter { background: #34B76F; color: #fff; }
+.quiz-opt.wrong .opt-letter { background: #E8636B; color: #fff; }
+.quiz-feedback {
+  margin-top: 10px; padding: 10px 14px; border-radius: 10px;
+  font-size: 14px; font-weight: 600; line-height: 1.5; display: none;
+}
+.quiz-feedback.show { display: block; }
+.fb-correct { background: #E3F8ED; color: #1a5c2e; border: 1.5px solid #B8E8CF; }
+.fb-wrong { background: #FFF3DC; color: #5A4A3A; border: 1.5px solid #F5E6C8; }
+.quiz-score-box {
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff; border-radius: 16px; padding: 20px 22px;
+  margin-top: 16px; text-align: center; display: none;
+}
+.quiz-score-box.show { display: block; }
+.quiz-score-num { font-size: 52px; font-weight: 900; line-height: 1; }
+.quiz-score-label { font-size: 14px; color: #55C8E8; margin-bottom: 4px; }
+.quiz-score-msg { font-size: 18px; font-weight: 700; margin-top: 8px; }
+.quiz-video-wrap { margin-top: 16px; display: none; }
+.quiz-video-wrap.show { display: block; }
+
+/* ═══════════ DISCOVERY FACT (hidden reward on game completion) ═══════════ */
+.discovery-fact {
+  display: none;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2px solid #F5E6C8;
+  border-left: 5px solid #D4943A;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #5A4A3A;
+  line-height: 1.6;
+  animation: factReveal 0.5s ease;
+}
+.discovery-fact.show { display: block; }
+.discovery-fact-label {
+  font-size: 11px;
+  color: #D4943A;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+@keyframes factReveal {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════ HISTORIAN'S SEAL — certificate card with stamp ═══════════ */
+.historian-seal {
+  display: none;
+  margin-top: 20px;
+  animation: cardSlideUp 0.4s ease;
+}
+.historian-seal.show { display: block; }
+@keyframes cardSlideUp {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.seal-certificate {
+  position: relative;
+  background: linear-gradient(160deg, #FFFDF8, #FFF5E6, #FFFDF8);
+  border: 2px solid #E8D8C0;
+  border-radius: 14px;
+  padding: 22px 100px 22px 24px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(140, 120, 80, 0.1);
+}
+.seal-cert-message {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  color: #5A4A3A;
+  line-height: 1.55;
+  font-style: italic;
+}
+.seal-cert-message strong {
+  font-style: normal;
+  color: #3A2A1A;
+}
+.seal-stamp-wrap {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-8deg);
+  animation: stampBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+@keyframes stampBounce {
+  0% { opacity: 0; transform: translateY(-50%) rotate(-8deg) scale(0); }
+  60% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1.2); }
+  100% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1); }
+}
+
+/* ═══════════ OPTIMA OWL BUDDY ═══════════ */
+.owl-buddy {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin: 18px 0;
+  box-shadow: 0 2px 12px rgba(14, 28, 66, 0.06);
+  position: relative;
+}
+.owl-buddy-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2.5px solid #F5E6C8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+  animation: owlBob 3s ease-in-out infinite;
+}
+@keyframes owlBob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-3px) rotate(2deg); }
+}
+.owl-buddy-bubble {
+  flex: 1;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 12px 16px;
+  position: relative;
+  font-size: 15px;
+  color: #3A4A6B;
+  line-height: 1.6;
+}
+.owl-buddy-bubble::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  background: #FAFBFF;
+  border-left: 1.5px solid #E2E8F4;
+  border-bottom: 1.5px solid #E2E8F4;
+  transform: rotate(45deg);
+}
+.owl-buddy-name {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  margin-bottom: 4px;
+}
+
+/* ═══════════ TAB SECTION HEADERS ═══════════ */
+.tab-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0 18px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.tab-section-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  color: #fff;
+}
+.tab-section-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  color: #7A88A8;
+  margin-bottom: 1px;
+}
+.tab-section-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ═══════════ SECTION DIVIDERS ═══════════ */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+  margin: 8px 0;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E2E8F4, transparent);
+}
+.section-divider-dot {
+  font-size: 8px;
+  color: #D4D8E4;
+  letter-spacing: 6px;
+}
+
+/* ═══════════ STEP BADGES (for Explore tab progression) ═══════════ */
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+  /* ✏️ GRADE ACCENT */
+  background: rgba(26, 138, 125, 0.08);
+  color: #1A8A7D;
+}
+.step-badge-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #fff;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+}
+
+/* ═══════════ FOOTER ═══════════ */
+.footer {
+  background: #0E1C42;
+  border-top: 4px solid #55C8E8;
+  padding: 18px 28px;
+  text-align: center;
+}
+.footer-main { font-size: 14px; color: #fff; margin-bottom: 4px; }
+.footer-main span { color: #55C8E8; font-weight: 700; }
+.footer-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media (max-width: 620px) {
+  .intro-2col { grid-template-columns: 1fr; }
+  .council-perspectives { grid-template-columns: 1fr; }
+  .vocab-grid { grid-template-columns: 1fr; }
+  .root-match-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+</style>
+<body>
+<div id="pageTop"></div>
+<div class="page-wrap">
+
+<!-- ═══ PROGRESS BAR ═══ -->
+<div class="progress-wrap">
+  <div class="progress-label">🏛️ Progress</div>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-pct" id="progressPct">0%</div>
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div>
+      <div class="header-org">Optima Academy Online</div>
+      <div class="header-sub">An Education Experience Company</div>
+    </div>
+  </div>
+  <div class="header-title">Economic Virtues: <em>Honesty &amp; Responsibility</em></div>
+  <div class="header-badge">
+    <span class="header-badge-icon">🌍</span>
+    <span class="header-badge-text">Lesson 3.09.08</span>
+  </div>
+</div>
+
+<!-- ═══ SVG HERO BANNER — Completed Marketplace Hall with mini exhibits + central Wise Trader plaque ═══ -->
+<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+  <defs>
+    <linearGradient id="skyGrad8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFE4B5"/>
+      <stop offset="100%" stop-color="#FFF4DA"/>
+    </linearGradient>
+    <linearGradient id="floorGrad8" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C68A3E"/>
+      <stop offset="100%" stop-color="#A06A2A"/>
+    </linearGradient>
+    <radialGradient id="plaqueGold" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="55%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#B47820"/>
+    </radialGradient>
+    <linearGradient id="ribbonRed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8636B"/>
+      <stop offset="100%" stop-color="#A03840"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky / hall background -->
+  <rect width="920" height="260" fill="url(#skyGrad8)"/>
+  <!-- Back wall band -->
+  <rect y="55" width="920" height="145" fill="#FFF8E7" opacity="0.55"/>
+  <!-- Floor -->
+  <rect y="200" width="920" height="60" fill="url(#floorGrad8)"/>
+  <line x1="0" y1="220" x2="920" y2="220" stroke="#8B5E20" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="240" x2="920" y2="240" stroke="#8B5E20" stroke-width="1" opacity="0.3"/>
+
+  <!-- Hanging garland of pennants (celebration) -->
+  <g>
+    <path d="M40 35 Q460 60 880 35" fill="none" stroke="#8B5E20" stroke-width="1.2" opacity="0.6"/>
+    <g>
+      <polygon points="100,38 116,38 108,52" fill="#E8636B"/>
+      <polygon points="180,46 196,46 188,60" fill="#D4943A"/>
+      <polygon points="260,52 276,52 268,66" fill="#1A8A7D"/>
+      <polygon points="340,56 356,56 348,70" fill="#8B6FC0"/>
+      <polygon points="560,56 576,56 568,70" fill="#34B76F"/>
+      <polygon points="640,52 656,52 648,66" fill="#D4943A"/>
+      <polygon points="720,46 736,46 728,60" fill="#55C8E8"/>
+      <polygon points="800,38 816,38 808,52" fill="#E8636B"/>
+      <animateTransform attributeName="transform" type="translate" dur="6s" values="0,0;0,3;0,0" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- ═══ MINI EXHIBITS CALLBACK ROW (left to right: booth, trade table, money case, map, decision board) ═══ -->
+
+  <!-- 1. Bakery booth (callback to .01/.03) -->
+  <g transform="translate(80, 165)" opacity="0.85">
+    <path d="M-26 0 L26 0 L22 -7 L-22 -7 Z" fill="#D4943A"/>
+    <rect x="-24" y="0" width="2" height="30" fill="#5C3A1E"/>
+    <rect x="22" y="0" width="2" height="30" fill="#5C3A1E"/>
+    <rect x="-25" y="22" width="50" height="10" fill="#C68A3E" stroke="#8B5E20" stroke-width="0.6"/>
+    <ellipse cx="-12" cy="21" rx="6" ry="3" fill="#D4943A"/>
+    <ellipse cx="2" cy="21" rx="6" ry="3" fill="#C4883A"/>
+    <ellipse cx="14" cy="21" rx="6" ry="3" fill="#D4943A"/>
+  </g>
+
+  <!-- 2. Trade table (callback to .02) -->
+  <g transform="translate(195, 175)" opacity="0.85">
+    <rect x="-26" y="0" width="52" height="6" fill="#C68A3E" stroke="#8B5E20" stroke-width="0.6"/>
+    <rect x="-24" y="6" width="3" height="14" fill="#8B5E20"/>
+    <rect x="21" y="6" width="3" height="14" fill="#8B5E20"/>
+    <!-- Fish -->
+    <ellipse cx="-15" cy="-3" rx="6" ry="3" fill="#55C8E8"/>
+    <polygon points="-21,-3 -25,-6 -25,0" fill="#55C8E8"/>
+    <!-- Grain sack -->
+    <path d="M5 -2 q-3 0 -3 -3 q0 -6 3 -8 l10 0 q3 2 3 8 q0 3 -3 3 z" fill="#E8C886" stroke="#8B5E20" stroke-width="0.6"/>
+  </g>
+
+  <!-- 3. Money case (callback to .04/.05) -->
+  <g transform="translate(310, 165)" opacity="0.85">
+    <rect x="-32" y="-12" width="64" height="32" fill="rgba(224, 244, 255, 0.7)" stroke="#5C3A1E" stroke-width="1"/>
+    <rect x="-34" y="-14" width="68" height="4" fill="#8B5E20"/>
+    <line x1="-12" y1="-12" x2="-12" y2="20" stroke="#8B5E20" stroke-width="0.6" opacity="0.5"/>
+    <line x1="12" y1="-12" x2="12" y2="20" stroke="#8B5E20" stroke-width="0.6" opacity="0.5"/>
+    <!-- Coins inside -->
+    <circle cx="-22" cy="6" r="5" fill="url(#plaqueGold)" stroke="#8B5E20" stroke-width="0.5"/>
+    <circle cx="0" cy="6" r="5" fill="#E0E0E8" stroke="#5C5C68" stroke-width="0.5"/>
+    <rect x="14" y="-2" width="14" height="10" rx="1" fill="#7FB070" stroke="#4A7048" stroke-width="0.5"/>
+  </g>
+
+  <!-- 4. Trade route map (callback to .06) -->
+  <g transform="translate(615, 165)" opacity="0.85">
+    <rect x="-34" y="-12" width="68" height="32" fill="#F8F4E8" stroke="#5C3A1E" stroke-width="1"/>
+    <!-- Tiny stylized country shapes -->
+    <path d="M-28 -6 Q-20 -8 -12 -6 Q-4 -8 4 -6 L4 -2 Q-4 -3 -12 -2 Q-20 -3 -28 -2 Z" fill="#C8A06A" opacity="0.85"/>
+    <path d="M-26 0 Q-14 2 -2 0 Q10 2 22 0 L22 5 Q10 6 -2 5 Q-14 6 -26 5 Z" fill="#D4B872" opacity="0.85"/>
+    <path d="M-14 8 Q-4 10 6 8 L4 14 Q-4 14 -12 12 Z" fill="#C8946A" opacity="0.85"/>
+    <!-- Arrows -->
+    <path d="M-20 -1 q3 5 6 9" fill="none" stroke="#E8636B" stroke-width="1" stroke-dasharray="2 2"/>
+    <path d="M8 9 q5 -4 10 -6" fill="none" stroke="#34B76F" stroke-width="1" stroke-dasharray="2 2"/>
+  </g>
+
+  <!-- 5. Decision Board (callback to .07) -->
+  <g transform="translate(730, 165)" opacity="0.85">
+    <rect x="-30" y="-14" width="60" height="34" fill="#F8F4E8" stroke="#5C3A1E" stroke-width="1"/>
+    <rect x="-30" y="-14" width="60" height="6" fill="#5C3A1E"/>
+    <line x1="0" y1="-8" x2="0" y2="20" stroke="#5C3A1E" stroke-width="0.6" opacity="0.6"/>
+    <!-- Cost tiles -->
+    <rect x="-26" y="-4" width="20" height="4" rx="1" fill="#FFCDD2" stroke="#A03840" stroke-width="0.5"/>
+    <rect x="-26" y="2" width="20" height="4" rx="1" fill="#FFCDD2" stroke="#A03840" stroke-width="0.5"/>
+    <rect x="-26" y="8" width="20" height="4" rx="1" fill="#FFCDD2" stroke="#A03840" stroke-width="0.5"/>
+    <!-- Benefit tiles -->
+    <rect x="6" y="-4" width="20" height="4" rx="1" fill="#CDEFD8" stroke="#0A4F2A" stroke-width="0.5"/>
+    <rect x="6" y="2" width="20" height="4" rx="1" fill="#CDEFD8" stroke="#0A4F2A" stroke-width="0.5"/>
+    <rect x="6" y="8" width="20" height="4" rx="1" fill="#CDEFD8" stroke="#0A4F2A" stroke-width="0.5"/>
+  </g>
+
+  <!-- ═══ THE CENTRAL WISE TRADER PLAQUE ═══ -->
+  <g transform="translate(460, 130)">
+    <animateTransform attributeName="transform" type="translate" dur="5s" values="460,130;460,127;460,130" repeatCount="indefinite"/>
+
+    <!-- Ribbon banners behind plaque -->
+    <g>
+      <polygon points="-92,-30 -64,-12 -82,-2 -110,-20" fill="url(#ribbonRed)" stroke="#7A1818" stroke-width="0.8"/>
+      <polygon points="-110,-20 -82,-2 -86,12 -114,-6" fill="#7A1818"/>
+      <polygon points="92,-30 64,-12 82,-2 110,-20" fill="url(#ribbonRed)" stroke="#7A1818" stroke-width="0.8"/>
+      <polygon points="110,-20 82,-2 86,12 114,-6" fill="#7A1818"/>
+    </g>
+
+    <!-- Outer rim of medallion -->
+    <circle cx="0" cy="0" r="62" fill="#B47820" stroke="#7A4E15" stroke-width="2"/>
+    <!-- Inner gold field -->
+    <circle cx="0" cy="0" r="56" fill="url(#plaqueGold)" stroke="#8B5E20" stroke-width="1"/>
+    <!-- Inner ring -->
+    <circle cx="0" cy="0" r="48" fill="none" stroke="#8B5E20" stroke-width="1.4"/>
+    <circle cx="0" cy="0" r="46" fill="none" stroke="#FFE066" stroke-width="0.6" opacity="0.8"/>
+
+    <!-- Laurel wreath - left side -->
+    <g transform="translate(-40, 0)">
+      <path d="M0 -32 Q-12 -22 -10 -10 Q-12 0 -8 8 Q-10 18 -2 26" fill="none" stroke="#1A6B4A" stroke-width="2"/>
+      <g fill="#34B76F">
+        <ellipse cx="-9" cy="-28" rx="4" ry="2" transform="rotate(-30 -9 -28)"/>
+        <ellipse cx="-12" cy="-20" rx="4" ry="2" transform="rotate(-40 -12 -20)"/>
+        <ellipse cx="-13" cy="-12" rx="4" ry="2" transform="rotate(-50 -13 -12)"/>
+        <ellipse cx="-12" cy="-4" rx="4" ry="2" transform="rotate(-60 -12 -4)"/>
+        <ellipse cx="-11" cy="6" rx="4" ry="2" transform="rotate(-70 -11 6)"/>
+        <ellipse cx="-8" cy="16" rx="4" ry="2" transform="rotate(-80 -8 16)"/>
+        <ellipse cx="-4" cy="24" rx="4" ry="2" transform="rotate(-100 -4 24)"/>
+      </g>
+    </g>
+
+    <!-- Laurel wreath - right side -->
+    <g transform="translate(40, 0)">
+      <path d="M0 -32 Q12 -22 10 -10 Q12 0 8 8 Q10 18 2 26" fill="none" stroke="#1A6B4A" stroke-width="2"/>
+      <g fill="#34B76F">
+        <ellipse cx="9" cy="-28" rx="4" ry="2" transform="rotate(30 9 -28)"/>
+        <ellipse cx="12" cy="-20" rx="4" ry="2" transform="rotate(40 12 -20)"/>
+        <ellipse cx="13" cy="-12" rx="4" ry="2" transform="rotate(50 13 -12)"/>
+        <ellipse cx="12" cy="-4" rx="4" ry="2" transform="rotate(60 12 -4)"/>
+        <ellipse cx="11" cy="6" rx="4" ry="2" transform="rotate(70 11 6)"/>
+        <ellipse cx="8" cy="16" rx="4" ry="2" transform="rotate(80 8 16)"/>
+        <ellipse cx="4" cy="24" rx="4" ry="2" transform="rotate(100 4 24)"/>
+      </g>
+    </g>
+
+    <!-- Owl silhouette in center (Opti) -->
+    <g transform="translate(0, -4)">
+      <!-- Body -->
+      <ellipse cx="0" cy="6" rx="14" ry="16" fill="#5C3A1E"/>
+      <!-- Head -->
+      <circle cx="0" cy="-8" r="11" fill="#5C3A1E"/>
+      <!-- Eye discs -->
+      <circle cx="-4" cy="-9" r="4" fill="#FFF8E7"/>
+      <circle cx="4" cy="-9" r="4" fill="#FFF8E7"/>
+      <circle cx="-4" cy="-9" r="2" fill="#0E1C42"/>
+      <circle cx="4" cy="-9" r="2" fill="#0E1C42"/>
+      <circle cx="-3.5" cy="-9.5" r="0.6" fill="#fff"/>
+      <circle cx="4.5" cy="-9.5" r="0.6" fill="#fff"/>
+      <!-- Beak -->
+      <polygon points="0,-6 -2,-3 2,-3" fill="#D4943A"/>
+      <!-- Tufts -->
+      <polygon points="-9,-15 -5,-12 -7,-10" fill="#5C3A1E"/>
+      <polygon points="9,-15 5,-12 7,-10" fill="#5C3A1E"/>
+      <!-- Belly stripe shapes -->
+      <ellipse cx="0" cy="8" rx="6" ry="9" fill="#A06A2A" opacity="0.6"/>
+      <!-- Wing fold lines -->
+      <path d="M-12 4 q4 6 0 14" fill="none" stroke="#3A2410" stroke-width="0.5" opacity="0.6"/>
+      <path d="M12 4 q-4 6 0 14" fill="none" stroke="#3A2410" stroke-width="0.5" opacity="0.6"/>
+    </g>
+
+    <!-- Text strips at top of medallion: "WISE TRADER" mimicked as decorative bars -->
+    <g transform="translate(0, -42)">
+      <rect x="-30" y="0" width="60" height="3" rx="1" fill="#5C3A1E"/>
+      <rect x="-22" y="5" width="44" height="2" rx="1" fill="#5C3A1E" opacity="0.7"/>
+    </g>
+    <!-- Bottom strips -->
+    <g transform="translate(0, 38)">
+      <rect x="-26" y="0" width="52" height="3" rx="1" fill="#5C3A1E"/>
+      <rect x="-18" y="5" width="36" height="2" rx="1" fill="#5C3A1E" opacity="0.7"/>
+    </g>
+
+    <!-- Star ornaments -->
+    <g fill="#FFF8E7" opacity="0.9">
+      <path d="M-50 -30 l2 -4 l2 4 l4 1 l-3 2 l1 4 l-4 -2 l-4 2 l1 -4 l-3 -2 z"/>
+      <path d="M50 -30 l2 -4 l2 4 l4 1 l-3 2 l1 4 l-4 -2 l-4 2 l1 -4 l-3 -2 z"/>
+      <path d="M-50 30 l2 -4 l2 4 l4 1 l-3 2 l1 4 l-4 -2 l-4 2 l1 -4 l-3 -2 z"/>
+      <path d="M50 30 l2 -4 l2 4 l4 1 l-3 2 l1 4 l-4 -2 l-4 2 l1 -4 l-3 -2 z"/>
+    </g>
+
+    <!-- Sparkles -->
+    <g fill="#FFF8E7">
+      <circle cx="-30" cy="-50" r="1.5">
+        <animate attributeName="r" dur="1.8s" values="1.5;2.5;1.5" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="34" cy="-44" r="1.2">
+        <animate attributeName="r" dur="2s" begin="-0.6s" values="1.2;2.2;1.2" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="42" cy="38" r="1.5">
+        <animate attributeName="r" dur="1.6s" begin="-1.1s" values="1.5;2.5;1.5" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Marketplace Hall sign at top -->
+  <g transform="translate(460, 20)">
+    <rect x="-110" y="0" width="220" height="20" rx="3" fill="#FFF8E7" stroke="#8B5E20" stroke-width="1.2"/>
+    <rect x="-100" y="4" width="200" height="3" rx="1" fill="#1A8A7D" opacity="0.85"/>
+    <rect x="-90" y="10" width="180" height="2.5" rx="1" fill="#5C3A1E" opacity="0.55"/>
+    <rect x="-80" y="15" width="160" height="2.5" rx="1" fill="#5C3A1E" opacity="0.45"/>
+  </g>
+
+  <!-- Two big golden stars flanking the plaque -->
+  <g transform="translate(180, 90)" opacity="0.85">
+    <path d="M0 -16 l5 -10 l5 10 l11 1 l-8 7 l3 11 l-11 -6 l-11 6 l3 -11 l-8 -7 z" fill="#FFD700" stroke="#B47820" stroke-width="1"/>
+    <animateTransform attributeName="transform" type="rotate" dur="20s" values="0;360" repeatCount="indefinite" additive="sum"/>
+  </g>
+  <g transform="translate(740, 90)" opacity="0.85">
+    <path d="M0 -16 l5 -10 l5 10 l11 1 l-8 7 l3 11 l-11 -6 l-11 6 l3 -11 l-8 -7 z" fill="#FFD700" stroke="#B47820" stroke-width="1"/>
+    <animateTransform attributeName="transform" type="rotate" dur="20s" begin="-10s" values="0;360" repeatCount="indefinite" additive="sum"/>
+  </g>
+</svg>
+
+<!-- ═══ INFO STRIP ═══ -->
+<div class="info-strip">
+  <div class="info-cell">
+    <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
+    <div>
+      <div class="info-label">Unit</div>
+      <div class="info-value">Basics of Economics</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#FFF3DC;">📅</div>
+    <div>
+      <div class="info-label">Week</div>
+      <div class="info-value">Week 27 · Q4</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#E3F8ED;">📜</div>
+    <div>
+      <div class="info-label">Focus</div>
+      <div class="info-value">Unit Closer · Economic Virtues</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#F0E8FF;">📋</div>
+    <div>
+      <div class="info-label">Standards</div>
+      <div class="info-value" style="font-size:12px;">SS.3.E.1.1 · SS.3.E.1.2 · SS.3.E.1.3 · SS.3.E.1.4</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MUSEUM MEMO ═══ -->
+<div class="quote-strip">
+  <div class="quote-strip-text" style="font-style:normal;text-align:left;font-size:15px;line-height:1.65;">
+    The Marketplace Hall is complete. From the front doors all the way to the back wall, every exhibit you helped build is open — booths and trade tables, the money case, the trade routes map, the Decision Board. And tonight a brand-new gold plaque arrived for the back wall. The head curator gathers every Trade &amp; Choice Curator around it. "Ten exhibits," he says. "Scarcity, choice, trade, goods, services, buyers, sellers, money, routes, decisions. Every one of them. But you've noticed something the museum can't show with shells and coins alone — none of these exhibits work unless the people inside them are honest and responsible." Today you write the final panel of the Marketplace Hall, and you earn your <strong>Wise Trader</strong> badge.
+  </div>
+</div>
+
+<!-- ═══ INTRO SECTION ═══ -->
+<div class="intro-section" id="introSection">
+  <div class="intro-collapsed-bar" onclick="toggleIntro()">
+    <div class="intro-collapsed-icon">📍</div>
+    <div class="intro-collapsed-text">Today's Curator's Question &amp; Objectives</div>
+    <div class="intro-collapsed-toggle">▼ Expand</div>
+  </div>
+
+  <div class="intro-2col">
+    <div class="intro-card theme-question">
+      <div class="intro-card-head">
+        <div class="intro-card-head-icon">✨</div>
+        <div>
+          <div class="intro-card-head-label">Curator's Question</div>
+          <div class="intro-card-head-title">Today's Big Question</div>
+        </div>
+      </div>
+      <div class="intro-card-body">
+        What virtues do honest and responsible people bring to a marketplace — and what would happen to a marketplace without them?
+      </div>
+    </div>
+
+    <div class="intro-card theme-objectives">
+      <div class="intro-card-head">
+        <div class="intro-card-head-icon">🎯</div>
+        <div>
+          <div class="intro-card-head-label">Objectives</div>
+          <div class="intro-card-head-title">What You'll Learn</div>
+        </div>
+      </div>
+      <div class="intro-card-body">
+        <div class="obj-line"><span class="obj-icon">🤝</span> Explain how honesty and responsibility hold a marketplace together.</div>
+        <div class="obj-line"><span class="obj-icon">🔄</span> Compare a marketplace with these virtues to one without them.</div>
+        <div class="obj-line"><span class="obj-icon">🏆</span> Write the Wise Trader plaque that closes the Marketplace Hall.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="need-strip">
+    <span class="need-strip-label">You'll need:</span>
+    <span class="need-chip">📓 Curator's Notebook</span>
+    <span class="need-chip">✏️ Pencil</span>
+    <span class="need-chip">🗺️ Lesson Page</span>
+  </div>
+</div>
+
+<!-- ═══ TAB BAR ═══ -->
+<div class="tab-bar" id="tabBar">
+  <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">📍 Enter the Museum <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('explore')" id="btn-explore">🔍 Explore <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('check')" id="btn-check">🧠 Self-Check <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📝 Evidence &amp; Assignment <span class="tab-check">✓</span></button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 1: ENTER THE MUSEUM ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel active" id="panel-scene">
+
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #D4943A, #E0A050);">📍</div>
+    <div>
+      <div class="tab-section-title">Enter the Museum</div>
+    </div>
+  </div>
+
+  <div class="todays-path">
+    <div class="todays-path-title">🗺️ Today's Path</div>
+    <div class="todays-path-steps">
+      <span class="todays-path-step">📍 Walk the completed hall &amp; spotlight responsibility</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🔍 Compare two markets — one honest, one not</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🧠 Check your understanding</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">📝 Write the Wise Trader plaque &amp; earn your badge</span>
+    </div>
+  </div>
+
+  <!-- Welcome Video -->
+  <div class="video-wrap" style="margin-top:18px;">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">📍 WELCOME · ENTER THE MUSEUM</div>
+        <div class="video-wrap-title">The Hall Is Complete</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> This is the unit closer — slow down and make it warm. Say: "Look at what you helped build. From the very first booth running out of bread, to the trade tables, to the money case that grew to fit our neighbors, to the trade routes map, to the Decision Board — every exhibit in this hall is open." Read the Curator's Question aloud. Then introduce today's virtue, responsibility: "Honesty and responsibility are different from a coin or a shell. You can't put them in a case. But every single exhibit in this hall stops working without them. Today you write the panel that explains why." Tease the badge ceremony — they earn their Wise Trader badge today. Under 2 minutes.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 3-09-08-welcome --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Virtue Spotlight -->
+  <div class="virtue-card">
+    <div class="virtue-label">🏛️ Virtue Spotlight — Responsibility</div>
+    <div class="virtue-text">Responsibility means doing what you said you'd do, even when it's harder than you expected. A seller is responsible when they hand over the goods they promised. A buyer is responsible when they pay what they agreed to pay. A trader is responsible when they keep their word across a long route. Today, notice how every part of the Marketplace Hall quietly depends on people who keep their promises.</div>
+  </div>
+
+  <!-- Curator Role -->
+  <div class="callout callout-info">
+    <div class="callout-icon">🕯️</div>
+    <p><strong>Your Role Today:</strong> You are a <strong>Trade &amp; Choice Curator</strong> — and today, you're not just adding to the hall. You're closing it. Your job is to write the final plaque that goes on the back wall, and to earn the title of <strong>Wise Trader</strong>.</p>
+  </div>
+
+  <!-- Mini gallery walk callback -->
+  <div class="activity bl-cyan" style="margin-top:18px;">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#55C8E8;">🚶</div>
+      <div>
+        <div class="activity-title">A Quick Walk Through Your Marketplace Hall</div>
+        <div class="activity-sub">Everything you built — at a glance</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Before you start the final panel, take a quick walk through the hall in your head.</p>
+      <ul style="margin:6px 0 0 22px;color:#0E1C42;line-height:1.7;">
+        <li><strong>🏪 The Front Booths</strong> — Scarcity, choice, and what gets given up.</li>
+        <li><strong>↔️ The Trade Tables</strong> — Coastal fish for valley grain. Two scarcities meet.</li>
+        <li><strong>🛍️ The Back-Wall Booths</strong> — Goods and services, buyers and sellers.</li>
+        <li><strong>💰 The Money Case</strong> — Four rules of good money, plus currencies of our neighbors.</li>
+        <li><strong>🗺️ The Trade Routes Map</strong> — Regions, resources, and the arrows between them.</li>
+        <li><strong>⚖️ The Decision Board</strong> — Costs, benefits, and the wise choice between them.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">You've built ten exhibits. Now let's see why all ten depend on something invisible.</p>
+    <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 2: EXPLORE ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-explore">
+
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #34B0A0);">🔍</div>
+    <div>
+      <div class="tab-section-title">Explore</div>
+    </div>
+  </div>
+
+  <!-- Explore Explainer Video -->
+  <div class="video-wrap">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">🔍 TEACHING · EXPLORE</div>
+        <div class="video-wrap-title">Two Markets — One Honest, One Not</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Frame the lesson as a thought experiment. Imagine two side-by-side markets. <strong>Market A</strong>: sellers are honest about their goods, buyers pay what they promised, traders keep their word. <strong>Market B</strong>: sellers cheat with light scales, buyers walk off without paying, traders lie about what's in the wagons. Walk students through what happens in each — Market A keeps growing, attracts more visitors, more goods arrive; Market B falls apart, trust disappears, traders stop coming, exhibits close. Then connect to today's lesson: every single exhibit in the hall — money, currencies, trade routes, decisions — works only because people behave honestly and responsibly. Then walk through the Source Study image. 3–5 minutes.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 3-09-08-explore-explainer --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 1: Learn -->
+  <div class="step-badge"><div class="step-badge-num">1</div> Learn the Story</div>
+
+  <!-- Content -->
+  <div class="activity bl-accent">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#1A8A7D;">📖</div>
+      <div>
+        <div class="activity-title">The Two Virtues That Hold a Marketplace Together</div>
+        <div class="activity-sub">Honesty and responsibility — the invisible exhibits</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>You've built ten exhibits in the Marketplace Hall, and every one of them is real and visible. But the head curator wants to point out something the museum cannot put behind glass. Walk through your hall one more time, and notice what every exhibit quietly needs.</p>
+      <p>The trade tables in 3.09.02 only worked because the fisher told the truth about the fish and the farmer told the truth about the grain. The money case in 3.09.04 only worked because a whole community kept its word — every dollar bill is a promise. The trade routes map in 3.09.06 only worked because mapmakers and traders were honest about which region had what. The Decision Board in 3.09.07 only worked because the people weighing costs and benefits were responsible enough to live with their choice.</p>
+      <p><strong>Honesty</strong> is telling the truth about what you have, what you owe, and what you've done. In a market, honesty means selling what you said you were selling, paying what you said you'd pay, and labeling things accurately. <strong>Responsibility</strong> is doing what you said you'd do, even when it gets harder than you thought. In a market, responsibility means delivering on time, keeping your promises across a long route, and standing behind your word.</p>
+      <p>These two virtues are the invisible exhibits. They aren't behind glass and they aren't on the map — but without them, every other exhibit in the hall would close.</p>
+    </div>
+  </div>
+
+  <!-- STEP 2: Investigate -->
+  <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
+
+  <!-- Source Study -->
+  <div class="source-card">
+    <div class="source-card-header">
+      <div class="source-card-header-icon">📜</div>
+      <div>
+        <div class="source-card-header-label">Source Study</div>
+        <div class="source-card-header-title">A Market Built on Honesty</div>
+      </div>
+    </div>
+    <div class="source-image-placeholder" data-image="source-3-09-08-honest-market">
+      <div class="source-image-placeholder-text">
+        🖼️ A historical image showing a marketplace where trust and honesty are visibly part of the setting — a vendor at a balance scale (an actual two-pan scale used to weigh goods accurately), a "fair weights and measures" inspector's sign, a handshake closing a deal, or a town hall posting marketplace rules. Historical American or European 1800s–1900s markets work well; "honest weights and measures" inspectors were a real thing and old photos or engravings of them often show signs and balance scales. The image should communicate "this marketplace runs on trust."<br><br>
+        <strong>Where to find one:</strong> Library of Congress Digital Collections (<em>loc.gov</em>) — search "weights and measures inspector," "market scale historical," or "marketplace handshake"; Wikimedia Commons (<em>commons.wikimedia.org</em>) — search "balance scale market," "honest weights measures," or "market inspector"; the Metropolitan Museum Open Access (<em>metmuseum.org</em>) — search "merchant weighing."<br><br>
+        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-09-08-honest-market.jpg</code>
+      </div>
+    </div>
+    <div class="source-card-body">
+      <div class="source-label-bar">
+        <span class="src-type">Historical Image</span> · A marketplace where honesty is part of the setup
+      </div>
+      <div class="callout callout-info">
+        <div class="callout-icon">👁️</div>
+        <p><strong>What do I see?</strong> Look for tools, signs, or people in the image that show people are taking honesty seriously. What stands out?</p>
+      </div>
+      <div class="callout callout-think">
+        <div class="callout-icon">💭</div>
+        <p><strong>What does it mean?</strong> Why would a community spend time and money on tools or rules that just make sure people are honest with each other?</p>
+      </div>
+      <div class="callout callout-tip">
+        <div class="callout-icon">⚖️</div>
+        <p><strong>Why does it matter?</strong> If a market stopped caring about honesty, what would happen to all the other things you've learned about — trade, money, routes, decisions?</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3: Trade and Choice — Compare two markets -->
+  <div class="step-badge"><div class="step-badge-num">3</div> Trade and Choice — Two Markets, Side by Side</div>
+
+  <div class="activity bl-gold">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#D4943A;">⚖️</div>
+      <div>
+        <div class="activity-title">Market A vs Market B</div>
+        <div class="activity-sub">Same exhibits — opposite virtues</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Imagine two marketplaces with the exact same booths, money, and trade routes. The only difference is the people inside them.</p>
+      <table style="width:100%;border-collapse:collapse;font-size:13px;margin:12px 0;border:1px solid #E2E8F4;border-radius:6px;overflow:hidden;">
+        <tr style="background:#1A8A7D;color:#fff;">
+          <th style="padding:8px 10px;text-align:left;font-weight:800;width:25%;">Exhibit</th>
+          <th style="padding:8px 10px;text-align:left;font-weight:800;background:#1A8A4F;">✅ Market A (honest &amp; responsible)</th>
+          <th style="padding:8px 10px;text-align:left;font-weight:800;background:#C44A52;">❌ Market B (dishonest &amp; careless)</th>
+        </tr>
+        <tr style="background:#F7FAFD;">
+          <td style="padding:8px 10px;color:#0E1C42;"><strong>Trade Tables</strong></td>
+          <td style="padding:8px 10px;color:#0E1C42;">Fishers bring fresh fish, farmers bring full sacks. Both sides walk away better off.</td>
+          <td style="padding:8px 10px;color:#0E1C42;">Fishers hide old fish under fresh ones. Farmers fill bags with sand. Both sides feel cheated.</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 10px;color:#0E1C42;"><strong>Goods &amp; Services</strong></td>
+          <td style="padding:8px 10px;color:#0E1C42;">The cobbler fixes the shoe carefully. The buyer pays the agreed price.</td>
+          <td style="padding:8px 10px;color:#0E1C42;">The cobbler rushes the job. The buyer walks off without paying.</td>
+        </tr>
+        <tr style="background:#F7FAFD;">
+          <td style="padding:8px 10px;color:#0E1C42;"><strong>Money</strong></td>
+          <td style="padding:8px 10px;color:#0E1C42;">Coins are real, bills are real, everyone trusts the value.</td>
+          <td style="padding:8px 10px;color:#0E1C42;">Coins are faked, bills are forged, no one knows what anything is worth.</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 10px;color:#0E1C42;"><strong>Trade Routes</strong></td>
+          <td style="padding:8px 10px;color:#0E1C42;">Traders deliver what they promised, on time.</td>
+          <td style="padding:8px 10px;color:#0E1C42;">Wagons arrive half-empty. Goods spoil because no one shows up.</td>
+        </tr>
+        <tr style="background:#F7FAFD;">
+          <td style="padding:8px 10px;color:#0E1C42;"><strong>Decisions</strong></td>
+          <td style="padding:8px 10px;color:#0E1C42;">People weigh costs and benefits and stand behind their choices.</td>
+          <td style="padding:8px 10px;color:#0E1C42;">People grab quickly and blame others when things go wrong.</td>
+        </tr>
+      </table>
+      <div class="callout callout-think">
+        <div class="callout-icon">🤔</div>
+        <p><strong>Pause &amp; Think:</strong> If you had to visit one of these markets, which would you choose? Which would <em>grow</em> over time, and which would shrink? Why?</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Then & Now -->
+  <div class="callout callout-tip">
+    <div class="callout-icon">⏳</div>
+    <p><strong>Then &amp; Now:</strong> Long ago, towns hired weights-and-measures inspectors to make sure sellers used honest scales. Today, governments still inspect gas pumps, grocery scales, and food labels for honesty. What stayed the same about why a community cares so much about whether people in a market tell the truth?</p>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- Exhibit Label -->
+  <div class="key-concept">
+    <div class="key-concept-label">🏷️ Exhibit Label</div>
+    <p>Honesty and responsibility are the invisible exhibits at the heart of every marketplace. They cannot be put behind glass, but every other exhibit — trade, money, routes, decisions — quietly depends on them.</p>
+  </div>
+
+  <!-- Opti -->
+  <div class="owl-buddy">
+    <div class="owl-buddy-avatar">🦉</div>
+    <div class="owl-buddy-bubble">
+      <div class="owl-buddy-name">🧭 Opti says…</div>
+      Quiet curator truth: the most valuable thing in any marketplace is not the gold or the goods. It's the trust between the people. When trust is there, the rest of the market can run forever. When trust breaks, even gold isn't enough.
+    </div>
+  </div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">You've compared two markets. Let's see how strong your understanding is — and then earn that badge.</p>
+    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Self-Check →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 3: SELF-CHECK ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-check">
+
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div>
+    <div>
+      <div class="tab-section-title">Quick Self-Check</div>
+    </div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:18px;">
+    <div class="callout-icon">🧠</div>
+    <p>Not graded — just for you! Answer these three questions to see how much you remember before writing your final unit panel.</p>
+  </div>
+
+  <div class="quiz-card">
+    <div style="padding:18px 22px;">
+
+      <!-- QUESTION 1 -->
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">1. What does <em>honesty</em> mean in a marketplace?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Always picking the most expensive option.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Telling the truth about what you have, what you owe, and what you've done.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Making the loudest deal at the booth.</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Right! Honesty is truth in what you sell, what you pay, and what you label.</div>
+        <div class="quiz-feedback fb-wrong">Think back to the lesson. Honesty is about what you <em>say</em> being true. Which option matches that?</div>
+      </div>
+
+      <!-- QUESTION 2 -->
+      <div class="quiz-q" data-answer="c">
+        <div class="quiz-q-text">2. What does <em>responsibility</em> mean for a trader on a long trade route?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>The trader makes the trip only when it's easy.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>The trader takes the goods home and keeps them.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>The trader delivers what was promised, even when the trip gets harder than expected.</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Yes! Responsibility means keeping your word — especially when it's hard.</div>
+        <div class="quiz-feedback fb-wrong">Think about today's virtue. Responsibility is about doing what you <em>said you would</em>, even when it isn't easy.</div>
+      </div>
+
+      <!-- QUESTION 3 -->
+      <div class="quiz-q" data-answer="a">
+        <div class="quiz-q-text">3. Why do honesty and responsibility matter to <em>every</em> exhibit in the Marketplace Hall?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Without them, people stop trusting each other and trade, money, and routes all break down.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because they make coins shinier.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because they double the value of every dollar bill.</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Exactly! Trust is the invisible glue that holds the whole hall together.</div>
+        <div class="quiz-feedback fb-wrong">Think about Market A versus Market B. What stopped working in the dishonest market?</div>
+      </div>
+
+      <!-- Score Box -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate the perfect score! Say: "You've got the heart of the whole unit. Honesty and responsibility hold every other exhibit together. Now go write the plaque that closes the hall and earn your Wise Trader badge." Under 30 seconds. High energy — this is a milestone.</div>
+              <div class="video-placeholder-id"><!-- slot: 3-09-08-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: review -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the answers. Reminders: honesty = telling the truth; responsibility = doing what you said you'd do; both = invisible exhibits that keep the visible exhibits running. Use Market A vs Market B one more time. Under 1 minute. Encouraging.</div>
+              <div class="video-placeholder-id"><!-- slot: 3-09-08-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">Now to write the final panel of the Marketplace Hall — and earn your Wise Trader badge.</p>
+    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Evidence &amp; Assignment →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 4: EVIDENCE & ASSIGNMENT ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-assignment">
+
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div>
+    <div>
+      <div class="tab-section-title">Evidence &amp; Assignment</div>
+    </div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:18px;">
+    <div class="callout-icon">📝</div>
+    <p>This is the final assignment of the unit. Answer the evidence questions, write the Wise Trader plaque, and earn your badge.</p>
+  </div>
+
+  <!-- Assignment Explainer Video -->
+  <div class="video-wrap">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
+        <div class="video-wrap-title">The Wise Trader Plaque</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Read each evidence question aloud. For Q1, model: "Honesty is telling the truth. Responsibility is doing what you said you'd do. In a market, both keep trust alive." For the final Curator Task, frame the Wise Trader plaque as the most important panel of the whole unit — it sums up everything they've built. Tell them to use at least four unit vocab words (scarcity, choice, trade, goods, services, buyers, sellers, money, currencies, trade routes, costs, benefits, honesty, responsibility). Walk through copy/download. 2–3 minutes. Make it feel like a graduation.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 3-09-08-assignment-explainer --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Part A: Evidence Questions -->
+  <div class="activity bl-cyan">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#55C8E8;">A</div>
+      <div>
+        <div class="activity-title">Evidence Questions</div>
+        <div class="activity-sub">Answer using details from the lesson and from the whole unit.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+
+      <!-- Q1 -->
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>In your own words, what is the difference between <em>honesty</em> and <em>responsibility</em> in a marketplace? Give one example of each.</div></div>
+      <div class="textbox-prompt">Use details from the lesson.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Honesty vs responsibility"
+        placeholder="Honesty in a marketplace means... Responsibility means..."
+        oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
+
+      <!-- Q2 -->
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Pick <em>one</em> exhibit from earlier in the unit (trade tables, money case, trade routes map, or Decision Board). Explain why that exhibit would stop working if people stopped being honest or responsible.</div></div>
+      <div class="textbox-prompt">Explain using a real example from the unit.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: One exhibit + the virtues"
+        placeholder="If people stopped being honest, the [exhibit] would stop working because..."
+        oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
+
+      <!-- Q3 -->
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>Why might a community spend money on rules, signs, or inspectors that just check whether people are honest? What does that tell you about how much honesty is worth?</div></div>
+      <div class="textbox-prompt">Use the virtue of responsibility in your answer.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: Why communities protect honesty"
+        placeholder="Communities protect honesty because..."
+        oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
+
+    </div>
+  </div>
+
+  <!-- Part B: The Wise Trader Plaque -->
+  <div class="activity bl-gold">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#D4943A;">B</div>
+      <div>
+        <div class="activity-title">Curator Task: The Wise Trader Plaque</div>
+        <div class="activity-sub">The final panel of the Marketplace Hall.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>This is it — the last panel in the whole Marketplace Hall. The head curator wants visitors who finish walking the entire exhibit to stop in front of this plaque and remember what they've learned. Write a short plaque (4–5 sentences) that tells visitors what makes a person a <strong>Wise Trader</strong>.</p>
+
+      <div class="callout callout-info" style="margin:10px 0;">
+        <div class="callout-icon">🧩</div>
+        <p><strong>Your plaque must:</strong><br>
+        — Use at least <strong>four</strong> of these unit words: scarcity, choice, trade, goods, services, buyers, sellers, money, currencies, trade routes, costs, benefits.<br>
+        — Name both <strong>honesty</strong> and <strong>responsibility</strong> as part of what a Wise Trader does.<br>
+        — End with one sentence about why a Wise Trader matters to a whole community.</p>
+      </div>
+
+      <div class="textbox-prompt" style="margin-top:10px;"><strong>The Wise Trader Plaque</strong></div>
+      <textarea class="journal-box" id="journal-assign" data-label="The Wise Trader Plaque"
+        placeholder="A Wise Trader is someone who..."
+        oninput="autoSave(this,'dot-assign');gatherAnswers();" style="min-height:140px;"></textarea>
+    </div>
+  </div>
+
+  <!-- Curator's Chronicle -->
+  <div class="activity bl-navy">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#0E1C42;">📜</div>
+      <div>
+        <div class="activity-title">Curator's Chronicle — Final Entry of the Unit</div>
+        <div class="activity-sub">One sentence to close the Marketplace Hall.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Finish this sentence in your own words:</p>
+      <div class="textbox-prompt">In the Marketplace Hall, I learned that ______ because ______.</div>
+      <textarea class="journal-box" id="journal-chronicle" data-label="Final Chronicle"
+        placeholder="In the Marketplace Hall, I learned that..."
+        oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+  <!-- Gathered Answers -->
+  <div class="gathered-card">
+    <div class="gathered-header">
+      <div class="gathered-header-icon">📋</div>
+      <div>
+        <div class="gathered-header-label">Review Your Work</div>
+        <div class="gathered-header-title">Gathered Answers</div>
+      </div>
+    </div>
+    <div class="gathered-body">
+      <div class="gathered-intro">All your answers are gathered here. Review them, then copy or download to submit.</div>
+      <textarea class="gathered-output" id="gatheredOutput" readonly></textarea>
+      <div class="gathered-actions">
+        <button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button>
+        <button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button>
+      </div>
+      <div class="gathered-copied" id="gatheredCopied">✅ Copied!</div>
+    </div>
+  </div>
+
+  <!-- ═══════════ WISE TRADER BADGE AWARD CARD ═══════════ -->
+  <style>
+    .wise-trader-card{
+      margin:24px 0 8px;
+      background:linear-gradient(135deg,#FFF4DA 0%,#FFE9B5 50%,#FFD79A 100%);
+      border:3px solid #B47820;
+      border-radius:14px;
+      padding:28px 22px;
+      text-align:center;
+      box-shadow:0 8px 24px rgba(140,90,20,0.18), inset 0 1px 0 rgba(255,255,255,0.6);
+      position:relative;
+      overflow:hidden;
+    }
+    .wise-trader-card::before{
+      content:"";
+      position:absolute; top:-40px; left:-40px; right:-40px; bottom:-40px;
+      background:radial-gradient(circle at 50% 50%, rgba(255,224,102,0.35) 0%, transparent 60%);
+      pointer-events:none;
+    }
+    .wise-trader-eyebrow{
+      font-family:'Nunito',sans-serif; font-size:11px; font-weight:800;
+      letter-spacing:3px; color:#7A4E15; margin-bottom:6px;
+      text-transform:uppercase;
+    }
+    .wise-trader-title{
+      font-family:'Nunito',sans-serif; font-size:30px; font-weight:900;
+      color:#5C3A1E; letter-spacing:1.2px; margin-bottom:4px;
+      text-shadow:1px 1px 0 rgba(255,255,255,0.6);
+    }
+    .wise-trader-sub{
+      font-family:'Nunito',sans-serif; font-size:13px; color:#7A4E15;
+      margin-bottom:18px;
+    }
+    .wise-trader-medallion{
+      width:130px; height:130px; margin:0 auto 14px;
+      position:relative; z-index:1;
+    }
+    .wise-trader-msg{
+      font-family:'Nunito',sans-serif; font-size:14px; color:#3A2410;
+      max-width:480px; margin:0 auto; line-height:1.6;
+      position:relative; z-index:1;
+    }
+    .wise-trader-signature{
+      margin-top:14px; font-style:italic; font-size:12px;
+      color:#7A4E15;
+    }
+  </style>
+  <div class="wise-trader-card">
+    <div class="wise-trader-eyebrow">★  Unit 9 Badge Ceremony  ★</div>
+    <div class="wise-trader-title">Wise Trader</div>
+    <div class="wise-trader-sub">Grade 3 · Marketplace Hall · Basics of Economics</div>
+
+    <div class="wise-trader-medallion">
+      <svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;filter:drop-shadow(0 4px 8px rgba(140,90,20,0.3));">
+        <defs>
+          <radialGradient id="wtMedalGrad" cx="50%" cy="40%" r="55%">
+            <stop offset="0%" stop-color="#FFE066"/>
+            <stop offset="55%" stop-color="#FFD700"/>
+            <stop offset="100%" stop-color="#B47820"/>
+          </radialGradient>
+          <linearGradient id="wtRibbon" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#E8636B"/>
+            <stop offset="100%" stop-color="#A03840"/>
+          </linearGradient>
+        </defs>
+        <!-- Ribbons -->
+        <polygon points="32,40 14,18 4,32 22,54" fill="url(#wtRibbon)" stroke="#7A1818" stroke-width="1"/>
+        <polygon points="98,40 116,18 126,32 108,54" fill="url(#wtRibbon)" stroke="#7A1818" stroke-width="1"/>
+        <polygon points="4,32 22,54 14,60 0,42" fill="#7A1818"/>
+        <polygon points="126,32 108,54 116,60 130,42" fill="#7A1818"/>
+        <!-- Medallion outer rim -->
+        <circle cx="65" cy="65" r="50" fill="#B47820" stroke="#7A4E15" stroke-width="2"/>
+        <!-- Gold field -->
+        <circle cx="65" cy="65" r="45" fill="url(#wtMedalGrad)" stroke="#8B5E20" stroke-width="1"/>
+        <!-- Inner ring -->
+        <circle cx="65" cy="65" r="38" fill="none" stroke="#8B5E20" stroke-width="1.2"/>
+        <circle cx="65" cy="65" r="36" fill="none" stroke="#FFE066" stroke-width="0.6" opacity="0.8"/>
+        <!-- Laurel left -->
+        <g transform="translate(34, 65)">
+          <path d="M0 -26 Q-10 -18 -8 -8 Q-10 0 -6 6 Q-8 14 -2 20" fill="none" stroke="#1A6B4A" stroke-width="1.8"/>
+          <g fill="#34B76F">
+            <ellipse cx="-7" cy="-22" rx="3" ry="1.6" transform="rotate(-30 -7 -22)"/>
+            <ellipse cx="-10" cy="-16" rx="3" ry="1.6" transform="rotate(-40 -10 -16)"/>
+            <ellipse cx="-11" cy="-9" rx="3" ry="1.6" transform="rotate(-50 -11 -9)"/>
+            <ellipse cx="-10" cy="-2" rx="3" ry="1.6" transform="rotate(-60 -10 -2)"/>
+            <ellipse cx="-9" cy="5" rx="3" ry="1.6" transform="rotate(-70 -9 5)"/>
+            <ellipse cx="-6" cy="13" rx="3" ry="1.6" transform="rotate(-80 -6 13)"/>
+          </g>
+        </g>
+        <!-- Laurel right -->
+        <g transform="translate(96, 65)">
+          <path d="M0 -26 Q10 -18 8 -8 Q10 0 6 6 Q8 14 2 20" fill="none" stroke="#1A6B4A" stroke-width="1.8"/>
+          <g fill="#34B76F">
+            <ellipse cx="7" cy="-22" rx="3" ry="1.6" transform="rotate(30 7 -22)"/>
+            <ellipse cx="10" cy="-16" rx="3" ry="1.6" transform="rotate(40 10 -16)"/>
+            <ellipse cx="11" cy="-9" rx="3" ry="1.6" transform="rotate(50 11 -9)"/>
+            <ellipse cx="10" cy="-2" rx="3" ry="1.6" transform="rotate(60 10 -2)"/>
+            <ellipse cx="9" cy="5" rx="3" ry="1.6" transform="rotate(70 9 5)"/>
+            <ellipse cx="6" cy="13" rx="3" ry="1.6" transform="rotate(80 6 13)"/>
+          </g>
+        </g>
+        <!-- Opti owl center -->
+        <g transform="translate(65, 62)">
+          <ellipse cx="0" cy="6" rx="11" ry="13" fill="#5C3A1E"/>
+          <circle cx="0" cy="-6" r="9" fill="#5C3A1E"/>
+          <circle cx="-3" cy="-7" r="3.2" fill="#FFF8E7"/>
+          <circle cx="3" cy="-7" r="3.2" fill="#FFF8E7"/>
+          <circle cx="-3" cy="-7" r="1.6" fill="#0E1C42"/>
+          <circle cx="3" cy="-7" r="1.6" fill="#0E1C42"/>
+          <circle cx="-2.5" cy="-7.5" r="0.5" fill="#fff"/>
+          <circle cx="3.5" cy="-7.5" r="0.5" fill="#fff"/>
+          <polygon points="0,-4 -1.5,-2 1.5,-2" fill="#D4943A"/>
+          <polygon points="-7,-12 -4,-10 -5,-8" fill="#5C3A1E"/>
+          <polygon points="7,-12 4,-10 5,-8" fill="#5C3A1E"/>
+          <ellipse cx="0" cy="7" rx="5" ry="7" fill="#A06A2A" opacity="0.55"/>
+        </g>
+        <!-- Title bar curve TOP -->
+        <text x="65" y="28" font-family="'Nunito', sans-serif" font-size="8" font-weight="900" fill="#5C3A1E" text-anchor="middle" letter-spacing="2">WISE TRADER</text>
+        <text x="65" y="108" font-family="'Nunito', sans-serif" font-size="6" font-weight="800" fill="#5C3A1E" text-anchor="middle" letter-spacing="1.5">GRADE 3 · ECONOMICS</text>
+        <!-- Star ornaments -->
+        <g fill="#FFF8E7" opacity="0.9">
+          <path d="M30 35 l1.2 -2.4 l1.2 2.4 l2.6 0.6 l-2 1.2 l0.6 2.4 l-2.4 -1.2 l-2.4 1.2 l0.6 -2.4 l-2 -1.2 z"/>
+          <path d="M100 35 l1.2 -2.4 l1.2 2.4 l2.6 0.6 l-2 1.2 l0.6 2.4 l-2.4 -1.2 l-2.4 1.2 l0.6 -2.4 l-2 -1.2 z"/>
+        </g>
+      </svg>
+    </div>
+
+    <p class="wise-trader-msg">
+      For closing the Marketplace Hall with honesty and responsibility — and for explaining why every exhibit, from the first booth to the Decision Board, depends on the people inside it. You have earned the title of <strong>Wise Trader</strong>.
+    </p>
+    <div class="wise-trader-signature">— Awarded by the Head Curator, Optima Academy Online · Grade 3 Social Studies</div>
+  </div>
+  <!-- ═══════════ END WISE TRADER BADGE ═══════════ -->
+
+  <!-- Turn-In Checklist -->
+  <div class="turn-in-card">
+    <div class="turn-in-header">
+      <div class="turn-in-header-icon">✅</div>
+      <div>
+        <div class="turn-in-header-label">Submit Your Work</div>
+        <div class="turn-in-header-title">Turn-In Checklist</div>
+      </div>
+    </div>
+    <div class="turn-in-body">
+      <div class="turn-in-intro">Check each item as you finish. When all are checked, you're done with Unit 9!</div>
+      <div class="turn-in-checklist">
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I answered the evidence questions.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I wrote the Wise Trader Plaque using at least four unit words.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I wrote my final Curator's Chronicle.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I copied or downloaded my work and submitted to Canvas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coming Up Next — UNIT 10 CLIFFHANGER -->
+  <div class="callout callout-tip" style="margin-top:18px;border-left:4px solid #D4943A;background:#FFF8EE;">
+    <div class="callout-icon">🔮</div>
+    <p><strong>Coming Up Next… A New Gallery Is Being Built.</strong> As you head out of the Marketplace Hall, you notice workers carrying tall wooden chairs and a long polished table down the corridor. A scroll of parchment sits unrolled on a stand. A wooden ballot box waits in the corner. The head curator catches your eye and smiles. "Markets help people <em>trade</em>," he says. "But people also have to <em>decide together</em> — how to make rules, who gets to lead, what's fair. That's a different gallery." Next week, you step into the <strong>Civics Hall</strong> as a <strong>Civic Curator</strong>, and you'll start asking a brand-new question: why do communities need government?</p>
+  </div>
+
+  <!-- Closing Video -->
+  <div class="video-wrap" style="margin-top:18px;">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">🎉 CLOSING · UNIT FAREWELL</div>
+        <div class="video-wrap-title">Wise Trader Earned — Unit 9 Complete</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> This is the unit farewell — make it warm and big. Say: "You built the entire Marketplace Hall. Scarcity. Choice. Trade. Goods and services. Buyers and sellers. Money, four characteristics, four currencies, four neighbors. Trade routes. Decisions. And the two virtues that hold it all together. You earned your Wise Trader badge, and the curator is proud." Then tease Unit 10: "But you're not done curating. As you leave the Marketplace Hall, workers are setting up a new gallery down the corridor — long tables, ballot boxes, scrolls. A different question is forming: why do communities need government at all? Next time, you become a Civic Curator." About 90 seconds. Celebration energy.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 3-09-08-closing --></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end panel-assignment -->
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+  <div class="footer-sub">Social Studies · Grade 3 · Lesson 3.09.08 · Unit 9 Closer</div>
+  <div class="footer-copy">© 2025 Optima Academy Online</div>
+</div>
+
+</div><!-- end page-wrap -->
+
+<!-- ═══ BACK TO TOP ═══ -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()">⬆ Top</button>
+
+<!-- ═══ CONFETTI CANVAS ═══ -->
+<canvas id="confettiCanvas"></canvas>
+
+<script>
+/* ═══════════ TAB SWITCHING ═══════════ */
+var visited = { scene: true };
+
+function switchTab(tab) {
+  visited[tab] = true;
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('panel-' + tab).classList.add('active');
+  document.getElementById('btn-' + tab).classList.add('active');
+
+  Object.keys(visited).forEach(function(v) {
+    document.getElementById('btn-' + v).classList.add('visited');
+  });
+
+  // Collapse intro on non-scene tabs
+  var intro = document.getElementById('introSection');
+  if (tab !== 'scene') {
+    intro.classList.add('collapsed');
+  } else {
+    intro.classList.remove('collapsed');
+  }
+
+  updateProgress();
+  scrollToTop();
+  if (tab === 'assignment') gatherAnswers();
+}
+
+function toggleIntro() {
+  document.getElementById('introSection').classList.toggle('collapsed');
+}
+
+/* ═══════════ PROGRESS ═══════════ */
+function updateProgress() {
+  var total = 4;
+  var done = Object.keys(visited).length;
+  var pct = Math.round((done / total) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '%';
+}
+
+/* ═══════════ AUTO-SAVE ═══════════ */
+function autoSave(textarea, dotId) {
+  var dot = document.getElementById(dotId);
+  if (dot) {
+    dot.classList.add('saved');
+    clearTimeout(textarea._saveTimeout);
+    textarea._saveTimeout = setTimeout(function() {}, 300);
+  }
+}
+
+/* ═══════════ GATHER ANSWERS ═══════════ */
+function gatherAnswers() {
+  var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
+  var output = '';
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var label = el.getAttribute('data-label') || id;
+    var val = el.value.trim();
+    output += label.toUpperCase() + '\n';
+    output += (val || '(no answer)') + '\n\n';
+  });
+
+  // Mini-game status
+  output += 'MINI-GAME RESULTS\n';
+
+  var gathered = document.getElementById('gatheredOutput');
+  if (gathered) gathered.value = output.trim();
+}
+
+/* ═══════════ COPY TO CLIPBOARD ═══════════ */
+function copyGathered() {
+  gatherAnswers();
+  var output = document.getElementById('gatheredOutput');
+  if (!output) return;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(output.value).then(function() {
+      showCopied();
+    });
+  } else {
+    output.select();
+    document.execCommand('copy');
+    showCopied();
+  }
+}
+function showCopied() {
+  var msg = document.getElementById('gatheredCopied');
+  msg.classList.add('show');
+  setTimeout(function() { msg.classList.remove('show'); }, 2500);
+}
+
+/* ═══════════ DOWNLOAD AS PDF ═══════════ */
+function downloadJournal() {
+  gatherAnswers();
+  var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
+  var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
+  html += '<title>Lesson 3.09.08 — My Work</title>';
+  html += '<style>';
+  html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
+  html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
+  html += 'h2{font-size:14px;color:#7A88A8;margin-bottom:24px;}';
+  html += '.section-title{font-size:16px;font-weight:bold;color:#0E1C42;margin:28px 0 4px;padding:8px 0 4px;border-bottom:2px solid #E2E8F4;}';
+  html += '.q-label{font-size:13px;font-weight:bold;color:#3A4A6B;margin:16px 0 2px;}';
+  html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
+  html += '.no-answer{color:#B0B8CC;font-style:italic;}';
+  html += '</style></head><body>';
+  html += '<h1>📓 My Work — Lesson 3.09.08</h1>';
+  html += '<h2>✏️ Lesson Title</h2>';
+
+  html += '<div class="section-title">📝 EVIDENCE QUESTIONS</div>';
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var label = el.getAttribute('data-label') || id;
+    var val = el.value.trim();
+    html += '<div class="q-label">' + label + '</div>';
+    html += val
+      ? '<div class="q-answer">' + val.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</div>'
+      : '<div class="q-answer no-answer">(no answer)</div>';
+  });
+
+  html += '</body></html>';
+  var win = window.open('', '_blank');
+  win.document.write(html);
+  win.document.close();
+  setTimeout(function() { win.print(); }, 400);
+}
+
+/* ═══════════ SELF-CHECK QUIZ ═══════════ */
+var quizAnswered = 0, quizCorrect = 0;
+function checkQuiz(optEl) {
+  var q = optEl.closest('.quiz-q');
+  if (q.classList.contains('answered')) return;
+  q.classList.add('answered');
+  quizAnswered++;
+  var correct = q.getAttribute('data-answer');
+  var chosen = optEl.getAttribute('data-val');
+  q.querySelectorAll('.quiz-opt').forEach(function(o) {
+    if (o.getAttribute('data-val') === correct) { o.classList.add('correct'); }
+    else { o.classList.add('disabled'); }
+  });
+  if (chosen === correct) {
+    quizCorrect++;
+    optEl.classList.add('correct');
+    var fb = q.querySelector('.fb-correct');
+    if (fb) fb.classList.add('show');
+  } else {
+    optEl.classList.add('wrong');
+    var fb = q.querySelector('.fb-wrong');
+    if (fb) fb.classList.add('show');
+  }
+  if (quizAnswered === 3) {
+    var scoreBox = document.getElementById('quizScore');
+    document.getElementById('quizScoreNum').textContent = quizCorrect;
+    if (quizCorrect === 3) {
+      document.getElementById('quizScoreMsg').textContent = '⭐ Perfect! You got every question right!';
+      document.getElementById('quizVideoCorrect').classList.add('show');
+      fireConfetti();
+    } else if (quizCorrect === 2) {
+      document.getElementById('quizScoreMsg').textContent = '🏛️ Great job! Almost there!';
+      document.getElementById('quizVideoReview').classList.add('show');
+    } else {
+      document.getElementById('quizScoreMsg').textContent = '📜 Good effort! Review the lesson and try again.';
+      document.getElementById('quizVideoReview').classList.add('show');
+    }
+    scoreBox.classList.add('show');
+  }
+}
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+var rootFirst = null;
+var rootCount = 0;
+window._rootMatchDone = false;
+
+function rootMatchClick(item) {
+  if (item.classList.contains('matched')) return;
+
+  if (!rootFirst) {
+    rootFirst = item;
+    item.classList.add('selected');
+    return;
+  }
+
+  if (rootFirst === item) {
+    rootFirst.classList.remove('selected');
+    rootFirst = null;
+    return;
+  }
+
+  var key1 = rootFirst.getAttribute('data-match');
+  var key2 = item.getAttribute('data-match');
+
+  if (key1 === key2 && rootFirst.classList.contains('is-word') !== item.classList.contains('is-word')) {
+    rootFirst.classList.remove('selected');
+    rootFirst.classList.add('matched');
+    item.classList.add('matched');
+    rootCount++;
+    rootFirst = null;
+    if (rootCount >= 4) {
+      document.getElementById('rootMatchFeedback').classList.add('show');
+      var fact = document.getElementById('rootDiscoveryFact');
+      if (fact) setTimeout(function() { fact.classList.add('show'); }, 600);
+      window._rootMatchDone = true;
+    }
+  } else {
+    item.classList.add('wrong-flash');
+    rootFirst.classList.add('wrong-flash');
+    var a = rootFirst;
+    var b = item;
+    setTimeout(function() {
+      a.classList.remove('wrong-flash', 'selected');
+      b.classList.remove('wrong-flash');
+    }, 500);
+    rootFirst = null;
+  }
+}
+
+/* ═══════════ FLIP CARDS ═══════════ */
+document.querySelectorAll('.flip-card').forEach(function(card) {
+  card.addEventListener('click', function() {
+    card.classList.toggle('flipped');
+  });
+});
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+function toggleCheck(item) {
+  item.classList.toggle('checked');
+  var check = item.querySelector('.turn-in-check');
+  check.textContent = item.classList.contains('checked') ? '✓' : '';
+
+  var allChecked = document.querySelectorAll('.turn-in-item.checked').length ===
+                   document.querySelectorAll('.turn-in-item').length;
+  if (allChecked) {
+    fireConfetti();
+    var seal = document.getElementById('historianSeal');
+    if (seal) seal.classList.add('show');
+  }
+}
+
+/* ═══════════ CONFETTI ═══════════ */
+function fireConfetti() {
+  var canvas = document.getElementById('confettiCanvas');
+  var ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  var particles = [];
+  var colors = ['#55C8E8','#D4943A','#1A8A7D','#34B76F','#8B6FC0','#FFD700','#E8636B'];
+  var emojis = ['🏛️','📜','🗺️','🌍','🧭','🏛️','🦉','🔔','⚖️','🌍','🏺','📋'];
+
+  // Regular confetti pieces
+  for (var i = 0; i < 120; i++) {
+    particles.push({
+      type: 'rect',
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      r: Math.random() * 6 + 3,
+      c: colors[Math.floor(Math.random() * colors.length)],
+      vx: (Math.random() - 0.5) * 4,
+      vy: Math.random() * 3 + 2,
+      rot: Math.random() * 360,
+      rv: (Math.random() - 0.5) * 8
+    });
+  }
+  // Emoji particles mixed in
+  for (var j = 0; j < 18; j++) {
+    particles.push({
+      type: 'emoji',
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      emoji: emojis[Math.floor(Math.random() * emojis.length)],
+      size: Math.random() * 14 + 26,
+      vx: (Math.random() - 0.5) * 3,
+      vy: Math.random() * 2.5 + 1.5,
+      rot: Math.random() * 360,
+      rv: (Math.random() - 0.5) * 5
+    });
+  }
+
+  var frames = 0;
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(function(p) {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot * Math.PI / 180);
+      if (p.type === 'emoji') {
+        ctx.font = p.size + 'px serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(p.emoji, 0, 0);
+      } else {
+        ctx.fillStyle = p.c;
+        ctx.fillRect(-p.r, -p.r / 2, p.r * 2, p.r);
+      }
+      ctx.restore();
+      p.x += p.vx;
+      p.y += p.vy;
+      p.rot += p.rv;
+      p.vy += 0.04;
+    });
+    frames++;
+    if (frames < 300) {
+      // Fade out during the last 80 frames
+      if (frames > 220) {
+        canvas.style.opacity = 1 - ((frames - 220) / 80);
+      }
+      requestAnimationFrame(animate);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      canvas.style.opacity = 1;
+    }
+  }
+  animate();
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+function scrollToTop() {
+  var target = document.getElementById('pageTop');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  // Fallback for iframe
+  try { window.parent.postMessage({ type: 'scrollToTop' }, '*'); } catch(e) {}
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show/hide back-to-top button
+(function() {
+  var btn = document.getElementById('backToTop');
+  var onScroll = function() {
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollY > 400) { btn.classList.add('show'); }
+    else { btn.classList.remove('show'); }
+  };
+  window.addEventListener('scroll', onScroll);
+  // Also listen in parent if iframe
+  try {
+    if (window.parent !== window) {
+      window.parent.addEventListener('scroll', onScroll);
+    }
+  } catch(e) {}
+})();
+
+/* ═══════════ INIT ═══════════ */
+updateProgress();
+
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-3rd-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];document.querySelectorAll('.source-image-placeholder[data-image]').forEach(function(el){tryImg(el,el.getAttribute('data-image'),0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+</script>
+</body></html>

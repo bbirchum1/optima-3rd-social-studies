@@ -1,0 +1,2772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optima Academy Online — Lesson 3.09.04: Characteristics of Money (Grade 3 Museum)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', 'Century Gothic', 'Arial Rounded MT Bold', Verdana, sans-serif;
+  background: #F0F2F8;
+  color: #0E1C42;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(14, 28, 66, 0.08);
+}
+
+/* ═══════════ PROGRESS BAR ═══════════ */
+.progress-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #0E1C42;
+  padding: 8px 20px 10px;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.progress-label {
+  font-size: 12px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+.progress-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  /* ✏️ GRADE ACCENT: Update gradient per grade identity */
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #1A8A7D);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+.progress-pct {
+  font-size: 13px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ═══════════ HEADER ═══════════ */
+.header {
+  background: #0E1C42;
+  border-bottom: 6px solid #55C8E8;
+  padding: 20px 28px 18px;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #55C8E8);
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.header-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #55C8E8; letter-spacing: 0.5px; }
+.header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.header-title em {
+  /* ✏️ GRADE ACCENT: Tinted emphasis */
+  color: #A0E8DA;
+  font-style: italic;
+}
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(85, 200, 232, 0.15);
+  border: 1.5px solid rgba(85, 200, 232, 0.35);
+  border-radius: 28px;
+  padding: 6px 16px;
+}
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+
+/* ═══════════ INFO STRIP ═══════════ */
+.info-strip {
+  display: flex;
+  flex-wrap: wrap;
+  background: #FFFFFF;
+  border-bottom: 2px solid #E2E8F4;
+}
+.info-cell {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 16px;
+  border-right: 1px solid #E2E8F4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-cell:last-child { border-right: none; }
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.info-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.info-detail { font-size: 11px; color: #3A4A6B; line-height: 1.3; }
+
+/* ═══════════ QUOTE STRIP ═══════════ */
+.quote-strip {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border-bottom: 2px solid #F5E6C8;
+  padding: 14px 28px;
+  text-align: center;
+}
+.quote-strip-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #5A4A3A;
+  line-height: 1.6;
+}
+.quote-strip-attr {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  color: #7A88A8;
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO COLLAPSIBLE ═══════════ */
+.intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
+.intro-collapsed-bar {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 28px;
+  background: #FFF8F0;
+  border-bottom: 2px solid #F5E6C8;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.intro-collapsed-bar:hover { background: #FFF3DC; }
+.intro-section.collapsed .intro-collapsed-bar { display: flex; }
+.intro-collapsed-icon { font-size: 18px; }
+.intro-collapsed-text {
+  font-size: 14px;
+  color: #5A4A3A;
+  font-weight: 700;
+  flex: 1;
+}
+.intro-collapsed-toggle {
+  font-size: 12px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO 2-COL ═══════════ */
+.intro-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px 28px 4px;
+}
+.intro-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+.intro-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 2px solid;
+}
+.intro-card-head-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.intro-card-head-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.intro-card-head-title { font-size: 18px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.intro-card-body { padding: 14px 18px; }
+.intro-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.65; margin-bottom: 8px; }
+.intro-card-body p:last-child { margin-bottom: 0; }
+.intro-card-body .obj-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.intro-card-body .obj-line:last-child { margin-bottom: 0; }
+.intro-card-body .obj-icon { flex-shrink: 0; font-size: 17px; }
+.theme-question .intro-card-head { background: #FFF3DC; border-color: #F5E6C8; }
+.theme-question .intro-card-head-icon { background: #D4943A; }
+.theme-objectives .intro-card-head { background: #EAF8FD; border-color: #D6F2FB; }
+.theme-objectives .intro-card-head-icon { background: #55C8E8; }
+
+/* ═══════════ NEED STRIP ═══════════ */
+.need-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 28px 18px;
+}
+.need-strip-label {
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.need-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #E3F8ED;
+  border: 1.5px solid #B8E8CF;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+
+/* ═══════════ TODAY'S PATH ═══════════ */
+.todays-path {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-top: 14px;
+}
+.todays-path-title {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.todays-path-steps {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 600;
+}
+.todays-path-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.todays-path-arrow { color: #B0B8CC; font-size: 11px; }
+
+/* ═══════════ TAB BAR ═══════════ */
+.tab-bar {
+  position: sticky;
+  top: 38px;
+  z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 3px solid #E2E8F4;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  box-shadow: 0 -4px 0 0 #0E1C42;
+}
+.tab-bar::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 1;
+  min-width: 160px;
+  padding: 12px 8px 11px;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7A88A8;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  line-height: 1.3;
+  text-align: center;
+}
+.tab-btn:hover { color: #0E1C42; background: #EAF8FD; }
+.tab-btn.active {
+  color: #0E1C42;
+  border-bottom-color: #55C8E8;
+  background: #FFFFFF;
+}
+.tab-btn .tab-check {
+  display: none;
+  font-size: 12px;
+  color: #34B76F;
+  margin-left: 4px;
+  font-weight: 800;
+}
+.tab-btn.visited .tab-check { display: inline; }
+.tab-panel { display: none; padding: 24px 28px 36px; }
+.tab-panel.active { display: block; }
+
+/* ═══════════ VIDEO WRAP ═══════════ */
+.video-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.08);
+  background: #000;
+  margin: 0 0 22px;
+}
+.video-wrap-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.video-wrap-type {
+  font-size: 10px;
+  color: #55C8E8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+.video-wrap-title { font-size: 16px; color: #fff; font-weight: 800; line-height: 1.2; }
+.video-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-placeholder {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.video-placeholder-icon { font-size: 44px; margin-bottom: 10px; opacity: 0.55; }
+.video-placeholder-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.video-placeholder-id {
+  font-size: 11px;
+  color: rgba(85, 200, 232, 0.4);
+  font-family: monospace;
+  margin-top: 6px;
+}
+
+/* ═══════════ ACTIVITY CARDS ═══════════ */
+.activity {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+/* ✏️ GRADE ACCENT: Change left-border color per grade */
+.activity.bl-accent { border-left: 6px solid #1A8A7D; }
+.activity.bl-cyan { border-left: 6px solid #55C8E8; }
+.activity.bl-gold { border-left: 6px solid #D4943A; }
+.activity.bl-green { border-left: 6px solid #34B76F; }
+.activity.bl-purple { border-left: 6px solid #8B6FC0; }
+.activity.bl-navy { border-left: 6px solid #0E1C42; }
+.activity-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 14px 18px;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.activity-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.activity-title { font-size: 19px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.activity-sub { font-size: 12px; color: #7A88A8; }
+.activity-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.activity-body { padding: 18px 22px; }
+.activity-body p { font-size: 17px; color: #3A4A6B; line-height: 1.75; margin-bottom: 12px; }
+.activity-body p:last-child { margin-bottom: 0; }
+
+/* ═══════════ CALLOUTS ═══════════ */
+.callout {
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.callout:last-child { margin-bottom: 0; }
+.callout-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-info { background: #EAF8FD; border: 2px solid #D6F2FB; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-vocab { background: #F0E8FF; border: 2px solid #D8CCF0; }
+.callout-virtue { background: #FDE8F0; border: 2px solid #F0B8CA; }
+
+/* ═══════════ VIRTUE SPOTLIGHT ═══════════ */
+.virtue-card {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-left: 6px solid #D4943A;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.virtue-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.virtue-text { font-size: 15px; color: #0E1C42; line-height: 1.65; }
+
+/* ═══════════ KEY CONCEPT ═══════════ */
+.key-concept {
+  background: #FFF3DC;
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.key-concept-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.key-concept p { font-size: 15px; color: #0E1C42; line-height: 1.7; margin-bottom: 6px; }
+
+/* ═══════════ SOURCE STUDY CARD ═══════════ */
+.source-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.source-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.source-card-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.source-card-header-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.source-card-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.source-image-placeholder {
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(145deg, #E2E8F4, #D6E0F0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #E2E8F4;
+}
+.source-image-placeholder-text {
+  font-size: 14px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+}
+.source-card-body { padding: 18px 22px; }
+.source-label-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+}
+.source-label-bar .src-type {
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+/* ═══════════ COPYWORK ═══════════ */
+.copywork-box {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+.copywork-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.copywork-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.copywork-instruction { font-size: 14px; color: #3A4A6B; line-height: 1.5; }
+
+/* ═══════════ COUNCIL CHAMBER ═══════════ */
+.council-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.council-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.council-header-icon { font-size: 26px; }
+.council-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.council-question {
+  padding: 16px 22px;
+  background: #FFF3DC;
+  border-bottom: 2px solid #F5E6C8;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.6;
+  font-style: italic;
+}
+.council-perspectives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.council-perspective {
+  padding: 16px 18px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.council-perspective:first-child { border-right: 1px solid #E2E8F4; }
+.council-perspective-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.council-perspective-label.side-a { color: #2A7AB5; }
+.council-perspective-label.side-b { color: #D4663A; }
+.council-perspective p { font-size: 14px; color: #3A4A6B; line-height: 1.55; }
+.council-body { padding: 18px 22px; }
+
+/* ═══════════ TIMELINE CARD ═══════════ */
+.timeline-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.timeline-header-icon { font-size: 22px; color: #fff; }
+.timeline-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.timeline-events { padding: 18px 22px; }
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.timeline-event:last-child { border-bottom: none; }
+.timeline-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.timeline-event-content { flex: 1; }
+.timeline-event-date { font-size: 13px; color: #1A8A7D; font-weight: 800; margin-bottom: 2px; }
+.timeline-event-text { font-size: 15px; color: #0E1C42; line-height: 1.55; }
+
+/* ═══════════ JOURNAL TEXT BOXES ═══════════ */
+.journal-box {
+  width: 100%;
+  min-height: 70px;
+  padding: 12px 14px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.6;
+  resize: vertical;
+  background: #FAFBFF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+.journal-box:focus {
+  outline: none;
+  border-color: #55C8E8;
+  box-shadow: 0 0 0 3px rgba(85, 200, 232, 0.15);
+  background: #fff;
+}
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.journal-label {
+  font-size: 12px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.journal-label .saved-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #B0B8CC;
+  transition: background 0.3s;
+}
+.journal-label .saved-dot.saved { background: #34B76F; }
+
+/* ═══════════ PERSISTENT TEXTBOX PROMPT ═══════════ */
+.textbox-prompt {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 8px 12px;
+  background: #EAF8FD;
+  border: 1.5px solid #D6F2FB;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  margin-top: 10px;
+}
+.textbox-prompt + .journal-box {
+  border-radius: 0 0 12px 12px;
+  margin-top: 0;
+}
+
+/* ═══════════ ASSIGNMENT QUESTIONS ═══════════ */
+.q-block {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.q-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #55C8E8;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 4px; }
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+.turn-in-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 18px;
+}
+.turn-in-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #EAF8FD;
+  padding: 18px 22px;
+  border-bottom: 2px solid #D6F2FB;
+}
+.turn-in-header-icon { font-size: 36px; line-height: 1; flex-shrink: 0; }
+.turn-in-header-label {
+  font-size: 11px;
+  color: #1A6B8E;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.turn-in-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+.turn-in-body { padding: 18px 22px 20px; }
+.turn-in-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 16px; line-height: 1.55; }
+.turn-in-checklist { display: flex; flex-direction: column; gap: 10px; }
+.turn-in-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item:hover { background: #EAF8FD; border-color: #B8E0F0; }
+.turn-in-item.checked { background: #E3F8ED; border-color: #B8E8CF; }
+.turn-in-item .turn-in-check {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #B8E0F0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item.checked .turn-in-check { background: #34B76F; border-color: #34B76F; }
+.turn-in-item-text { font-size: 15px; color: #0E1C42; font-weight: 600; line-height: 1.55; flex: 1; }
+
+/* ═══════════ GATHERED ANSWERS ═══════════ */
+.gathered-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 22px;
+}
+.gathered-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  padding: 16px 22px;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.gathered-header-icon { font-size: 28px; }
+.gathered-header-label {
+  font-size: 11px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.gathered-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.gathered-body { padding: 18px 22px 20px; }
+.gathered-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 14px; line-height: 1.55; }
+.gathered-output {
+  width: 100%;
+  min-height: 250px;
+  padding: 16px 18px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #0E1C42;
+  line-height: 1.65;
+  background: #FAFBFF;
+  resize: vertical;
+  white-space: pre-wrap;
+}
+.gathered-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.gathered-btn {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gathered-btn:hover { transform: translateY(-2px); }
+.gathered-btn-copy {
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  box-shadow: 0 4px 14px rgba(85, 200, 232, 0.25);
+}
+.gathered-btn-pdf {
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  box-shadow: 0 4px 14px rgba(14, 28, 66, 0.25);
+}
+.gathered-copied {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34B76F;
+  margin-top: 8px;
+  display: none;
+}
+.gathered-copied.show { display: block; }
+
+/* ═══════════ NARRATIVE TRANSITION ═══════════ */
+.tab-next-wrap { text-align: center; padding: 24px 0 8px; }
+.tab-transition-voice {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #5A4A3A;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.tab-next-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  border: none;
+  border-radius: 28px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(85, 200, 232, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tab-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(85, 200, 232, 0.4);
+}
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+.root-match-game { margin: 14px 0; }
+.root-match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.root-match-item {
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.5;
+  transition: background 0.15s, border-color 0.2s, transform 0.15s;
+  user-select: none;
+}
+.root-match-item:hover { transform: translateY(-1px); border-color: #8B6FC0; }
+.root-match-item.selected { background: #F0E8FF; border-color: #8B6FC0; }
+.root-match-item.matched { background: #E3F8ED; border-color: #34B76F; pointer-events: none; opacity: 0.8; }
+.root-match-item.wrong-flash { background: #FFF0EC; border-color: #E8636B; animation: shake 0.4s ease; }
+.root-match-item.is-word { font-weight: 800; font-family: 'Lora', Georgia, serif; font-size: 16px; }
+.root-match-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.root-match-feedback.show { display: block; }
+
+/* ═══════════ FLIP CARDS ═══════════ */
+.vocab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0;
+}
+.flip-card { perspective: 800px; height: 160px; cursor: pointer; }
+.flip-card-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  text-align: center;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.06);
+}
+.flip-card-front { background: #FFFFFF; border-top: 5px solid #55C8E8; }
+.flip-card-front .fc-emoji { font-size: 24px; margin-bottom: 6px; }
+.flip-card-front .fc-word {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px; font-weight: 700; color: #0E1C42;
+}
+.flip-card-front .fc-tap { font-size: 11px; color: #7A88A8; font-weight: 600; margin-top: 4px; }
+.flip-card-back {
+  background: linear-gradient(145deg, #0E1C42, #1A2D5A);
+  border-color: #0E1C42;
+  transform: rotateY(180deg);
+}
+.flip-card-back .fc-def { font-size: 13px; color: #fff; line-height: 1.5; font-weight: 600; }
+.flip-card-back .fc-word-back {
+  font-size: 10px; color: #55C8E8; text-transform: uppercase;
+  letter-spacing: 1px; font-weight: 800; margin-bottom: 6px;
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  height: 44px;
+  padding: 0 18px 0 14px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  font-size: 14px; font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(14, 28, 66, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0; visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 500;
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { box-shadow: 0 6px 24px rgba(14, 28, 66, 0.5); transform: translateY(-3px); }
+
+/* ═══════════ CONFETTI ═══════════ */
+#confettiCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* ═══════════ SELF-CHECK QUIZ ═══════════ */
+.quiz-card {
+  background: #fff;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.quiz-q {
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.quiz-q-text { font-size: 17px; color: #0E1C42; font-weight: 700; margin-bottom: 12px; line-height: 1.55; }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-opt {
+  display: flex; align-items: center; gap: 12px;
+  background: #fff; border: 2px solid #E2E8F4; border-radius: 12px;
+  padding: 10px 14px; font-size: 15px; color: #0E1C42; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+}
+.quiz-opt:hover { border-color: #55C8E8; background: #EAF8FD; }
+.quiz-opt.correct { background: #E3F8ED; border-color: #34B76F; color: #1a5c2e; }
+.quiz-opt.wrong { background: #FFF0EC; border-color: #E8636B; color: #8a3030; }
+.quiz-opt.disabled { opacity: 0.5; cursor: default; pointer-events: none; }
+.opt-letter {
+  width: 28px; height: 28px; border-radius: 50%; background: #E2E8F4;
+  font-size: 13px; font-weight: 800; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; color: #3A4A6B;
+}
+.quiz-opt.correct .opt-letter { background: #34B76F; color: #fff; }
+.quiz-opt.wrong .opt-letter { background: #E8636B; color: #fff; }
+.quiz-feedback {
+  margin-top: 10px; padding: 10px 14px; border-radius: 10px;
+  font-size: 14px; font-weight: 600; line-height: 1.5; display: none;
+}
+.quiz-feedback.show { display: block; }
+.fb-correct { background: #E3F8ED; color: #1a5c2e; border: 1.5px solid #B8E8CF; }
+.fb-wrong { background: #FFF3DC; color: #5A4A3A; border: 1.5px solid #F5E6C8; }
+.quiz-score-box {
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff; border-radius: 16px; padding: 20px 22px;
+  margin-top: 16px; text-align: center; display: none;
+}
+.quiz-score-box.show { display: block; }
+.quiz-score-num { font-size: 52px; font-weight: 900; line-height: 1; }
+.quiz-score-label { font-size: 14px; color: #55C8E8; margin-bottom: 4px; }
+.quiz-score-msg { font-size: 18px; font-weight: 700; margin-top: 8px; }
+.quiz-video-wrap { margin-top: 16px; display: none; }
+.quiz-video-wrap.show { display: block; }
+
+/* ═══════════ DISCOVERY FACT (hidden reward on game completion) ═══════════ */
+.discovery-fact {
+  display: none;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2px solid #F5E6C8;
+  border-left: 5px solid #D4943A;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #5A4A3A;
+  line-height: 1.6;
+  animation: factReveal 0.5s ease;
+}
+.discovery-fact.show { display: block; }
+.discovery-fact-label {
+  font-size: 11px;
+  color: #D4943A;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+@keyframes factReveal {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════ HISTORIAN'S SEAL — certificate card with stamp ═══════════ */
+.historian-seal {
+  display: none;
+  margin-top: 20px;
+  animation: cardSlideUp 0.4s ease;
+}
+.historian-seal.show { display: block; }
+@keyframes cardSlideUp {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.seal-certificate {
+  position: relative;
+  background: linear-gradient(160deg, #FFFDF8, #FFF5E6, #FFFDF8);
+  border: 2px solid #E8D8C0;
+  border-radius: 14px;
+  padding: 22px 100px 22px 24px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(140, 120, 80, 0.1);
+}
+.seal-cert-message {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  color: #5A4A3A;
+  line-height: 1.55;
+  font-style: italic;
+}
+.seal-cert-message strong {
+  font-style: normal;
+  color: #3A2A1A;
+}
+.seal-stamp-wrap {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-8deg);
+  animation: stampBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+@keyframes stampBounce {
+  0% { opacity: 0; transform: translateY(-50%) rotate(-8deg) scale(0); }
+  60% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1.2); }
+  100% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1); }
+}
+
+/* ═══════════ OPTIMA OWL BUDDY ═══════════ */
+.owl-buddy {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin: 18px 0;
+  box-shadow: 0 2px 12px rgba(14, 28, 66, 0.06);
+  position: relative;
+}
+.owl-buddy-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2.5px solid #F5E6C8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+  animation: owlBob 3s ease-in-out infinite;
+}
+@keyframes owlBob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-3px) rotate(2deg); }
+}
+.owl-buddy-bubble {
+  flex: 1;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 12px 16px;
+  position: relative;
+  font-size: 15px;
+  color: #3A4A6B;
+  line-height: 1.6;
+}
+.owl-buddy-bubble::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  background: #FAFBFF;
+  border-left: 1.5px solid #E2E8F4;
+  border-bottom: 1.5px solid #E2E8F4;
+  transform: rotate(45deg);
+}
+.owl-buddy-name {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  margin-bottom: 4px;
+}
+
+/* ═══════════ TAB SECTION HEADERS ═══════════ */
+.tab-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0 18px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.tab-section-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  color: #fff;
+}
+.tab-section-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  color: #7A88A8;
+  margin-bottom: 1px;
+}
+.tab-section-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ═══════════ SECTION DIVIDERS ═══════════ */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+  margin: 8px 0;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E2E8F4, transparent);
+}
+.section-divider-dot {
+  font-size: 8px;
+  color: #D4D8E4;
+  letter-spacing: 6px;
+}
+
+/* ═══════════ STEP BADGES (for Explore tab progression) ═══════════ */
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+  /* ✏️ GRADE ACCENT */
+  background: rgba(26, 138, 125, 0.08);
+  color: #1A8A7D;
+}
+.step-badge-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #fff;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+}
+
+/* ═══════════ FOOTER ═══════════ */
+.footer {
+  background: #0E1C42;
+  border-top: 4px solid #55C8E8;
+  padding: 18px 28px;
+  text-align: center;
+}
+.footer-main { font-size: 14px; color: #fff; margin-bottom: 4px; }
+.footer-main span { color: #55C8E8; font-weight: 700; }
+.footer-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media (max-width: 620px) {
+  .intro-2col { grid-template-columns: 1fr; }
+  .council-perspectives { grid-template-columns: 1fr; }
+  .vocab-grid { grid-template-columns: 1fr; }
+  .root-match-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+</style>
+<body>
+<div id="pageTop"></div>
+<div class="page-wrap">
+
+<!-- ═══ PROGRESS BAR ═══ -->
+<div class="progress-wrap">
+  <div class="progress-label">🏛️ Progress</div>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-pct" id="progressPct">0%</div>
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div>
+      <div class="header-org">Optima Academy Online</div>
+      <div class="header-sub">An Education Experience Company</div>
+    </div>
+  </div>
+  <div class="header-title">Characteristics of <em>Money</em></div>
+  <div class="header-badge">
+    <span class="header-badge-icon">🌍</span>
+    <span class="header-badge-text">Lesson 3.09.04</span>
+  </div>
+</div>
+
+<!-- ═══ SVG HERO BANNER — Glass display case with coins, bills, shell, salt block ═══ -->
+<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+  <defs>
+    <linearGradient id="skyGrad4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E6D5A8"/>
+      <stop offset="100%" stop-color="#FFF4DA"/>
+    </linearGradient>
+    <linearGradient id="floorGrad4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C68A3E"/>
+      <stop offset="100%" stop-color="#A06A2A"/>
+    </linearGradient>
+    <linearGradient id="caseGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#E0F4FF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#B8D8E8" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="coinGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#B47820"/>
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F0F0F0"/>
+      <stop offset="50%" stop-color="#C8C8D0"/>
+      <stop offset="100%" stop-color="#909098"/>
+    </linearGradient>
+    <linearGradient id="billGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B8D8B0"/>
+      <stop offset="100%" stop-color="#7FB070"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky / hall background -->
+  <rect width="920" height="260" fill="url(#skyGrad4)"/>
+
+  <!-- Floor -->
+  <rect y="200" width="920" height="60" fill="url(#floorGrad4)"/>
+  <line x1="0" y1="220" x2="920" y2="220" stroke="#8B5E20" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="240" x2="920" y2="240" stroke="#8B5E20" stroke-width="1" opacity="0.3"/>
+
+  <!-- Hall banner string -->
+  <path d="M40 28 Q460 48 880 28" fill="none" stroke="#8B5E20" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- Marketplace Hall sign top center -->
+  <g transform="translate(420, 18)">
+    <rect x="-72" y="0" width="144" height="22" rx="3" fill="#FFF8E7" stroke="#8B5E20" stroke-width="1.2"/>
+    <rect x="-62" y="5" width="124" height="3" rx="1" fill="#1A8A7D" opacity="0.8"/>
+    <rect x="-54" y="11" width="108" height="2.5" rx="1" fill="#5C3A1E" opacity="0.5"/>
+    <rect x="-48" y="16" width="96" height="2.5" rx="1" fill="#5C3A1E" opacity="0.5"/>
+  </g>
+
+  <!-- GLASS DISPLAY CASE (centerpiece) -->
+  <g transform="translate(460, 180)">
+    <!-- Wooden base of case -->
+    <rect x="-310" y="14" width="620" height="20" fill="#8B5E20" stroke="#5C3A1E" stroke-width="1.2"/>
+    <rect x="-310" y="14" width="620" height="4" fill="#5C3A1E"/>
+    <!-- Glass walls -->
+    <rect x="-310" y="-90" width="620" height="104" fill="url(#caseGrad)" stroke="#5C3A1E" stroke-width="1.5"/>
+    <!-- Top frame of case -->
+    <rect x="-314" y="-94" width="628" height="6" fill="#8B5E20" stroke="#5C3A1E" stroke-width="1"/>
+    <!-- Vertical dividers (4 sections) -->
+    <line x1="-155" y1="-88" x2="-155" y2="12" stroke="#8B5E20" stroke-width="2" opacity="0.6"/>
+    <line x1="0" y1="-88" x2="0" y2="12" stroke="#8B5E20" stroke-width="2" opacity="0.6"/>
+    <line x1="155" y1="-88" x2="155" y2="12" stroke="#8B5E20" stroke-width="2" opacity="0.6"/>
+    <!-- Glass highlights / reflections -->
+    <path d="M-300 -84 L-300 4 M-285 -84 L-285 4" stroke="#FFFFFF" stroke-width="1" opacity="0.5"/>
+    <path d="M280 -84 L280 4" stroke="#FFFFFF" stroke-width="1" opacity="0.4"/>
+
+    <!-- SECTION 1: Gold coins (-310 to -155) -->
+    <g transform="translate(-232, 0)">
+      <!-- Velvet pad -->
+      <rect x="-50" y="-12" width="100" height="20" rx="3" fill="#A03840" opacity="0.4"/>
+      <!-- Stack of gold coins -->
+      <ellipse cx="-22" cy="0" rx="14" ry="4" fill="#B47820"/>
+      <ellipse cx="-22" cy="-3" rx="14" ry="4" fill="url(#coinGrad)" stroke="#8B5E20" stroke-width="0.6"/>
+      <ellipse cx="-22" cy="-6" rx="14" ry="4" fill="url(#coinGrad)" stroke="#8B5E20" stroke-width="0.6"/>
+      <ellipse cx="-22" cy="-9" rx="14" ry="4" fill="url(#coinGrad)" stroke="#8B5E20" stroke-width="0.6"/>
+      <!-- Single big coin -->
+      <circle cx="14" cy="-4" r="12" fill="url(#coinGrad)" stroke="#8B5E20" stroke-width="0.8"/>
+      <circle cx="14" cy="-4" r="9" fill="none" stroke="#8B5E20" stroke-width="0.4"/>
+      <path d="M14 -10 L16 -6 L20 -5 L17 -2 L18 2 L14 0 L10 2 L11 -2 L8 -5 L12 -6 Z" fill="#8B5E20" opacity="0.4"/>
+      <!-- Sparkle -->
+      <g opacity="0.85">
+        <circle cx="-15" cy="-12" r="1.5" fill="#FFF8E7">
+          <animate attributeName="r" dur="2s" values="1.5;2.5;1.5" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="20" cy="-10" r="1" fill="#FFF8E7">
+          <animate attributeName="r" dur="2.5s" begin="-0.7s" values="1;2;1" repeatCount="indefinite"/>
+        </circle>
+      </g>
+      <!-- Label below -->
+      <rect x="-32" y="14" width="64" height="3" rx="1" fill="#5C3A1E" opacity="0.4"/>
+    </g>
+
+    <!-- SECTION 2: Silver coins (-155 to 0) -->
+    <g transform="translate(-78, 0)">
+      <rect x="-50" y="-12" width="100" height="20" rx="3" fill="#3A4A6B" opacity="0.25"/>
+      <!-- Three silver coins side by side -->
+      <circle cx="-26" cy="-2" r="10" fill="url(#silverGrad)" stroke="#5C5C68" stroke-width="0.6"/>
+      <circle cx="-26" cy="-2" r="7" fill="none" stroke="#5C5C68" stroke-width="0.4"/>
+      <circle cx="0" cy="-3" r="10" fill="url(#silverGrad)" stroke="#5C5C68" stroke-width="0.6"/>
+      <circle cx="0" cy="-3" r="7" fill="none" stroke="#5C5C68" stroke-width="0.4"/>
+      <circle cx="26" cy="-2" r="10" fill="url(#silverGrad)" stroke="#5C5C68" stroke-width="0.6"/>
+      <circle cx="26" cy="-2" r="7" fill="none" stroke="#5C5C68" stroke-width="0.4"/>
+      <!-- Star symbols -->
+      <path d="M-26 -5 L-24 -3 L-22 -3 L-23.5 -1.5 L-23 1 L-26 -0.5 L-29 1 L-28.5 -1.5 L-30 -3 L-28 -3 Z" fill="#5C5C68" opacity="0.5"/>
+      <path d="M0 -6 L2 -4 L4 -4 L2.5 -2.5 L3 0 L0 -1.5 L-3 0 L-2.5 -2.5 L-4 -4 L-2 -4 Z" fill="#5C5C68" opacity="0.5"/>
+      <rect x="-32" y="14" width="64" height="3" rx="1" fill="#5C3A1E" opacity="0.4"/>
+    </g>
+
+    <!-- SECTION 3: Paper bills (0 to 155) -->
+    <g transform="translate(78, 0)">
+      <rect x="-50" y="-12" width="100" height="20" rx="3" fill="#7FB070" opacity="0.25"/>
+      <!-- Fan of three bills -->
+      <g transform="translate(-12, 0) rotate(-12)">
+        <rect x="-26" y="-9" width="52" height="22" rx="2" fill="url(#billGrad)" stroke="#4A7048" stroke-width="0.6"/>
+        <circle cx="0" cy="2" r="5" fill="none" stroke="#4A7048" stroke-width="0.6"/>
+        <text x="-22" y="-2" font-family="serif" font-size="6" font-weight="800" fill="#4A7048">$</text>
+        <text x="20" y="11" font-family="serif" font-size="6" font-weight="800" fill="#4A7048">$</text>
+      </g>
+      <g transform="translate(0, -2)">
+        <rect x="-26" y="-9" width="52" height="22" rx="2" fill="url(#billGrad)" stroke="#4A7048" stroke-width="0.6"/>
+        <circle cx="0" cy="2" r="5" fill="none" stroke="#4A7048" stroke-width="0.6"/>
+        <text x="-22" y="-2" font-family="serif" font-size="6" font-weight="800" fill="#4A7048">$</text>
+        <text x="20" y="11" font-family="serif" font-size="6" font-weight="800" fill="#4A7048">$</text>
+      </g>
+      <g transform="translate(12, 0) rotate(12)">
+        <rect x="-26" y="-9" width="52" height="22" rx="2" fill="url(#billGrad)" stroke="#4A7048" stroke-width="0.6"/>
+        <circle cx="0" cy="2" r="5" fill="none" stroke="#4A7048" stroke-width="0.6"/>
+        <text x="-22" y="-2" font-family="serif" font-size="6" font-weight="800" fill="#4A7048">$</text>
+        <text x="20" y="11" font-family="serif" font-size="6" font-weight="800" fill="#4A7048">$</text>
+      </g>
+      <rect x="-32" y="14" width="64" height="3" rx="1" fill="#5C3A1E" opacity="0.4"/>
+    </g>
+
+    <!-- SECTION 4: Old "almost-money" — shell and salt block (155 to 310) -->
+    <g transform="translate(232, 0)">
+      <rect x="-50" y="-12" width="100" height="20" rx="3" fill="#8B6FC0" opacity="0.25"/>
+      <!-- Cowrie shell -->
+      <g transform="translate(-22, -2)">
+        <ellipse cx="0" cy="0" rx="14" ry="9" fill="#FFF4DA" stroke="#8B5E20" stroke-width="0.8"/>
+        <ellipse cx="0" cy="-1" rx="10" ry="7" fill="#FFE4B5"/>
+        <line x1="-7" y1="-1" x2="7" y2="-1" stroke="#8B5E20" stroke-width="0.6"/>
+        <line x1="-6" y1="-3" x2="-3" y2="0" stroke="#8B5E20" stroke-width="0.4"/>
+        <line x1="-3" y1="-3" x2="0" y2="0" stroke="#8B5E20" stroke-width="0.4"/>
+        <line x1="0" y1="-3" x2="3" y2="0" stroke="#8B5E20" stroke-width="0.4"/>
+        <line x1="3" y1="-3" x2="6" y2="0" stroke="#8B5E20" stroke-width="0.4"/>
+      </g>
+      <!-- Salt block (small white cube) -->
+      <g transform="translate(18, -3)">
+        <path d="M-9 6 L-9 -6 L0 -10 L9 -6 L9 6 L0 10 Z" fill="#F8F4E8" stroke="#8B5E20" stroke-width="0.6"/>
+        <path d="M-9 -6 L0 -10 L9 -6" fill="#FFFFFF" stroke="#8B5E20" stroke-width="0.4"/>
+        <path d="M0 -10 L0 10" stroke="#8B5E20" stroke-width="0.4" opacity="0.4"/>
+        <!-- Salt sparkle dots -->
+        <circle cx="-3" cy="0" r="0.6" fill="#FFFFFF"/>
+        <circle cx="2" cy="3" r="0.6" fill="#FFFFFF"/>
+        <circle cx="4" cy="-2" r="0.6" fill="#FFFFFF"/>
+      </g>
+      <rect x="-32" y="14" width="64" height="3" rx="1" fill="#5C3A1E" opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- Plaque / sign above case -->
+  <g transform="translate(460, 70)">
+    <animateTransform attributeName="transform" type="translate" dur="5s" values="460,70;460,67;460,70" repeatCount="indefinite"/>
+    <rect x="-90" y="0" width="180" height="22" rx="3" fill="#FFF8E7" stroke="#8B5E20" stroke-width="1.2"/>
+    <rect x="-80" y="5" width="160" height="3" rx="1" fill="#D4943A" opacity="0.85"/>
+    <rect x="-72" y="11" width="144" height="2.5" rx="1" fill="#5C3A1E" opacity="0.5"/>
+    <rect x="-65" y="16" width="130" height="2.5" rx="1" fill="#5C3A1E" opacity="0.5"/>
+    <!-- Hanging cords -->
+    <line x1="-50" y1="0" x2="-50" y2="-18" stroke="#8B5E20" stroke-width="0.8"/>
+    <line x1="50" y1="0" x2="50" y2="-18" stroke="#8B5E20" stroke-width="0.8"/>
+  </g>
+
+  <!-- Small candle/lamp on each end of case -->
+  <g transform="translate(120, 165)">
+    <rect x="-4" y="0" width="8" height="20" fill="#D4943A" stroke="#8B5E20" stroke-width="0.8"/>
+    <circle cx="0" cy="-3" r="3" fill="#FFD700">
+      <animate attributeName="r" dur="1.5s" values="3;3.5;3" repeatCount="indefinite"/>
+    </circle>
+    <ellipse cx="0" cy="-8" rx="2" ry="4" fill="#FFE066">
+      <animate attributeName="ry" dur="1.5s" values="4;5;4" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  <g transform="translate(800, 165)">
+    <rect x="-4" y="0" width="8" height="20" fill="#D4943A" stroke="#8B5E20" stroke-width="0.8"/>
+    <circle cx="0" cy="-3" r="3" fill="#FFD700">
+      <animate attributeName="r" dur="1.5s" begin="-0.7s" values="3;3.5;3" repeatCount="indefinite"/>
+    </circle>
+    <ellipse cx="0" cy="-8" rx="2" ry="4" fill="#FFE066">
+      <animate attributeName="ry" dur="1.5s" begin="-0.7s" values="4;5;4" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+</svg>
+
+<!-- ═══ INFO STRIP ═══ -->
+<div class="info-strip">
+  <div class="info-cell">
+    <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
+    <div>
+      <div class="info-label">Unit</div>
+      <div class="info-value">Basics of Economics</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#FFF3DC;">📅</div>
+    <div>
+      <div class="info-label">Week</div>
+      <div class="info-value">Week 25 · Q4</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#E3F8ED;">📜</div>
+    <div>
+      <div class="info-label">Focus</div>
+      <div class="info-value">Economics</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#F0E8FF;">📋</div>
+    <div>
+      <div class="info-label">Standards</div>
+      <div class="info-value" style="font-size:12px;">SS.3.E.1.1 · SS.3.E.1.2 · SS.3.E.1.3 · SS.3.E.1.4</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MUSEUM MEMO ═══ -->
+<div class="quote-strip">
+  <div class="quote-strip-text" style="font-style:normal;text-align:left;font-size:15px;line-height:1.65;">
+    A long glass case now sits in the middle of the Marketplace Hall. Inside, the head curator has arranged gold coins, silver coins, paper bills — and two strange items: a smooth cowrie shell from a faraway shore, and a small white block of salt. "Every single one of these used to be money somewhere," he says. "Some still are. But not everything works the same. Some of these were trusted for hundreds of years. One of them dissolved if it got wet." Today, Trade &amp; Choice Curators will figure out what makes something <em>work</em> as money — and write the case's display panel.
+  </div>
+</div>
+
+<!-- ═══ INTRO SECTION ═══ -->
+<div class="intro-section" id="introSection">
+  <div class="intro-collapsed-bar" onclick="toggleIntro()">
+    <div class="intro-collapsed-icon">📍</div>
+    <div class="intro-collapsed-text">Today's Curator's Question &amp; Objectives</div>
+    <div class="intro-collapsed-toggle">▼ Expand</div>
+  </div>
+
+  <div class="intro-2col">
+    <div class="intro-card theme-question">
+      <div class="intro-card-head">
+        <div class="intro-card-head-icon">✨</div>
+        <div>
+          <div class="intro-card-head-label">Curator's Question</div>
+          <div class="intro-card-head-title">Today's Big Question</div>
+        </div>
+      </div>
+      <div class="intro-card-body">
+        What makes something actually work as money — and why do people trust a coin or a piece of paper at all?
+      </div>
+    </div>
+
+    <div class="intro-card theme-objectives">
+      <div class="intro-card-head">
+        <div class="intro-card-head-icon">🎯</div>
+        <div>
+          <div class="intro-card-head-label">Objectives</div>
+          <div class="intro-card-head-title">What You'll Learn</div>
+        </div>
+      </div>
+      <div class="intro-card-body">
+        <div class="obj-line"><span class="obj-icon">💰</span> Name the main characteristics good money needs.</div>
+        <div class="obj-line"><span class="obj-icon">🪙</span> Explain why some items make better money than others.</div>
+        <div class="obj-line"><span class="obj-icon">📝</span> Judge whether a real item would work as money.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="need-strip">
+    <span class="need-strip-label">You'll need:</span>
+    <span class="need-chip">📓 Curator's Notebook</span>
+    <span class="need-chip">✏️ Pencil</span>
+    <span class="need-chip">🗺️ Lesson Page</span>
+  </div>
+</div>
+
+<!-- ═══ TAB BAR ═══ -->
+<div class="tab-bar" id="tabBar">
+  <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">📍 Enter the Museum <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('explore')" id="btn-explore">🔍 Explore <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('check')" id="btn-check">🧠 Self-Check <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📝 Evidence &amp; Assignment <span class="tab-check">✓</span></button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 1: ENTER THE MUSEUM ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel active" id="panel-scene">
+
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #D4943A, #E0A050);">📍</div>
+    <div>
+      <div class="tab-section-title">Enter the Museum</div>
+    </div>
+  </div>
+
+  <div class="todays-path">
+    <div class="todays-path-title">🗺️ Today's Path</div>
+    <div class="todays-path-steps">
+      <span class="todays-path-step">📍 Step up to the money case &amp; spotlight courage</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🔍 Test four items against four money rules</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🧠 Check your understanding</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">📝 Judge an item using the money rules</span>
+    </div>
+  </div>
+
+  <!-- Welcome Video -->
+  <div class="video-wrap" style="margin-top:18px;">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">📍 WELCOME · ENTER THE MUSEUM</div>
+        <div class="video-wrap-title">The Money Case</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Welcome students back. Say: "There's a brand-new glass case in the middle of the Marketplace Hall today. Inside: gold coins, silver coins, paper bills — and weirdly, a shell and a block of salt. They've <em>all</em> been money somewhere in history." Read the Curator's Question aloud. Mention today's virtue, courage: "It actually takes courage to trust money. A coin is just a small piece of metal. A bill is just a printed piece of paper. People had to be brave enough to believe that those things would still be worth something tomorrow." Under 2 minutes.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 3-09-04-welcome --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Virtue Spotlight -->
+  <div class="virtue-card">
+    <div class="virtue-label">🏛️ Virtue Spotlight — Courage</div>
+    <div class="virtue-text">Trusting money takes a small kind of courage. A gold coin is just a chunk of metal. A bill is just a printed paper. People had to be brave enough to believe that everyone else would still trust that coin tomorrow. Today, notice how money only works when whole communities are willing to trust it together.</div>
+  </div>
+
+  <!-- Curator Role -->
+  <div class="callout callout-info">
+    <div class="callout-icon">🕯️</div>
+    <p><strong>Your Role Today:</strong> You are a <strong>Trade &amp; Choice Curator</strong> — your job is to help museum visitors see why some things work as money and others don't. Today, you'll test four items against four simple rules — and write the case's display panel.</p>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">The glass case is waiting. Time to find out what really makes money <em>money</em>.</p>
+    <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 2: EXPLORE ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-explore">
+
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #34B0A0);">🔍</div>
+    <div>
+      <div class="tab-section-title">Explore</div>
+    </div>
+  </div>
+
+  <!-- Explore Explainer Video -->
+  <div class="video-wrap">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">🔍 TEACHING · EXPLORE</div>
+        <div class="video-wrap-title">Four Rules of Good Money</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Walk students through four characteristics of money, kept in plain 3rd-grade language. <strong>Lasts</strong> (durable): it doesn't fall apart fast. <strong>Easy to carry</strong> (portable): you can take it where you need it. <strong>Easy to count</strong> (divisible / countable): it comes in known amounts. <strong>Trusted</strong> (recognizable / valuable): people agree it's worth something. Use the case items: gold and silver coins last forever; bills are easy to carry; coins are easy to count; everyone in the country agrees a dollar bill is worth a dollar. Then explain why salt and shells <em>kind of</em> worked — and why they didn't last. Walk through the Source Study questions. 3–5 minutes.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 3-09-04-explore-explainer --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 1: Learn the story -->
+  <div class="step-badge"><div class="step-badge-num">1</div> Learn the Story</div>
+
+  <!-- Content Section -->
+  <div class="activity bl-accent">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#1A8A7D;">📖</div>
+      <div>
+        <div class="activity-title">What Makes Something Money?</div>
+        <div class="activity-sub">Four rules a curator can use to test anything</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Before there were coins and bills, people traded fish for grain, eggs for cloth, or salt for tools. Trade worked — but it was slow. You had to find someone who wanted what you had and had what you wanted. So communities started using one common thing as money. But not just <em>anything</em> can be money.</p>
+      <p>Over time, people noticed that good money has four characteristics. <strong>It lasts.</strong> Money should not fall apart, melt, or get eaten by mice. <strong>It is easy to carry.</strong> If you can't take it to the market, it won't help you. <strong>It is easy to count.</strong> Money should come in pieces you can add, divide, and check. <strong>It is trusted.</strong> Everyone in the community has to agree it's worth something — or no one will accept it.</p>
+      <p>Gold and silver coins passed all four tests. They lasted hundreds of years. They were small and heavy enough to feel real but light enough to carry. They could be counted one by one. And whole countries trusted them. Paper bills were a newer idea — lighter than coins, but they only worked because everyone agreed the paper stood for something real.</p>
+      <p>Some things <em>almost</em> worked. Cowrie shells were beautiful, easy to count, and used as money in many places — but they could chip or wash away. Salt was so valuable that Roman soldiers were sometimes paid in it — but it dissolved if it got wet, so it didn't last. Knowing the rules helps a curator see why one item became money and another quietly stopped being money.</p>
+    </div>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- STEP 2: Investigate -->
+  <div class="step-badge"><div class="step-badge-num">2</div> Investigate the Evidence</div>
+
+  <!-- Artifact Table (Grade 3 Source Study scaffold) -->
+  <div class="activity bl-purple">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#8B6FC0;">🏺</div>
+      <div>
+        <div class="activity-title">Artifact Table</div>
+        <div class="activity-sub">Study these objects as if they were placed before you in a museum case.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <table style="width:100%;border-collapse:collapse;font-size:14px;">
+        <tr style="border-bottom:1px solid #E2E8F4;">
+          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;width:35%;vertical-align:top;">Object / Source</td>
+          <td style="padding:10px 12px;color:#0E1C42;">Historical coins or paper currency — gold, silver, or copper coins, or printed bills</td>
+        </tr>
+        <tr style="border-bottom:1px solid #E2E8F4;">
+          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">Time Period</td>
+          <td style="padding:10px 12px;color:#0E1C42;">From a few hundred years ago to today</td>
+        </tr>
+        <tr style="border-bottom:1px solid #E2E8F4;">
+          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">Place</td>
+          <td style="padding:10px 12px;color:#0E1C42;">Used by people across many countries to trade for goods and services</td>
+        </tr>
+        <tr style="border-bottom:1px solid #E2E8F4;">
+          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">What I Notice First</td>
+          <td style="padding:10px 12px;color:#7A88A8;font-style:italic;">Look at the source image below and note one thing that catches your eye.</td>
+        </tr>
+        <tr>
+          <td style="padding:10px 12px;font-weight:700;color:#3A4A6B;vertical-align:top;">What I Wonder</td>
+          <td style="padding:10px 12px;color:#7A88A8;font-style:italic;">What question do you have about these objects?</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Source Study Card -->
+  <div class="source-card">
+    <div class="source-card-header">
+      <div class="source-card-header-icon">📜</div>
+      <div>
+        <div class="source-card-header-label">Source Study</div>
+        <div class="source-card-header-title">Historical Money</div>
+      </div>
+    </div>
+    <div class="source-image-placeholder" data-image="source-3-09-04-historical-money">
+      <div class="source-image-placeholder-text">
+        🖼️ A clear, bright photograph of historical coins and/or paper money — for example, a collection of antique U.S. coins (silver dollars, copper pennies), a historical U.S. banknote, or a museum-style display of coins from different time periods. The image should show <em>texture and detail</em> — markings, edges, portraits, dates — so students can study the object as evidence. No close-up faces of living people; portraits printed on currency are fine and expected.<br><br>
+        <strong>Where to find one:</strong> Smithsonian Open Access (<em>si.edu/openaccess</em>) — search "historical coins" or "U.S. currency"; Library of Congress Digital Collections (<em>loc.gov</em>) — search "coin photograph" or "historical banknote"; Wikimedia Commons (<em>commons.wikimedia.org</em>) — search "antique coin photograph" or "historic U.S. banknote."<br><br>
+        <strong>Save your image as:</strong> <code style="background:rgba(0,0,0,0.06);padding:2px 8px;border-radius:4px;font-size:13px;">source-3-09-04-historical-money.jpg</code>
+      </div>
+    </div>
+    <div class="source-card-body">
+      <div class="source-label-bar">
+        <span class="src-type">Historical Artifact</span> · Coins and/or paper currency from past communities
+      </div>
+      <div class="callout callout-info">
+        <div class="callout-icon">👁️</div>
+        <p><strong>What do I see?</strong> Look closely. What is the money made of? What shapes, markings, or numbers can you spot? Does it look like it would last a long time?</p>
+      </div>
+      <div class="callout callout-think">
+        <div class="callout-icon">💭</div>
+        <p><strong>What does it mean?</strong> Why would a community choose <em>this</em> to be its money? Which of the four rules does it pass?</p>
+      </div>
+      <div class="callout callout-tip">
+        <div class="callout-icon">⚖️</div>
+        <p><strong>Why does it matter?</strong> If this money stopped being trusted, what would happen to the people who had a lot of it? Why does trust matter so much?</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trade and Choice Routine — Test the four items -->
+  <div class="activity bl-gold">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#D4943A;">💰</div>
+      <div>
+        <div class="activity-title">Test Four Items Against the Four Rules</div>
+        <div class="activity-sub">A curator's chart — which items pass, and which fall short?</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Below is the curator's test chart. Read each row carefully. A ✅ means the item passes that rule. An ❌ means it doesn't.</p>
+      <table style="width:100%;border-collapse:collapse;font-size:13px;margin:12px 0;border:1px solid #E2E8F4;border-radius:6px;overflow:hidden;">
+        <tr style="background:#1A8A7D;color:#fff;">
+          <th style="padding:8px 8px;text-align:left;font-weight:800;">Item</th>
+          <th style="padding:8px 6px;text-align:center;font-weight:800;">Lasts</th>
+          <th style="padding:8px 6px;text-align:center;font-weight:800;">Easy to carry</th>
+          <th style="padding:8px 6px;text-align:center;font-weight:800;">Easy to count</th>
+          <th style="padding:8px 6px;text-align:center;font-weight:800;">Trusted</th>
+        </tr>
+        <tr style="background:#F7FAFD;">
+          <td style="padding:8px;color:#0E1C42;"><strong>🪙 Gold coin</strong></td>
+          <td style="padding:8px;text-align:center;color:#34B76F;">✅</td>
+          <td style="padding:8px;text-align:center;color:#34B76F;">✅</td>
+          <td style="padding:8px;text-align:center;color:#34B76F;">✅</td>
+          <td style="padding:8px;text-align:center;color:#34B76F;">✅</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;color:#0E1C42;"><strong>💵 Paper bill</strong></td>
+          <td style="padding:8px;text-align:center;color:#D4943A;">⚠️ kind of</td>
+          <td style="padding:8px;text-align:center;color:#34B76F;">✅</td>
+          <td style="padding:8px;text-align:center;color:#34B76F;">✅</td>
+          <td style="padding:8px;text-align:center;color:#34B76F;">✅</td>
+        </tr>
+        <tr style="background:#F7FAFD;">
+          <td style="padding:8px;color:#0E1C42;"><strong>🐚 Cowrie shell</strong></td>
+          <td style="padding:8px;text-align:center;color:#D4943A;">⚠️ kind of</td>
+          <td style="padding:8px;text-align:center;color:#34B76F;">✅</td>
+          <td style="padding:8px;text-align:center;color:#34B76F;">✅</td>
+          <td style="padding:8px;text-align:center;color:#D4943A;">⚠️ some places</td>
+        </tr>
+        <tr>
+          <td style="padding:8px;color:#0E1C42;"><strong>🧂 Block of salt</strong></td>
+          <td style="padding:8px;text-align:center;color:#E8636B;">❌ dissolves</td>
+          <td style="padding:8px;text-align:center;color:#D4943A;">⚠️ heavy</td>
+          <td style="padding:8px;text-align:center;color:#D4943A;">⚠️ crumbly</td>
+          <td style="padding:8px;text-align:center;color:#D4943A;">⚠️ long ago</td>
+        </tr>
+      </table>
+      <div class="callout callout-think">
+        <div class="callout-icon">🤔</div>
+        <p><strong>Pause &amp; Think:</strong> Which item passes all four rules? Which one fails the most? Why might a community still use a "kind of" item if they didn't have anything better?</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Then & Now -->
+  <div class="callout callout-tip">
+    <div class="callout-icon">⏳</div>
+    <p><strong>Then &amp; Now:</strong> Long ago, people carried gold and silver coins in leather pouches. Today, many people carry plastic cards or pay with phones. What stayed the same about why money has to be easy to carry, easy to count, and trusted?</p>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <!-- STEP 3: Connect -->
+  <div class="step-badge"><div class="step-badge-num">3</div> Connect the Ideas</div>
+
+  <!-- Exhibit Label -->
+  <div class="key-concept">
+    <div class="key-concept-label">🏷️ Exhibit Label</div>
+    <p>Good money has four characteristics: it lasts, it's easy to carry, it's easy to count, and it's trusted. When an item passes all four rules, a whole community can use it to buy goods and services with confidence.</p>
+  </div>
+
+  <!-- Opti the Owl -->
+  <div class="owl-buddy">
+    <div class="owl-buddy-avatar">🦉</div>
+    <div class="owl-buddy-bubble">
+      <div class="owl-buddy-name">🧭 Opti says…</div>
+      Wild fact for the curator file: the English word <em>salary</em> comes from the Latin word for salt, because Roman soldiers were sometimes paid in it. Imagine getting your paycheck as a bag of salt. You'd be very careful not to get caught in the rain.
+    </div>
+  </div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">You've tested the items against the four rules. Let's see if the rules stuck.</p>
+    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Self-Check →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 3: SELF-CHECK ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-check">
+
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div>
+    <div>
+      <div class="tab-section-title">Quick Self-Check</div>
+    </div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:18px;">
+    <div class="callout-icon">🧠</div>
+    <p>Not graded — just for you! Answer these three questions to see how much you remember before writing your evidence responses.</p>
+  </div>
+
+  <div class="quiz-card">
+    <div style="padding:18px 22px;">
+
+      <!-- QUESTION 1 -->
+      <div class="quiz-q" data-answer="c">
+        <div class="quiz-q-text">1. Which of the following is NOT one of the four characteristics of good money?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>It lasts.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>It is easy to carry.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>It is the same color as the country's flag.</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Right! Color doesn't matter. What matters is that money lasts, is easy to carry, is easy to count, and is trusted.</div>
+        <div class="quiz-feedback fb-wrong">Think back to the four rules. They were about how money works, not how it looks. Which one of these isn't about how it works?</div>
+      </div>
+
+      <!-- QUESTION 2 -->
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">2. Why didn't a block of salt make great long-term money?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Because salt tastes bad.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because it doesn't last — it dissolves and crumbles.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because nobody needed salt.</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Exactly! Salt fails the very first rule — it has to last, and salt dissolves in water.</div>
+        <div class="quiz-feedback fb-wrong">Think about what happens to salt in the rain or in a wet bag. Which rule does that break?</div>
+      </div>
+
+      <!-- QUESTION 3 -->
+      <div class="quiz-q" data-answer="a">
+        <div class="quiz-q-text">3. Why does money need to be <em>trusted</em>?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>If people don't believe it's worth something, no one will accept it.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Because trust makes coins shinier.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Because trust changes how heavy a bill is.</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Yes! Money only works because a whole community agrees that it's worth something. Without trust, it's just metal and paper.</div>
+        <div class="quiz-feedback fb-wrong">Think about a coin you've never seen before. Why would you hesitate to take it as payment? Trust matters because…</div>
+      </div>
+
+      <!-- Score Box -->
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <!-- Conditional video: perfect -->
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate the perfect score! Say: "You've got the four rules — lasts, easy to carry, easy to count, and trusted. You're ready to write the display panel for the money case." Under 30 seconds. High energy.</div>
+              <div class="video-placeholder-id"><!-- slot: 3-09-04-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conditional video: review -->
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's look at those tricky questions.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through the answers. Repeat the four rules slowly: lasts, easy to carry, easy to count, trusted. Use salt and gold as the strongest contrast. Under 1 minute. Encouraging.</div>
+              <div class="video-placeholder-id"><!-- slot: 3-09-04-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Tab Transition -->
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">Now that you've checked your understanding, time to put the four rules to work on a real item.</p>
+    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Evidence &amp; Assignment →</button>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══ TAB 4: EVIDENCE & ASSIGNMENT ═══ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<div class="tab-panel" id="panel-assignment">
+
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div>
+    <div>
+      <div class="tab-section-title">Evidence &amp; Assignment</div>
+    </div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:18px;">
+    <div class="callout-icon">📝</div>
+    <p>Time to show what you know. Answer the evidence questions and complete your Curator Task. Your answers will be gathered at the bottom so you can copy or download them for Canvas.</p>
+  </div>
+
+  <!-- Assignment Explainer Video -->
+  <div class="video-wrap">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
+        <div class="video-wrap-title">What You'll Turn In</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Read the evidence questions aloud. For Q1, model: "Good money has to last — that's why salt didn't work. It dissolves." For the Curator Task, explain that students will be given a new item — chocolate bars — and have to judge each rule one at a time. Then write a short panel that says whether chocolate bars would or wouldn't work. Walk through copy/download. 2–3 minutes.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 3-09-04-assignment-explainer --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Part A: Evidence Questions -->
+  <div class="activity bl-cyan">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#55C8E8;">A</div>
+      <div>
+        <div class="activity-title">Evidence Questions</div>
+        <div class="activity-sub">Answer using details from the lesson.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+
+      <!-- Q1 -->
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Name the four characteristics of good money. Use one item from the lesson to show what happens when one of those characteristics is missing.</div></div>
+      <div class="textbox-prompt">Use details from the lesson to support your answer.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: Four characteristics of money"
+        placeholder="Good money has four characteristics. They are..."
+        oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
+
+      <!-- Q2 -->
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Why does money need to be <em>trusted</em>? What could happen in a marketplace if people stopped trusting the money?</div></div>
+      <div class="textbox-prompt">Explain your thinking using evidence from the lesson.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: Why trust matters"
+        placeholder="Money needs to be trusted because..."
+        oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
+
+      <!-- Q3 -->
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>Why did salt and shells <em>kind of</em> work as money, but not as well as gold or silver?</div></div>
+      <div class="textbox-prompt">Compare them using at least one of the four rules.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: Why salt and shells fell short"
+        placeholder="Salt and shells were used as money, but..."
+        oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
+
+    </div>
+  </div>
+
+  <!-- Part B: Curator Task -->
+  <div class="activity bl-gold">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#D4943A;">B</div>
+      <div>
+        <div class="activity-title">Curator Task: Would It Work as Money?</div>
+        <div class="activity-sub">Use the four rules to judge a brand-new item.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>The head curator just put a new card on your desk. The card asks: <em>Would chocolate bars work as money?</em> Use the curator's four-rule test on the item. For each rule, write yes or no and give one reason. Then write a short final panel (2–3 sentences) explaining your overall judgment.</p>
+
+      <div class="callout callout-info" style="margin:10px 0;">
+        <div class="callout-icon">🍫</div>
+        <p><strong>The item to test:</strong> a standard chocolate bar (the kind you'd buy in a store).</p>
+      </div>
+
+      <div class="textbox-prompt" style="margin-top:10px;">Rule 1 — Would chocolate bars <strong>last</strong>?</div>
+      <textarea class="journal-box" id="journal-rule1" data-label="Rule 1: Lasts?"
+        placeholder="Yes/No because..."
+        oninput="autoSave(this,'dot-assign');gatherAnswers();" style="min-height:55px;"></textarea>
+
+      <div class="textbox-prompt" style="margin-top:10px;">Rule 2 — Would they be <strong>easy to carry</strong>?</div>
+      <textarea class="journal-box" id="journal-rule2" data-label="Rule 2: Easy to carry?"
+        placeholder="Yes/No because..."
+        oninput="autoSave(this,'dot-assign');gatherAnswers();" style="min-height:55px;"></textarea>
+
+      <div class="textbox-prompt" style="margin-top:10px;">Rule 3 — Would they be <strong>easy to count</strong>?</div>
+      <textarea class="journal-box" id="journal-rule3" data-label="Rule 3: Easy to count?"
+        placeholder="Yes/No because..."
+        oninput="autoSave(this,'dot-assign');gatherAnswers();" style="min-height:55px;"></textarea>
+
+      <div class="textbox-prompt" style="margin-top:10px;">Rule 4 — Would they be <strong>trusted</strong>?</div>
+      <textarea class="journal-box" id="journal-rule4" data-label="Rule 4: Trusted?"
+        placeholder="Yes/No because..."
+        oninput="autoSave(this,'dot-assign');gatherAnswers();" style="min-height:55px;"></textarea>
+
+      <div class="textbox-prompt" style="margin-top:14px;"><strong>Final panel</strong> — Would chocolate bars work as money? Why or why not? (2–3 sentences)</div>
+      <textarea class="journal-box" id="journal-assign" data-label="Curator Task: Final panel — Chocolate bars as money"
+        placeholder="Chocolate bars would (or would not) work as money because..."
+        oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+  <!-- Curator's Chronicle -->
+  <div class="activity bl-navy">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#0E1C42;">📜</div>
+      <div>
+        <div class="activity-title">Curator's Chronicle</div>
+        <div class="activity-sub">One sentence to capture today's exhibit work.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Finish this sentence in your own words:</p>
+      <div class="textbox-prompt">In this exhibit, I learned that ______ because ______.</div>
+      <textarea class="journal-box" id="journal-chronicle" data-label="Curator's Chronicle"
+        placeholder="In this exhibit, I learned that..."
+        oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+  <!-- Gathered Answers -->
+  <div class="gathered-card">
+    <div class="gathered-header">
+      <div class="gathered-header-icon">📋</div>
+      <div>
+        <div class="gathered-header-label">Review Your Work</div>
+        <div class="gathered-header-title">Gathered Answers</div>
+      </div>
+    </div>
+    <div class="gathered-body">
+      <div class="gathered-intro">All your answers are gathered here. Review them, then copy or download to submit.</div>
+      <textarea class="gathered-output" id="gatheredOutput" readonly></textarea>
+      <div class="gathered-actions">
+        <button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button>
+        <button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button>
+      </div>
+      <div class="gathered-copied" id="gatheredCopied">✅ Copied!</div>
+    </div>
+  </div>
+
+  <!-- Historian's Certificate -->
+  <div class="historian-seal" id="historianSeal">
+    <div class="seal-certificate">
+      <div class="seal-cert-message">
+        <strong>Nice work, Trade &amp; Choice Curator!</strong> You tested a real item against the four rules of good money and wrote a clear judgment panel for the museum case.
+      </div>
+      <div class="seal-stamp-wrap">
+        <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
+          <defs>
+            <radialGradient id="stampGrad" cx="50%" cy="45%" r="50%">
+              <stop offset="0%" stop-color="#D94040"/>
+              <stop offset="100%" stop-color="#A02020"/>
+            </radialGradient>
+            <clipPath id="owlStampClip"><circle cx="45" cy="38" r="16"/></clipPath>
+          </defs>
+          <circle cx="45" cy="45" r="42" fill="url(#stampGrad)" stroke="#7A1818" stroke-width="1.5"/>
+          <circle cx="45" cy="45" r="37" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+          <image href="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"
+                 x="27" y="20" width="36" height="36"
+                 clip-path="url(#owlStampClip)" opacity="0.3" style="filter:brightness(3) grayscale(1);"/>
+          <text x="45" y="72" fill="rgba(255,255,255,0.85)" font-family="'Nunito', sans-serif" font-size="9" font-weight="800" letter-spacing="2" text-anchor="middle">CERTIFIED</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Turn-In Checklist -->
+  <div class="turn-in-card">
+    <div class="turn-in-header">
+      <div class="turn-in-header-icon">✅</div>
+      <div>
+        <div class="turn-in-header-label">Submit Your Work</div>
+        <div class="turn-in-header-title">Turn-In Checklist</div>
+      </div>
+    </div>
+    <div class="turn-in-body">
+      <div class="turn-in-intro">Check each item as you finish. When all are checked, you're done!</div>
+      <div class="turn-in-checklist">
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I answered the evidence questions.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I tested chocolate bars against all four rules and wrote my final panel.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I wrote my Curator's Chronicle.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I copied or downloaded my work and submitted to Canvas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coming Up Next (REQUIRED) -->
+  <div class="callout callout-tip" style="margin-top:18px;border-left:4px solid #D4943A;background:#FFF8EE;">
+    <div class="callout-icon">🔮</div>
+    <p><strong>Coming Up Next…</strong> The money case just got bigger. The head curator added three new sections labeled <em>Canada</em>, <em>Mexico</em>, and <em>The Caribbean</em>, and dropped a small stack of foreign coins and colorful bills into each one. "Same rules, different countries," he says with a smile. "Tomorrow you'll figure out what's the same — and what's different — about the money our neighbors use."</p>
+  </div>
+
+  <!-- Closing Video -->
+  <div class="video-wrap" style="margin-top:18px;">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div>
+        <div class="video-wrap-title">Great Work, Trade &amp; Choice Curator!</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Celebrate: "You tested chocolate bars against four real curator rules and wrote a judgment panel. You can now explain what makes money <em>money</em>." Tease next lesson: "Tomorrow, the money case is going to grow. Three new sections — Canada, Mexico, and the Caribbean — and a small pile of coins and bills in each. Same rules, different countries. You'll see what travels between them and what changes." Under 1 minute.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 3-09-04-closing --></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end panel-assignment -->
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+  <div class="footer-sub">Social Studies · Grade 3 · Lesson 3.09.04</div>
+  <div class="footer-copy">© 2025 Optima Academy Online</div>
+</div>
+
+</div><!-- end page-wrap -->
+
+<!-- ═══ BACK TO TOP ═══ -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()">⬆ Top</button>
+
+<!-- ═══ CONFETTI CANVAS ═══ -->
+<canvas id="confettiCanvas"></canvas>
+
+<script>
+/* ═══════════ TAB SWITCHING ═══════════ */
+var visited = { scene: true };
+
+function switchTab(tab) {
+  visited[tab] = true;
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('panel-' + tab).classList.add('active');
+  document.getElementById('btn-' + tab).classList.add('active');
+
+  Object.keys(visited).forEach(function(v) {
+    document.getElementById('btn-' + v).classList.add('visited');
+  });
+
+  // Collapse intro on non-scene tabs
+  var intro = document.getElementById('introSection');
+  if (tab !== 'scene') {
+    intro.classList.add('collapsed');
+  } else {
+    intro.classList.remove('collapsed');
+  }
+
+  updateProgress();
+  scrollToTop();
+  if (tab === 'assignment') gatherAnswers();
+}
+
+function toggleIntro() {
+  document.getElementById('introSection').classList.toggle('collapsed');
+}
+
+/* ═══════════ PROGRESS ═══════════ */
+function updateProgress() {
+  var total = 4;
+  var done = Object.keys(visited).length;
+  var pct = Math.round((done / total) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '%';
+}
+
+/* ═══════════ AUTO-SAVE ═══════════ */
+function autoSave(textarea, dotId) {
+  var dot = document.getElementById(dotId);
+  if (dot) {
+    dot.classList.add('saved');
+    clearTimeout(textarea._saveTimeout);
+    textarea._saveTimeout = setTimeout(function() {}, 300);
+  }
+}
+
+/* ═══════════ GATHER ANSWERS ═══════════ */
+function gatherAnswers() {
+  var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
+  var output = '';
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var label = el.getAttribute('data-label') || id;
+    var val = el.value.trim();
+    output += label.toUpperCase() + '\n';
+    output += (val || '(no answer)') + '\n\n';
+  });
+
+  // Mini-game status
+  output += 'MINI-GAME RESULTS\n';
+
+  var gathered = document.getElementById('gatheredOutput');
+  if (gathered) gathered.value = output.trim();
+}
+
+/* ═══════════ COPY TO CLIPBOARD ═══════════ */
+function copyGathered() {
+  gatherAnswers();
+  var output = document.getElementById('gatheredOutput');
+  if (!output) return;
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(output.value).then(function() {
+      showCopied();
+    });
+  } else {
+    output.select();
+    document.execCommand('copy');
+    showCopied();
+  }
+}
+function showCopied() {
+  var msg = document.getElementById('gatheredCopied');
+  msg.classList.add('show');
+  setTimeout(function() { msg.classList.remove('show'); }, 2500);
+}
+
+/* ═══════════ DOWNLOAD AS PDF ═══════════ */
+function downloadJournal() {
+  gatherAnswers();
+  var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-assign', 'journal-chronicle'];
+  var html = '<!DOCTYPE html><html><head><meta charset="UTF-8">';
+  html += '<title>Lesson 3.09.04 — My Work</title>';
+  html += '<style>';
+  html += 'body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
+  html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
+  html += 'h2{font-size:14px;color:#7A88A8;margin-bottom:24px;}';
+  html += '.section-title{font-size:16px;font-weight:bold;color:#0E1C42;margin:28px 0 4px;padding:8px 0 4px;border-bottom:2px solid #E2E8F4;}';
+  html += '.q-label{font-size:13px;font-weight:bold;color:#3A4A6B;margin:16px 0 2px;}';
+  html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
+  html += '.no-answer{color:#B0B8CC;font-style:italic;}';
+  html += '</style></head><body>';
+  html += '<h1>📓 My Work — Lesson 3.09.04</h1>';
+  html += '<h2>✏️ Lesson Title</h2>';
+
+  html += '<div class="section-title">📝 EVIDENCE QUESTIONS</div>';
+  ids.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    var label = el.getAttribute('data-label') || id;
+    var val = el.value.trim();
+    html += '<div class="q-label">' + label + '</div>';
+    html += val
+      ? '<div class="q-answer">' + val.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</div>'
+      : '<div class="q-answer no-answer">(no answer)</div>';
+  });
+
+  html += '</body></html>';
+  var win = window.open('', '_blank');
+  win.document.write(html);
+  win.document.close();
+  setTimeout(function() { win.print(); }, 400);
+}
+
+/* ═══════════ SELF-CHECK QUIZ ═══════════ */
+var quizAnswered = 0, quizCorrect = 0;
+function checkQuiz(optEl) {
+  var q = optEl.closest('.quiz-q');
+  if (q.classList.contains('answered')) return;
+  q.classList.add('answered');
+  quizAnswered++;
+  var correct = q.getAttribute('data-answer');
+  var chosen = optEl.getAttribute('data-val');
+  q.querySelectorAll('.quiz-opt').forEach(function(o) {
+    if (o.getAttribute('data-val') === correct) { o.classList.add('correct'); }
+    else { o.classList.add('disabled'); }
+  });
+  if (chosen === correct) {
+    quizCorrect++;
+    optEl.classList.add('correct');
+    var fb = q.querySelector('.fb-correct');
+    if (fb) fb.classList.add('show');
+  } else {
+    optEl.classList.add('wrong');
+    var fb = q.querySelector('.fb-wrong');
+    if (fb) fb.classList.add('show');
+  }
+  if (quizAnswered === 3) {
+    var scoreBox = document.getElementById('quizScore');
+    document.getElementById('quizScoreNum').textContent = quizCorrect;
+    if (quizCorrect === 3) {
+      document.getElementById('quizScoreMsg').textContent = '⭐ Perfect! You got every question right!';
+      document.getElementById('quizVideoCorrect').classList.add('show');
+      fireConfetti();
+    } else if (quizCorrect === 2) {
+      document.getElementById('quizScoreMsg').textContent = '🏛️ Great job! Almost there!';
+      document.getElementById('quizVideoReview').classList.add('show');
+    } else {
+      document.getElementById('quizScoreMsg').textContent = '📜 Good effort! Review the lesson and try again.';
+      document.getElementById('quizVideoReview').classList.add('show');
+    }
+    scoreBox.classList.add('show');
+  }
+}
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+var rootFirst = null;
+var rootCount = 0;
+window._rootMatchDone = false;
+
+function rootMatchClick(item) {
+  if (item.classList.contains('matched')) return;
+
+  if (!rootFirst) {
+    rootFirst = item;
+    item.classList.add('selected');
+    return;
+  }
+
+  if (rootFirst === item) {
+    rootFirst.classList.remove('selected');
+    rootFirst = null;
+    return;
+  }
+
+  var key1 = rootFirst.getAttribute('data-match');
+  var key2 = item.getAttribute('data-match');
+
+  if (key1 === key2 && rootFirst.classList.contains('is-word') !== item.classList.contains('is-word')) {
+    rootFirst.classList.remove('selected');
+    rootFirst.classList.add('matched');
+    item.classList.add('matched');
+    rootCount++;
+    rootFirst = null;
+    if (rootCount >= 4) {
+      document.getElementById('rootMatchFeedback').classList.add('show');
+      var fact = document.getElementById('rootDiscoveryFact');
+      if (fact) setTimeout(function() { fact.classList.add('show'); }, 600);
+      window._rootMatchDone = true;
+    }
+  } else {
+    item.classList.add('wrong-flash');
+    rootFirst.classList.add('wrong-flash');
+    var a = rootFirst;
+    var b = item;
+    setTimeout(function() {
+      a.classList.remove('wrong-flash', 'selected');
+      b.classList.remove('wrong-flash');
+    }, 500);
+    rootFirst = null;
+  }
+}
+
+/* ═══════════ FLIP CARDS ═══════════ */
+document.querySelectorAll('.flip-card').forEach(function(card) {
+  card.addEventListener('click', function() {
+    card.classList.toggle('flipped');
+  });
+});
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+function toggleCheck(item) {
+  item.classList.toggle('checked');
+  var check = item.querySelector('.turn-in-check');
+  check.textContent = item.classList.contains('checked') ? '✓' : '';
+
+  var allChecked = document.querySelectorAll('.turn-in-item.checked').length ===
+                   document.querySelectorAll('.turn-in-item').length;
+  if (allChecked) {
+    fireConfetti();
+    var seal = document.getElementById('historianSeal');
+    if (seal) seal.classList.add('show');
+  }
+}
+
+/* ═══════════ CONFETTI ═══════════ */
+function fireConfetti() {
+  var canvas = document.getElementById('confettiCanvas');
+  var ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  var particles = [];
+  var colors = ['#55C8E8','#D4943A','#1A8A7D','#34B76F','#8B6FC0','#FFD700','#E8636B'];
+  var emojis = ['🏛️','📜','🗺️','🌍','🧭','🏛️','🦉','🔔','⚖️','🌍','🏺','📋'];
+
+  // Regular confetti pieces
+  for (var i = 0; i < 120; i++) {
+    particles.push({
+      type: 'rect',
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      r: Math.random() * 6 + 3,
+      c: colors[Math.floor(Math.random() * colors.length)],
+      vx: (Math.random() - 0.5) * 4,
+      vy: Math.random() * 3 + 2,
+      rot: Math.random() * 360,
+      rv: (Math.random() - 0.5) * 8
+    });
+  }
+  // Emoji particles mixed in
+  for (var j = 0; j < 18; j++) {
+    particles.push({
+      type: 'emoji',
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height - canvas.height,
+      emoji: emojis[Math.floor(Math.random() * emojis.length)],
+      size: Math.random() * 14 + 26,
+      vx: (Math.random() - 0.5) * 3,
+      vy: Math.random() * 2.5 + 1.5,
+      rot: Math.random() * 360,
+      rv: (Math.random() - 0.5) * 5
+    });
+  }
+
+  var frames = 0;
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(function(p) {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot * Math.PI / 180);
+      if (p.type === 'emoji') {
+        ctx.font = p.size + 'px serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(p.emoji, 0, 0);
+      } else {
+        ctx.fillStyle = p.c;
+        ctx.fillRect(-p.r, -p.r / 2, p.r * 2, p.r);
+      }
+      ctx.restore();
+      p.x += p.vx;
+      p.y += p.vy;
+      p.rot += p.rv;
+      p.vy += 0.04;
+    });
+    frames++;
+    if (frames < 300) {
+      // Fade out during the last 80 frames
+      if (frames > 220) {
+        canvas.style.opacity = 1 - ((frames - 220) / 80);
+      }
+      requestAnimationFrame(animate);
+    } else {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      canvas.style.opacity = 1;
+    }
+  }
+  animate();
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+function scrollToTop() {
+  var target = document.getElementById('pageTop');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  // Fallback for iframe
+  try { window.parent.postMessage({ type: 'scrollToTop' }, '*'); } catch(e) {}
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show/hide back-to-top button
+(function() {
+  var btn = document.getElementById('backToTop');
+  var onScroll = function() {
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollY > 400) { btn.classList.add('show'); }
+    else { btn.classList.remove('show'); }
+  };
+  window.addEventListener('scroll', onScroll);
+  // Also listen in parent if iframe
+  try {
+    if (window.parent !== window) {
+      window.parent.addEventListener('scroll', onScroll);
+    }
+  } catch(e) {}
+})();
+
+/* ═══════════ INIT ═══════════ */
+updateProgress();
+
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-3rd-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];document.querySelectorAll('.source-image-placeholder[data-image]').forEach(function(el){tryImg(el,el.getAttribute('data-image'),0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+</script>
+</body></html>
