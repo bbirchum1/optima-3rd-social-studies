@@ -1,0 +1,2442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optima Academy Online — Lesson 3.07.08: Contributions from Diverse Groups (Grade 3 Museum)</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@400;600;700;800;900&display=swap');
+
+*,*::before,*::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Nunito', 'Century Gothic', 'Arial Rounded MT Bold', Verdana, sans-serif;
+  background: #F0F2F8;
+  color: #0E1C42;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0 0 40px rgba(14, 28, 66, 0.08);
+}
+
+/* ═══════════ PROGRESS BAR ═══════════ */
+.progress-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #0E1C42;
+  padding: 8px 20px 10px;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.progress-label {
+  font-size: 12px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}
+.progress-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  /* ✏️ GRADE ACCENT: Update gradient per grade identity */
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #1A8A7D);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+.progress-pct {
+  font-size: 13px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* ═══════════ HEADER ═══════════ */
+.header {
+  background: #0E1C42;
+  border-bottom: 6px solid #55C8E8;
+  padding: 20px 28px 18px;
+  position: relative;
+  overflow: hidden;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #55C8E8, #7FD8F0, #55C8E8);
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.header-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.header-logo img { width: 48px; height: 38px; }
+.header-org { font-size: 22px; color: #fff; font-weight: 800; line-height: 1.15; }
+.header-sub { font-size: 11px; color: #55C8E8; letter-spacing: 0.5px; }
+.header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 28px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.header-title em {
+  /* ✏️ GRADE ACCENT: Tinted emphasis */
+  color: #A0E8DA;
+  font-style: italic;
+}
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(85, 200, 232, 0.15);
+  border: 1.5px solid rgba(85, 200, 232, 0.35);
+  border-radius: 28px;
+  padding: 6px 16px;
+}
+.header-badge-icon { font-size: 22px; }
+.header-badge-text { font-size: 18px; color: #fff; font-weight: 800; }
+
+/* ═══════════ INFO STRIP ═══════════ */
+.info-strip {
+  display: flex;
+  flex-wrap: wrap;
+  background: #FFFFFF;
+  border-bottom: 2px solid #E2E8F4;
+}
+.info-cell {
+  flex: 1;
+  min-width: 150px;
+  padding: 12px 16px;
+  border-right: 1px solid #E2E8F4;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-cell:last-child { border-right: none; }
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.info-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+.info-value { font-size: 16px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.info-detail { font-size: 11px; color: #3A4A6B; line-height: 1.3; }
+
+/* ═══════════ QUOTE STRIP ═══════════ */
+.quote-strip {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border-bottom: 2px solid #F5E6C8;
+  padding: 14px 28px;
+  text-align: center;
+}
+.quote-strip-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #5A4A3A;
+  line-height: 1.6;
+}
+.quote-strip-attr {
+  font-family: 'Nunito', sans-serif;
+  font-size: 11px;
+  color: #7A88A8;
+  font-weight: 700;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO COLLAPSIBLE ═══════════ */
+.intro-section { transition: max-height 0.35s ease, padding 0.35s ease, opacity 0.25s ease; overflow: hidden; }
+.intro-section.collapsed .intro-2col,
+.intro-section.collapsed .need-strip { display: none; }
+.intro-collapsed-bar {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 28px;
+  background: #FFF8F0;
+  border-bottom: 2px solid #F5E6C8;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.intro-collapsed-bar:hover { background: #FFF3DC; }
+.intro-section.collapsed .intro-collapsed-bar { display: flex; }
+.intro-collapsed-icon { font-size: 18px; }
+.intro-collapsed-text {
+  font-size: 14px;
+  color: #5A4A3A;
+  font-weight: 700;
+  flex: 1;
+}
+.intro-collapsed-toggle {
+  font-size: 12px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ═══════════ INTRO 2-COL ═══════════ */
+.intro-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px 28px 4px;
+}
+.intro-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+.intro-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-bottom: 2px solid;
+}
+.intro-card-head-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.intro-card-head-label {
+  font-size: 10px;
+  color: #7A88A8;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.intro-card-head-title { font-size: 18px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.intro-card-body { padding: 14px 18px; }
+.intro-card-body p { font-size: 15px; color: #3A4A6B; line-height: 1.65; margin-bottom: 8px; }
+.intro-card-body p:last-child { margin-bottom: 0; }
+.intro-card-body .obj-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.intro-card-body .obj-line:last-child { margin-bottom: 0; }
+.intro-card-body .obj-icon { flex-shrink: 0; font-size: 17px; }
+.theme-question .intro-card-head { background: #FFF3DC; border-color: #F5E6C8; }
+.theme-question .intro-card-head-icon { background: #D4943A; }
+.theme-objectives .intro-card-head { background: #EAF8FD; border-color: #D6F2FB; }
+.theme-objectives .intro-card-head-icon { background: #55C8E8; }
+
+/* ═══════════ NEED STRIP ═══════════ */
+.need-strip {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 28px 18px;
+}
+.need-strip-label {
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.need-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #E3F8ED;
+  border: 1.5px solid #B8E8CF;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 13px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+
+/* ═══════════ TODAY'S PATH ═══════════ */
+.todays-path {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-top: 14px;
+}
+.todays-path-title {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.todays-path-steps {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 600;
+}
+.todays-path-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.todays-path-arrow { color: #B0B8CC; font-size: 11px; }
+
+/* ═══════════ TAB BAR ═══════════ */
+.tab-bar {
+  position: sticky;
+  top: 38px;
+  z-index: 100;
+  background: #FFFFFF;
+  border-bottom: 3px solid #E2E8F4;
+  display: flex;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  box-shadow: 0 -4px 0 0 #0E1C42;
+}
+.tab-bar::-webkit-scrollbar { display: none; }
+.tab-btn {
+  flex: 1;
+  min-width: 160px;
+  padding: 12px 8px 11px;
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7A88A8;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+  line-height: 1.3;
+  text-align: center;
+}
+.tab-btn:hover { color: #0E1C42; background: #EAF8FD; }
+.tab-btn.active {
+  color: #0E1C42;
+  border-bottom-color: #55C8E8;
+  background: #FFFFFF;
+}
+.tab-btn .tab-check {
+  display: none;
+  font-size: 12px;
+  color: #34B76F;
+  margin-left: 4px;
+  font-weight: 800;
+}
+.tab-btn.visited .tab-check { display: inline; }
+.tab-panel { display: none; padding: 24px 28px 36px; }
+.tab-panel.active { display: block; }
+
+/* ═══════════ VIDEO WRAP ═══════════ */
+.video-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 4px 20px rgba(14, 28, 66, 0.08);
+  background: #000;
+  margin: 0 0 22px;
+}
+.video-wrap-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.video-wrap-type {
+  font-size: 10px;
+  color: #55C8E8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+.video-wrap-title { font-size: 16px; color: #fff; font-weight: 800; line-height: 1.2; }
+.video-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.video-placeholder {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.video-placeholder-icon { font-size: 44px; margin-bottom: 10px; opacity: 0.55; }
+.video-placeholder-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
+  line-height: 1.5;
+}
+.video-placeholder-id {
+  font-size: 11px;
+  color: rgba(85, 200, 232, 0.4);
+  font-family: monospace;
+  margin-top: 6px;
+}
+
+/* ═══════════ ACTIVITY CARDS ═══════════ */
+.activity {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+}
+/* ✏️ GRADE ACCENT: Change left-border color per grade */
+.activity.bl-accent { border-left: 6px solid #1A8A7D; }
+.activity.bl-cyan { border-left: 6px solid #55C8E8; }
+.activity.bl-gold { border-left: 6px solid #D4943A; }
+.activity.bl-green { border-left: 6px solid #34B76F; }
+.activity.bl-purple { border-left: 6px solid #8B6FC0; }
+.activity.bl-navy { border-left: 6px solid #0E1C42; }
+.activity-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 14px 18px;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.activity-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.activity-title { font-size: 19px; color: #0E1C42; font-weight: 800; line-height: 1.2; }
+.activity-sub { font-size: 12px; color: #7A88A8; }
+.activity-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.activity-body { padding: 18px 22px; }
+.activity-body p { font-size: 17px; color: #3A4A6B; line-height: 1.75; margin-bottom: 12px; }
+.activity-body p:last-child { margin-bottom: 0; }
+
+/* ═══════════ CALLOUTS ═══════════ */
+.callout {
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.callout:last-child { margin-bottom: 0; }
+.callout-icon { font-size: 28px; flex-shrink: 0; margin-top: 2px; }
+.callout p { font-size: 16px; color: #0E1C42; line-height: 1.65; margin: 0; }
+.callout-info { background: #EAF8FD; border: 2px solid #D6F2FB; }
+.callout-think { background: #FFF3DC; border: 2px solid #F5E6C8; }
+.callout-tip { background: #E3F8ED; border: 2px solid #B8E8CF; }
+.callout-vocab { background: #F0E8FF; border: 2px solid #D8CCF0; }
+.callout-virtue { background: #FDE8F0; border: 2px solid #F0B8CA; }
+
+/* ═══════════ VIRTUE SPOTLIGHT ═══════════ */
+.virtue-card {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-left: 6px solid #D4943A;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.virtue-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.virtue-text { font-size: 15px; color: #0E1C42; line-height: 1.65; }
+
+/* ═══════════ KEY CONCEPT ═══════════ */
+.key-concept {
+  background: #FFF3DC;
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.key-concept-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.key-concept p { font-size: 15px; color: #0E1C42; line-height: 1.7; margin-bottom: 6px; }
+
+/* ═══════════ SOURCE STUDY CARD ═══════════ */
+.source-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.source-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.source-card-header-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.source-card-header-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+}
+.source-card-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.source-image-placeholder {
+  width: 100%;
+  height: 240px;
+  background: linear-gradient(145deg, #E2E8F4, #D6E0F0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #E2E8F4;
+}
+.source-image-placeholder-text {
+  font-size: 14px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+}
+.source-card-body { padding: 18px 22px; }
+.source-label-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 13px;
+  color: #3A4A6B;
+  font-weight: 700;
+}
+.source-label-bar .src-type {
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+/* ═══════════ COPYWORK ═══════════ */
+.copywork-box {
+  background: linear-gradient(135deg, #FFF8F0 0%, #FFF3DC 100%);
+  border: 2px solid #F5E6C8;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+.copywork-label {
+  font-size: 12px;
+  color: #D4943A;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.copywork-text {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.copywork-instruction { font-size: 14px; color: #3A4A6B; line-height: 1.5; }
+
+/* ═══════════ COUNCIL CHAMBER ═══════════ */
+.council-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.council-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.council-header-icon { font-size: 26px; }
+.council-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.council-question {
+  padding: 16px 22px;
+  background: #FFF3DC;
+  border-bottom: 2px solid #F5E6C8;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 17px;
+  color: #0E1C42;
+  line-height: 1.6;
+  font-style: italic;
+}
+.council-perspectives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.council-perspective {
+  padding: 16px 18px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.council-perspective:first-child { border-right: 1px solid #E2E8F4; }
+.council-perspective-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.council-perspective-label.side-a { color: #2A7AB5; }
+.council-perspective-label.side-b { color: #D4663A; }
+.council-perspective p { font-size: 14px; color: #3A4A6B; line-height: 1.55; }
+.council-body { padding: 18px 22px; }
+
+/* ═══════════ TIMELINE CARD ═══════════ */
+.timeline-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #1A8A7D, #34B0A0);
+  border-bottom: 2px solid rgba(255,255,255,0.15);
+}
+.timeline-header-icon { font-size: 22px; color: #fff; }
+.timeline-header-title { font-size: 17px; color: #fff; font-weight: 800; }
+.timeline-events { padding: 18px 22px; }
+.timeline-event {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1.5px solid #E2E8F4;
+}
+.timeline-event:last-child { border-bottom: none; }
+.timeline-dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.timeline-event-content { flex: 1; }
+.timeline-event-date { font-size: 13px; color: #1A8A7D; font-weight: 800; margin-bottom: 2px; }
+.timeline-event-text { font-size: 15px; color: #0E1C42; line-height: 1.55; }
+
+/* ═══════════ JOURNAL TEXT BOXES ═══════════ */
+.journal-box {
+  width: 100%;
+  min-height: 70px;
+  padding: 12px 14px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  color: #0E1C42;
+  line-height: 1.6;
+  resize: vertical;
+  background: #FAFBFF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+.journal-box:focus {
+  outline: none;
+  border-color: #55C8E8;
+  box-shadow: 0 0 0 3px rgba(85, 200, 232, 0.15);
+  background: #fff;
+}
+.journal-box::placeholder { color: #B0B8CC; font-style: italic; }
+.journal-label {
+  font-size: 12px;
+  color: #7A88A8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.journal-label .saved-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #B0B8CC;
+  transition: background 0.3s;
+}
+.journal-label .saved-dot.saved { background: #34B76F; }
+
+/* ═══════════ PERSISTENT TEXTBOX PROMPT ═══════════ */
+.textbox-prompt {
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.5;
+  padding: 8px 12px;
+  background: #EAF8FD;
+  border: 1.5px solid #D6F2FB;
+  border-bottom: none;
+  border-radius: 10px 10px 0 0;
+  margin-top: 10px;
+}
+.textbox-prompt + .journal-box {
+  border-radius: 0 0 12px 12px;
+  margin-top: 0;
+}
+
+/* ═══════════ ASSIGNMENT QUESTIONS ═══════════ */
+.q-block {
+  background: #FAFBFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+}
+.q-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #55C8E8;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.q-text { font-size: 16px; color: #0E1C42; line-height: 1.65; margin-bottom: 4px; }
+
+/* ═══════════ TURN-IN CHECKLIST ═══════════ */
+.turn-in-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 18px;
+}
+.turn-in-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: #EAF8FD;
+  padding: 18px 22px;
+  border-bottom: 2px solid #D6F2FB;
+}
+.turn-in-header-icon { font-size: 36px; line-height: 1; flex-shrink: 0; }
+.turn-in-header-label {
+  font-size: 11px;
+  color: #1A6B8E;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+.turn-in-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  color: #0E1C42;
+  font-weight: 700;
+}
+.turn-in-body { padding: 18px 22px 20px; }
+.turn-in-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 16px; line-height: 1.55; }
+.turn-in-checklist { display: flex; flex-direction: column; gap: 10px; }
+.turn-in-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item:hover { background: #EAF8FD; border-color: #B8E0F0; }
+.turn-in-item.checked { background: #E3F8ED; border-color: #B8E8CF; }
+.turn-in-item .turn-in-check {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+  border: 2px solid #B8E0F0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
+  transition: background 0.2s, border-color 0.2s;
+}
+.turn-in-item.checked .turn-in-check { background: #34B76F; border-color: #34B76F; }
+.turn-in-item-text { font-size: 15px; color: #0E1C42; font-weight: 600; line-height: 1.55; flex: 1; }
+
+/* ═══════════ GATHERED ANSWERS ═══════════ */
+.gathered-card {
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.04);
+  margin-top: 22px;
+}
+.gathered-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  padding: 16px 22px;
+  border-bottom: 2px solid rgba(85, 200, 232, 0.2);
+}
+.gathered-header-icon { font-size: 28px; }
+.gathered-header-label {
+  font-size: 11px;
+  color: #55C8E8;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+}
+.gathered-header-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+}
+.gathered-body { padding: 18px 22px 20px; }
+.gathered-intro { font-size: 15px; color: #3A4A6B; margin-bottom: 14px; line-height: 1.55; }
+.gathered-output {
+  width: 100%;
+  min-height: 250px;
+  padding: 16px 18px;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #0E1C42;
+  line-height: 1.65;
+  background: #FAFBFF;
+  resize: vertical;
+  white-space: pre-wrap;
+}
+.gathered-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.gathered-btn {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.gathered-btn:hover { transform: translateY(-2px); }
+.gathered-btn-copy {
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  box-shadow: 0 4px 14px rgba(85, 200, 232, 0.25);
+}
+.gathered-btn-pdf {
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  box-shadow: 0 4px 14px rgba(14, 28, 66, 0.25);
+}
+.gathered-copied {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #34B76F;
+  margin-top: 8px;
+  display: none;
+}
+.gathered-copied.show { display: block; }
+
+/* ═══════════ NARRATIVE TRANSITION ═══════════ */
+.tab-next-wrap { text-align: center; padding: 24px 0 8px; }
+.tab-transition-voice {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #5A4A3A;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.tab-next-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  background: linear-gradient(135deg, #55C8E8, #7FD8F0);
+  color: #0E1C42;
+  border: none;
+  border-radius: 28px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(85, 200, 232, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tab-next-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(85, 200, 232, 0.4);
+}
+
+/* ═══════════ ROOT MATCH GAME ═══════════ */
+.root-match-game { margin: 14px 0; }
+.root-match-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.root-match-item {
+  padding: 12px 16px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #0E1C42;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  line-height: 1.5;
+  transition: background 0.15s, border-color 0.2s, transform 0.15s;
+  user-select: none;
+}
+.root-match-item:hover { transform: translateY(-1px); border-color: #8B6FC0; }
+.root-match-item.selected { background: #F0E8FF; border-color: #8B6FC0; }
+.root-match-item.matched { background: #E3F8ED; border-color: #34B76F; pointer-events: none; opacity: 0.8; }
+.root-match-item.wrong-flash { background: #FFF0EC; border-color: #E8636B; animation: shake 0.4s ease; }
+.root-match-item.is-word { font-weight: 800; font-family: 'Lora', Georgia, serif; font-size: 16px; }
+.root-match-feedback {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #34B76F;
+  display: none;
+}
+.root-match-feedback.show { display: block; }
+
+/* ═══════════ FLIP CARDS ═══════════ */
+.vocab-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0;
+}
+.flip-card { perspective: 800px; height: 160px; cursor: pointer; }
+.flip-card-inner {
+  position: relative;
+  width: 100%; height: 100%;
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+}
+.flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 16px;
+  text-align: center;
+  border: 2px solid #E2E8F4;
+  box-shadow: 0 2px 10px rgba(14, 28, 66, 0.06);
+}
+.flip-card-front { background: #FFFFFF; border-top: 5px solid #55C8E8; }
+.flip-card-front .fc-emoji { font-size: 24px; margin-bottom: 6px; }
+.flip-card-front .fc-word {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px; font-weight: 700; color: #0E1C42;
+}
+.flip-card-front .fc-tap { font-size: 11px; color: #7A88A8; font-weight: 600; margin-top: 4px; }
+.flip-card-back {
+  background: linear-gradient(145deg, #0E1C42, #1A2D5A);
+  border-color: #0E1C42;
+  transform: rotateY(180deg);
+}
+.flip-card-back .fc-def { font-size: 13px; color: #fff; line-height: 1.5; font-weight: 600; }
+.flip-card-back .fc-word-back {
+  font-size: 10px; color: #55C8E8; text-transform: uppercase;
+  letter-spacing: 1px; font-weight: 800; margin-bottom: 6px;
+}
+
+/* ═══════════ BACK TO TOP ═══════════ */
+.back-to-top {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  height: 44px;
+  padding: 0 18px 0 14px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff;
+  border: 2px solid #55C8E8;
+  font-size: 14px; font-weight: 800;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(14, 28, 66, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0; visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+  z-index: 500;
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { box-shadow: 0 6px 24px rgba(14, 28, 66, 0.5); transform: translateY(-3px); }
+
+/* ═══════════ CONFETTI ═══════════ */
+#confettiCanvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* ═══════════ SELF-CHECK QUIZ ═══════════ */
+.quiz-card {
+  background: #fff;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+.quiz-q {
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+}
+.quiz-q-text { font-size: 17px; color: #0E1C42; font-weight: 700; margin-bottom: 12px; line-height: 1.55; }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; }
+.quiz-opt {
+  display: flex; align-items: center; gap: 12px;
+  background: #fff; border: 2px solid #E2E8F4; border-radius: 12px;
+  padding: 10px 14px; font-size: 15px; color: #0E1C42; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+}
+.quiz-opt:hover { border-color: #55C8E8; background: #EAF8FD; }
+.quiz-opt.correct { background: #E3F8ED; border-color: #34B76F; color: #1a5c2e; }
+.quiz-opt.wrong { background: #FFF0EC; border-color: #E8636B; color: #8a3030; }
+.quiz-opt.disabled { opacity: 0.5; cursor: default; pointer-events: none; }
+.opt-letter {
+  width: 28px; height: 28px; border-radius: 50%; background: #E2E8F4;
+  font-size: 13px; font-weight: 800; display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0; color: #3A4A6B;
+}
+.quiz-opt.correct .opt-letter { background: #34B76F; color: #fff; }
+.quiz-opt.wrong .opt-letter { background: #E8636B; color: #fff; }
+.quiz-feedback {
+  margin-top: 10px; padding: 10px 14px; border-radius: 10px;
+  font-size: 14px; font-weight: 600; line-height: 1.5; display: none;
+}
+.quiz-feedback.show { display: block; }
+.fb-correct { background: #E3F8ED; color: #1a5c2e; border: 1.5px solid #B8E8CF; }
+.fb-wrong { background: #FFF3DC; color: #5A4A3A; border: 1.5px solid #F5E6C8; }
+.quiz-score-box {
+  /* ✏️ GRADE ACCENT */
+  background: linear-gradient(135deg, #0E1C42, #1A2D5A);
+  color: #fff; border-radius: 16px; padding: 20px 22px;
+  margin-top: 16px; text-align: center; display: none;
+}
+.quiz-score-box.show { display: block; }
+.quiz-score-num { font-size: 52px; font-weight: 900; line-height: 1; }
+.quiz-score-label { font-size: 14px; color: #55C8E8; margin-bottom: 4px; }
+.quiz-score-msg { font-size: 18px; font-weight: 700; margin-top: 8px; }
+.quiz-video-wrap { margin-top: 16px; display: none; }
+.quiz-video-wrap.show { display: block; }
+
+/* ═══════════ DISCOVERY FACT (hidden reward on game completion) ═══════════ */
+.discovery-fact {
+  display: none;
+  margin-top: 8px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2px solid #F5E6C8;
+  border-left: 5px solid #D4943A;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #5A4A3A;
+  line-height: 1.6;
+  animation: factReveal 0.5s ease;
+}
+.discovery-fact.show { display: block; }
+.discovery-fact-label {
+  font-size: 11px;
+  color: #D4943A;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+@keyframes factReveal {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ═══════════ HISTORIAN'S SEAL — certificate card with stamp ═══════════ */
+.historian-seal {
+  display: none;
+  margin-top: 20px;
+  animation: cardSlideUp 0.4s ease;
+}
+.historian-seal.show { display: block; }
+@keyframes cardSlideUp {
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.seal-certificate {
+  position: relative;
+  background: linear-gradient(160deg, #FFFDF8, #FFF5E6, #FFFDF8);
+  border: 2px solid #E8D8C0;
+  border-radius: 14px;
+  padding: 22px 100px 22px 24px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(140, 120, 80, 0.1);
+}
+.seal-cert-message {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 16px;
+  color: #5A4A3A;
+  line-height: 1.55;
+  font-style: italic;
+}
+.seal-cert-message strong {
+  font-style: normal;
+  color: #3A2A1A;
+}
+.seal-stamp-wrap {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-8deg);
+  animation: stampBounce 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+@keyframes stampBounce {
+  0% { opacity: 0; transform: translateY(-50%) rotate(-8deg) scale(0); }
+  60% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1.2); }
+  100% { opacity: 1; transform: translateY(-50%) rotate(-8deg) scale(1); }
+}
+
+/* ═══════════ OPTIMA OWL BUDDY ═══════════ */
+.owl-buddy {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border: 2px solid #E2E8F4;
+  border-radius: 18px;
+  margin: 18px 0;
+  box-shadow: 0 2px 12px rgba(14, 28, 66, 0.06);
+  position: relative;
+}
+.owl-buddy-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFF8F0, #FFF3DC);
+  border: 2.5px solid #F5E6C8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+  animation: owlBob 3s ease-in-out infinite;
+}
+@keyframes owlBob {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-3px) rotate(2deg); }
+}
+.owl-buddy-bubble {
+  flex: 1;
+  background: #FAFBFF;
+  border: 1.5px solid #E2E8F4;
+  border-radius: 14px;
+  padding: 12px 16px;
+  position: relative;
+  font-size: 15px;
+  color: #3A4A6B;
+  line-height: 1.6;
+}
+.owl-buddy-bubble::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 18px;
+  width: 14px;
+  height: 14px;
+  background: #FAFBFF;
+  border-left: 1.5px solid #E2E8F4;
+  border-bottom: 1.5px solid #E2E8F4;
+  transform: rotate(45deg);
+}
+.owl-buddy-name {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  /* ✏️ GRADE ACCENT */
+  color: #1A8A7D;
+  margin-bottom: 4px;
+}
+
+/* ═══════════ TAB SECTION HEADERS ═══════════ */
+.tab-section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0 18px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid #E2E8F4;
+}
+.tab-section-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+  color: #fff;
+}
+.tab-section-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  color: #7A88A8;
+  margin-bottom: 1px;
+}
+.tab-section-title {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+  color: #0E1C42;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ═══════════ SECTION DIVIDERS ═══════════ */
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 0;
+  margin: 8px 0;
+}
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E2E8F4, transparent);
+}
+.section-divider-dot {
+  font-size: 8px;
+  color: #D4D8E4;
+  letter-spacing: 6px;
+}
+
+/* ═══════════ STEP BADGES (for Explore tab progression) ═══════════ */
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px 4px 4px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+  /* ✏️ GRADE ACCENT */
+  background: rgba(26, 138, 125, 0.08);
+  color: #1A8A7D;
+}
+.step-badge-num {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  color: #fff;
+  /* ✏️ GRADE ACCENT */
+  background: #1A8A7D;
+}
+
+/* ═══════════ FOOTER ═══════════ */
+.footer {
+  background: #0E1C42;
+  border-top: 4px solid #55C8E8;
+  padding: 18px 28px;
+  text-align: center;
+}
+.footer-main { font-size: 14px; color: #fff; margin-bottom: 4px; }
+.footer-main span { color: #55C8E8; font-weight: 700; }
+.footer-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 2px; }
+.footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media (max-width: 620px) {
+  .intro-2col { grid-template-columns: 1fr; }
+  .council-perspectives { grid-template-columns: 1fr; }
+  .vocab-grid { grid-template-columns: 1fr; }
+  .root-match-grid { grid-template-columns: 1fr; }
+}
+
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-6px)} 75%{transform:translateX(6px)} }
+</style>
+</head>
+<body><div id="pageTop"></div>
+
+<div class="page-wrap">
+
+<!-- ═══ PROGRESS BAR ═══ -->
+<div class="progress-wrap">
+  <div class="progress-label">🏛️ Progress</div>
+  <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+  <div class="progress-pct" id="progressPct">0%</div>
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<div class="header">
+  <div class="header-brand">
+    <div class="header-logo"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" /></div>
+    <div>
+      <div class="header-org">Optima Academy Online</div>
+      <div class="header-sub">An Education Experience Company</div>
+    </div>
+  </div>
+  <div class="header-title">The Contributions Wall</div>
+  <div class="header-badge">
+    <span class="header-badge-icon">🌍</span>
+    <span class="header-badge-text">Lesson 3.07.08</span>
+  </div>
+</div>
+
+<!-- ═══ SVG HERO BANNER — THE CONTRIBUTIONS WALL ═══ -->
+<svg viewBox="0 0 920 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+  <defs>
+    <linearGradient id="cwSky" x1="0" y1="0" x2="0" y2="260" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8AB8D8"/>
+      <stop offset="55%" stop-color="#D8E0E8"/>
+      <stop offset="100%" stop-color="#E8DCB4"/>
+    </linearGradient>
+    <linearGradient id="cwWall" x1="0" y1="40" x2="0" y2="190" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F2EBD8"/>
+      <stop offset="100%" stop-color="#DDD0B0"/>
+    </linearGradient>
+  </defs>
+  <rect width="920" height="260" fill="url(#cwSky)"/>
+  <rect x="0" y="200" width="920" height="60" fill="#8B7355"/>
+  <rect x="0" y="195" width="920" height="8" fill="#6B5B45"/>
+  <!-- Wall sign -->
+  <rect x="280" y="18" width="360" height="28" rx="6" fill="#0E1C42" opacity="0.92"/>
+  <text x="460" y="38" fill="#FFD972" font-family="'Nunito', sans-serif" font-size="14" font-weight="800" text-anchor="middle" letter-spacing="1.5">🏆 THE CONTRIBUTIONS WALL</text>
+
+  <!-- Large gallery wall -->
+  <rect x="40" y="58" width="840" height="135" rx="4" fill="url(#cwWall)" stroke="#A89070" stroke-width="2"/>
+  <rect x="40" y="55" width="840" height="6" fill="#6B5B45"/>
+
+  <!-- Row 1 of portrait frames — filled in -->
+  <!-- Frame 1 -->
+  <g transform="translate(70, 75)">
+    <rect x="0" y="0" width="60" height="70" rx="3" fill="#5D3A1A" stroke="#3D2A1A" stroke-width="1.5"/>
+    <rect x="4" y="4" width="52" height="50" fill="#A8C5DC"/>
+    <!-- Silhouette portrait -->
+    <circle cx="30" cy="22" r="11" fill="#5B7B92"/>
+    <path d="M14 50 Q14 35 30 35 Q46 35 46 50 Z" fill="#5B7B92"/>
+    <!-- Name plaque -->
+    <rect x="2" y="56" width="56" height="12" rx="1" fill="#D4A640"/>
+    <text x="30" y="64" fill="#3A2810" font-family="'Nunito', sans-serif" font-size="5" font-weight="800" text-anchor="middle">NORTHEAST</text>
+  </g>
+  <!-- Frame 2 -->
+  <g transform="translate(150, 75)">
+    <rect x="0" y="0" width="60" height="70" rx="3" fill="#5D3A1A" stroke="#3D2A1A" stroke-width="1.5"/>
+    <rect x="4" y="4" width="52" height="50" fill="#F4D4A8"/>
+    <circle cx="30" cy="22" r="11" fill="#C9612A"/>
+    <path d="M14 50 Q14 35 30 35 Q46 35 46 50 Z" fill="#C9612A"/>
+    <rect x="2" y="56" width="56" height="12" rx="1" fill="#D4A640"/>
+    <text x="30" y="64" fill="#3A2810" font-family="'Nunito', sans-serif" font-size="5" font-weight="800" text-anchor="middle">SOUTHEAST</text>
+  </g>
+  <!-- Frame 3 (Midwest) -->
+  <g transform="translate(230, 75)">
+    <rect x="0" y="0" width="60" height="70" rx="3" fill="#5D3A1A" stroke="#3D2A1A" stroke-width="1.5"/>
+    <rect x="4" y="4" width="52" height="50" fill="#E8C594"/>
+    <circle cx="30" cy="22" r="11" fill="#3AA8C8"/>
+    <path d="M14 50 Q14 35 30 35 Q46 35 46 50 Z" fill="#3AA8C8"/>
+    <rect x="2" y="56" width="56" height="12" rx="1" fill="#D4A640"/>
+    <text x="30" y="64" fill="#3A2810" font-family="'Nunito', sans-serif" font-size="5" font-weight="800" text-anchor="middle">MIDWEST</text>
+  </g>
+  <!-- Frame 4 (Southwest) -->
+  <g transform="translate(310, 75)">
+    <rect x="0" y="0" width="60" height="70" rx="3" fill="#5D3A1A" stroke="#3D2A1A" stroke-width="1.5"/>
+    <rect x="4" y="4" width="52" height="50" fill="#F2C8A8"/>
+    <circle cx="30" cy="22" r="11" fill="#A04A1E"/>
+    <path d="M14 50 Q14 35 30 35 Q46 35 46 50 Z" fill="#A04A1E"/>
+    <rect x="2" y="56" width="56" height="12" rx="1" fill="#D4A640"/>
+    <text x="30" y="64" fill="#3A2810" font-family="'Nunito', sans-serif" font-size="5" font-weight="800" text-anchor="middle">SOUTHWEST</text>
+  </g>
+  <!-- Frame 5 (West) -->
+  <g transform="translate(390, 75)">
+    <rect x="0" y="0" width="60" height="70" rx="3" fill="#5D3A1A" stroke="#3D2A1A" stroke-width="1.5"/>
+    <rect x="4" y="4" width="52" height="50" fill="#C8E0C8"/>
+    <circle cx="30" cy="22" r="11" fill="#6A4FA0"/>
+    <path d="M14 50 Q14 35 30 35 Q46 35 46 50 Z" fill="#6A4FA0"/>
+    <rect x="2" y="56" width="56" height="12" rx="1" fill="#D4A640"/>
+    <text x="30" y="64" fill="#3A2810" font-family="'Nunito', sans-serif" font-size="5" font-weight="800" text-anchor="middle">WEST</text>
+  </g>
+
+  <!-- Empty frames waiting to be filled (right side) -->
+  <g transform="translate(485, 75)">
+    <rect x="0" y="0" width="60" height="70" rx="3" fill="none" stroke="#A89070" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="30" y="38" fill="#A89070" font-size="22" text-anchor="middle">?</text>
+  </g>
+  <g transform="translate(565, 75)">
+    <rect x="0" y="0" width="60" height="70" rx="3" fill="none" stroke="#A89070" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="30" y="38" fill="#A89070" font-size="22" text-anchor="middle">?</text>
+  </g>
+  <g transform="translate(645, 75)">
+    <rect x="0" y="0" width="60" height="70" rx="3" fill="none" stroke="#A89070" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="30" y="38" fill="#A89070" font-size="22" text-anchor="middle">?</text>
+  </g>
+
+  <!-- Wall title plaque at bottom -->
+  <rect x="100" y="156" width="720" height="22" rx="3" fill="#5D3A1A"/>
+  <text x="460" y="172" fill="#F5E6C8" font-family="'Nunito', sans-serif" font-size="11" font-weight="800" text-anchor="middle" letter-spacing="2">PEOPLE WHO SHAPED EVERY REGION OF OUR COUNTRY</text>
+
+  <!-- Cart of empty frames being wheeled in -->
+  <g transform="translate(810, 200)">
+    <rect x="-20" y="-30" width="40" height="6" fill="#5D4E37"/>
+    <rect x="-18" y="-26" width="12" height="20" rx="1" fill="none" stroke="#5D4E37" stroke-width="1.5"/>
+    <rect x="-2" y="-26" width="12" height="20" rx="1" fill="none" stroke="#5D4E37" stroke-width="1.5"/>
+    <line x1="-18" y1="-6" x2="20" y2="-6" stroke="#5D4E37" stroke-width="2"/>
+    <circle cx="-12" cy="-2" r="4" fill="#3A3838"/>
+    <circle cx="14" cy="-2" r="4" fill="#3A3838"/>
+  </g>
+
+  <!-- Curator avatar pinning a portrait -->
+  <g transform="translate(80, 175)">
+    <circle cx="0" cy="0" r="12" fill="#F4D4B0" stroke="#A87060"/>
+    <circle cx="-3" cy="-2" r="0.8" fill="#1A1A2E"/>
+    <circle cx="3" cy="-2" r="0.8" fill="#1A1A2E"/>
+    <path d="M-3 4 Q0 6 3 4" stroke="#A03830" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
+
+<!-- ═══ INFO STRIP ═══ -->
+<div class="info-strip">
+  <div class="info-cell">
+    <div class="info-icon" style="background:#EAF8FD;">🏛️</div>
+    <div>
+      <div class="info-label">Unit</div>
+      <div class="info-value">U.S. Regions Gallery</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#FFF3DC;">📅</div>
+    <div>
+      <div class="info-label">Week</div>
+      <div class="info-value">Week 22 · Q3</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#E3F8ED;">📜</div>
+    <div>
+      <div class="info-label">Focus</div>
+      <div class="info-value">Geography, History & Evidence</div>
+    </div>
+  </div>
+  <div class="info-cell">
+    <div class="info-icon" style="background:#F0E8FF;">📋</div>
+    <div>
+      <div class="info-label">Standards</div>
+      <div class="info-value" style="font-size:12px;">SS.3.G.2.2–2.6 · SS.3.G.4.1, 4.4</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ MUSEUM MEMO ═══ -->
+<div class="quote-strip">
+  <div class="quote-strip-text" style="font-style:normal;text-align:left;font-size:15px;line-height:1.65;">
+    The U.S. Regions Gallery is open. The Listening Station hums. But there's one wall left blank — wide, tall, and waiting. The director hands you a stack of name plaques. "This is the Contributions Wall," she says. "Land alone doesn't shape a country. People do. Today we honor people from every region who helped shape the United States — scientists, leaders, artists, athletes, and everyday heroes. The gallery isn't finished until they're here."
+  </div>
+</div>
+
+<!-- ═══ INTRO SECTION ═══ -->
+<div class="intro-section" id="introSection">
+  <div class="intro-collapsed-bar" onclick="toggleIntro()">
+    <div class="intro-collapsed-icon">📍</div>
+    <div class="intro-collapsed-text">Today's Curator's Question & Objectives</div>
+    <div class="intro-collapsed-toggle">▼ Expand</div>
+  </div>
+
+  <div class="intro-2col">
+    <div class="intro-card theme-question">
+      <div class="intro-card-head">
+        <div class="intro-card-head-icon">✨</div>
+        <div>
+          <div class="intro-card-head-label">Curator's Question</div>
+          <div class="intro-card-head-title">Today's Big Question</div>
+        </div>
+      </div>
+      <div class="intro-card-body">
+        <p>Who are some of the people from different regions and backgrounds who helped shape the United States — and what did they contribute?</p>
+      </div>
+    </div>
+
+    <div class="intro-card theme-objectives">
+      <div class="intro-card-head">
+        <div class="intro-card-head-icon">🎯</div>
+        <div>
+          <div class="intro-card-head-label">Objectives</div>
+          <div class="intro-card-head-title">What You'll Learn</div>
+        </div>
+      </div>
+      <div class="intro-card-body">
+        <div class="obj-line"><span class="obj-icon">🏆</span> Identify contributors from different regions and backgrounds.</div>
+        <div class="obj-line"><span class="obj-icon">🗺️</span> Connect each contributor to the region or place that shaped them.</div>
+        <div class="obj-line"><span class="obj-icon">📝</span> Write a Contributions Wall sign honoring people who shaped the United States.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="need-strip">
+    <span class="need-strip-label">You'll need:</span>
+    <span class="need-chip">📓 Curator's Notebook</span>
+    <span class="need-chip">✏️ Pencil</span>
+    <span class="need-chip">🗺️ Lesson Page</span>
+  </div>
+</div>
+
+<!-- ═══ TAB BAR ═══ -->
+<div class="tab-bar" id="tabBar">
+  <button class="tab-btn active" onclick="switchTab('scene')" id="btn-scene">📍 Enter the Museum <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('explore')" id="btn-explore">🔍 Explore <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('check')" id="btn-check">🧠 Self-Check <span class="tab-check">✓</span></button>
+  <button class="tab-btn" onclick="switchTab('assignment')" id="btn-assignment">📝 Evidence &amp; Assignment <span class="tab-check">✓</span></button>
+</div>
+
+<!-- ═══ TAB 1: ENTER THE MUSEUM ═══ -->
+<div class="tab-panel active" id="panel-scene">
+
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #D4943A, #E0A050);">📍</div>
+    <div>
+      <div class="tab-section-title">Enter the Museum</div>
+    </div>
+  </div>
+
+  <div class="todays-path">
+    <div class="todays-path-title">🗺️ Today's Path</div>
+    <div class="todays-path-steps">
+      <span class="todays-path-step">📍 Open the Contributions Wall & spotlight courtesy</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🔍 Meet six contributors and match them to their regions</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">🧠 Check your understanding</span>
+      <span class="todays-path-arrow">→</span>
+      <span class="todays-path-step">📝 Write the Contributions Wall sign and close the gallery</span>
+    </div>
+  </div>
+
+  <!-- Welcome Video -->
+  <div class="video-wrap" style="margin-top:18px;">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">📍 WELCOME · ENTER THE MUSEUM</div>
+        <div class="video-wrap-title">Opening the Contributions Wall</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Greet students warmly. Say: "Welcome back, U.S. Region Curators. Today is the LAST lesson in the gallery — the Contributions Wall." Read the Curator's Question: "Who are some of the people from different regions and backgrounds who helped shape the United States?" Explain that maps show where, alcoves show what places look like, the Listening Station shows how places sound — but the people who lived and worked in these places are what made each region matter. Remind students about courtesy: every person on the wall is a real human being whose story belongs to a real community. Under 2 minutes.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 3-07-08-welcome --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Virtue Spotlight -->
+  <div class="virtue-card">
+    <div class="virtue-label">🏛️ Virtue Spotlight — Courtesy</div>
+    <div class="virtue-text">The Contributions Wall honors people from MANY backgrounds — Native Americans, African Americans, Asian Americans, Latino Americans, women and men, scientists, artists, leaders, and everyday helpers. Courtesy means we name each person carefully, tell their story honestly, and never decide one person's contribution is more important than another's. Every contribution matters.</div>
+  </div>
+
+  <!-- Curator Role -->
+  <div class="callout callout-info">
+    <div class="callout-icon">🕯️</div>
+    <p><strong>Your Role Today:</strong> You are a <strong>U.S. Region Curator</strong> finishing the gallery. Today your focus is the Contributions Wall. You'll meet six people from across the regions, learn what they contributed, and add them to the wall so visitors leave the gallery knowing both the <em>places</em> AND the <em>people</em> of the United States.</p>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">The wall is blank and the frames are waiting. Let's meet the people who shaped every region.</p>
+    <button class="tab-next-btn" onclick="switchTab('explore')">Continue to 🔍 Explore →</button>
+  </div>
+</div>
+
+<!-- ═══ TAB 2: EXPLORE ═══ -->
+<div class="tab-panel" id="panel-explore">
+
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #1A8A7D, #34B0A0);">🔍</div>
+    <div>
+      <div class="tab-section-title">Explore</div>
+    </div>
+  </div>
+
+  <!-- Explore Video -->
+  <div class="video-wrap">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">🔍 TEACHING · EXPLORE</div>
+        <div class="video-wrap-title">Meet the Contributors</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Introduce the six contributors students will meet today: <strong>Sequoyah</strong> (Cherokee Nation — created the Cherokee writing system); <strong>Frederick Douglass</strong> (born in the Southeast, wrote and spoke against slavery, lived in the Northeast as a leader); <strong>Maya Lin</strong> (Ohio — designed the Vietnam Veterans Memorial in Washington, D.C.); <strong>Sandra Day O'Connor</strong> (Arizona — first woman to serve on the U.S. Supreme Court); <strong>Cesar Chavez</strong> (Arizona/California — organized farm workers to fight for fair wages and safer conditions); <strong>Queen Lili'uokalani</strong> (Hawaii — the last queen of the Kingdom of Hawaii and a composer of songs still sung today). Explain that the wall will include MANY more people — these six are a starting set. Remind students about courtesy. 3–5 minutes.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 3-07-08-explore-explainer --></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="step-badge"><div class="step-badge-num">1</div> Meet Six Contributors</div>
+
+  <div class="activity bl-accent">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#1A8A7D;">📖</div>
+      <div>
+        <div class="activity-title">Six People Who Shaped Their Regions — and the Country</div>
+        <div class="activity-sub">Read each profile carefully before you match them on the wall</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>This wall could hold thousands of contributors — and a real museum would keep adding more. Today you'll meet just six, chosen to show the many backgrounds and regions of our country. As you read each one, ask yourself: <em>What did this person give that nobody else could?</em></p>
+
+      <!-- Contributor 1: Sequoyah (Cherokee, Southeast/Southwest) -->
+      <div style="background:#FFF8EE;border-left:4px solid #D4943A;border-radius:8px;padding:14px 18px;margin:14px 0;">
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <div style="font-size:42px;flex-shrink:0;">📜</div>
+          <div>
+            <div style="font-size:13px;font-weight:800;color:#A06820;letter-spacing:1px;">CHEROKEE NATION · SOUTHEAST &amp; SOUTHWEST</div>
+            <div style="font-size:18px;font-weight:800;color:#0E1C42;margin:4px 0;">Sequoyah (about 1770–1843)</div>
+            <p style="color:#0E1C42;line-height:1.6;">Sequoyah was a <strong>Cherokee silversmith</strong> who created an entire writing system for his people — 86 symbols, one for each sound in the Cherokee language. Before this, Cherokee was only spoken. Within a few years of his invention, many Cherokee people could read and write in their own language. His system is still used today.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contributor 2: Frederick Douglass (Southeast → Northeast) -->
+      <div style="background:#E8F8F0;border-left:4px solid #1A8A7D;border-radius:8px;padding:14px 18px;margin:14px 0;">
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <div style="font-size:42px;flex-shrink:0;">🕊️</div>
+          <div>
+            <div style="font-size:13px;font-weight:800;color:#0E6058;letter-spacing:1px;">MARYLAND → MASSACHUSETTS &amp; NEW YORK</div>
+            <div style="font-size:18px;font-weight:800;color:#0E1C42;margin:4px 0;">Frederick Douglass (1818–1895)</div>
+            <p style="color:#0E1C42;line-height:1.6;">Born enslaved in the Southeast, <strong>Frederick Douglass</strong> taught himself to read, then escaped to the Northeast. He became one of the most powerful speakers and writers of his time, telling the truth about slavery and arguing for freedom and equal rights for African Americans. He also fought for women's right to vote.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contributor 3: Maya Lin (Midwest) -->
+      <div style="background:#EAF8FD;border-left:4px solid #55C8E8;border-radius:8px;padding:14px 18px;margin:14px 0;">
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <div style="font-size:42px;flex-shrink:0;">🏛️</div>
+          <div>
+            <div style="font-size:13px;font-weight:800;color:#3A88A8;letter-spacing:1px;">OHIO · MIDWEST</div>
+            <div style="font-size:18px;font-weight:800;color:#0E1C42;margin:4px 0;">Maya Lin (born 1959)</div>
+            <p style="color:#0E1C42;line-height:1.6;">Born in Ohio to Chinese-American parents, <strong>Maya Lin</strong> was only 21 years old and still in college when her design was chosen for the <strong>Vietnam Veterans Memorial</strong> in Washington, D.C. The black granite wall lists the names of every American who died in the Vietnam War. Millions of people visit it every year to remember.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contributor 4: Sandra Day O'Connor (Southwest) -->
+      <div style="background:#FFF0EC;border-left:4px solid #C0392B;border-radius:8px;padding:14px 18px;margin:14px 0;">
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <div style="font-size:42px;flex-shrink:0;">⚖️</div>
+          <div>
+            <div style="font-size:13px;font-weight:800;color:#A82820;letter-spacing:1px;">ARIZONA · SOUTHWEST</div>
+            <div style="font-size:18px;font-weight:800;color:#0E1C42;margin:4px 0;">Sandra Day O'Connor (1930–2023)</div>
+            <p style="color:#0E1C42;line-height:1.6;">Sandra Day O'Connor grew up on a cattle ranch in Arizona. She became a lawyer, then a judge, and in 1981 she became the <strong>first woman to serve on the United States Supreme Court</strong> — the highest court in the country. She served for 24 years and helped decide many important cases.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contributor 5: Cesar Chavez (Southwest/West) -->
+      <div style="background:#FFF0EC;border-left:4px solid #C0392B;border-radius:8px;padding:14px 18px;margin:14px 0;">
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <div style="font-size:42px;flex-shrink:0;">🌽</div>
+          <div>
+            <div style="font-size:13px;font-weight:800;color:#A82820;letter-spacing:1px;">ARIZONA &amp; CALIFORNIA · SOUTHWEST &amp; WEST</div>
+            <div style="font-size:18px;font-weight:800;color:#0E1C42;margin:4px 0;">Cesar Chavez (1927–1993)</div>
+            <p style="color:#0E1C42;line-height:1.6;">Born in Arizona to a Mexican-American family, <strong>Cesar Chavez</strong> worked in the fields of California from the time he was a child. He saw how hard farm workers worked and how unfairly they were treated. As an adult, he organized farm workers to ask for fair pay, safer working conditions, and respect. His work changed laws and lives.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contributor 6: Queen Lili'uokalani (West - Hawaii) -->
+      <div style="background:#F2EDFB;border-left:4px solid #8B6FC0;border-radius:8px;padding:14px 18px;margin:14px 0;">
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <div style="font-size:42px;flex-shrink:0;">👑</div>
+          <div>
+            <div style="font-size:13px;font-weight:800;color:#6A4FA0;letter-spacing:1px;">HAWAII · WEST</div>
+            <div style="font-size:18px;font-weight:800;color:#0E1C42;margin:4px 0;">Queen Lili'uokalani (1838–1917)</div>
+            <p style="color:#0E1C42;line-height:1.6;"><strong>Queen Lili'uokalani</strong> was the last queen of the Kingdom of Hawaii. She loved her people and her islands, and she worked to protect Hawaiian traditions and the rights of Native Hawaiians. She was also a gifted musician who composed many songs — including "Aloha 'Oe," which is still sung today around the world.</p>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin-top:16px;font-style:italic;color:#5B6680;text-align:center;">These are six of countless contributors. Real museum walls keep growing — and so does this one.</p>
+    </div>
+  </div>
+
+  <div class="callout callout-think">
+    <div class="callout-icon">🤔</div>
+    <p><strong>Pause & Think:</strong> Pick ONE of the six contributors. If they walked into your classroom today, what is the first thing you'd want to thank them for?</p>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <div class="step-badge"><div class="step-badge-num">2</div> Match Contributors to Their Regions</div>
+
+  <!-- Flip Cards: Portfolio Review -->
+  <div class="activity bl-accent">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#D4943A;">🔄</div>
+      <div>
+        <div class="activity-title">Contributor-to-Region Match</div>
+        <div class="activity-sub">Tap a contributor, then tap the region most connected to their work</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Each card on the left names one of the six contributors. Tap a contributor, then tap the region most connected to where they lived or worked. Get all six right!</p>
+
+      <div class="root-match-game">
+        <div class="root-match-grid">
+          <div class="root-match-item is-word" data-match="a" onclick="rootMatchClick(this)">Created the Cherokee writing system</div>
+          <div class="root-match-item" data-match="c" onclick="rootMatchClick(this)">🌽 Midwest (Ohio)</div>
+          <div class="root-match-item is-word" data-match="b" onclick="rootMatchClick(this)">Spoke and wrote against slavery; lived in Massachusetts &amp; New York</div>
+          <div class="root-match-item" data-match="a" onclick="rootMatchClick(this)">🏞️ Cherokee Nation (Southeast →)</div>
+          <div class="root-match-item is-word" data-match="c" onclick="rootMatchClick(this)">Designed the Vietnam Veterans Memorial</div>
+          <div class="root-match-item" data-match="d" onclick="rootMatchClick(this)">🌵 Southwest (Arizona)</div>
+          <div class="root-match-item is-word" data-match="d" onclick="rootMatchClick(this)">First woman on the U.S. Supreme Court; grew up on an Arizona ranch</div>
+          <div class="root-match-item" data-match="b" onclick="rootMatchClick(this)">🏙️ Northeast (Massachusetts)</div>
+          <div class="root-match-item is-word" data-match="e" onclick="rootMatchClick(this)">Organized California farm workers for fair wages</div>
+          <div class="root-match-item" data-match="f" onclick="rootMatchClick(this)">🌺 West (Hawaii)</div>
+          <div class="root-match-item is-word" data-match="f" onclick="rootMatchClick(this)">Last queen of Hawaii and composer of "Aloha 'Oe"</div>
+          <div class="root-match-item" data-match="e" onclick="rootMatchClick(this)">🌾 West (California)</div>
+        </div>
+        <div class="root-match-feedback" id="rootMatchFeedback">🎉 All six contributors placed! The wall is taking shape.</div>
+        <div class="discovery-fact" id="rootDiscoveryFact">
+          <div class="discovery-fact-label">🔎 Discovery Fact</div>
+          When Maya Lin's design for the Vietnam Veterans Memorial was chosen in 1981, the judges didn't know she was a 21-year-old college student. The names on the wall are listed in the order people died — not alphabetically — so family members can trace the wall and find their loved ones in time, not just by name.
+        </div>
+      </div>
+
+      <!-- Category 3 Source Image Placeholder -->
+      <div class="callout callout-info" style="margin-top:18px;background:#FFF8EE;border-left:4px solid #0E1C42;">
+        <div class="callout-icon">📷</div>
+        <p><strong>Source — The Vietnam Veterans Memorial:</strong></p>
+        <div class="source-image-placeholder" data-image="source-3-07-08-contribution-portrait-or-monument" style="background:#F2E8D2;border:2px dashed #C9A96E;border-radius:8px;padding:18px;margin:10px 0;text-align:center;min-height:auto;height:auto;"><div class="source-image-placeholder-text"><div style="font-size:36px;margin-bottom:6px;">🖼️</div>
+          <div style="font-weight:700;color:#0E1C42;">[Image placeholder: <code>source-3-07-08-contribution-portrait-or-monument.jpg</code>]</div>
+          <div style="font-size:13px;color:#5B6680;margin-top:6px;">A public-domain photograph of the Vietnam Veterans Memorial in Washington, D.C., designed by Maya Lin. Sources: Library of Congress, National Park Service, National Archives.</div></div></div>
+        <p style="font-size:12px;color:#5B6680;margin-top:6px;font-style:italic;text-align:center;">📸 The Vietnam Veterans Memorial in Washington, D.C. — designed by Maya Lin and dedicated in 1982.</p>
+        <p style="font-size:14px;margin-top:8px;"><strong>Look closely.</strong> Why do you think people travel to see contributions like this one — sometimes from far away?</p>
+      </div>
+
+      <!-- Reflection: Your own region contributor -->
+      <div class="callout callout-think" style="margin-top:18px;">
+        <div class="callout-icon">🤝</div>
+        <p><strong>Your Region's Contributors:</strong> Think about your own state or region. Who is one person — famous OR someone from your family or community — whose work or kindness helped shape the place where you live?</p>
+        <div class="textbox-prompt">Name one person from your region and what they contributed.</div>
+        <textarea class="journal-box" id="journal-mine" data-label="A Contributor From My Region"
+          placeholder="One person from my region is ______. They contributed..."
+          oninput="autoSave(this,'dot-mine');gatherAnswers();"></textarea>
+      </div>
+
+      <!-- Final Synthesis: Gallery Closing -->
+      <div class="callout callout-think" style="margin-top:18px;background:#FFF8EE;border-left:4px solid #D4943A;">
+        <div class="callout-icon">🏆</div>
+        <p><strong>Closing the Gallery:</strong> Look back at everything in the U.S. Regions Gallery — five alcoves, a Listening Station, and now the Contributions Wall. What's ONE big idea about the United States that this whole gallery teaches a visitor?</p>
+        <div class="textbox-prompt">Name one big idea about our country that the gallery teaches visitors.</div>
+        <textarea class="journal-box" id="journal-bigidea" data-label="One Big Idea From the Gallery"
+          placeholder="One big idea the gallery teaches is..."
+          oninput="autoSave(this,'dot-bigidea');gatherAnswers();"></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- Then & Now -->
+  <div class="callout callout-tip">
+    <div class="callout-icon">⏳</div>
+    <p><strong>Then & Now:</strong> Long ago, contributions were remembered through stories told around fires, songs passed from grandparents to grandchildren, and names carved into stone. Today, we still tell those stories — but we also use websites, museums, books, and walls of names like Maya Lin's memorial. What stayed the same about why we remember the people who shaped us?</p>
+  </div>
+
+  <div class="section-divider"><span class="section-divider-dot">···</span></div>
+
+  <div class="step-badge"><div class="step-badge-num">3</div> The Big Picture</div>
+
+  <!-- Exhibit Label -->
+  <div class="key-concept">
+    <div class="key-concept-label">🏷️ Exhibit Label</div>
+    <p>The United States is shaped by its land — but more deeply by its people. From Cherokee inventors to Hawaiian queens, from formerly enslaved abolitionists to first-generation Chinese-American architects, from farm worker organizers to Arizona Supreme Court justices, contributors from every region and background built the country we share. Every name on this wall is a real person whose work matters today.</p>
+  </div>
+
+  <!-- Opti -->
+  <div class="owl-buddy">
+    <div class="owl-buddy-avatar">🦉</div>
+    <div class="owl-buddy-bubble">
+      <div class="owl-buddy-name">🧭 Opti says…</div>
+      You know what I noticed? Every contributor on this wall did one thing — and that one thing changed the country. Sequoyah's 86 symbols. Maya Lin's wall of names. Cesar Chavez's grape boycott. Big country, small starts. That's a pattern worth carrying with you.
+    </div>
+  </div>
+
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">The wall is filling up. Let's check what you remember before you write the closing sign for the gallery.</p>
+    <button class="tab-next-btn" onclick="switchTab('check')">Continue to 🧠 Self-Check →</button>
+  </div>
+</div>
+
+<!-- ═══ TAB 3: SELF-CHECK ═══ -->
+<div class="tab-panel" id="panel-check">
+
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #8B6FC0, #A88AD4);">🧠</div>
+    <div>
+      <div class="tab-section-title">Quick Self-Check</div>
+    </div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:18px;">
+    <div class="callout-icon">🧠</div>
+    <p>Not graded — just for you! Answer these three questions before writing your Map Quest response.</p>
+  </div>
+
+  <div class="quiz-card">
+    <div style="padding:18px 22px;">
+
+      <!-- Q1 -->
+      <div class="quiz-q" data-answer="c">
+        <div class="quiz-q-text">1. Sequoyah's biggest contribution was —</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Inventing a new kind of cattle ranch</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Becoming the first Cherokee president of the United States</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Creating a writing system for the Cherokee language</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Right! Sequoyah created 86 symbols, one for each sound in the Cherokee language. His system is still used today.</div>
+        <div class="quiz-feedback fb-wrong">Think back to the profile card. What did Sequoyah invent for his people?</div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="quiz-q" data-answer="b">
+        <div class="quiz-q-text">2. Frederick Douglass is remembered for —</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>Designing famous buildings</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>Speaking and writing against slavery and for equal rights</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Inventing a new musical instrument</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Yes! Douglass escaped slavery, learned to read on his own, and used his voice and writing to fight for freedom and equal rights for African Americans.</div>
+        <div class="quiz-feedback fb-wrong">Think about the words "spoke" and "wrote." Douglass used both to fight for something important.</div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="quiz-q" data-answer="a">
+        <div class="quiz-q-text">3. What is one big idea the whole gallery — alcoves, Listening Station, and Contributions Wall — teaches a visitor?</div>
+        <div class="quiz-options">
+          <div class="quiz-opt" data-val="a" onclick="checkQuiz(this)"><span class="opt-letter">A</span>The United States is shaped by many places, voices, and people working together.</div>
+          <div class="quiz-opt" data-val="b" onclick="checkQuiz(this)"><span class="opt-letter">B</span>One region is the most important and the rest don't matter.</div>
+          <div class="quiz-opt" data-val="c" onclick="checkQuiz(this)"><span class="opt-letter">C</span>Only land matters — people do not.</div>
+        </div>
+        <div class="quiz-feedback fb-correct">Exactly! Land, stories, AND people together shape every region. That's the gallery's big idea.</div>
+        <div class="quiz-feedback fb-wrong">A good curator never says one region is more important than another, and never says people don't matter. Think about what the whole gallery, from the first alcove to this wall, has shown.</div>
+      </div>
+
+      <div class="quiz-score-box" id="quizScore">
+        <div class="quiz-score-label">Your Score</div>
+        <div class="quiz-score-num" id="quizScoreNum">0</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.7);">out of 3</div>
+        <div class="quiz-score-msg" id="quizScoreMsg"></div>
+      </div>
+
+      <div class="quiz-video-wrap" id="quizVideoCorrect">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">⭐</span>
+            <div>
+              <div class="video-wrap-type">Perfect Score · Great Work!</div>
+              <div class="video-wrap-title">You nailed it!</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">⭐</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Celebrate: "Perfect! Sequoyah, Frederick Douglass, and the gallery's big idea — all clear. Now write the closing sign that will welcome visitors home." Under 30 seconds.</div>
+              <div class="video-placeholder-id"><!-- slot: 3-07-08-quiz-perfect --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-video-wrap" id="quizVideoReview">
+        <div class="video-wrap">
+          <div class="video-wrap-header">
+            <span style="font-size:20px;">🔄</span>
+            <div>
+              <div class="video-wrap-type">Review · Keep Going!</div>
+              <div class="video-wrap-title">Let's review those tricky parts.</div>
+            </div>
+          </div>
+          <div class="video-ratio">
+            <div class="video-placeholder">
+              <div class="video-placeholder-icon">🔄</div>
+              <div class="video-placeholder-text"><strong>Teacher recording notes:</strong> Walk through answers. Remind: "Sequoyah made the Cherokee writing system. Frederick Douglass spoke and wrote against slavery. And the gallery's big idea is that places, stories, AND people together shape the United States." Under 1 minute.</div>
+              <div class="video-placeholder-id"><!-- slot: 3-07-08-quiz-review --></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="tab-next-wrap">
+    <p class="tab-transition-voice">Good check! Now it's time to write the closing sign — the one that will send visitors home with the gallery's big idea.</p>
+    <button class="tab-next-btn" onclick="switchTab('assignment')">Continue to 📝 Evidence &amp; Assignment →</button>
+  </div>
+</div>
+
+<!-- ═══ TAB 4: EVIDENCE & ASSIGNMENT ═══ -->
+<div class="tab-panel" id="panel-assignment">
+
+  <div class="tab-section-header">
+    <div class="tab-section-icon" style="background:linear-gradient(135deg, #55C8E8, #7FD8F0);">📝</div>
+    <div>
+      <div class="tab-section-title">Evidence &amp; Assignment</div>
+    </div>
+  </div>
+
+  <div class="callout callout-info" style="margin-bottom:18px;">
+    <div class="callout-icon">📝</div>
+    <p>Time to finish the gallery for good. Answer the evidence questions and write the Contributions Wall sign. Your work closes the U.S. Regions Gallery.</p>
+  </div>
+
+  <!-- Assignment Video -->
+  <div class="video-wrap">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">📝 ASSIGNMENT · EVIDENCE</div>
+        <div class="video-wrap-title">Your Contributions Wall Sign — Closing the Gallery</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Read Q1 and model an answer about one contributor (e.g., "I picked Cesar Chavez because he stood up for farm workers."). Read Q2 and Q3. Then explain the Curator Task: "Write 3–4 sentences for the Contributions Wall sign. Tell visitors what the wall shows — that people from every region and background helped shape the United States. Name at least one contributor. Use kind, careful words. This sign closes the whole gallery." Walk through the turn-in steps. 2–3 minutes.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 3-07-08-assignment-explainer --></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Part A: Evidence Questions -->
+  <div class="activity bl-cyan">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#55C8E8;">A</div>
+      <div>
+        <div class="activity-title">Evidence Questions</div>
+        <div class="activity-sub">Answer using details from what you've learned this year.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+
+      <div class="q-block"><div class="q-text"><span class="q-num">1</span>Pick one of the six contributors. Name them, name the region they're connected to, and explain one thing they contributed.</div></div>
+      <div class="textbox-prompt">Try Sequoyah, Frederick Douglass, Maya Lin, Sandra Day O'Connor, Cesar Chavez, or Queen Lili'uokalani.</div>
+      <textarea class="journal-box" id="journal-q1" data-label="Q1: One Contributor"
+        placeholder="One contributor is ______, from the ______ region. They contributed..."
+        oninput="autoSave(this,'dot-q1');gatherAnswers();"></textarea>
+
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">2</span>Why is it important to remember contributors from MANY different backgrounds — not just a few?</div></div>
+      <div class="textbox-prompt">Think about what the gallery would feel like if only one group was on the wall.</div>
+      <textarea class="journal-box" id="journal-q2" data-label="Q2: Why Many Backgrounds Matter"
+        placeholder="It is important to remember contributors from many backgrounds because..."
+        oninput="autoSave(this,'dot-q2');gatherAnswers();"></textarea>
+
+      <div class="q-block" style="margin-top:14px;"><div class="q-text"><span class="q-num">3</span>Look back across the WHOLE gallery — five regions, the Listening Station, and the Contributions Wall. What is one big thing you learned about the United States?</div></div>
+      <div class="textbox-prompt">Think about land, stories, AND people — and how they work together.</div>
+      <textarea class="journal-box" id="journal-q3" data-label="Q3: Big Idea From the Whole Gallery"
+        placeholder="One big thing I learned about the United States is..."
+        oninput="autoSave(this,'dot-q3');gatherAnswers();"></textarea>
+
+    </div>
+  </div>
+
+  <!-- Part B: Curator Task -->
+  <div class="activity bl-gold">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#D4943A;">B</div>
+      <div>
+        <div class="activity-title">Curator Task: Contributions Wall Closing Sign</div>
+        <div class="activity-sub">Write the final sign that closes the U.S. Regions Gallery.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>This is the LAST sign in the gallery. Write 3–4 sentences for visitors that explain what the Contributions Wall shows — that people from every region and background helped shape our country. Name at least one contributor. End the sign with the gallery's big idea: the United States is shaped by its land, its stories, AND its people.</p>
+
+      <div class="textbox-prompt">Describe the Contributions Wall and the gallery's big idea in 3–4 sentences. Name at least one contributor.</div>
+      <textarea class="journal-box" id="journal-assign" data-label="Curator Task: Contributions Wall Closing Sign"
+        placeholder="Welcome to the Contributions Wall — the final stop in our U.S. Regions Gallery. This wall honors..."
+        oninput="autoSave(this,'dot-assign');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+  <!-- Curator's Chronicle -->
+  <div class="activity bl-navy">
+    <div class="activity-head">
+      <div class="activity-num" style="background:#0E1C42;">📜</div>
+      <div>
+        <div class="activity-title">Curator's Chronicle</div>
+        <div class="activity-sub">One sentence to capture today's exhibit work.</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p>Finish this sentence in your own words:</p>
+      <div class="textbox-prompt">In this exhibit, I learned that ______ because ______.</div>
+      <textarea class="journal-box" id="journal-chronicle" data-label="Curator's Chronicle"
+        placeholder="In this exhibit, I learned that..."
+        oninput="autoSave(this,'dot-chronicle');gatherAnswers();"></textarea>
+    </div>
+  </div>
+
+  <!-- Gathered Answers -->
+  <div class="gathered-card">
+    <div class="gathered-header">
+      <div class="gathered-header-icon">📋</div>
+      <div>
+        <div class="gathered-header-label">Review Your Work</div>
+        <div class="gathered-header-title">Gathered Answers</div>
+      </div>
+    </div>
+    <div class="gathered-body">
+      <div class="gathered-intro">All your answers are gathered here. Review them, then copy or download to submit.</div>
+      <textarea class="gathered-output" id="gatheredOutput" readonly></textarea>
+      <div class="gathered-actions">
+        <button class="gathered-btn gathered-btn-copy" onclick="copyGathered()">📋 Copy to Clipboard</button>
+        <button class="gathered-btn gathered-btn-pdf" onclick="downloadJournal()">📄 Download as PDF</button>
+      </div>
+      <div class="gathered-copied" id="gatheredCopied">✅ Copied!</div>
+    </div>
+  </div>
+
+  <!-- Certificate with cliffhanger -->
+  <div class="historian-seal" id="historianSeal">
+    <div class="seal-certificate">
+      <div class="seal-cert-message">
+        <strong>Nice work, U.S. Region Curator!</strong> The Contributions Wall is up — and with it, the gallery is truly complete. Visitors will walk through five alcoves, listen at the station, read names of contributors from every region, and leave knowing this country is shaped by places, voices, AND people. The director shakes your hand. "You've done excellent work, Region Guide." She glances toward the next room. "But the museum council has questions about how to use what you've built. They're waiting in the Council Chamber."
+      </div>
+      <div class="seal-stamp-wrap">
+        <svg viewBox="0 0 90 90" width="80" height="80" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 2px 6px rgba(140,30,30,0.25));">
+          <defs>
+            <radialGradient id="stampGrad" cx="50%" cy="45%" r="50%">
+              <stop offset="0%" stop-color="#D94040"/>
+              <stop offset="100%" stop-color="#A02020"/>
+            </radialGradient>
+            <clipPath id="owlStampClip"><circle cx="45" cy="38" r="16"/></clipPath>
+          </defs>
+          <circle cx="45" cy="45" r="42" fill="url(#stampGrad)" stroke="#7A1818" stroke-width="1.5"/>
+          <circle cx="45" cy="45" r="37" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1.2"/>
+          <image href="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png"
+                 x="27" y="20" width="36" height="36"
+                 clip-path="url(#owlStampClip)" opacity="0.3" style="filter:brightness(3) grayscale(1);"/>
+          <text x="45" y="72" fill="rgba(255,255,255,0.85)" font-family="'Nunito', sans-serif" font-size="9" font-weight="800" letter-spacing="2" text-anchor="middle">CERTIFIED</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Turn-In Checklist -->
+  <div class="turn-in-card">
+    <div class="turn-in-header">
+      <div class="turn-in-header-icon">✅</div>
+      <div>
+        <div class="turn-in-header-label">Submit Your Work</div>
+        <div class="turn-in-header-title">Turn-In Checklist</div>
+      </div>
+    </div>
+    <div class="turn-in-body">
+      <div class="turn-in-intro">Check each item as you finish. When all are checked, you're done!</div>
+      <div class="turn-in-checklist">
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I answered all three evidence questions.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I completed the Curator Task: Contributions Wall Closing Sign.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I wrote my Curator's Chronicle.</div>
+        </div>
+        <div class="turn-in-item" onclick="toggleCheck(this)">
+          <div class="turn-in-check"></div>
+          <div class="turn-in-item-text">✅ I copied or downloaded my work and submitted to Canvas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Coming Up Next (REQUIRED on every lesson) -->
+  <div class="callout callout-tip" style="margin-top:18px;border-left:4px solid #D4943A;background:#FFF8EE;">
+    <div class="callout-icon">🔮</div>
+    <p><strong>Coming Up Next…</strong> A side door opens at the back of the gallery. Through it you can see a long oak table surrounded by chairs — and a sign above the doorway that reads "REGIONAL COUNCIL CHAMBER." The museum council is already gathering. "They've been watching your work," the director says quietly. "Now they want your help. When resources are limited, how do regions decide what to do? That's where we go next."</p>
+  </div>
+
+  <!-- Closing Video with cliffhanger -->
+  <div class="video-wrap" style="margin-top:18px;">
+    <div class="video-wrap-header">
+      <span style="font-size:20px;">🎬</span>
+      <div>
+        <div class="video-wrap-type">🎉 CLOSING · WRAP-UP</div>
+        <div class="video-wrap-title">Gallery Complete — Next: The Regional Council Chamber</div>
+      </div>
+    </div>
+    <div class="video-ratio">
+      <div class="video-placeholder">
+        <div class="video-placeholder-icon">🎬</div>
+        <div class="video-placeholder-text">
+          <strong>Teacher recording notes:</strong> Celebrate big: "You did it! The Contributions Wall is up. The U.S. Regions Gallery is TRULY complete — five regions, a listening station, and now a wall of people. Land, stories, and people, all working together." Then bridge to the next unit: "But the museum council has been watching. Through a side door is the Regional Council Chamber — a long table where students will help decide how regions share resources. 'When resources are limited, how do regions decide what to do?' That's the next question." End warmly: "Step back and look at what you've made. The whole country, alcove by alcove, voice by voice, person by person. Take a moment. You earned it." Under 1 minute.
+        </div>
+        <div class="video-placeholder-id"><!-- slot: 3-07-08-closing --></div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end panel-assignment -->
+
+<!-- ═══ FOOTER ═══ -->
+<div class="footer">
+  <div class="footer-main">🏫 <span>Optima Academy Online</span></div>
+  <div class="footer-sub">Social Studies · Grade 3 · Lesson 3.07.08</div>
+  <div class="footer-copy">© 2025 Optima Academy Online</div>
+</div>
+
+</div><!-- end page-wrap -->
+
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()">⬆ Top</button>
+<canvas id="confettiCanvas"></canvas>
+
+<script>
+var visited = { scene: true };
+
+function switchTab(tab) {
+  visited[tab] = true;
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+  document.getElementById('panel-' + tab).classList.add('active');
+  document.getElementById('btn-' + tab).classList.add('active');
+  Object.keys(visited).forEach(function(v) { document.getElementById('btn-' + v).classList.add('visited'); });
+  var intro = document.getElementById('introSection');
+  if (tab !== 'scene') { intro.classList.add('collapsed'); } else { intro.classList.remove('collapsed'); }
+  updateProgress(); scrollToTop();
+  if (tab === 'assignment') gatherAnswers();
+}
+function toggleIntro() { document.getElementById('introSection').classList.toggle('collapsed'); }
+function updateProgress() {
+  var total = 4, done = Object.keys(visited).length;
+  var pct = Math.round((done / total) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressPct').textContent = pct + '%';
+}
+function autoSave(textarea, dotId) { var dot = document.getElementById(dotId); if (dot) dot.classList.add('saved'); }
+function gatherAnswers() {
+  var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-mine', 'journal-bigidea', 'journal-assign', 'journal-chronicle'];
+  var output = '';
+  ids.forEach(function(id) {
+    var el = document.getElementById(id); if (!el) return;
+    var label = el.getAttribute('data-label') || id;
+    output += label.toUpperCase() + '\n' + (el.value.trim() || '(no answer)') + '\n\n';
+  });
+  var gathered = document.getElementById('gatheredOutput');
+  if (gathered) gathered.value = output.trim();
+}
+function copyGathered() {
+  gatherAnswers(); var output = document.getElementById('gatheredOutput'); if (!output) return;
+  if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(output.value).then(function() { showCopied(); }); }
+  else { output.select(); document.execCommand('copy'); showCopied(); }
+}
+function showCopied() {
+  var msg = document.getElementById('gatheredCopied');
+  msg.classList.add('show'); setTimeout(function() { msg.classList.remove('show'); }, 2500);
+}
+function downloadJournal() {
+  gatherAnswers();
+  var ids = ['journal-q1', 'journal-q2', 'journal-q3', 'journal-mine', 'journal-bigidea', 'journal-assign', 'journal-chronicle'];
+  var html = '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Lesson 3.07.08 — My Work</title>';
+  html += '<style>body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:0 20px;color:#1a1a2e;line-height:1.7;}';
+  html += 'h1{font-size:22px;border-bottom:3px solid #55C8E8;padding-bottom:8px;margin-bottom:6px;}';
+  html += 'h2{font-size:14px;color:#7A88A8;margin-bottom:24px;}';
+  html += '.q-label{font-size:13px;font-weight:bold;color:#3A4A6B;margin:16px 0 2px;}';
+  html += '.q-answer{font-size:14px;color:#0E1C42;margin:0 0 4px;padding:6px 12px;background:#f8f9fc;border-left:3px solid #D6F2FB;border-radius:4px;white-space:pre-wrap;}';
+  html += '.no-answer{color:#B0B8CC;font-style:italic;}</style></head><body>';
+  html += '<h1>📓 My Work — Lesson 3.07.08</h1><h2>The Contributions Wall</h2>';
+  html += '<div style="font-size:16px;font-weight:bold;color:#0E1C42;margin:28px 0 4px;padding:8px 0 4px;border-bottom:2px solid #E2E8F4;">📝 EVIDENCE & ASSIGNMENT</div>';
+  ids.forEach(function(id) {
+    var el = document.getElementById(id); if (!el) return;
+    var label = el.getAttribute('data-label') || id;
+    var val = el.value.trim();
+    html += '<div class="q-label">' + label + '</div>';
+    html += val ? '<div class="q-answer">' + val.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</div>' : '<div class="q-answer no-answer">(no answer)</div>';
+  });
+  html += '</body></html>';
+  var win = window.open('', '_blank'); win.document.write(html); win.document.close();
+  setTimeout(function() { win.print(); }, 400);
+}
+
+var quizAnswered = 0, quizCorrect = 0;
+function checkQuiz(optEl) {
+  var q = optEl.closest('.quiz-q'); if (q.classList.contains('answered')) return;
+  q.classList.add('answered'); quizAnswered++;
+  var correct = q.getAttribute('data-answer'), chosen = optEl.getAttribute('data-val');
+  q.querySelectorAll('.quiz-opt').forEach(function(o) {
+    if (o.getAttribute('data-val') === correct) o.classList.add('correct'); else o.classList.add('disabled');
+  });
+  if (chosen === correct) { quizCorrect++; optEl.classList.add('correct'); var fb = q.querySelector('.fb-correct'); if (fb) fb.classList.add('show'); }
+  else { optEl.classList.add('wrong'); var fb = q.querySelector('.fb-wrong'); if (fb) fb.classList.add('show'); }
+  if (quizAnswered === 3) {
+    var scoreBox = document.getElementById('quizScore');
+    document.getElementById('quizScoreNum').textContent = quizCorrect;
+    if (quizCorrect === 3) { document.getElementById('quizScoreMsg').textContent = '⭐ Perfect! You got every question right!'; document.getElementById('quizVideoCorrect').classList.add('show'); fireConfetti(); }
+    else if (quizCorrect === 2) { document.getElementById('quizScoreMsg').textContent = '🏛️ Great job! Almost there!'; document.getElementById('quizVideoReview').classList.add('show'); }
+    else { document.getElementById('quizScoreMsg').textContent = '📜 Good effort! Review and try again.'; document.getElementById('quizVideoReview').classList.add('show'); }
+    scoreBox.classList.add('show');
+  }
+}
+
+/* Flip Cards */
+document.querySelectorAll('.flip-card').forEach(function(card) { card.addEventListener('click', function() { card.classList.toggle('flipped'); }); });
+
+function toggleCheck(item) {
+  item.classList.toggle('checked');
+  item.querySelector('.turn-in-check').textContent = item.classList.contains('checked') ? '✓' : '';
+  if (document.querySelectorAll('.turn-in-item.checked').length === document.querySelectorAll('.turn-in-item').length) {
+    fireConfetti(); var seal = document.getElementById('historianSeal'); if (seal) seal.classList.add('show');
+  }
+}
+
+function fireConfetti() {
+  var canvas = document.getElementById('confettiCanvas'), ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+  var particles = [], colors = ['#55C8E8','#D4943A','#1A8A7D','#34B76F','#8B6FC0','#FFD700','#E8636B'];
+  var emojis = ['🏛️','📜','🗺️','🌍','🧭','🦉','🔔','⚖️','🏺','📋'];
+  for (var i = 0; i < 120; i++) particles.push({ type:'rect', x:Math.random()*canvas.width, y:Math.random()*canvas.height-canvas.height, r:Math.random()*6+3, c:colors[Math.floor(Math.random()*colors.length)], vx:(Math.random()-0.5)*4, vy:Math.random()*3+2, rot:Math.random()*360, rv:(Math.random()-0.5)*8 });
+  for (var j = 0; j < 18; j++) particles.push({ type:'emoji', x:Math.random()*canvas.width, y:Math.random()*canvas.height-canvas.height, emoji:emojis[Math.floor(Math.random()*emojis.length)], size:Math.random()*14+26, vx:(Math.random()-0.5)*3, vy:Math.random()*2.5+1.5, rot:Math.random()*360, rv:(Math.random()-0.5)*5 });
+  var frames = 0;
+  function animate() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(function(p) { ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot*Math.PI/180);
+      if (p.type==='emoji') { ctx.font=p.size+'px serif'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.fillText(p.emoji,0,0); }
+      else { ctx.fillStyle=p.c; ctx.fillRect(-p.r,-p.r/2,p.r*2,p.r); }
+      ctx.restore(); p.x+=p.vx; p.y+=p.vy; p.rot+=p.rv; p.vy+=0.04; });
+    frames++; if (frames<300) { if(frames>220) canvas.style.opacity=1-((frames-220)/80); requestAnimationFrame(animate); }
+    else { ctx.clearRect(0,0,canvas.width,canvas.height); canvas.style.opacity=1; }
+  }
+  animate();
+}
+
+function scrollToTop() {
+  var target = document.getElementById('pageTop');
+  if (target) target.scrollIntoView({ behavior:'smooth', block:'start' });
+  try { window.parent.postMessage({ type:'scrollToTop' }, '*'); } catch(e) {}
+  window.scrollTo({ top:0, behavior:'smooth' });
+}
+(function() {
+  var btn = document.getElementById('backToTop');
+  var onScroll = function() { if ((window.pageYOffset||document.documentElement.scrollTop)>400) btn.classList.add('show'); else btn.classList.remove('show'); };
+  window.addEventListener('scroll', onScroll);
+  try { if (window.parent !== window) window.parent.addEventListener('scroll', onScroll); } catch(e) {}
+})();
+updateProgress();
+(function(){var B='https://raw.githubusercontent.com/bbirchum1/optima-3rd-social-studies/main/images/';var EX=['.png','.jpg','.jpeg','.webp'];document.querySelectorAll('.source-image-placeholder[data-image]').forEach(function(el){tryImg(el,el.getAttribute('data-image'),0)});function tryImg(el,name,i){if(i>=EX.length)return;var img=new Image();img.onload=function(){img.style.cssText='width:100%;height:auto;display:block;max-width:100%;';img.alt=name.replace(/-/g,' ');el.innerHTML='';el.style.cssText='padding:0;border:none;background:none;min-height:0;max-height:none;height:auto;overflow:visible;border-radius:12px;display:block;width:100%;';el.appendChild(img)};img.onerror=function(){tryImg(el,name,i+1)};img.src=B+name+EX[i]}})();
+</script>
+</body>
+</html>
