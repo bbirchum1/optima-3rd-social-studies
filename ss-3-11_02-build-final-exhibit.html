@@ -2342,8 +2342,7 @@ function downloadJournal() {
     html += '<div class="q-label">' + label + '</div>';
     html += val ? '<div class="q-answer">' + val.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</div>' : '<div class="q-answer no-answer">(no answer)</div>';
   });
-  html += '
-</body></html>';
+  html += '\n</body></html>';
   var win = window.open('', '_blank'); win.document.write(html); win.document.close();
   setTimeout(function() { win.print(); }, 400);
 }
