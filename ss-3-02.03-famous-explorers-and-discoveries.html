@@ -2155,7 +2155,53 @@ function downloadJournal() {
       : '<div class="q-answer no-answer">(no answer)</div>';
   });
 
-  html += '</body></html>';
+  html += '
+  <!-- Video Manifest Loader -->
+  <script>
+  (function() {
+    var MANIFEST_URL = 'https://raw.githubusercontent.com/bbirchum1/optima-3rd-social-studies/main/video-manifest.json';
+    function loadVideos() {
+      fetch(MANIFEST_URL + '?_=' + Date.now())
+        .then(function(r) { return r.json(); })
+        .then(function(manifest) {
+          var slots = document.querySelectorAll('.video-placeholder-id');
+          slots.forEach(function(slotEl) {
+            var slotId = null;
+            slotEl.childNodes.forEach(function(node) {
+              if (node.nodeType === 8) {
+                var m = node.nodeValue.trim().match(/^slot:\s*(.+)$/);
+                if (m) slotId = m[1].trim();
+              }
+            });
+            if (!slotId) return;
+            var video = manifest.videos && manifest.videos[slotId];
+            if (!video || video.status !== 'ready' || !video.embed) return;
+            var placeholder = slotEl.closest('.video-placeholder');
+            if (!placeholder) return;
+            var wrapper = document.createElement('div');
+            wrapper.innerHTML = video.embed;
+            var iframe = wrapper.firstElementChild;
+            if (iframe) {
+              iframe.style.width = '100%';
+              iframe.style.height = '100%';
+              iframe.style.position = 'absolute';
+              iframe.style.top = '0';
+              iframe.style.left = '0';
+              iframe.style.border = 'none';
+              placeholder.replaceWith(iframe);
+            }
+          });
+        })
+        .catch(function(e) { console.log('Video manifest not loaded:', e); });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', loadVideos);
+    } else {
+      loadVideos();
+    }
+  })();
+  </script>
+</body></html>';
   var win = window.open('', '_blank');
   win.document.write(html);
   win.document.close();
