@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 10 Assessment — Citizen and Government Assessment</title>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:system-ui,-apple-system,sans-serif;background:#F0F2F8;color:#0E1C42;line-height:1.6;-webkit-font-smoothing:antialiased;}
+.page-wrap{max-width:920px;margin:0 auto;background:#fff;box-shadow:0 0 40px rgba(14,28,66,.08);}
+.header{background:linear-gradient(135deg,#0E1C42 0%,#1A2D5A 60%,#243868 100%);border-bottom:6px solid #B8860B;padding:20px 28px 18px;position:relative;overflow:hidden;}
+.header-brand{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.header-logo{width:52px;height:52px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,.15);}
+.header-logo img{width:48px;height:48px;border-radius:50%;}
+.header-org{font-size:22px;color:#fff;font-weight:800;line-height:1.15;}
+.header-sub{font-size:11px;color:#D4A017;letter-spacing:.5px;}
+.header-title{font-family:Georgia,serif;font-size:26px;color:#fff;font-weight:700;line-height:1.2;margin-bottom:10px;}
+.header-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(184,134,11,.2);border:1.5px solid rgba(212,160,23,.4);border-radius:28px;padding:6px 16px;}
+.header-badge-text{font-size:16px;color:#fff;font-weight:800;}
+.content{padding:28px;}
+.intro{background:linear-gradient(135deg,#FFF8F0 0%,#FFF3DC 100%);border:2px solid #F5E6C8;border-radius:18px;padding:22px 24px;margin-bottom:28px;}
+.intro p{font-size:17px;color:#5A4A3A;line-height:1.75;margin:0;}
+.total-bar{background:linear-gradient(135deg,#0E1C42,#1A2D5A);border-radius:18px;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;}
+.total-label{font-size:14px;color:#D4A017;text-transform:uppercase;letter-spacing:1px;font-weight:800;}
+.total-value{font-size:24px;color:#F9A825;font-weight:800;}
+.section{margin-bottom:28px;}
+.section-head{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:10px;border-bottom:3px solid #E2E8F4;}
+.section-icon{width:42px;height:42px;border-radius:14px;color:#fff;font-size:20px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.section-icon.knowledge{background:#2C5F8A;}
+.section-icon.source{background:#6B4423;}
+.section-icon.response{background:#1A6B3A;}
+.section-icon.virtue{background:#7B4A1E;}
+.section-title{font-size:20px;color:#0E1C42;font-weight:800;}
+.section-pts{font-size:12px;color:#7A88A8;font-weight:700;}
+.question{background:#fff;border:2px solid #E2E8F4;border-radius:16px;padding:20px 22px;margin-bottom:16px;box-shadow:0 2px 8px rgba(14,28,66,.03);}
+.q-number{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#0E1C42;color:#fff;font-size:13px;font-weight:800;margin-right:10px;flex-shrink:0;}
+.q-label{font-size:11px;color:#7A88A8;text-transform:uppercase;letter-spacing:.8px;font-weight:700;margin-bottom:8px;}
+.q-text{font-size:17px;color:#0E1C42;line-height:1.7;margin-bottom:12px;font-weight:600;}
+.options{list-style:none;margin:0;padding:0;}
+.options li{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;margin-bottom:6px;border:2px solid #E2E8F4;border-radius:12px;font-size:16px;color:#3A4A6B;line-height:1.6;cursor:pointer;transition:background .15s,border-color .15s;user-select:none;}
+.options li:hover{background:#FFF5E0;border-color:#E8C84A;}
+.options li.selected{background:#FFF0C0;border-color:#B8860B;}
+.options li.selected .opt-letter{background:#8B6914;color:#fff;}
+.opt-letter{width:26px;height:26px;border-radius:50%;background:#E2E8F4;color:#0E1C42;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.source-box{background:#F5EDD8;border:2px solid #D4A017;border-radius:14px;padding:16px 20px;margin-bottom:16px;font-size:16px;color:#3A4A6B;line-height:1.7;}
+.source-box strong{color:#8B6914;display:block;margin-bottom:4px;}
+.response-box{width:100%;min-height:90px;border:2px solid #E2E8F4;border-radius:12px;padding:14px 16px;font-family:system-ui,sans-serif;font-size:16px;color:#0E1C42;line-height:1.6;resize:vertical;background:#FAFBFE;}
+.response-box:focus{outline:none;border-color:#B8860B;box-shadow:0 0 0 3px rgba(184,134,11,.15);}
+.pts{display:inline-flex;align-items:center;gap:4px;background:#FFF5E0;border:1.5px solid #E8C84A;border-radius:20px;padding:3px 10px;font-size:12px;color:#8B6914;font-weight:800;margin-left:8px;}
+.match-table{width:100%;border-collapse:collapse;margin-top:8px;}
+.match-table td{padding:10px 14px;border:2px solid #E2E8F4;font-size:15px;color:#3A4A6B;vertical-align:middle;}
+.match-table td:first-child{font-weight:700;background:#F8F6F0;width:40%;}
+.match-select{border:2px solid #B8860B;border-radius:8px;padding:7px 10px;font-size:15px;color:#0E1C42;background:#fff;cursor:pointer;width:100%;}
+.gathered-card{background:#fff;border:2px solid #E2E8F4;border-radius:18px;overflow:hidden;box-shadow:0 2px 10px rgba(14,28,66,.04);}
+.gathered-header{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#1A4A2E,#0D3020);padding:16px 22px;}
+.gathered-header-icon{font-size:28px;line-height:1;}
+.gathered-header-label{font-size:11px;color:#D4A017;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px;}
+.gathered-header-title{font-family:Georgia,serif;font-size:20px;color:#fff;font-weight:700;}
+.gathered-body{padding:18px 22px 20px;}
+.gathered-intro{font-size:15px;color:#3A4A6B;margin-bottom:14px;line-height:1.55;}
+.gathered-output{width:100%;min-height:260px;padding:16px 18px;border:2px solid #E2E8F4;border-radius:12px;font-family:system-ui,sans-serif;font-size:14px;color:#0E1C42;line-height:1.65;background:#FAFBFF;resize:vertical;}
+.gathered-actions{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap;}
+.gathered-btn{flex:1;min-width:190px;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border:none;border-radius:14px;font-size:15px;font-weight:800;cursor:pointer;transition:transform .2s;}
+.gathered-btn:hover{transform:translateY(-2px);}
+.gathered-btn-copy{background:linear-gradient(135deg,#D4A017,#B8860B);color:#fff;}
+.gathered-btn-pdf{background:linear-gradient(135deg,#1A4A2E,#0D3020);color:#fff;border:2px solid #D4A017;}
+.gathered-copied{text-align:center;font-size:14px;font-weight:700;color:#B8860B;margin-top:8px;display:none;}
+.gathered-copied.show{display:block;}
+.footer{background:#0E1C42;padding:16px 28px;text-align:center;}
+.footer p{font-size:12px;color:rgba(255,255,255,.4);margin:0;}
+@media(max-width:600px){.content{padding:20px 16px;}.question{padding:16px;}}
+</style>
+</head>
+<body>
+<div class="page-wrap">
+  <div class="header">
+    <div class="header-brand">
+      <div class="header-logo">
+        <img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Owl">
+      </div>
+      <div>
+        <div class="header-org">Optima Academy Online</div>
+        <div class="header-sub">3rd Grade Social Studies &middot; Basics of Government and Citizenship &middot; Weeks 28&ndash;31</div>
+      </div>
+    </div>
+    <div class="header-title">Unit 10 Assessment &mdash; Citizen and Government Assessment</div>
+    <div class="header-badge"><span class="header-badge-text">Unit 10 &middot; 26 Points</span></div>
+  </div>
+
+  <div class="content">
+    <div class="intro"><p>In this unit you learned about government, citizenship, civic virtues, patriotic holidays, and Florida history. Use everything you studied to show what you know!</p></div>
+    <div class="total-bar"><span class="total-label">Total Points Available</span><span class="total-value">26 Points</span></div>
+
+    <!-- PART A -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon knowledge">&#127963;</div>
+        <div><div class="section-title">Part A: Knowledge Check</div><div class="section-pts">Questions 1&ndash;8 &middot; 11 Points</div></div>
+      </div>
+
+      <div class="question">
+        <div class="q-label">Multiple Choice <span class="pts">1 pt</span></div>
+        <div class="q-text"><span class="q-number">1</span>What is a government?</div>
+        <ul class="options" data-gather="Q1: What is a government?">
+          <li onclick="selectOption(this)"><span class="opt-letter">A</span>A type of money</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">B</span>A group of people chosen to make rules and take care of a community</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">C</span>A holiday</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">D</span>A type of map</li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <div class="q-label">Multiple Choice <span class="pts">1 pt</span></div>
+        <div class="q-text"><span class="q-number">2</span>Where does the U.S. government get its power?</div>
+        <ul class="options" data-gather="Q2: Where does the U.S. government get its power?">
+          <li onclick="selectOption(this)"><span class="opt-letter">A</span>From the military</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">B</span>From the President alone</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">C</span>From the people</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">D</span>From other countries</li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <div class="q-label">Multiple Choice <span class="pts">1 pt</span></div>
+        <div class="q-text"><span class="q-number">3</span>Which level of government runs public schools and fire stations?</div>
+        <ul class="options" data-gather="Q3: Which level of government runs public schools and fire stations?">
+          <li onclick="selectOption(this)"><span class="opt-letter">A</span>National</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">B</span>State</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">C</span>Local</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">D</span>International</li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <div class="q-label">Multiple Choice <span class="pts">1 pt</span></div>
+        <div class="q-text"><span class="q-number">4</span>What does the word <em>Florida</em> mean?</div>
+        <ul class="options" data-gather="Q4: What does the word Florida mean?">
+          <li onclick="selectOption(this)"><span class="opt-letter">A</span>Land of sunshine</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">B</span>The flowered place</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">C</span>Land of rivers</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">D</span>The golden coast</li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <div class="q-label">Multiple Choice <span class="pts">1 pt</span></div>
+        <div class="q-text"><span class="q-number">5</span>What is the difference between Memorial Day and Veterans Day?</div>
+        <ul class="options" data-gather="Q5: Difference between Memorial Day and Veterans Day">
+          <li onclick="selectOption(this)"><span class="opt-letter">A</span>They are the same holiday</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">B</span>Memorial Day honors those who died serving; Veterans Day honors all who have served</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">C</span>Memorial Day is in November; Veterans Day is in May</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">D</span>Memorial Day is for Presidents; Veterans Day is for soldiers</li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <div class="q-label">Multiple Choice <span class="pts">1 pt</span></div>
+        <div class="q-text"><span class="q-number">6</span>What is a civic virtue?</div>
+        <ul class="options" data-gather="Q6: What is a civic virtue?">
+          <li onclick="selectOption(this)"><span class="opt-letter">A</span>A type of government building</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">B</span>A habit a citizen practices to help the community</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">C</span>A law everyone must follow</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">D</span>A holiday</li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <div class="q-label">Multiple Choice <span class="pts">1 pt</span></div>
+        <div class="q-text"><span class="q-number">7</span>What does <em>E Pluribus Unum</em> mean?</div>
+        <ul class="options" data-gather="Q7: What does E Pluribus Unum mean?">
+          <li onclick="selectOption(this)"><span class="opt-letter">A</span>In God we trust</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">B</span>Liberty and justice for all</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">C</span>Out of many, one</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">D</span>We the people</li>
+        </ul>
+      </div>
+
+      <div class="question">
+        <div class="q-label">Matching <span class="pts">4 pts</span></div>
+        <div class="q-text"><span class="q-number">8</span>Match each civic virtue to its example.</div>
+        <table class="match-table">
+          <tr>
+            <td>Civility</td>
+            <td><select class="match-select" data-gather="Q8a: Civility =">
+              <option value="">&#8212; Select &#8212;</option>
+              <option value="A">A. Cleaning up a park without being asked</option>
+              <option value="B">B. Returning a library book on time</option>
+              <option value="C">C. Listening to someone you disagree with</option>
+              <option value="D">D. Splitting group work fairly so the team succeeds</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td>Volunteerism</td>
+            <td><select class="match-select" data-gather="Q8b: Volunteerism =">
+              <option value="">&#8212; Select &#8212;</option>
+              <option value="A">A. Cleaning up a park without being asked</option>
+              <option value="B">B. Returning a library book on time</option>
+              <option value="C">C. Listening to someone you disagree with</option>
+              <option value="D">D. Splitting group work fairly so the team succeeds</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td>Responsibility</td>
+            <td><select class="match-select" data-gather="Q8c: Responsibility =">
+              <option value="">&#8212; Select &#8212;</option>
+              <option value="A">A. Cleaning up a park without being asked</option>
+              <option value="B">B. Returning a library book on time</option>
+              <option value="C">C. Listening to someone you disagree with</option>
+              <option value="D">D. Splitting group work fairly so the team succeeds</option>
+            </select></td>
+          </tr>
+          <tr>
+            <td>Cooperation</td>
+            <td><select class="match-select" data-gather="Q8d: Cooperation =">
+              <option value="">&#8212; Select &#8212;</option>
+              <option value="A">A. Cleaning up a park without being asked</option>
+              <option value="B">B. Returning a library book on time</option>
+              <option value="C">C. Listening to someone you disagree with</option>
+              <option value="D">D. Splitting group work fairly so the team succeeds</option>
+            </select></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- PART B -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon source">&#128269;</div>
+        <div><div class="section-title">Part B: Source Task</div><div class="section-pts">Questions 9&ndash;10 &middot; 5 Points</div></div>
+      </div>
+      <div class="source-box">
+        <strong>Source: The Preamble of the U.S. Constitution</strong>
+        "We the People of the United States... do ordain and establish this Constitution." This document was signed in 1787 and sets up the rules for the U.S. government.
+      </div>
+      <div class="question">
+        <div class="q-label">Multiple Choice <span class="pts">1 pt</span></div>
+        <div class="q-text"><span class="q-number">9</span>The words "We the People" tell us that the government's power comes from:</div>
+        <ul class="options" data-gather="Q9: We the People means power comes from">
+          <li onclick="selectOption(this)"><span class="opt-letter">A</span>The President</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">B</span>The military</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">C</span>The people</li>
+          <li onclick="selectOption(this)"><span class="opt-letter">D</span>Other countries</li>
+        </ul>
+      </div>
+      <div class="question">
+        <div class="q-label">Constructed Response <span class="pts">4 pts</span></div>
+        <div class="q-text"><span class="q-number">10</span>Why is it important that even the President must follow the Constitution? Explain in 2&ndash;3 sentences.</div>
+        <textarea class="response-box" data-gather="Q10: Why even the President must follow the Constitution:" placeholder="Write your answer here..."></textarea>
+      </div>
+    </div>
+
+    <!-- PART C -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon response">&#9997;</div>
+        <div><div class="section-title">Part C: Constructed Response</div><div class="section-pts">Question 11 &middot; 6 Points</div></div>
+      </div>
+      <div class="question">
+        <div class="q-label">Constructed Response <span class="pts">6 pts</span></div>
+        <div class="q-text"><span class="q-number">11</span>Name one patriotic holiday and explain what it celebrates or remembers. Then explain whether it is a "celebrating" holiday or a "remembering" holiday and why.</div>
+        <textarea class="response-box" style="min-height:120px;" data-gather="Q11: Patriotic holiday — what it marks and whether celebrating or remembering:" placeholder="Write your answer here..."></textarea>
+      </div>
+    </div>
+
+    <!-- PART D -->
+    <div class="section">
+      <div class="section-head">
+        <div class="section-icon virtue">&#11088;</div>
+        <div><div class="section-title">Part D: Virtue Reflection</div><div class="section-pts">Question 12 &middot; 4 Points</div></div>
+      </div>
+      <div class="question">
+        <div class="q-label">Virtue Reflection <span class="pts">4 pts</span></div>
+        <div class="q-text"><span class="q-number">12</span>Pick one civic virtue: <strong>civility</strong>, <strong>volunteerism</strong>, <strong>responsibility</strong>, or <strong>cooperation</strong>. Give a real-life example of how a student your age could practice that virtue in school or in your community.</div>
+        <textarea class="response-box" data-gather="Q12: Civic virtue — real-life student example:" placeholder="The civic virtue I chose is... A student could show this by..."></textarea>
+      </div>
+    </div>
+
+    <!-- GATHERED ANSWERS -->
+    <div class="gathered-card">
+      <div class="gathered-header">
+        <div class="gathered-header-icon">&#128203;</div>
+        <div>
+          <div class="gathered-header-label">Teacher View</div>
+          <div class="gathered-header-title">Gathered Answers</div>
+        </div>
+      </div>
+      <div class="gathered-body">
+        <p class="gathered-intro">Click <strong>Gather &amp; Copy Answers</strong> to collect all responses. Then copy or print for your teacher.</p>
+        <textarea class="gathered-output" id="gatheredOutput" readonly placeholder="Your answers will appear here..."></textarea>
+        <div class="gathered-actions">
+          <button class="gathered-btn gathered-btn-copy" onclick="gatherAnswers();copyGathered();">&#128203; Gather &amp; Copy Answers</button>
+          <button class="gathered-btn gathered-btn-pdf" onclick="downloadPDF();">&#128438; Print / Download</button>
+        </div>
+        <div class="gathered-copied" id="gatheredCopied">Copied to clipboard!</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer"><p>Optima Academy Online &middot; 3rd Grade Social Studies &middot; Unit 10: Basics of Government and Citizenship</p></div>
+</div>
+
+<script>
+function gatherAnswers(){
+  var titleEl=document.querySelector('.header-title');
+  var t=titleEl?titleEl.textContent.trim():'Assessment';
+  var lines=[t,'='.repeat(Math.min(t.length,50)),''];
+  document.querySelectorAll('[data-gather]').forEach(function(node){
+    var lbl=node.getAttribute('data-gather');
+    if(node.tagName==='TEXTAREA'){
+      lines.push(lbl);lines.push(node.value.trim()||'(no answer)');lines.push('');
+    } else if(node.tagName==='SELECT'){
+      var sel=node.options[node.selectedIndex];
+      lines.push(lbl);lines.push(sel&&sel.value?sel.text:'(not selected)');lines.push('');
+    } else if(node.tagName==='UL'){
+      var s=node.querySelector('li.selected');
+      lines.push(lbl);lines.push(s?'Selected: '+s.querySelector('.opt-letter').textContent.trim():'(not selected)');lines.push('');
+    }
+  });
+  var el=document.getElementById('gatheredOutput');if(el)el.value=lines.join('\n');
+}
+function selectOption(li){
+  li.parentElement.querySelectorAll('li').forEach(function(x){x.classList.remove('selected');});
+  li.classList.add('selected');gatherAnswers();
+}
+function copyGathered(){
+  var el=document.getElementById('gatheredOutput');if(!el)return;
+  el.select();try{document.execCommand('copy');}catch(e){navigator.clipboard.writeText(el.value);}
+  var n=document.getElementById('gatheredCopied');if(n){n.classList.add('show');setTimeout(function(){n.classList.remove('show');},2500);}
+}
+function downloadPDF(){
+  gatherAnswers();
+  var el=document.getElementById('gatheredOutput');var text=el?el.value:'';
+  var tit=document.querySelector('.header-title').textContent.trim();
+  var css='body{font-family:Georgia,serif;max-width:680px;margin:36px auto;padding:0 24px;color:#111;line-height:1.75}h1{font-size:19px;border-bottom:3px solid #B8860B;padding-bottom:7px;margin-bottom:4px}h2{font-size:12px;color:#888;margin-bottom:20px;font-weight:normal}pre{white-space:pre-wrap;font-family:Georgia,serif;font-size:14px;line-height:1.75}@media print{@page{margin:1.2cm}body{margin:0}}';
+  var html='<!DOCTYPE html><html><head><meta charset="UTF-8"><style>'+css+'<\/style><\/head><body><h1>'+tit+'<\/h1><h2>Student: __________________________ &nbsp;&nbsp; Date: __________<\/h2><pre>'+text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'<\/pre><\/body><\/html>';
+  var win=window.open('','_blank');if(!win){alert('Please allow pop-ups.');return;}
+  win.document.write(html);win.document.close();setTimeout(function(){win.print();},500);
+}
+</script>
+</body>
+</html>
