@@ -55,16 +55,16 @@
       "file": "ss-3-01.02-primary-secondary-sources.html",
       "type": "Teacher Welcome",
       "section": "Welcome",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=02849c05-34ad-4aa8-b54e-fb1610344365&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-02-welcome.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-02-explore-explainer": {
       "lesson": "Optima Academy Online — Secondary Sources",
       "file": "ss-3-01.02-primary-secondary-sources.html",
       "type": "Core Lesson",
       "section": "Explore",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=9388fdb8-ae15-4245-be7a-dc94d65ab1f1&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-02-explore-explainer.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-02-quiz-perfect": {
       "lesson": "Optima Academy Online — Secondary Sources",
@@ -103,16 +103,16 @@
       "file": "ss-3-01.03-asking-questions.html",
       "type": "Teacher Welcome",
       "section": "Welcome",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=92ea7d23-6d99-432e-b2dc-cc1298ca708f&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-03-welcome.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-03-explore-explainer": {
       "lesson": "Optima Academy Online — Questions",
       "file": "ss-3-01.03-asking-questions.html",
       "type": "Core Lesson",
       "section": "Explore",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=660d75a2-3921-4ebd-8163-6c206fe0818d&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-03-explore-explainer.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-03-quiz-perfect": {
       "lesson": "Optima Academy Online — Questions",
@@ -135,32 +135,32 @@
       "file": "ss-3-01.03-asking-questions.html",
       "type": "Assignment Explainer",
       "section": "Assignment",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=24e92422-752c-4c24-a028-163a9babbcb1&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-03-assignment-explainer.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-03-closing": {
       "lesson": "Optima Academy Online — Questions",
       "file": "ss-3-01.03-asking-questions.html",
       "type": "Closing",
       "section": "Closing",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=581c3154-9fff-4931-bf2f-45141cd52711&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-03-closing.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-04-welcome": {
       "lesson": "Optima Academy Online — Reliable Info",
       "file": "ss-3-01.04-technology-reliable-info.html",
       "type": "Teacher Welcome",
       "section": "Welcome",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=14e014c8-13d9-4d25-b1ce-d77de0947bba&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-04-welcome.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-04-explore-explainer": {
       "lesson": "Optima Academy Online — Reliable Info",
       "file": "ss-3-01.04-technology-reliable-info.html",
       "type": "Core Lesson",
       "section": "Explore",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=e495f7f8-d2fd-4827-a325-e122890a0eb2&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-04-explore-explainer.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-04-quiz-perfect": {
       "lesson": "Optima Academy Online — Reliable Info",
@@ -183,32 +183,32 @@
       "file": "ss-3-01.04-technology-reliable-info.html",
       "type": "Assignment Explainer",
       "section": "Assignment",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=68a6442d-7727-45f9-85cc-487f7c16a819&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-04-assignment-explainer.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-04-closing": {
       "lesson": "Optima Academy Online — Reliable Info",
       "file": "ss-3-01.04-technology-reliable-info.html",
       "type": "Closing",
       "section": "Closing",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=11071d6a-17c4-45cf-bdb5-c84f349a912e&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-04-closing.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-05-welcome": {
       "lesson": "Optima Academy Online — Roots",
       "file": "ss-3-01.05-word-roots.html",
       "type": "Teacher Welcome",
       "section": "Welcome",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=80073456-b91c-46b4-99ae-0108ef0ee5de&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-05-welcome.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-05-explore-explainer": {
       "lesson": "Optima Academy Online — Roots",
       "file": "ss-3-01.05-word-roots.html",
       "type": "Core Lesson",
       "section": "Explore",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=e6459f93-4521-471e-bb9a-3b64542705b5&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-05-explore-explainer.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-05-quiz-perfect": {
       "lesson": "Optima Academy Online — Roots",
@@ -231,32 +231,32 @@
       "file": "ss-3-01.05-word-roots.html",
       "type": "Assignment Explainer",
       "section": "Assignment",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=c2c8bcc2-8e4f-4a09-b75d-7ba26e838824&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-05-assignment-explainer.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-05-closing": {
       "lesson": "Optima Academy Online — Roots",
       "file": "ss-3-01.05-word-roots.html",
       "type": "Closing",
       "section": "Closing",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=c2ccb336-d6d9-4fc3-9b76-12dd1df757fa&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-05-closing.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-06-welcome": {
       "lesson": "Optima Academy Online — Evidence Entry",
       "file": "ss-3-01.06-first-evidence-entry.html",
       "type": "Teacher Welcome",
       "section": "Welcome",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=38af9359-d59f-4d23-a432-94285999acf4&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-06-welcome.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-06-explore-explainer": {
       "lesson": "Optima Academy Online — Evidence Entry",
       "file": "ss-3-01.06-first-evidence-entry.html",
       "type": "Core Lesson",
       "section": "Explore",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=667f0572-f60b-478e-950f-3bda0e5632da&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-06-explore-explainer.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-06-quiz-perfect": {
       "lesson": "Optima Academy Online — Evidence Entry",
@@ -279,16 +279,16 @@
       "file": "ss-3-01.06-first-evidence-entry.html",
       "type": "Assignment Explainer",
       "section": "Assignment",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=8982c1ed-4407-43e9-ba2e-6284ac8c87a8&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-06-assignment-explainer.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-01-06-closing": {
       "lesson": "Optima Academy Online — Evidence Entry",
       "file": "ss-3-01.06-first-evidence-entry.html",
       "type": "Closing",
       "section": "Closing",
-      "embed": "",
-      "status": "pending"
+      "embed": "<iframe src=\"https://optimaedcom.sharepoint.com/sites/summercrew/_layouts/15/embed.aspx?UniqueId=ab95d30f-4ca8-4a03-b922-bc6e81e0f3cd&embed=%7B%22hvm%22%3Atrue%2C%22ust%22%3Atrue%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create\" width=\"640\" height=\"360\" frameborder=\"0\" scrolling=\"no\" allowfullscreen title=\"3-01-06-closing.mp4\"></iframe>",
+      "status": "ready"
     },
     "3-02-01-welcome": {
       "lesson": "Optima Academy Online — Lesson 3.02.01: Why People Explore (Grade 3 Museum)",
